@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		* {margin:0; padding:0}
+		html, body {color:#6773a9; font-size:12px; font-family:consolas, Dutum, "돋움", vardana}
+		div.wrap {border:5px solid #1865b3; padding:10px;}
+		.folder {color:#ff2e81; font-weight:bold}
+		table {margin:0; padding:0; table-layout:fixed; width: 100%; border:1px solid #eee;  border-collapse: collapse;}
+		tr {background:#ffffff}
+		th {padding: 7px 0 5px 0; color:#6c8cd7; font-size:11px; text-align:center; background:#d4d4d4; border:1px solid #bbb;}
+		td {padding: 10px; color:#6c8cd7; font-size:11px;text-align:left; border:1px solid #bbb;}
+		td p {
+			line-height: 1.6;
+		}
+		table td.depthTitle {color:#777777; font-weight:bold; font-size:11px; text-align:left; padding-left:10px}
+		table td.etc {color:#393939; text-align:left; padding-left:5px;}
+		table td.link{text-align:left; padding-left:7px; color:blue;}
+		table td.link a {color:blue;}
+		table tr:hover{background-color:#d4d4d4;}
+		h2.title {padding:10px 0 15px 0; color:#000000; margin-bottom:8px; font-size:14px; text-align:center}
+		p.pageLink {margin:20px 0 10px 0; color:#0019a9;  font-size:11px}
+		a {color:#838383; text-decoration:none}
+		a:hover {color:#919191; text-decoration:underline}
+		dl.list dt {border-bottom: 1px dashed #ccc; font-size: 14px; line-height: 2em; padding: 5px; color: #000; overflow: hidden;}
+		dl.list dt button {padding: 2px 5px; margin-left: 20px; width: 180px; cursor: pointer; display: block; float: right; font-family:Dutum, "돋움", vardana}
+		dl.list dt span {font-weight: bold; color: #6c8cd7}
+		dl.list dd {padding:10px 0;}
+		.menu_line td {background:#efefef;}
+		.delete {text-decoration:line-through; color:red; font-weight:bold;}
+		.delete a{font-weight:normal; color:red !important;}
+		.ing td{background:#FFFBC8 ;}
+		.del td{background:#FF8606;}
+		.end td {background:#ffeaea;}
+		.wait td{background-color: #c8e9ec;}
+
+		tr.none {
+			display: none;
+		}
+
+		dt {
+			display: flex;
+			flex: 1 1 auto;
+		}
+
+		.opt {
+			display: flex;
+			flex: 1 1 auto;
+		}
+		.explain {
+			display: inline-flex;
+			margin-right: 20px;
+			margin-left: auto;
+		}
+		.explain > * {
+			display: flex;
+			align-items: center;
+			color: #555 !important;
+			font-size: 12px;
+			font-weight: normal !important;
+			margin-left: 10px;
+		}
+		.explain > *:before {
+			content: '';
+			display: inline-block;
+			width: 6px; height: 6px;
+			margin-right: 6px;
+		}
+
+		.explain .inProgress:before {
+			background: #999;
+		}
+
+		.explain .complete:before {
+			background: indianred;
+		}
+
+
+
+		table.tbl thead tr:nth-child(1) th {
+			position: sticky;
+			top: 0;
+		}
+
+		table.tbl th {
+			height: 40px;
+			color: #333;
+		}
+		table.tbl td {
+			height: 40px;
+		}
+
+		table.tbl th , table.tbl td {
+			border: 1px solid #999;
+		}
+		table.tbl tr:hover td {
+			background-color: #ffc299;
+		}
+
+		table.tbl td:nth-child(2) {
+			color: #333;
+			font-weight: 700;
+		}
+
+		table.tbl td:nth-child(4) {
+			padding: 0;
+		}
+		table.tbl td a {
+			display: block;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding: 0px 10px;
+			line-height: 1.2;
+		}
+
+		table.tbl td:nth-child(4) a {
+			color: #333;
+		}
+		table.tbl td:nth-child(4) a:hover {
+			color: #f60 !important;
+		}
+
+		.end td {
+			background-color: #fff2ca;
+			color: #63562e;
+		}
+
+		.end td a {
+		/*   color: #ff0 !important;  */
+		}
+
+		tr.bks td:nth-child(3) {
+			background-color: #feff8a;
+		}
+		tr.lkh td:nth-child(3) {
+			background-color: #ffb7e6;
+		}
+		tr.sjw td:nth-child(3) {
+			background-color: #bcd9f3;
+		}
+		tr.sms td:nth-child(3) {
+			background-color: #ceffbb;
+		}
+
+		tr.inProgress td:not(:nth-child(3)) {
+			background-color: #eee;
+			color: #999 !important;
+		}
+
+		tr.complete td:nth-child(1) {
+			color: indianred;
+		}
+
+		ul.explainList {
+			margin: 20px 0;
+			font-size: 12px;
+			color: #555;
+		}
+
+		ul.explainList > li {
+			line-height: 1.4;
+			padding-bottom: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	 <div class="wrap">
+			<dl class="list">
+				 <dt>
+					<h1>PTN CMS</h1>
+					<div class="opt">
+
+						<div class="explain">
+							<span class="inProgress">진행중</span>
+							<span class="complete">완료</span>
+						</div>
+						<select class="workers">
+							<option value="0">전체</option>
+							<option value="1">석지우</option>
+							<option value="2">이근호</option>
+							<option value="3">신민식</option>
+							<option value="4">배경수</option>
+						</select>
+					</div>
+				 </dt>
+				 <dd>
+						<h2>공통 이슈정리</h2>
+						<ul class="explainList">
+							<li>
+								<p>제플린 디자인 가이드에 1600 x 795 고정값으로 작업 되어 있으나 팝업 디자인마다의 크기라 달라
+									제플린 가이드에 있는 각기 팝업의 크기를 따르기로 결정하였습니다.</p>
+								<p>윈도우 팝업 최대 높이는 900px 로 설정하였습니다. ( 필요에 따라 추후 변경가능합니다. )</p>
+							</li>
+						</ul>
+
+						<table class="tbl">
+							<colgroup>
+								<col style="width:150px" />
+								<col style="width:300px" />
+								<col style="width:150px" />
+								<col style="width:250px" />
+								<col style="width:auto" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>진행상황</th>
+									<th>페이지명</th>
+									<th>작업자</th>
+									<th>링크</th>
+									<th>설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="end">
+									<td>진행중</td>
+									<td>PTN_Util-01_공통  </td>
+									<td>배경수</td>
+									<td><a href="common.html" target="_blank">common.html</a></td>
+									<td>
+										 전체 페이지내에서 사용할 수 있는 공통 부분들만을 따로 구분지어 정리하여두었습니다.
+									</td>
+								</tr>
+								 <tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-01_1_알람(리스트 펼침)</td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-01_1.html" target="_blank">PTN-CST-01_1.html</a></td>
+									<td></td>
+								</tr>
+								 <tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-01_1_타입별 알람 </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-01_1_type.html" target="_blank">PTN-CST-01_1_type.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-01_2_실시간알람  </td>
+									<td>석지우</td>
+									<td><a href="layerPopup_PTN-CST-01_2.html" target="_blank">layerPopup_PTN-CST-01_2.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-02_나의상담전광판  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-02.html" target="_blank">PTN-CST-02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-03_나의할일_01  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-03_01.html" target="_blank">PTN-CST-03_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-03_나의할일_02  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-03_02.html" target="_blank">PTN-CST-03_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-04_나의예약조회_01  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-04_01.html" target="_blank">PTN-CST-04_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-04_나의예약조회_02  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-04_02.html" target="_blank">PTN-CST-04_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-05_지식관리_01  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-05_01.html" target="_blank">PTN-CST-05_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-05_지식관리_02  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_CST_05_02.html" target="_blank">winPopup_PTN_CST_05_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-05_지식관리_02_sample</td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_CST_05_02_sample.html" target="_blank">winPopup_PTN_CST_05_02_sample.html</a></td>
+									<td>제목 두줄 말줄임 처리 예시</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_01_상담기본  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_01.html" target="_blank">PTN-CST-06_01.html</a></td>
+									<td>인풋파일 없을때</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_02_일대일문의상담_1 </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-03_01.html" target="_blank">PTN-CST-03_01.html</a></td>
+									<td>인풋파일 있을때</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_02_일대일문의상담_2 </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_02_2.html" target="_blank">PTN-CST-06_02_2.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_02_일대일문의상담_3 </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-03_01.html" target="_blank">PTN-CST-03_01.html</a></td>
+									<td>제플린 가이드에는 화면 변화가 없음(중복)</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_03_파트너미답변  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_03.html" target="_blank">PTN-CST-06_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_04_OB예약  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_04_OB.html" target="_blank">PTN-CST-06_04_OB.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_09_OB예약이력  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_04_OB_01.html" target="_blank">PTN-CST-06_04_OB_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_05_SMS </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_05_SMS.html" target="_blank">PTN-CST-06_05_SMS.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_06_파트너상담이력등록 </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_06.html" target="_blank">PTN-CST-06_06.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_07_상담유형 팝업 </td>
+									<td>석지우</td>
+									<td><a href="winPopup_PTN-CST_06_07.html" target="_blank">winPopup_PTN-CST_06_07.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_08_파트너상담이력등록 </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_08.html" target="_blank">PTN-CST-06_08.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_09_그룹이관  </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-06_09.html" target="_blank">PTN-CST-06_09.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-06_10_개인이관  </td>
+									<td>석지우</td>
+									<td><a href="winPopup_PTN-CST_06_10.html" target="_blank">winPopup_PTN-CST_06_10.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-07_스크립트 </td>
+									<td>석지우</td>
+									<td><a href="PTN-CST-07.html" target="_blank">PTN-CST-07.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-08_파트너상담이력상세_1  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_CST_08_01.html" target="_blank">winPopup_PTN_CST_08_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-08_파트너상담이력상세_2  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_CST_08_02.html" target="_blank">winPopup_PTN_CST_08_02.html</a></td>
+									<td>
+										<p>티몬 파트너 영역 크기 변경 150px - > 160px</p>
+										<p>폰트 차이로 인해 글자가 줄바꿈 되는 현상이 발생되어 텍스트 영역의 크기를 변경했습니다.</p>
+										<p>전체다운로드 버튼 -> 폰트 변경으로 인해 디자인상 사이즈와 차이가 있습니다.</p>
+									</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-CST-08_파트너상담이력상세_3  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_CST_08_03.html" target="_blank">winPopup_PTN_CST_08_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-01_1 </td>
+									<td>이근호</td>
+									<td><a href="layerPopup_PTN_PS_01_01.html" target="_blank">layerPopup_PTN_PS_01_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-01_2 </td>
+									<td>신민식</td>
+									<td><a href="layerPopup_PTN_PS_01_02.html" target="_blank">layerPopup_PTN_PS_01_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-02_1 </td>
+									<td>이근호</td>
+									<td><a href="sample_home_ptn_info.html" target="_blank">sample_home_ptn_info.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-02_2 </td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_PS_02_02.html" target="_blank">winPopup_PTN_PS_02_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-04_Timeline  </td>
+									<td>이근호</td>
+									<td><a href="sample_home_timeline.html" target="_blank">sample_home_timeline.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-05_파트너판매_딜리스트_01 </td>
+									<td>신민식</td>
+									<td><a href="layout.html" target="_blank">layout.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-06_파트너판매_딜상세정보_01  </td>
+									<td>신민식</td>
+									<td><a href="PTN-PS-06_01.html" target="_blank">PTN-PS-06_01.html</a></td>
+									<td>
+										<p>딜 기본정보 테이블의 "미사용티켓환불(%)" 텍스트의 셀 너비가 부족하여 th의 너비를 110px -> 120px로 변경</p>
+										<p>배송정보 테이블의 "당일발송 마감시간" 텍스트의 셀 너비가 부족하여 th의 너비를 110px -> 115px로 변경</p>
+									</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-06_파트너판매_딜상세정보_02  </td>
+									<td>신민식</td>
+									<td><a href="PTN-PS-06_01.html" target="_blank">PTN-PS-06_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-06_파트너판매_딜상세정보_03-1_딜공지_01 </td>
+									<td>이근호</td>
+									<td><a href="layerPopup_PTN_PS_06_03_01.html" target="_blank">layerPopup_PTN_PS_06_03_01.html</a></td>
+									<td>
+										<p>해당 테이블의 스크롤이 존재하기 때문에 첨부파일의 툴팁 부분의 위치가 수정되었습니다.</p>
+										<p>우측 기준으로 위치가 적용되도록 수정되었습니다.</p>
+									</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-06_파트너판매_딜상세정보_03-1_딜공지_02 </td>
+									<td>이근호</td>
+									<td><a href="layerPopup_PTN_PS_06_03_02.html" target="_blank">layerPopup_PTN_PS_06_03_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-06_파트너판매_딜상세정보_03-1_딜공지_03 </td>
+									<td>이근호</td>
+									<td><a href="layerPopup_PTN_PS_06_03_03.html" target="_blank">layerPopup_PTN_PS_06_03_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-06_파트너판매_딜상세정보_03-1_딜공지_04 </td>
+									<td>이근호</td>
+									<td><a href="layerPopup_PTN_PS_06_03_04.html" target="_blank">layerPopup_PTN_PS_06_03_04.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-06_파트너판매_딜상세정보_03-1_딜공지_05 </td>
+									<td>이근호</td>
+									<td><a href="layerPopup_PTN_PS_06_03_05.html" target="_blank">layerPopup_PTN_PS_06_03_05.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-06_파트너판매_딜상세정보_03-1_딜공지_06 </td>
+									<td>이근호</td>
+									<td><a href="layerPopup_PTN_PS_06_03_06.html" target="_blank">layerPopup_PTN_PS_06_03_06.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-07_파트너판매_딜별CS문의내역_01 </td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_PS_07_01.html" target="_blank">winPopup_PTN_PS_07_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-07_파트너판매_딜별CS문의내역_02 </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_PS_07_02.html" target="_blank">winPopup_PTN_PS_07_02.html</a></td>
+									<td>
+										<p>첨부파일 전체다운로드 버튼 크기 다른 페이지와 같은 버튼인데 사이즈가 달라 다른페이지의 첨부파일 버튼과 동일하게 스타일 적용했습니다.</p>
+										<p>( 다른 페이지 버튼 참고 페이지 : PTN-CST-08_파트너상담이력상세_3 )</p>
+										<p>테이블 첫번째 열 사이즈 100px->110px로 변경하였습니다.</p>
+										<p>폰트사이즈 변경으로 인해 텍스트 줄바꿈 현상이 있어서 크기 수정했습니다.</p>
+									</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-08_파트너판매_딜주문정보_01  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_PS_08_01.html" target="_blank">winPopup_PTN_PS_08_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-09_파트너판매_딜주문별클레임정보_01  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_PS_09_01.html" target="_blank">winPopup_PTN_PS_09_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-09_파트너판매_딜주문별클레임정보_02  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_PS_09_02.html" target="_blank">winPopup_PTN_PS_09_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-09_파트너판매_딜주문별클레임정보_03  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_PS_09_03.html" target="_blank">winPopup_PTN_PS_09_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-09_파트너판매_딜주문별클레임정보_04  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_PS_09_04.html" target="_blank">winPopup_PTN_PS_09_04.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-08_파트너 판매_딜 주문 정보_1-3_미사용티켓  </td>
+									<td>석지우</td>
+									<td><a href="winPopup_PTN_PS_09_01_03.html" target="_blank">winPopup_PTN_PS_09_01_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-PS-08_파트너판매_딜 주문 정보_1-2_딜별주문조회  </td>
+									<td>석지우</td>
+									<td><a href="winPopup_PTN_PS_08_1_2.html" target="_blank">winPopup_PTN_PS_08_1_2.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-02_상담내역조회_01</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_02_01.html" target="_blank">winPopup_PTN_Top_02_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-02_상담내역조회_02</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_02_02.html" target="_blank">winPopup_PTN_Top_02_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-03_OB예약내역조회</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_03.html" target="_blank">winPopup_PTN_Top_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-04_문자발송내역</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_04.html" target="_blank">winPopup_PTN_Top_04.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-05_딜별 공지사항_01</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_05_01.html" target="_blank">winPopup_PTN_Top_05_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-05_딜별 공지사항_02 <br />- 내용, 첨부파일, 연관딜 모두 노출</td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_05_02_01.html" target="_blank">winPopup_PTN_Top_05_02_01.html</a></td>
+									<td>
+										<p>첨부파일 전체 다운로드 버튼 아이콘 색상 다른 버튼하고 다릅니다. 다른 페이지에서 사용하는 버튼과 동일한 스타일로 적용했습니다.</p>
+										<p>( 다른 페이지 버튼 참고 페이지 : PTN-CST-08_파트너상담이력상세_3 )</p>
+									</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-05_딜별 공지사항_02 <br />- 첨부파일 비노출</td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_05_02_02.html" target="_blank">winPopup_PTN_Top_05_02_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-05_딜별 공지사항_02 <br />- 연관딜 비노출</td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_05_02_03.html" target="_blank">winPopup_PTN_Top_05_02_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-05_딜별 공지사항_02 <br />- 첨부파일, 연관딜 모두 비노출</td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_05_02_04.html" target="_blank">winPopup_PTN_Top_05_02_04.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-05_딜별 공지사항_03 </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_05_03.html" target="_blank">winPopup_PTN_Top_05_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-06_지식관리_01</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_06_01.html" target="_blank">winPopup_PTN_Top_06_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-06_지식관리_02_1  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_06_02_01.html" target="_blank">winPopup_PTN_Top_06_02_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-06_지식관리_02_3  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_06_02_03.html" target="_blank">winPopup_PTN_Top_06_02_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-07_전체상담</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_07.html" target="_blank">winPopup_PTN_Top_07.html</a></td>
+									<td>창 너비가 부족하여 상담유형의 인풋길이를 240px -> 203px로 줄임</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-08_통합파트너OB예약내역</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_08.html" target="_blank">winPopup_PTN_Top_08.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-09_통합파트너전체문자발송내역</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_09.html" target="_blank">winPopup_PTN_Top_09.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-10_통합파트너CS문의조회내역_01</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_10_01.html" target="_blank">winPopup_PTN_Top_10_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-10_통합파트너CS문의조회내역_02 </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_10_02.html" target="_blank">winPopup_PTN_Top_10_02.html</a></td>
+									<td>
+										<p>테이블 첫번째 열 사이즈 100px->110px로 변경</p>
+										<p>폰트사이즈 변경으로 인해 텍스트 줄바꿈 현상이 있어서 크기 수정했습니다.</p>
+									</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-11_파트너상담재배정_01-1  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_11_01_01.html" target="_blank">winPopup_PTN_Top_11_01_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-11_파트너상담재배정_01-2  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_11_01_02.html" target="_blank">winPopup_PTN_Top_11_01_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-11_파트너상담재배정_02_01 </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_11_02_01.html" target="_blank">winPopup_PTN_Top_11_02_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-11_파트너상담재배정_02_02 </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_11_02_02.html" target="_blank">winPopup_PTN_Top_11_02_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-13_파트너상담사스킬등록_01-1  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_13_01_01.html" target="_blank">winPopup_PTN_Top_13_01_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-13_파트너상담사스킬등록_01-2  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_13_01_02.html" target="_blank">winPopup_PTN_Top_13_01_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-13_파트너상담사스킬등록_02-1  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_13_02_01.html" target="_blank">winPopup_PTN_Top_13_02_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-13_파트너상담사스킬등록_02-2  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_13_02_02.html" target="_blank">winPopup_PTN_Top_13_02_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-13_파트너상담사스킬등록_02-3  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_13_02_03.html" target="_blank">winPopup_PTN_Top_13_02_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-13_파트너상담사스킬등록_02-4  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_13_02_04.html" target="_blank">winPopup_PTN_Top_13_02_04.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-14_파트너상담사스킬등록현황조회_01_1</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_14_01_1.html" target="_blank">winPopup_PTN_Top_14_01_1.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-14_파트너상담사스킬등록현황조회_01_2</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_14_01_2.html" target="_blank">winPopup_PTN_Top_14_01_2.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-14_파트너상담사스킬등록현황조회_01_3</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_14_01_3.html" target="_blank">winPopup_PTN_Top_14_01_3.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-14_파트너상담사스킬등록현황조회_01_4</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_14_01_4.html" target="_blank">winPopup_PTN_Top_14_01_4.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-15_파트너상담라우팅관리_01  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_15_01.html" target="_blank">winPopup_PTN_Top_15_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-15_파트너상담라우팅관리_02  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_15_02.html" target="_blank">winPopup_PTN_Top_15_02.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-15_파트너상담라우팅관리_03  </td>
+									<td>이근호</td>
+									<td><a href="winPopup_PTN_Top_15_03.html" target="_blank">winPopup_PTN_Top_15_03.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN-Top-16_사용자정보조회</td>
+									<td>신민식</td>
+									<td><a href="winPopup_PTN_Top_16.html" target="_blank">winPopup_PTN_Top_16.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN_00_LOGIN_01 </td>
+									<td>이근호</td>
+									<td><a href="login.html" target="_blank">login.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN_00_LOGIN_02 </td>
+									<td>이근호</td>
+									<td><a href="login.html" target="_blank">login.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PTN_Util-02 </td>
+									<td>이근호</td>
+									<td><a href="layerPopup_PTN_Util-02.html" target="_blank">layerPopup_PTN_Util-02.html</a></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+				 </dd>
+			</dl>
+	 </div>
+
+<script>
+
+	let tdsWorkers = document.querySelectorAll( 'table tr > td:nth-child(3)' ) ;
+	let tdsStatus = document.querySelectorAll( 'table tr > td:nth-child(1)' ) ;
+
+	[].forEach.call( tdsWorkers , ( td , idx ) => {
+		let cName = null ;
+		switch ( td.textContent ) {
+			case '배경수' :
+				cName = 'bks' ;
+				break ;
+			case '이근호' :
+				cName = 'lkh' ;
+				break ;
+			case '석지우' :
+				cName = 'sjw' ;
+				break ;
+			case '신민식' :
+				cName = 'sms' ;
+				break ;
+			default :
+		}
+
+		if ( cName != null ) {
+			td.closest( 'tr' ).classList.add( cName ) ;
+		}
+	}) ;
+
+	[].forEach.call( tdsStatus , ( td , idx ) => {
+		let cName = null ;
+		switch ( td.textContent ) {
+			case '진행중' :
+				cName = 'inProgress' ;
+				break ;
+			case '완료' :
+				cName = 'complete' ;
+				break ;
+			default :
+		}
+
+		if ( cName != null ) {
+			td.closest( 'tr' ).classList.add( cName ) ;
+		}
+	}) ;
+
+	let slctWorkers = document.querySelector( 'select.workers' ) ;
+	slctWorkers.addEventListener( 'change' , () => {
+		console.log( 'a' , slctWorkers.selectedIndex ) ;
+		let workerName = '' ;
+		switch ( slctWorkers.selectedIndex ) {
+			case 1 :
+				workerName = '석지우' ;
+				break ;
+			case 2 :
+				workerName = '이근호' ;
+				break ;
+			case 3 :
+				workerName = '신민식' ;
+				break ;
+			case 4 :
+				workerName = '배경수' ;
+				break ;
+			default :
+				workerName = '전체' ;
+		}
+
+		[].forEach.call( tdsWorkers , ( td , idx ) => {
+			let cName = null ;
+			if ( workerName == '전체' ) {
+				td.closest( 'tr' ).classList.remove( 'none' ) ;
+			} else {
+				if ( td.textContent != workerName ) {
+					td.closest( 'tr' ).classList.add( 'none' ) ;
+				} else {
+					td.closest( 'tr' ).classList.remove( 'none' ) ;
+				}
+			}
+		}) ;
+	}) ;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="content">
+  <div class="get_product_wrap">
+    <div class="header">
+      <h2>엑셀로 수정하기</h2>
+    </div>
+    <div class="spc_tab_wp">
+      <ul class="spc_tab">
+        <li><button type="button">상품단위 수정</button></li>
+        <li class="on"><button type="button">옵션단위 수정</button></li>
+      </ul>
+    </div>
+    <ul class="spc_note mb18">
+      <li><i class="dot"></i>옵션별 재고, 노출/미노출, 옵션값 추가가 가능합니다.</li>
+    </ul>
+    <div class="btn_area right decrease">
+      <button type="submit" class="btn cancel2">엑셀 다운로드</button>
+      <button type="submit" class="btn submit2">엑셀 업로드</button>
+    </div>
+    <div class="upload_request mt50">
+      <strong><span>업로드 요청</span></strong>
+      <ul class="spc_note">
+          <li><i class="dot"></i>요청 결과가 ‘등록 불가’인 상품은 오류 엑셀을 다운받아 수정한 뒤 재업로드 해주세요.</li>
+          <li><i class="dot"></i>요청 결과가 ‘등록 가능’인 상품은 순차적으로 자동 등록이 진행되며, 등록 완료까지 최대 1분이 소요됩니다.</li>
+          <li><i class="dot"></i>자동 등록에 실패한 상품은 메일로 안내 드립니다. </li>
+        </ul>
+    </div>
+    <table class="deals_tb02 custom">
+        <colgroup>
+          <col style="width: 142px;">
+          <col style="width: 254px;">
+          <col style="width: 163px;">
+          <col style="width: auto;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>상품번호</th>
+            <th>상품명</th>
+            <th>요청 결과</th>
+            <th>사유</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>-</td>
+            <td>사무용 노트북</td>
+            <td><p class="state_txt or">등록 불가</p></td>
+            <td>모든 옵션의 가격은 동일해야 합니다.</td>
+          </tr>
+          <tr>
+            <td>12345678</td>
+            <td>노트북 울트라 PC 14U380-EU1TK </td>
+            <td><p class="state_txt none_bold">등록 가능 (등록 중)</p></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>게임용 노트북</td>
+            <td><p class="state_txt or">등록 불가</p></td>
+            <td>사전에 등록되지 않은 카테고리 번호입니다.</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>중고 노트북</td>
+            <td><p class="state_txt or">등록 불가</p></td>
+            <td>브랜드 항목은 필수 입력 값입니다.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn_area right mt15">
+        <button type="submit" class="btn cancel3">확인</button>
+      </div>
+  </div>
+</div>
+</body>
+</html>

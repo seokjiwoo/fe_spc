@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+%sp-delivery {
+    background: url('../im/sp-delivery.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-delivery($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-delivery, $filename);
+    @extend %sp-delivery;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-delivery: (
+    spritesheet_name: sp-delivery,
+    ico_quest: (offset_x: -25px, offset_y: 0, width: 16px, height: 16px),
+    ico_quest2: (offset_x: 0, offset_y: -25px, width: 12px, height: 12px),
+    ico_refresh: (offset_x: 0, offset_y: 0, width: 21px, height: 21px),
+);

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+%sp-sales {
+    background: url('../im/sp-sales.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-sales($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-sales, $filename);
+    @extend %sp-sales;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-sales: (
+    spritesheet_name: sp-sales,
+    btn_next_after: (offset_x: 0, offset_y: 0, width: 24px, height: 24px),
+    btn_next_before: (offset_x: -28px, offset_y: 0, width: 24px, height: 24px),
+    btn_nextend_after: (offset_x: 0, offset_y: -28px, width: 24px, height: 24px),
+    btn_nextend_before: (offset_x: -28px, offset_y: -28px, width: 24px, height: 24px),
+    btn_prev_after: (offset_x: -56px, offset_y: 0, width: 24px, height: 24px),
+    btn_prev_before: (offset_x: -56px, offset_y: -28px, width: 24px, height: 24px),
+    btn_prevfirst_after: (offset_x: 0, offset_y: -56px, width: 24px, height: 24px),
+    btn_prevfirst_before: (offset_x: -28px, offset_y: -56px, width: 24px, height: 24px),
+    ico_arr_down: (offset_x: -84px, offset_y: -67px, width: 16px, height: 10px),
+    ico_arr_up: (offset_x: -60px, offset_y: -84px, width: 16px, height: 8px),
+    ico_balloon_arr: (offset_x: -80px, offset_y: -84px, width: 11px, height: 7px),
+    ico_btn_close: (offset_x: -84px, offset_y: -24px, width: 19px, height: 19px),
+    ico_chk_off: (offset_x: -56px, offset_y: -56px, width: 20px, height: 20px),
+    ico_chk_on: (offset_x: -84px, offset_y: 0, width: 20px, height: 20px),
+    ico_clip: (offset_x: -84px, offset_y: -47px, width: 16px, height: 16px),
+    ico_help: (offset_x: 0, offset_y: -84px, width: 16px, height: 16px),
+    ico_radio_off: (offset_x: -20px, offset_y: -84px, width: 16px, height: 16px),
+    ico_radio_on: (offset_x: -40px, offset_y: -84px, width: 16px, height: 16px),
+    ico_slct_arr: (offset_x: -108px, offset_y: 0, width: 10px, height: 5px),
+    ico_txt_arrow: (offset_x: -108px, offset_y: -9px, width: 4px, height: 8px),
+    ico_txt_arrow2: (offset_x: -108px, offset_y: -21px, width: 3px, height: 5px),
+);

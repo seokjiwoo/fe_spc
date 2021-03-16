@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 상품정보제공고시 등록</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+
+
+<!-- 상품정보제공고시 등록 -->
+<div class="enrollment_wrap">
+	<div class="header">
+		<h2>상품정보 제공고시 등록 <button class="btn guide_down">등록가이드</button></h2>
+		<button class="btn submit2">저장</button>
+	</div>
+	<form action="" class="spc_form">
+		<fieldset>
+			<table class="spc_table_form keyword">
+				<colgroup>
+					<col style="width: 183px  ; ">
+					<col style="width: 178px ; ">
+					<col style="width: 178px ; ">
+					<col style="width: 178px ; ">
+					<col style="width: auto ; ">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th rowspan="2">심의 키워드 발견</th>
+						<td>의심 단어</td>
+						<td>확인</td>
+						<td>입증</td>
+						<td class="red">금지</td>
+					</tr>
+					<tr>
+						<td><a href="#">28<em>개</em></a></td>
+						<td><a href="#" class="blue">3<em>개</em></a></td>
+						<td><a href="#" class="green">5<em>개</em></a></td>
+						<td><a href="#" class="red">20<em>개</em></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</form>
+	<!-- 
+		키워드에 따른 컬러 변경 클래스 입니다. 
+		keyword_chk 뒤에 넣어주세요
+		예) keyword_chk red / keyword_chk blue / keyword_chk green
+	-->
+	<div class="keyword_chk red">
+		<em>금지단어</em>
+		<span class="ls">
+			<a href="#">뾰루지</a>
+			<a href="#">디벤린겔</a>
+			<a href="#">림프</a>
+			<a href="#">메디슨</a>
+			<a href="#">머티</a>
+			<a href="#">컬</a>
+			<a href="#">뾰루지</a>
+			<a href="#">디벤린겔</a>
+			<a href="#">림프</a>
+			<a href="#">메디슨</a>
+			<a href="#">머티</a>
+			<a href="#">컬</a>
+			<a href="#">뾰루지</a>
+			<a href="#">디벤린겔</a>
+			<a href="#">림프</a>
+			<a href="#">메디슨</a>
+			<a href="#">머티</a>
+			<a href="#">컬</a>
+			<a href="#">뾰루지</a>
+			<a href="#">디벤린겔</a>
+			<a href="#">림프</a>
+			<a href="#">메디슨</a>
+			<a href="#">머티</a>
+			<a href="#">컬</a>
+			<a href="#">뾰루지</a>
+			<a href="#">디벤린겔</a>
+			<a href="#">림프</a>
+			<a href="#">메디슨</a>
+			<a href="#">머티</a>
+			<a href="#">컬</a>
+			<a href="#">뾰루지</a>
+			<a href="#">디벤린겔</a>
+			<a href="#">림프</a>
+			<a href="#">메디슨</a>
+			<a href="#">머티</a>
+			<a href="#">컬</a>
+		</span>
+	</div>
+	<div class="scroll_box h710">
+		<form action="" class="spc_form">
+			<fieldset>
+				<table class="spc_table_form">
+					<colgroup>
+						<col style="width: 183px ; ">
+						<col style="width: * ; ">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th rowspan="2"><span class="bullet">*</span>등록방식<button class="help">도움</button></th>
+							<td>
+								<label for="ly_radio5-1" class="spc_radio checked"><input type="radio" id="ly_radio5-1" name="ly_radio5" checked="checked"><i class="symbol"></i>직접 등록</label>
+								<label for="ly_radio5-2" class="spc_radio"><input type="radio" id="ly_radio5-2" name="ly_radio5"><i class="symbol"></i>템플릿 선택 등록</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="spc_select">
+										<div class="value"><span class="selected">상품군 선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								<button type="button" class="btn init">추가</button>
+								<button type="button" class="btn init">템플릿 삭제</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+		</form>
+		<div class="add_products">
+			<div class="btn_ls">
+				<button type="button" class="btn del_orange">화장품<span></span></button>
+				<button type="button" class="btn del">건강기능식품<span></span></button>
+				<button type="button" class="btn del">일이삼사오육칠팔구십<span></span></button>
+				<button type="button" class="btn del">가정용기전기제품<span></span></button>
+				<button type="button" class="btn del">영유아용품<span></span></button>
+				<button type="button" class="btn del">계절가전<span></span></button>
+				<button type="button" class="btn del">가정용기전기제품<span></span></button>
+			</div>
+			<div class="template_chk">
+				<label for="tem_add1-1" class="spc_check"><input type="checkbox" id="tem_add1-1"><i class="symbol"></i>템플릿으로 추가</label>
+				<input type="text" class="spc_text name" placeholder="한글기준 최대 10자" />
+				<label for="tem_add1-2" class="spc_check right"><input type="checkbox" id="tem_add1-2"><i class="symbol"></i>상품상세정보 참조로 전체 입력(입력불가한 항목은 직접입력필요)</label>
+			</div>
+			<table class="input_tb">
+				<colgroup>
+					<col style="width:203px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>상품군</th>
+						<td>상품군1</td>
+					</tr>
+					<tr>
+						<th>1.용량또는중량</th>
+						<td>
+							<textarea class="txtarea" disabled></textarea>
+							<p><label for="product01" class="spc_check disabled"><input type="checkbox" id="product01" disabled><i class="symbol"></i>상품상세정보 참조로</label></p>
+						</td>
+					</tr>
+					<tr>
+						<th>2. 제품주요사양</th>
+						<td>
+							<!-- textarea 에서 정보입력후 code Box 로 변경되는 부분입니다. -->
+							<div class="keyword_box">
+								<a href="#" class="red">뾰루지</a>
+								<a href="#" class="blue">라미실</a>
+								<a href="#" class="blue">Lamisil</a>
+								<a href="#" class="green">트임</a>
+							</div>
+							<p><label for="product02" class="spc_check"><input type="checkbox" id="product02"><i class="symbol"></i>상품상세정보 참조로</label></p>
+						</td>
+					</tr>
+					<tr>
+						<th>3.사용기한또는개봉후사용기</th>
+						<td>
+							<textarea class="txtarea"></textarea>
+							<p><label for="product03" class="spc_check"><input type="checkbox" id="product03"><i class="symbol"></i>상품상세정보 참조로</label></p>
+						</td>
+					</tr>
+					<tr>
+						<th>4.사용방법</th>
+						<td>
+							<textarea class="txtarea"></textarea>
+							<p><label for="product04" class="spc_check"><input type="checkbox" id="product04"><i class="symbol"></i>상품상세정보 참조로</label></p>
+						</td>
+					</tr>
+					<tr>
+						<th>5.제조업자 및 제조판매업</th>
+						<td>
+							<textarea class="txtarea"></textarea>
+							<p><label for="product05" class="spc_check"><input type="checkbox" id="product05"><i class="symbol"></i>상품상세정보 참조로</label></p>
+						</td>
+					</tr>
+					<tr>
+						<th>7-3. 소비자의 추가적인 부담사항 <span>(가입비, 유심카드 구입비 등 추가로 부담하여야 할 금액, 부가서비스, 의무 사용기간, 위약금 등)</span></th>
+						<td>
+							<textarea class="txtarea"></textarea>
+							<p><label for="product06" class="spc_check"><input type="checkbox" id="product06"><i class="symbol"></i>상품상세정보 참조로</label></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- // 상품정보제공고시 등록 -->
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	
+	/* [D] 탭 클릭 */
+	$('.spc_form .btn_toggle').on('click', function(){
+		var $this = $(this);
+		var $spcForm = $this.closest('.spc_form');
+		
+		$spcForm.toggleClass('open');
+	});
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+</script>
+</body>
+</html>

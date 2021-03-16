@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sales.css">
+	<style>
+		/* [D] UI 확인용 */
+		.sales_layer{
+			display: block;
+			position: relative; 
+			margin : 20px; 
+		}
+	</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+
+<!-- 배송지연 패널티 -->
+<div class="sales_layer penalty" style="width:1128px;">
+	<div class="layer_hd">
+		<h3>배송지연 패널티</h3>
+	</div>
+	<div class="layer_ct">
+		<div class="desc">
+			묶음배송을 진행한 경우 <em>출고일이 가장 늦은 딜번호 기준</em>으로 배송지연패널티가 적용됩니다.
+		</div>
+		<table class="sales_tb">
+			<colgroup>
+				<col width="101px" />
+				<col width="101px" />
+				<col width="101px" />
+				<col width="111px" />
+				<col width="111px" />
+				<col width="211px" />
+				<col width="*" />
+				<col width="111px" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>배송번호</th>
+					<th>주문번호</th>
+					<th>딜번호</th>
+					<th>출고일</th>
+					<th>배송완료일</th>
+					<th>지연사유</th>
+					<th>지연사유 상세</th>
+					<th>지연신고일</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>370715226</td>
+				<td>2327528618</td>
+				<td>2603150434</td>
+				<td>2019-11-07<br >18:31:48</td>
+				<td>2019-11-08<br >19:10:04 </td>
+				<td>
+					<p class="txt pd15">지정일발송(예약발송)</p>
+				</td>
+				<td>
+					<p class="txt pd15">md협의건으로 11월 8일까지 출고예정입니다.</p>
+				</td>
+				<td>2019-11-05<br >09:23:28</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+<!-- 배송지연 패널티 팝업 -->
+<div class="sales_layer penalty" style="width:1128px;">
+	<div class="layer_hd">
+		<h3>배송지연 패널티</h3>
+	</div>
+	<div class="layer_ct">
+		<div class="desc">
+			배송지연된 주문에 대한 패널티 금액입니다.
+			<div class="right_btns">
+				<button>자주하는 질문</button>
+				<button>배송지연패널티</button>
+			</div>
+		</div>
+		<table class="sales_tb">
+			<colgroup>
+				<col width="101px" />
+				<col width="101px" />
+				<col width="101px" />
+				<col width="166px" />
+				<col width="126px" />
+				<col width="166px" />
+				<col width="166px" />
+				<col width="*" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>배송번호</th>
+					<th>주문번호</th>
+					<th>딜번호</th>
+					<th>지연기준일</th>
+					<th>지연일수</th>
+					<th>발송지연 안내일</th>
+					<th>출고일</th>
+					<th>패널티 금액</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>370715226</td>
+				<td>2327528618</td>
+				<td>2603150434</td>
+				<td>2019-11-07 18:31:48</td>
+				<td>1</td>
+				<td>2019-11-08 19:10:04</td>
+				<td>2019-11-08 19:10:04</td>
+				<td><p class="r_price">500원</p></td>
+			</tr>
+			</tbody>
+		</table>
+		<p class="totalprice">총 패널티 금액 500 원</p>
+		<h4>소명접수 사유</h4>
+		<table class="sales_tb type_02 reason_tbl">
+			<colgroup>
+				<col width="150">
+				<col width="*">
+			</colgroup>
+			<tbody>
+			<tr>
+				<th>소명사유 선택</th>
+				<td>
+					<div class="spc_select">
+						<div class="value"><span class="selected">전체</span><i></i></div>
+						<select>
+							<option value="">전체</option>
+						</select>
+					</div>
+					<textarea class="txt_area" placeholder="패널티 금액에 대한 기타 소명접수 내용을 등록해주세요.&#13;&#10;등록은 한번만 가능하며, 등록 후 수정 불가하오니 신중하게 적어주세요. (250자 이내)"></textarea>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<ul class="noti">
+			<li>소명접수를 하셔도 승인되지 않으면, 상기의 패널티 금액대로 차감 정산됩니다.</li>
+			<li>소명접수 승인에 대한 자세한 문의는 파트너지원센터로 문의해주세요</li>
+			<li>2019-09-30 주문까지 : 배송지연 기준일로부터 1일당 1,000원 (최대 10,000원)</li>
+			<li>2019-10-01 주문부터 : 배송지연 기준일로부터 1일당 500원 (최대 5,000원)</li>
+		</ul>
+
+		<div class="btns">
+			<button class="btn orange-border">취소</button>
+			<button class="btn orange">등록</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+<!-- 배송지연 패널티 소명결과 팝업 -->
+<div class="sales_layer penalty" style="width:1128px;">
+	<div class="layer_hd">
+		<h3>배송지연 패널티 소명결과</h3>
+	</div>
+	<div class="layer_ct">
+		<div class="desc">
+			배송지연된 주문에 대한 패널티 금액입니다.
+			<div class="right_btns">
+				<button>자주하는 질문</button>
+				<button>배송지연패널티</button>
+			</div>
+		</div>
+		<table class="sales_tb">
+			<colgroup>
+				<col width="101px" />
+				<col width="101px" />
+				<col width="101px" />
+				<col width="166px" />
+				<col width="126px" />
+				<col width="166px" />
+				<col width="166px" />
+				<col width="*" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>배송번호</th>
+					<th>주문번호</th>
+					<th>딜번호</th>
+					<th>지연기준일</th>
+					<th>지연일수</th>
+					<th>발송지연 안내일</th>
+					<th>출고일</th>
+					<th>패널티 금액</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>370715226</td>
+				<td>2327528618</td>
+				<td>2603150434</td>
+				<td>2019-11-07 18:31:48</td>
+				<td>1</td>
+				<td>2019-11-08 19:10:04</td>
+				<td>2019-11-08 19:10:04</td>
+				<td><p class="r_price">500원</p></td>
+			</tr>
+			</tbody>
+		</table>
+		<p class="totalprice">총 패널티 금액 500 원</p>
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+	
+<!-- 배송그룹번호 상세 정보 -->
+<div class="sales_layer delivery_num" style="width:648px;">
+	<div class="layer_hd">
+		<h3>배송그룹번호 상세 정보</h3>
+	</div>
+	<div class="layer_ct">
+		<p>묶음배송을 진행한 경우 배송완료일이 <span class="point">가장 빠른 딜번호 기준</span>으로 배송비가 적용 됩니다. </p>
+		<div class="scroll">
+			<table class="sales_tb">
+				<colgroup>
+					<col style="width:161px" />
+					<col style="width:161px" />
+					<col style="width:161px" />
+					<col style="width:auto" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>배송그룹번호</th>
+						<th>주문번호</th>
+						<th>딜번호</th>
+						<th>배송완료일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>2018-05-01</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div> 
+
+<div class="sales_layer delivery_num" style="width:648px;">
+	<div class="layer_hd">
+		<h3>배송그룹번호 상세 정보</h3>
+	</div>
+	<div class="layer_ct">
+		<p>묶음배송을 진행한 경우 배송완료일이 <span class="point">가장 늦은 딜번호 기준</span>으로 배송지연패널티가 적용 됩니다. </p>
+		<div class="scroll">
+			<table class="sales_tb">
+				<colgroup>
+					<col style="width:129px" />
+					<col style="width:129px" />
+					<col style="width:129px" />
+					<col style="width:129px" />
+					<col style="width:auto" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>배송그룹번호</th>
+						<th>주문번호</th>
+						<th>딜번호</th>
+						<th>배송시작일</th>
+						<th>배송완료일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+					<tr>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>123456789</td>
+						<td>&nbsp;</td>
+						<td>2018-05-01</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div> 
+
+<!-- 용어설명 -->
+<div class="sales_layer word_dis" style="width:758px;">
+	<div class="layer_hd">
+		<h3>용어설명</h3>
+	</div>
+	<div class="layer_ct">
+		<table class="sales_tb type_01">
+			<colgroup>
+				<col style="width:134px" />
+				<col style="width:auto" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>용어</th>
+					<th>용어설명</th>
+				</tr>
+			</thead>
+		</table>
+		<div class="scroll">
+			<table class="sales_tb type_01">
+				<colgroup>
+					<col style="width:134px" />
+					<col style="width:auto" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<td class="pd0">정산예정일</td>
+						<td>
+							<p class="txt ws">
+								계약한 정산기준일에 따라 계산되는 날짜 (단, 환불금액의 경우 환불발생일 +5영업일) <br>
+								2회차로 나눠 정산받도록 계약한 경우, 1차 예정일&gt;2차 예정일일 경우, 2차 예정일(+40일)에 100% 정산 진행
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">정산일</td>
+						<td>
+							<p class="txt">
+								정산예정금액이 지급완료된 일자이며, 정산 금액이 마이너스이면 지급되지 않으므로 정산일은 공란으로 <br>
+								표시 (단, 마이너스 금액을 상쇄할 수 있는 플러스 금액이 발생하여 지급된 경우 정산일 표시)
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">거래발생일</td>
+						<td>
+							<p class="txt">각 거래가 발생한 일자</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">거래구분</td>
+						<td>
+							<p class="txt">정산에 영향을 미치는 거래에 대한 구분 값</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0"><span class="lh">세금계산서 발행/<br>기준금액</span></td>
+						<td>
+							<p class="txt">
+								거래구분 중 배송완료, 배송완료 후 환불완료, 서비스수수료, 컨텐츠제작비용, 촬영비용 <br>
+								(단, 실제 발행된 금액과 차이가 있을 수 있음)
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">딜/옵션</td>
+						<td>
+							<p class="txt">각 거래에 대한 딜/옵션 정보이며, 서비스수수료와 같은 공제/환급금 성격의 거래는 옵션 정보가 없음</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">정산기준금액</td>
+						<td>
+							<p class="txt">판매가 기준의 배송완료금액 혹은 배송 후 환불금액 </p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">정산율(%)</td>
+						<td>
+							<p class="txt">각 거래에 대한 정산율</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">정산예정금액</td>
+						<td>
+							<p class="txt">(정산기준금액 – 판매대행수수료금액)X정산율(%) = 정산기준금액X정산율(%)-판매수수료금액 정산율반영</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">판매대행수수료(%)</td>
+						<td>
+							<p class="txt">옵션별 판매수수료이며 딜 계약 시 입력된 수수료와 동일함</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0">판매대행수수료금액</td>
+						<td>
+							<p class="txt">정산기준금액 X 판매대행수수료(%)</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="pd0"><span class="lh">판매대행수수료금액<br>(정산율반영)</span></td>
+						<td>
+							<p class="txt">판매대행수수료금액 X 정산율(%)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<ul class="noti">
+			<li>각 항목에 대한 상세문의는 파트너지원센터로 문의 부탁드립니다.</li>
+		</ul>
+		
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+
+<!-- 1:1문의작성 -->
+<div class="sales_layer question_write" style="width:648px;">
+	<div class="layer_hd">
+		<h3>1:1 문의작성</h3>
+	</div>
+	<div class="layer_ct">
+		<div class="scroll">
+			<table class="sales_tb type_02">
+				<colgroup>
+					<col style="width:151px" />
+					<col style="width:auto" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>연락처</th>
+						<td>
+							<div class="inp_wp">
+								<div class="spc_select" style="width: 100px; ">
+									<div class="value"><span class="selected">010</span><i></i></div>
+									<select>
+										<option>옵션1</option>
+										<option>옵션2</option>
+										<option>옵션3</option>
+									</select>
+								</div>
+								<span class="gap"></span>
+								<input type="text" style="width: 100px; ">
+								<span class="gap"></span>
+								<input type="text" style="width: 100px; ">
+							</div>
+							<label for="tmp_chk1" class="spc_check"><input type="checkbox" id="tmp_chk1"><i class="symbol"></i>답신여부를 SMS로 받음</label>
+						</td>
+					</tr>
+					<tr>
+						<th><span class="lh">답변 받으실<br>E-mail</span></th>
+						<td>
+							<div class="inp_wp">
+								<input type="text" style="width: 140px; ">
+								<span class="mail">@</span>
+								<input type="text" style="width: 140px; ">
+								<div class="spc_select ml6" style="width: 140px; ">
+									<div class="value"><span class="selected">naver.com</span><i></i></div>
+									<select>
+										<option>옵션1</option>
+										<option>옵션2</option>
+										<option>옵션3</option>
+									</select>
+								</div>
+							</div>
+							<label for="tmp_chk2" class="spc_check"><input type="checkbox" id="tmp_chk2"><i class="symbol"></i>E-mail로 답변 받음</label>
+						</td>
+					</tr>
+					<tr>
+						<th>문의유형</th>
+						<td>
+							<div class="inp_wp">
+								<div class="spc_select" style="width: 446px; ">
+									<div class="value"><span class="selected">선택하세요</span><i></i></div>
+									<select>
+										<option>옵션1</option>
+										<option>옵션2</option>
+										<option>옵션3</option>
+									</select>
+								</div>
+							</div>
+							<label for="tmp_chk3" class="spc_check checked"><input type="checkbox" id="tmp_chk3"><i class="symbol"></i>배송 지연 패널티 관련 문의</label>
+							<label for="tmp_chk4" class="spc_check"><input type="checkbox" id="tmp_chk4"><i class="symbol"></i>심의관련 1:1문의</label>
+						</td>
+					</tr>
+					<tr>
+						<th>문의딜</th>
+						<td>
+							<label for="tmp_radio1" class="spc_radio checked"><input type="radio" id="tmp_radio1" name="tmp_radio" checked="checked"><i class="symbol"></i>딜번호로 검색</label>
+							<label for="tmp_radio2" class="spc_radio"><input type="radio" id="tmp_radio2" name="tmp_radio"><i class="symbol"></i>진행중 딜목록</label>
+							<label for="tmp_radio3" class="spc_radio"><input type="radio" id="tmp_radio3" name="tmp_radio"><i class="symbol"></i>판매종료 딜목록</label>
+							<div class="search_box">
+								<input type="text" style="width: 366px; ">
+								<button>검색</button>
+							</div>
+							<ul class="noti">
+								<li>선택된 될 : 딜번호로 검색하여 딜을 선택해주세요.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th><span class="lh">문의 전<br>확인사항</span></th>
+						<td>
+							<p class="lh">
+								문의 전 확인사항입니다. 문의 전 확인사항입니다. 문의 전 확인사항입니다. 문의 <br>
+								전 확인사항입니다. 문의 전 확인사항입니다. 문의 전 확인사항입니다. 문의 전 <br>
+								확인사항입니다. 문의 전 확인사항입니다.<br>
+								문의 전 확인사항입니다. 문의 전 확인사항입니다. 문의 전 확인사항입니다. 문의 <br>
+								전 확인사항입니다. 문의 전 확인사항입니다. <br>
+							</p>
+							<ul class="noti">
+								<li>계약내용, 컨텐츠 등 딜 진행 관련 내용은 담당 MD에게 문의해주세요</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>제목</th>
+						<td><input type="text" style="width: 446px; "></td>
+					</tr>
+					<tr>
+						<th>내용</th>
+						<td>
+							<textarea class="txt_area"></textarea>
+							<ul class="noti">
+								<li>딜 정보, 고객정보 등 문의 내용을 최대한 상세하게 기재해 주세요.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>첨부파일</th>
+						<td>
+							<div class="btn fileUpload">
+								<input type="file">
+								<span>파일첨부</span>
+							</div>
+							<ul class="noti">
+								<li>파일 (gif, bmp, png, jpg, docs, xls, xlsx, pptx, txt, pdf)을 기준으로 최대 50MB 이하, <br> 최대 3개까지 첨부 가능합니다.</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+
+<!-- 배송지연 패널티 -->
+<div class="sales_layer penalty" style="width:648px;">
+	<div class="layer_hd">
+		<h3>배송지연 패널티</h3>
+	</div>
+	<div class="layer_ct">
+		<p class="txt">배송지연된 주문에 대한 패널티 금액입니다. <a href="#">패널티금액 산정기준</a></p>
+		<div class="scroll">
+			<table class="sales_tb type_03">
+				<colgroup>
+					<col style="width:122px" />
+					<col style="width:200px" />
+					<col style="width:122px" />
+					<col style="width:auto" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>주문번호</th>
+						<td>1234567890</td>
+						<th class="bdr-left">주문번호</th>
+						<td>1234567890</td>
+					</tr>
+					<tr>
+						<th>지연기준일</th>
+						<td>2018-04-19</td>
+						<th class="bdr-left">지연일수</th>
+						<td>1일</td>
+					</tr>
+					<tr>
+						<th>옵션</th>
+						<td colspan="3">05. 플리츠 벙거지 (베이지 CEidJ-OAS)|Free사이즈</td>
+					</tr>
+					<tr>
+						<th>옵션가</th>
+						<td>9,900</td>
+						<th class="bdr-left">배송지연신고</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>출고일</th>
+						<td>2018-04-19 18:40:00</td>
+						<th class="bdr-left">패널티금액</th>
+						<td>1,000원</td>
+					</tr>
+					<tr>
+						<th><span class="point">총 패널티금액</span></th>
+						<td colspan="3"><strong class="point">1,000원</strong></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>소명접수 사유</h4>
+			<table class="sales_tb type_02">
+				<colgroup>
+					<col style="width:122px;">
+					<col style="width:auto;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>소명사유 선택</th>
+						<td>
+							<div class="spc_select" style="width: 446px; ">
+								<div class="value"><span class="selected">전체</span><i></i></div>
+								<select>
+									<option>옵션1</option>
+									<option>옵션2</option>
+									<option>옵션3</option>
+								</select>
+							</div>
+							<textarea class="txt_area"></textarea>
+							<ul class="noti">
+								<li>패널티 금액에 대한 기타 소명접수 내용을 등록하세요. <br>등록은 한번만 가능하며, 등록 후 수정 불가하오니 신중하게 적어주세요. (50자 이내)</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="noti">
+				<li>소명접수를 하셔도 승인되지 않으면, 상기의 패널티 금액대로 차감 정산됩니다.</li>
+				<li>소명접수 승인에 대한 자세한 문의는 파트너지원센터로 문의하세요</li>
+			</ul>
+		</div>
+		
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+
+<div class="sales_layer penalty" style="width:648px;">
+	<div class="layer_hd">
+		<h3>배송지연 패널티</h3>
+	</div>
+	<div class="layer_ct">
+		<p class="txt">배송지연된 주문에 대한 패널티 금액입니다. <a href="#">패널티금액 산정기준</a></p>
+		<div class="scroll">
+			<table class="sales_tb type_03">
+				<colgroup>
+					<col style="width:122px" />
+					<col style="width:200px" />
+					<col style="width:122px" />
+					<col style="width:auto" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>배송그룹번호</th>
+						<td>1234567890</td>
+						<th class="bdr-left">주문번호</th>
+						<td>1234567890</td>
+					</tr>
+					<tr>
+						<th>딜번호</th>
+						<td>2018-04-19</td>
+						<th class="bdr-left">지연기준일</th>
+						<td>2018-05-09</td>
+					</tr>
+					<tr>
+						<th>지연일수</th>
+						<td>1일</td>
+						<th class="bdr-left">배송지연신고</th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>출고일</th>
+						<td>2018-04-19 18:40:00</td>
+						<th class="bdr-left">패널티금액</th>
+						<td>1,000원</td>
+					</tr>
+					<tr>
+						<th><span class="point">총 패널티금액</span></th>
+						<td colspan="3"><strong class="point">1,000원</strong></td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>소명접수 사유</h4>
+			<table class="sales_tb type_02">
+				<colgroup>
+					<col style="width:122px;">
+					<col style="width:auto;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>소명사유 선택</th>
+						<td>
+							<div class="spc_select" style="width: 446px; ">
+								<div class="value"><span class="selected">전체</span><i></i></div>
+								<select>
+									<option>옵션1</option>
+									<option>옵션2</option>
+									<option>옵션3</option>
+								</select>
+							</div>
+							<textarea class="txt_area"></textarea>
+							<ul class="noti">
+								<li>패널티 금액에 대한 기타 소명접수 내용을 등록하세요. <br>등록은 한번만 가능하며, 등록 후 수정 불가하오니 신중하게 적어주세요. (50자 이내)</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="noti">
+				<li>소명접수를 하셔도 승인되지 않으면, 상기의 패널티 금액대로 차감 정산됩니다.</li>
+				<li>소명접수 승인에 대한 자세한 문의는 파트너지원센터로 문의하세요</li>
+			</ul>
+		</div>
+		
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+
+<!-- 도움말 -->
+<div class="sales_layer help" style="width:648px;">
+	<div class="layer_hd">
+		<h3>도움말</h3>
+	</div>
+	<div class="layer_ct">
+		<ul class="tab">
+			<li class="on"><button>월별 매출내역</button></li>
+			<li><button>월별 매입내역</button></li>
+		</ul>
+		<div class="scroll">
+			<ul class="noti type02">
+				<li>월별 매출내역은 분기마다 국세청에 보고되는 사업자 번호별 ´판매대행자료´와 동일한 자료입니다. <br>국세청 고시 제 2015-6호의 4조에 의해 결제수단(증빙서류)별로 매출액이 보고 됩니다.</li>
+				<li>월별 매출내역은 위와 같은 기준으로 티몬에서 집계한 자료이므로 파트너분께서 부가가치세 신고를 위해 <br> 집계하셨던 기준과 다를 수 있습니다. 절대적인 자료는 아니므로 참고자료로 활용해 주시기 바랍니다.</li>
+			</ul>
+			<h4>매출내역 포함 거래</h4>
+			<table class="sales_tb type_04">
+				<colgroup>
+					<col style="width:110px;">
+					<col style="width:110px;">
+					<col style="width:auto;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>거래구분</th>
+						<th>집계기준일</th>
+						<th>매출대상</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">승인주문</td>
+						<td>승인일</td>
+						<td><p class="txt pd15">결제 승인이 완료(현금은 고객이 입금완료)된 금액(+)</p></td>
+					</tr>
+					<tr>
+						<td>발급일</td>
+						<td><p class="txt pd15">현금영수증 발급이 완료된 금액(+)</p></td>
+					</tr>
+					<tr>
+						<td>취소/환불주문</td>
+						<td>환불일</td>
+						<td>
+							<p class="txt pd15">
+								환불 승인이 완료(현금은 고객에게 환불완료)된 금액(-) <br>
+								환불로 인해 고객이 결제한 추가 배송비(+)
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4>집계방식에 따른 거래내역</h4>
+			<table class="sales_tb type_04">
+				<colgroup>
+					<col style="width:139px">
+					<col style="width:auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th><span class="lh">결제수단<br>(증빙서류)</span></th>
+						<th>설명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="lh">현금영수증<br>미발급</span></td>
+						<td>
+							<p class="txt pd15">
+								현금으로 결제하였으나 현금영수증 발급이 진행중인 거래이며 중복집계를 방지하기 <br>
+								위해 발급이 완료되면 발급된 월 내역에서 제외(-) 처리
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>기타</td>
+						<td>
+							<p class="txt pd15">고객이 사용한 티몬 캐쉬(적립금) 또는 할인금액을 의미</p>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2">매출차감액</td>
+						<td><p class="txt pd15">티몬부담 할인쿠폰금액 &gt; 판매대행수수료 일 경우 판매대행수수료 만큼 수수료를 감면</p></td>
+					</tr>
+					<tr>
+						<td>
+							<p class="txt pd15">
+								티몬부담 할인쿠폰금액 ≤ 판매대행수수료 일 경우 티몬부담 할인쿠폰 금액 만큼 <br>매입수수료를 감면
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="noti">
+				<li>매출차감액은 월별매출내역에서 제공해드리오니 총매출액에서 차감하고 신고하시길 권장합니다.</li>
+			</ul>
+			<h4>월별 매출내역 발생일</h4>
+			<table class="sales_tb">
+				<colgroup>
+					<col style="width:220px">
+					<col style="width:auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>발생일</th>
+						<th>집계 대상</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1일 ~ 4일</td>
+						<td>전월 15일까지 조회 가능</td>
+					</tr>
+					<tr>
+						<td>5일 ~ 19일</td>
+						<td>전월 말일까지 조회 가능</td>
+					</tr>
+					<tr>
+						<td>20일 ~ 월 말일</td>
+						<td>당월 15일까지 조회 가능</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+
+<div class="sales_layer help" style="width:648px;">
+	<div class="layer_hd">
+		<h3>도움말</h3>
+	</div>
+	<div class="layer_ct">
+		<ul class="tab">
+			<li><button>월별 매출내역</button></li>
+			<li class="on"><button>월별 매입내역</button></li>
+		</ul>
+		<div class="scroll">
+			<ul class="noti type02">
+				<li>
+					월별매입/매출내역은 최대 3개월 기간을 조회할 수 있으며 집계기간을 명시했으니 조회 후 매출월/매입월 별로 <br>
+					확인 부탁드립니다. 또한 매월 1일, 16일 양일은 데이터를 생성하는 일자로 전일자 데이터 집계 중에는 조회 불가능 <br>
+					할 수 있습니다.
+				</li>
+			</ul>
+			<h4>매출내역 포함 거래</h4>
+			<table class="sales_tb type_04">
+				<colgroup>
+					<col style="width:110px;">
+					<col style="width:110px;">
+					<col style="width:auto;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>거래구분</th>
+						<th>집계기준일</th>
+						<th>매출대상</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>배송완료 티켓</td>
+						<td>배송완료일</td>
+						<td><p class="txt pd15">배송이 완료된 티켓금액(+)</p></td>
+					</tr>
+					<tr>
+						<td>환불완료 티켓</td>
+						<td>환불일</td>
+						<td><p class="txt pd15">배송완료 후 환불승인이 완료된 티켓금액 (-)</p></td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="noti">
+				<li>배송딜입니다.</li>
+			</ul>
+			<h4>매입내역 집계 <span class="point">(매입내역은 판매대행수수료에서 매출차감액을 차감한 금액으로 집계됩니다.)</span></h4>
+			<table class="sales_tb type_04">
+				<colgroup>
+					<col style="width:139px">
+					<col style="width:auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>관련용어</th>
+						<th>설명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>판매대행수수료</td>
+						<td> 
+							<p class="txt pd15">옵션판매가 X (배송완료 - 환불완료 수량) X 옵션별 판매수수료(%)</p>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2">매출차감액</td>
+						<td><p class="txt pd15">티몬부담 할인쿠폰금액 &gt; 판매대행수수료 일 경우 판매대행수수료 만큼 수수료를 감면</p></td>
+					</tr>
+					<tr>
+						<td>
+							<p class="txt pd15">
+								티몬부담 할인쿠폰금액 ≤ 판매대행수수료 일 경우 티몬부담 할인쿠폰 금액 만큼 <br>매입수수료를 감면
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="noti">
+				<li>티몬부담 할인쿠폰 금액은 매출차감액 보다 크거나 같습니다. 이 금액은 참고자료로 활용해 주시기 바랍니다.</li>
+			</ul>
+			<h4>월별 매출내역 발생일</h4>
+			<table class="sales_tb">
+				<colgroup>
+					<col style="width:220px">
+					<col style="width:auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>발생일</th>
+						<th>설명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1일 ~ 15일</td>
+						<td>전월 16일 ~ 전월 말일 까지 집계내역 (5일 발행대상)</td>
+					</tr>
+					<tr>
+						<td>16일 ~ 월 말일</td>
+						<td>당월 1일 ~ 당월 15일 까지 집계내역 (20일 발행대상)</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="btns">
+			<button class="btn orange">확인</button>
+		</div>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>
+
+<!-- 매입 상세내역 요청자료  -->
+<div class="sales_layer request" style="width:648px;">
+	<div class="layer_hd">
+		<h3>매입 상세내역 요청자료</h3>
+	</div>
+	<div class="layer_ct">
+		<div class="scroll">
+			<table class="sales_tb type_04">
+				<colgroup>
+					<col style="width:139px">
+					<col style="width:305px">
+					<col style="width:auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>요청일</th>
+						<th>요청기간 / 딜명</th>
+						<th>다운로드</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2018-03-20</td>
+						<td>
+							<p class="deal_date">
+								<strong>2017-11-01~2017-11-30</strong>
+								<span>딜 전체</span>
+							</p>
+						</td>
+						<td>
+							<button class="btn default">엑셀 다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<td>2018-03-20</td>
+						<td>
+							<p class="deal_date">
+								<strong>2017-11-01~2017-11-30</strong>
+								<span>딜 전체</span>
+							</p>
+						</td>
+						<td>
+							<button class="btn default">엑셀 다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<td>2018-03-20</td>
+						<td>
+							<p class="deal_date">
+								<strong>2017-11-01~2017-11-30</strong>
+								<span>딜 전체</span>
+							</p>
+						</td>
+						<td>
+							<button class="btn default">엑셀 다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<td>2018-03-20</td>
+						<td>
+							<p class="deal_date">
+								<strong>2017-11-01~2017-11-30</strong>
+								<span>딜 전체</span>
+							</p>
+						</td>
+						<td>
+							<button class="btn default">엑셀 다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<td>2018-03-20</td>
+						<td>
+							<p class="deal_date">
+								<strong>2017-11-01~2017-11-30</strong>
+								<span>딜 전체</span>
+							</p>
+						</td>
+						<td>
+							<button class="btn default">엑셀 다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<td>2018-03-20</td>
+						<td>
+							<p class="deal_date">
+								<strong>2017-11-01~2017-11-30</strong>
+								<span>딜 전체</span>
+							</p>
+						</td>
+						<td>데이터 생성중</td>
+					</tr>
+					<tr>
+						<td>2018-03-20</td>
+						<td>
+							<p class="deal_date">
+								<strong>2017-11-01~2017-11-30</strong>
+								<span>딜 전체</span>
+							</p>
+						</td>
+						<td>데이터 생성중</td>
+					</tr>
+					<tr>
+						<td>2018-03-20</td>
+						<td>
+							<p class="deal_date">
+								<strong>2017-11-01~2017-11-30</strong>
+								<span>딜 전체</span>
+							</p>
+						</td>
+						<td>데이터 생성중</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<ul class="noti">
+			<li>
+				매입 상세내역은 요청하신 <span class="point">다음날 오전 10시 이후에 다운로드가 가능하며, </span><br>
+				<span class="point">요청일로부터 2개월 동안 재 다운로드 가능</span>합니다.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+%sp-support {
+    background: url('../im/sp-support.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-support($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-support, $filename);
+    @extend %sp-support;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-support: (
+    spritesheet_name: sp-support,
+    ico_radio_off: (offset_x: 0, offset_y: 0, width: 16px, height: 16px),
+    ico_radio_on: (offset_x: -20px, offset_y: 0, width: 16px, height: 16px),
+);

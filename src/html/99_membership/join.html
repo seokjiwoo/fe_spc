@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 브랜드 파트너 센터 :: 회원가입</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/membership.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc store"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc store"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc store"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc store"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc store"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global_brand.html')
+	</div>
+	<div id="container">
+		<div id="content" class="membership">
+			<h2 class="membership_title">회원가입</h2>
+			<p class="membership_desc">티몬에 등록된 제휴채널의 브랜드 파트너만 가입하실 수 있습니다.</p>
+			<div class="membership_box">
+				<h3 class="input_title">제휴채널 및 지점선택</h3>
+				<ul class="spc_form">
+					<li class="input_area">
+						<div class="spc_select">
+							<button class="value"><span class="selected">제휴채널 선택</span><i></i></button>
+							<select name="" id="">
+								<option>제휴채널 선택</option>
+								<option>제휴채널 선택</option>
+								<option>제휴채널 선택</option>
+							</select>
+						</div>
+					</li>
+					<li class="input_area"><input type="text" name="" value="" placeholder="지점 선택" class="spc_text" /></li>
+					<li class="input_desc">티몬의 지점은 제휴채널의 지점명입니다. 예) 티몬 강남점</li>
+				</ul>
+				<hr class="horizon_line" />
+				<h3 class="input_title">기본정보</h3>
+				<ul class="spc_form">
+					<li class="input_area brand_name">
+						<input type="text" name="" value="" placeholder="아이디" class="spc_text" />
+						<button class="btn link btn_membership">중복확인</button>
+					</li>
+					<li class="input_desc btm_space1">아이디는 5~10자의 한글, 영문, 숫자 및 특수기호 일부만 입력 가능합니다.</li>
+					<li class="input_area"><input type="password" name="" value="" placeholder="비밀번호" class="spc_text" /></li>
+					<li class="input_area"><input type="password" name="" value="" placeholder="비밀번호 확인" class="spc_text" /></li>
+					<li class="input_desc btm_space1">
+						10~20자의 영문 대/소문자, 숫자, 특수문자 2개 이상을 조합해서 사용해 주세요.<br />
+						연속된 숫자나 문자 4개 이상 사용할 수 없습니다.
+					</li>
+					<li class="input_area tel">
+						<div class="spc_select">
+							<button class="value"><span class="selected">010</span><i></i></button>
+							<select name="" id="">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+							</select>
+						</div>
+						<span class="tel_hypen"></span>
+						<input type="text" name="" value="" class="spc_text" />
+						<span class="tel_hypen"></span>
+						<input type="text" name="" value="" class="spc_text" />
+						<button class="btn link btn_membership">휴대폰 인증</button>
+					</li>
+					<li class="input_desc btm_space1">
+						연락 가능한 연락처를 입력해주세요.
+					</li>
+					<li class="input_area brand_name">
+						<div class="spc_text">
+							<a href="#" class="brand_obj">나이키<span class="icon_x"></span></a>
+							<a href="#" class="brand_obj">나이키우먼<span class="icon_x"></span></a>
+							<a href="#" class="brand_obj">나이키골프<span class="icon_x"></span></a>
+						</div>
+						<button class="btn link btn_membership">브랜드 조회</button>
+					</li>
+					<li class="input_desc">
+						상품 브랜드명을 조회하여 입력해 주세요.
+					</li>
+				</ul>
+				<hr class="horizon_line" />
+				<h3 class="input_title">
+					이용약관동의
+					<label for="agree_term" class="spc_check">
+						전체 이용약관 동의 <span class="org_text"></span>
+						<span class="symbol"></span>
+						<input type="checkbox" name="" id="agree_term" checked="checked">
+					</label>
+				</h3>
+				<table class="join_term_table1">
+					<colgroup>
+						<col style="width:33%;" />
+						<col style="width:34%;" />
+						<col style="width:33%;" />
+					</colgroup>
+					<thead>
+						<th>목적</th>
+						<th>항목</th>
+						<th>보유기간</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>본인식별 및 인증, 상담</td>
+							<td>휴대폰번호</td>
+							<td>회원 탈퇴 시 까지</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="term_txt">티몬의 지점은 제휴채널의 지점명입니다. 예) 티몬 강남점</p>
+				<p class="check_term_agree btm_space2">
+					<label for="save_id" class="spc_check">
+						개인정보 수집 및 이용 약관 동의 <span class="org_text">(필수)</span>
+						<span class="symbol"></span>
+						<input type="checkbox" name="" id="save_id" checked="checked">
+					</label>
+				</p>
+				<p class="term_txt">티몬 광고플랫폼인 슈퍼클릭 진행 권유를 위해 엔비스타 및 제휴대행사들에 필요 정보를 제공하고 위탁 합니다.</p>
+				<table class="join_term_table1">
+					<colgroup>
+						<col style="width:20%;">
+						<col style="width:30%;">
+						<col style="width:30%;">
+						<col style="width:20%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>제공 받는 자</th>
+							<th>제공 목적</th>
+							<th>항목</th>
+							<th>보유기간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>(주)엔비스타</td>
+							<td>슈퍼클릭 광고 권유를 <br> 위한 전화 및 이메일<br> 발송</td>
+							<td>사업자번호, 전화번호,<br> 이메일, 딜번호</td>
+							<td>1년</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="join_term_box">
+					<dl>
+						<dt>1.	개인정보 3자 제공</dt>
+						<dd>회사는 “개인정보 취급방침 내 2항. 개인정보의 수집 및 이용목적’에서 명시한 범위 내에서 개인정보를 사용을 원칙으로 하며, 회원의 사전 동의 없이 범위 외적으로 사용 또는 이용하지 않습니다. 또한, 회원의 개인정보를 외부 및 제3자에게 제공하지 않습니다. 단, 아래는 예외로 합니다.</dd>
+						<dd>
+							<ul>
+								<li>- 이용자들이 사전에 동의한 경우</li>
+								<li>- 법령의 규정에 따르거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우회사는 회원에 대하여 더욱 질 높은 서비스 제공 등을 위해 사전에 동의한 회원에 한하여, 아래와 같이 개인정보를 제공하거나 제공을 받고 있습니다.</li>
+							</ul>
+						</dd>
+						<dd><br>1-1 티켓몬스터’로부터 제공 및 위탁/이용</dd>
+						<dd>
+							<table class="join_term_table1">
+								<colgroup>
+									<col style="width:20%;">
+									<col style="width:30%;">
+									<col style="width:30%;">
+									<col style="width:20%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>제공 받는 자</th>
+										<th>제공하는 항목</th>
+										<th>제공받는 자의<br> 이용목적</th>
+										<th>보유 및 <br> 이용기간</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>(주)엔비스타</td>
+										<td>사업자번호, 전화번호,<br> 이메일, 딜번호</td>
+										<td>슈퍼클릭 광고<br>  권유를 위한 전화 <br>및  이메일 발송</td>
+										<td>1년</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+						<dd class="custom_t10">이용자는 개인정보의 제3자 제공에 대하여 동의를 하지 않을 수 있고, 언제든지 제3자 제공 동의를 철회할 수 있습니다. 동의를 거부하시는 경우에도 회원가입서비스는 이용하실 수 있으나, 제 3자 제공에 기반한 관련 서비스의 이용제공이 제한될 수 있습니다.</dd>
+					</dl>
+					<dl>
+						<dt>2.	수집한 개인정보 취급 위탁</dt>
+						<dd>회사는 서비스 이행을 위해 아래와 같이 개인정보 취급 업무를 외부 전문업체에 위탁하여 운영하고 있으며, 안전한 개인정보 보호를 위하여 관계 법령 및 필요사항을 내부적으로 규정하고 있습니다.</dd>
+						<dd>
+							<table class="join_term_table1">
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:50%">
+									<col style="width:30%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>수탁업체<br>(대행사)</th>
+										<th>위탁업무</th>
+										<th>보유 및 이용기간</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>디지털플래닝</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+									<tr>
+										<td>주피터</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+									<tr>
+										<td>헬라</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+									<tr>
+										<td>엠팝</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+									<tr>
+										<td>엔컴즈</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+									<tr>
+										<td>플레이오토</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+									<tr>
+										<td>스마일코리아</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+									<tr>
+										<td>아이디어키</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+									<tr>
+										<td>단크파트너스</td>
+										<td>슈퍼클릭 광고 권유를 위한 <br>전화영업 및 이메일 발송</td>
+										<td>1년</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+					</dl>
+					<dl>
+						<dt>3.	개인정보 파기</dt>
+						<dd>제3자에게 제공, 위탁된 개인정보의 보유, 이용 기간이 만료된 개인정보는 아래와 같은 방법으로 파기합니다.</dd>
+						<dd>
+							<ul>
+								<li>3-1. 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.</li>
+								<li>3-2. 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</li>
+							</ul>
+						</dd>
+					</dl>
+			     </div>
+				<p class="check_term_agree btm_space2">
+					<label for="save_id2" class="spc_check checked">
+						제 3자 정보제공 및 위탁이용 동의 <span class="org_text">(선택)</span>
+						<span class="symbol"></span>
+						<input type="checkbox" name="" id="save_id2" checked="checked">
+					</label>
+				</p>
+				<p class="button_area">
+					<button class="btn submit">회원가입</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+});
+</script>
+</body>
+</html>

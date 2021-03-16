@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+.spc_layer.claim {
+	.spc_form {
+		.subtext{
+			margin-top: 15px;
+			padding-bottom: 7px;
+		}
+		.subtext_list{
+			margin:20px 0 20px;
+			li{
+				.subtext{
+					margin-top:0;
+				}
+			}
+		}
+		.spc_check+.subtext {
+			margin-top: 10px;
+			padding-bottom: 0px;
+			line-height:18px;
+		}
+	}
+	.spc_table_form.claim_form td {
+		font-size:14px;
+		color:#595963;
+		.point{
+			color: $color_point;
+			font-weight:bold;
+		}
+		
+		.spc_text::input-placeholder {
+			color:#b8b8bb;
+			font-weight:bold;
+		}
+		.spc_text:-ms-input-placeholder {
+			color:#b8b8bb;
+			font-weight:bold;
+		}
+		.spc_text::-moz-placeholder {
+			color:#b8b8bb;
+			font-weight:bold;
+		}
+		.spc_text::-webkit-input-placeholder {
+			color:#b8b8bb;
+			font-weight:bold;
+		}
+		.spc_txt_area{
+			width:100%;
+			border:0;
+			padding:22px 0;
+			min-height:126px;
+			font-size:14px;
+			color: $color_base;
+		}
+	}
+
+	.spc_table_form.claim_change{
+		border-top:1px solid #babcc0;
+		th{
+			position:relative;
+			text-align:center;
+			padding:2px 10px 2px 10px;
+			border:0;
+
+			&:after{
+				position:absolute;
+				left:0;
+				top:16px;
+				content:"";
+				display: block;
+				width:1px;
+				height:11px;
+				background:#e7e8e9;
+			}
+
+			&:first-child{
+				&:after{
+					display:none;
+				}
+			}
+		}
+		td{
+			padding: 20px 10px 20px 10px;
+			text-align:center;
+			border-left:0;
+			border-top:1px solid #e8e9ea;
+			font-size:14px;
+			color: $color_dark;
+			strong{
+				color:$color_notable;
+			}
+			p.txt_left{
+				text-align:left;
+			}
+		}
+	}
+	.spc_table_form.claim_change + .btn_area {
+		margin-top:30px;
+	}
+
+	.amount {
+		text-align:center;
+		padding-left:0;
+		padding-right:0;
+	}
+	
+	.double_line {
+		padding-top:20px;
+		padding-bottom:11px;
+		margin-right:20px;
+		.text {
+			line-height:14px;
+			padding-bottom:15px;
+		}
+		.spc_check {
+			margin-top:10px;
+		}
+	}
+	.double_line:first-child {
+		padding-top:10px;
+		padding-bottom:20px;
+		border-bottom:1px solid #e8e9ea;
+		margin-right:20px;
+		.spc_select {
+			margin-bottom:5px;
+		}
+	}
+	.result_text {
+		margin:12px 20px 11px 0;
+		background-color:#fafbfa;
+		padding:14px 20px 16px 20px;
+		color:#595963;
+		font-family:'Dotum';
+		font-size:12px;
+		line-height:24px;
+		.operator_minus {
+			width:13px;
+			height:13px;
+			display:inline-block;
+			@include sp-claim2("operator_minus");
+			vertical-align:middle;
+		}
+		.operator_plus {
+			width:13px;
+			height:13px;
+			display:inline-block;
+			@include sp-claim2("operator_plus");
+			vertical-align:middle;
+		}
+		.result_line {
+			font-size:14px;
+			font-weight:bold;
+			line-height:26px;
+			margin-bottom:7px;
+			strong {
+				color:$color_point;
+			}
+		}
+	}
+	.pos_wrap{
+		position:relative;
+		.btn{
+			position:absolute;
+			right:0;
+			top:-15px;
+		}
+	}
+	.file{
+		button.btn.small{
+			margin-left:5px;
+		}
+		span.tit{
+			height:36px;
+			line-height:36px;
+			text-align:center;
+			border:1px solid #ccc;
+			border-right:0;
+			float:left;
+			color:#595963;
+			padding:0 18px;
+		}
+	}
+	.file_lst{
+		float:left;
+		min-height: 24px;
+		width: 413px;
+		padding: 6px 0;
+		border: 1px solid #cacdd1;
+		li{
+			position: relative;
+			height: 24px;
+			font-size: 12px;
+			color: #595963;
+			line-height: 26px;
+			.file_name{
+				position: relative;
+				display: block;
+				height: 100%;
+				padding: 0 45px 0 10px;
+				@include ellipsis(auto);
+				
+				&:hover{
+					text-decoration: underline;
+				}
+				
+				i{
+					margin: -2px 5px 0 0;
+					@include sp-common('ico_file');
+					vertical-align: middle;
+				}
+				
+				.btn_delete{
+					position: absolute;
+					top: 5px;
+					right: 10px;
+					height: 14px;
+					font-size: 12px;
+					color: $color_base;
+					line-height: 15px;
+					
+					i{
+						margin: -2px 2px 0 0;
+						@include sp-common('ico_file_delete');
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+	.cltxt{
+		margin-top:12px;
+		clear:both;
+		font-size:14px;
+		color:#595963;
+		li{
+			line-height:24px;
+			span{
+				color:$color_point;
+			}
+		}
+	}
+	.info{
+		margin-top:22px;
+		font-size:14px;
+		font-weight:bold;
+		a{
+			color:$color_base;
+			text-decoration:underline;
+		}
+	}
+	.claim_txt01{
+		font-size:14px;
+		color:$color_base;
+	}
+	.claim_txt02{
+		margin-top:14px;
+		font-size:12px;
+		color:$color_base2;
+	}
+}
+
+.win_pop{
+	padding:32px 24px;
+	h1{
+		font-size:18px;
+		color:$color_dark;
+	}
+	.txt{
+		p{
+			margin-top:16px;
+			line-height:24px;
+			font-size:14px;
+			color:$color_base;
+			&:first-child + p{
+				margin-top:8px;
+			}
+			span{
+				color:$color_point;
+			}
+		}
+	}
+	.btn_area{
+		margin-top:38px;
+		text-align:center;
+	}
+}

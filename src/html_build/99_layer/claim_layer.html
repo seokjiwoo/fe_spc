@@ -1,0 +1,2482 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: TMON</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/claim.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>반송장 번호 일괄등록 엑셀 파일 업로드</h3>
+		</div>
+		<div class="layer_ct">
+			<form class="spc_form">
+				<fieldset class="spc_form">
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width:147px;">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>구분</th>
+								<td>
+									<div class="cell_wp01">
+										<label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked><i class="symbol"></i>클레임번호 별 등록</label>
+										<label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>묶음 클레임번호 별 등록</label>
+										<ul class="spc_note">
+											<li><i class="dot"></i>클레임번호 별 등록 시 묶음 클레임번호가 있는 <span class="point">묶음 클레임의 반송장은 업로드 불가</span>합니다.<br>다운로드 받으신 엑셀 양식 파일에 주문번호, 클레임번호, 반송택배사명, 반송장 번호를 등록해 주세요. </li>
+											<li><i class="dot"></i><a href="#" class="detail_view">운송장 번호 중복사용에 대한 안내보기</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>택배사 선택</th>
+								<td>
+									<div class="spc_select" style="width: 210px; ">
+										<div class="value"><span class="selected">선택하세요</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>첨부파일</th>
+								<td>
+									<div class="btnWrap">
+										<button type="button" class="btn init2">양식 다운로드</button>
+										<div class="btn fileUpload">
+											<input type="file">
+											<span>파일첨부</span>
+										</div>
+									</div>
+									<div class="fileInfo_wrap">
+										<p class="fileInfo">
+											<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+											<button class="del">delete</button>
+										</p>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 반송장 번호가 등록 됩니다.</li>
+										<li><i class="dot"></i><span class="point">2개 이상의 택배사를 이용하시는 경우 꼭! 택배사별로 파일을 나누어 주세요.</span></li>
+										<li><i class="dot"></i>엑셀에 입력한 택배사가 다르더라도 무조건 팝업에서 선택한 택배사로 업데이트 됩니다.)</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">등록</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<div class="spc_layer claim" style="width:840px;">
+		<div class="layer_hd">
+			<h3>반송장 번호 일괄등록 엑셀 파일 업로드</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="alert_box">
+				<p>
+					<span class="txt_point">등록이 실패하였습니다. </span> <br>
+					아래 내역을 수정하시고 업로드 재시도 부탁 드립니다.<br>
+					등록 실패 요인이 1건 이상 존재하면, <span class="under">전체 업로드가 실패되므로 전체 업로드 내역에 대해 재시도가 필요합니다.</span>
+				</p>
+			</div>
+			<h4>등록 실패 요인 <span class="txt_point">3건</span></h4>
+			<div class="scroll_box h277">
+				<form class="spc_form">
+					<fieldset class="spc_form">
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:110px;">
+								<col style="width:110px">
+								<col style="width:115px">
+								<col style="width:110px">
+								<col style="width:110px">
+								<col style="width: auto ">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="inner_tit03">주문번호</th>
+									<th class="inner_tit03">배송번호</th>
+									<th class="inner_tit03">묶음 클레임번호</th>
+									<th class="inner_tit03">반송택배사</th>
+									<th class="inner_tit03">반송장번호</th>
+									<th class="inner_tit03">실패사유</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="inner_td active bdr-left0">1234567890</td>
+									<td class="inner_td">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td"><p class="hidden_txt">드림택배드림택배드림택배</p></td>
+									<td class="inner_td">123456789012</td>
+									<td class="inner_td"><p class="txt_point">취소 완료된 주문내역입니다.</p></td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td active"><p class="hidden_txt">롯데택배</p></td>
+									<td class="inner_td">123456789012</td>
+									<td class="inner_td"><p class="txt_point">택배사가 일치하지 않습니다.</p></td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td"><p class="hidden_txt">편의점택배</p></td>
+									<td class="inner_td active">123456789012</td>
+									<td class="inner_td"><p class="txt_point">유효하지않은 송장번호입니다.</p></td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0 active">1234567890</td>
+									<td class="inner_td">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td"><p class="hidden_txt">드림택배드림택배드림택배</p></td>
+									<td class="inner_td">123456789012</td>
+									<td class="inner_td"><p class="txt_point">취소 완료된 주문내역입니다.</p></td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td active"><p class="hidden_txt">롯데택배</p></td>
+									<td class="inner_td">123456789012</td>
+									<td class="inner_td"><p class="txt_point">취소 완료된 주문내역입니다.</p></td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td active"><p class="hidden_txt">롯데택배</p></td>
+									<td class="inner_td">123456789012</td>
+									<td class="inner_td"><p class="txt_point">취소 완료된 주문내역입니다.</p></td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<div class="btn_area center">
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>환불처리</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>등록 실패 요인 <span class="txt_point">3건</span> / 클레임번호 <span class="txt_point">123456789</span></h4>
+			<div class="scroll_box h200">
+				<div class="tb_wrap">
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>환불사유</th>
+										<td colspan="3">
+											<p class="txt_re">제품하자 (저번주문한거랑입자가확다르네요푸석해보이고 애기가 갑자기 토도많이하고 향도 이상해요)</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>환불사유</th>
+										<td colspan="3">
+											<p class="txt_re">제품하자 (저번주문한거랑입자가확다르네요푸석해보이고 애기가 갑자기 토도많이하고 향도 이상해요)</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<h4>환불 처리 방법</h4>
+			<form class="spc_form">
+				<fieldset class="spc_form">
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width:120px;">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th rowspan="2">처리방법</th>
+								<td>
+									<label for="ly_radio1-3" class="spc_radio checked"><input type="radio" id="ly_radio1-3" name="ly_radio2" checked><i class="symbol"></i>환불승인</label>
+									<label for="ly_radio1-4" class="spc_radio"><input type="radio" id="ly_radio1-4" name="ly_radio2"><i class="symbol"></i>환불거절</label>
+									<label for="ly_radio1-33" class="spc_radio checked disabled"><input type="radio" id="ly_radio1-33" name="ly_radio2" checked disabled><i class="symbol"></i>환불승인</label>
+									<label for="ly_radio1-44" class="spc_radio disabled"><input type="radio" id="ly_radio1-44" name="ly_radio2" disabled><i class="symbol"></i>환불거절</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="return_price">
+										<div class="result"><em>총환불금액</em><span class="txt_point">2,080원</span></div>
+										<ul>
+											<li>상품주문금액(배송비 포함) 2,080원</li>
+											<li class="remove">반품배송비 0원</li>
+											<li class="remove">쿠폰할인 취소 0원</li>
+											<li class="remove">즉시할인 취소 0원</li>
+											<li class="remove">환불 차감액 취소 0원</li>
+											<li class="add">품절보상적립금 0원</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="3">처리방법</th>
+								<td>
+									<label for="ly_radio1-5" class="spc_radio checked"><input type="radio" id="ly_radio1-5" name="ly_radio3" checked><i class="symbol"></i>환불승인</label>
+									<label for="ly_radio1-6" class="spc_radio"><input type="radio" id="ly_radio1-6" name="ly_radio3"><i class="symbol"></i>환불거절</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<ul class="form_ls">
+										<li>
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">선택</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</li>
+										<li><input type="text" class="spc_text" value="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:508px;"></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="spc_select disabled" style="width: 210px; ">
+										<div class="value"><span class="selected">택배사선택</span><i></i></div>
+										<select disabled>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<input type="text" class="spc_text" value="운송장 번호 (-없이 입력해주세요.)" disabled style="width:210px;">
+									<ul class="spc_note">
+										<li><i class="dot"></i>회수된 상품을 고객들에게 반송처리 하신 경우 아래 반송 운송장 번호를 입력해 주세요. <br>반송시에는 고객과 충분히 협의하여 처리해 주셔야 합니다.</li>
+									</ul>
+									<label for="check1" class="spc_check checked"><input type="checkbox" id="check1" checked><i class="symbol"></i>반품 내역 없음</label>
+									<label for="check1-1" class="spc_check checked disabled"><input type="checkbox" id="check1-1" checked disabled><i class="symbol"></i>반품 내역 없음</label>
+									<label for="check1-2" class="spc_check disabled"><input type="checkbox" id="check1-2" disabled><i class="symbol"></i>반품 내역 없음</label>
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>환불 추가 비용 청구</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>주문번호 <span class="txt_point">123456789</span> / 클레임번호 <span class="txt_point">123456789</span></h4>
+			<div class="scroll_box h200">
+				<div class="tb_wrap">
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>청구사유/금액</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">선택하세요</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>청구사유/금액</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">추가비용 청구하지 않음</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>청구사유/금액</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">반품배송비 청구</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+											<input type="text" class="spc_text" value="0" style="width:218px;">
+											<span class="subtext">원</span>
+										</td>
+									</tr>
+									<tr>
+										<th>청구사유/금액</th>
+										<td colspan="3">
+											<ul class="form_ls">
+												<li>
+													<div class="spc_select" style="width: 210px; ">
+														<div class="value"><span class="selected">반품배송비 청구</span><i></i></div>
+														<select>
+															<option>옵션1</option>
+															<option>옵션2</option>
+															<option>옵션3</option>
+														</select>
+													</div>
+													<input type="text" class="spc_text" value="0" style="width:218px;">
+													<span class="subtext">원</span>
+												</li>
+												<li><input type="text" class="spc_text" value="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:506px;"></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>반품송장 등록</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+											<input type="text" class="spc_text" value="운송장 번호 (-없이 입력해주세요.)" style="width:218px;">
+											<ul class="spc_note">
+												<li><i class="dot"></i>반품 송장 번호를 알고 계실 경우, 송장번호를 입력해 주세요.</li>
+											</ul>
+											<label for="check2" class="spc_check"><input type="checkbox" id="check2" checked><i class="symbol"></i>반품 내역 없음</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>청구사유/금액</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">추가비용 청구하지 않음</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<ul class="spc_note">
+				<li><i class="dot"></i>비용을 청구할 경우고객이 마이페이지에서 승인해야 하며, 승인할 경우 즉시 환불처리됩니다.</li>
+			</ul>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>교환보류</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>주문번호 <span class="txt_point">123456789</span> / 클레임번호 <span class="txt_point">123456789</span></h4>
+			<div class="scroll_box h200">
+				<div class="tb_wrap">
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>교환사유</th>
+										<td colspan="3">상품불량</td>
+									</tr>
+									<tr>
+										<th>보류사유</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">선택하세요</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>보류사유</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">교환배송비 청구</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+											<input type="text" class="spc_text" value="0" style="width:218px;">
+											<span class="subtext">원</span>
+										</td>
+									</tr>
+									<tr>
+										<th>보류사유</th>
+										<td colspan="3">
+											<ul class="form_ls">
+												<li>
+													<div class="spc_select" style="width: 210px; ">
+														<div class="value"><span class="selected">반품상품 미도착</span><i></i></div>
+														<select>
+															<option>옵션1</option>
+															<option>옵션2</option>
+															<option>옵션3</option>
+														</select>
+													</div>
+												</li>
+												<li><input type="text" class="spc_text" value="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:506px;"></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>보류사유</th>
+										<td colspan="3">
+											<ul class="form_ls">
+												<li>
+													<div class="spc_select" style="width: 210px; ">
+														<div class="value"><span class="selected">기타 추가비용청구</span><i></i></div>
+														<select>
+															<option>옵션1</option>
+															<option>옵션2</option>
+															<option>옵션3</option>
+														</select>
+													</div>
+													<input type="text" class="spc_text" value="0" style="width:218px;">
+													<span class="subtext">원</span>
+												</li>
+												<li><input type="text" class="spc_text" value="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:506px;"></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>반품송장 등록</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+											<input type="text" class="spc_text" value="운송장 번호 (-없이 입력해주세요.)" style="width:218px;">
+											<ul class="spc_note">
+												<li><i class="dot"></i>반품 송장 번호를 알고 계실 경우, 송장번호를 입력해 주세요.</li>
+											</ul>
+											<label for="check3" class="spc_check"><input type="checkbox" id="check3" checked><i class="symbol"></i>반품 내역 없음</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>교환사유</th>
+										<td colspan="3">상품불량</td>
+									</tr>
+									<tr>
+										<th>보류사유</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">추가비용 청구하지 않음</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>보류사유</th>
+										<td colspan="3">
+											<ul class="form_ls">
+												<li>
+													<div class="spc_select" style="width: 210px; ">
+														<div class="value"><span class="selected">반품상품 미도착</span><i></i></div>
+														<select>
+															<option>옵션1</option>
+															<option>옵션2</option>
+															<option>옵션3</option>
+														</select>
+													</div>
+												</li>
+												<li><input type="text" class="spc_text" value="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:506px;"></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>반품송장 등록</th>
+										<td colspan="3">
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+											<input type="text" class="spc_text" value="운송장 번호 (-없이 입력해주세요.)" style="width:218px;">
+											<ul class="spc_note">
+												<li><i class="dot"></i>반품 송장 번호를 알고 계실 경우, 송장번호를 입력해 주세요.</li>
+											</ul>
+											<label for="check3" class="spc_check"><input type="checkbox" id="check3" checked><i class="symbol"></i>반품 내역 없음</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>교환처리</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>주문번호 <span class="txt_point">123456789</span> / 클레임번호 <span class="txt_point">123456789</span></h4>
+			<div class="scroll_box h200">
+				<div class="tb_wrap">
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>교환사유</th>
+										<td colspan="3">상품불량</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>교환사유</th>
+										<td colspan="3">상품불량</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<h4>교환 처리 방법</h4>
+			<form class="spc_form">
+				<fieldset class="spc_form">
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width:120px;">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th rowspan="2">처리방법</th>
+								<td>
+									<label for="ly_radio1-6" class="spc_radio checked"><input type="radio" id="ly_radio1-6" name="ly_radio3" checked><i class="symbol"></i>교환처리</label>
+									<label for="ly_radio1-7" class="spc_radio"><input type="radio" id="ly_radio1-7" name="ly_radio3"><i class="symbol"></i>교환거절</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="spc_select" style="width: 210px; ">
+										<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<input type="text" class="spc_text" value="운송장 번호 (-없이 입력해주세요.)" style="width:218px;">
+									<ul class="spc_note">
+										<li><i class="dot"></i>비용을 청구할 경우고객이 마이페이지에서 승인해야 하며, 승인할 경우 즉시 환불처리됩니다.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="3">처리방법</th>
+								<td>
+									<label for="ly_radio1-8" class="spc_radio checked"><input type="radio" id="ly_radio1-8" name="ly_radio3" checked=""><i class="symbol"></i>교환처리</label>
+									<label for="ly_radio1-9" class="spc_radio"><input type="radio" id="ly_radio1-9" name="ly_radio3"><i class="symbol"></i>교환거절</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<ul class="form_ls">
+										<li>
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">선택</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</li>
+										<li><input type="text" class="spc_text" value="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:508px;"></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="spc_select disabled" style="width: 210px; ">
+										<div class="value"><span class="selected">택배사선택</span><i></i></div>
+										<select disabled="">
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<input type="text" class="spc_text" value="운송장 번호 (-없이 입력해주세요.)" disabled="" style="width:210px;">
+									<ul class="spc_note">
+										<li><i class="dot"></i>회수된 상품을 고객들에게 반송처리 하신 경우 아래 반송 운송장 번호를 입력해 주세요. <br>반송시에는 고객과 충분히 협의하여 처리해 주셔야 합니다.</li>
+									</ul>
+									<label for="check6" class="spc_check checked"><input type="checkbox" id="check1" checked=""><i class="symbol"></i>반품 내역 없음</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>재배송 처리</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>주문번호 <span class="txt_point">123456789</span> / 클레임번호 <span class="txt_point">123456789</span></h4>
+			<div class="scroll_box h200">
+				<div class="tb_wrap">
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>재배송사유</th>
+										<td colspan="3">상품불량</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+					<form class="spc_form">
+						<fieldset class="spc_form">
+							<table class="spc_table_form">
+								<colgroup>
+									<col style="width:120px;">
+									<col style="width:351px">
+									<col style="width:63px">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>딜명</th>
+										<td colspan="3">카카오 큐티 젤리 케이스</td>
+									</tr>
+									<tr>
+										<th rowspan="2">옵션/수량</th>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>1개</td>
+									</tr>
+									<tr>
+										<td>01. 카카오 큐티 젤리 케이스</td>
+										<th>수량</th>
+										<td>2개</td>
+									</tr>
+									<tr>
+										<th>재배송사유</th>
+										<td colspan="3">상품불량</td>
+									</tr>
+								</tbody>
+							</table>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<h4>재배송 처리방법</h4>
+			<form class="spc_form">
+				<fieldset class="spc_form">
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width:120px;">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th rowspan="2">처리방법</th>
+								<td colspan="3">
+									<label for="ly_radio1-6" class="spc_radio checked"><input type="radio" id="ly_radio1-6" name="ly_radio3" checked><i class="symbol"></i>재배송 승인</label>
+									<label for="ly_radio1-7" class="spc_radio"><input type="radio" id="ly_radio1-7" name="ly_radio3"><i class="symbol"></i>재배송 거절</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<div class="spc_select" style="width: 210px; ">
+										<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<input type="text" class="spc_text" value="운송장 번호 (-없이 입력해주세요.)" style="width:218px;">
+									<ul class="spc_note">
+										<li><i class="dot"></i>재배송 처리하실 송장번호를 입력해 주세요.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="2">처리방법</th>
+								<td colspan="3">
+									<label for="ly_radio1-6" class="spc_radio checked"><input type="radio" id="ly_radio1-6" name="ly_radio3" checked><i class="symbol"></i>재배송 승인</label>
+									<label for="ly_radio1-7" class="spc_radio"><input type="radio" id="ly_radio1-7" name="ly_radio3"><i class="symbol"></i>재배송 거절</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<ul class="form_ls">
+										<li>
+											<div class="spc_select" style="width: 210px; ">
+												<div class="value"><span class="selected">거절사유 선택</span><i></i></div>
+												<select>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</li>
+										<li><input type="text" class="spc_text" value="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:508px;"></li>
+									</ul>										
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	
+	<!-- 기본배송비 차감 설정 -->
+	<div class="spc_layer claim" style="width:428px;">
+		<div class="layer_hd">
+			<h3>기본배송비 차감 설정</h3>
+		</div>
+		<div class="layer_ct">
+			<p class="desc">
+				<span class="org_txt">택배동봉, 선불택배, 파트너 계좌입금</span> 등의 방법으로 반품배송비를 지불한 경우<br >
+				고객이 지급해야 하는 <span class="org_txt">잔여 기본배송비</span>를 입력하세요.
+			</p>
+			<form class="spc_form">
+				<fieldset class="spc_form">
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width:234px;">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>고객 지급필요 잔여 기본배송비</th>
+								<td>
+									<input type="text" class="spc_text" value="8000" style="width:153px;">
+									<span class="subtext">원</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 도서산간 배송비 차감 설정 -->
+	<div class="spc_layer claim" style="width:428px;">
+		<div class="layer_hd">
+			<h3>도서산간 배송비 차감 설정</h3>
+		</div>
+		<div class="layer_ct">
+			<p class="desc">
+				<span class="org_txt">택배동봉, 선불택배, 파트너 계좌입금</span> 등의 방법으로 반품배송비를 지불한 경우<br >
+				고객이 지급해야 하는 <span class="org_txt">잔여 도서산간 배송비</span>를 입력하세요.
+			</p>
+			<form class="spc_form">
+				<fieldset class="spc_form">
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width:234px;">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>고객 지급필요 잔여 도서산간 배송비</th>
+								<td>
+									<input type="text" class="spc_text" value="8000" style="width:153px;">
+									<span class="subtext">원</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 도서산간 배송비 차감 설정 -->
+	<div class="spc_layer claim" style="width:428px;">
+		<div class="layer_hd">
+			<h3>반품배송비 수정 시 적용 예시</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>배송비 차감 설정 전후 금액 변화 예시</h4>
+			<div class="delip_txt_box">
+				<ul>
+					<li><i class="dot"></i>최초 고객부담 배송비 : 3,000원</li>
+					<li><i class="dot"></i>고객이 선납부 배송비 : 1,000원</li>
+					<li><i class="dot"></i>고객 지급 필요 잔여 배송비 : 2,000원 설정</li>
+				</ul>
+			</div>
+			<form class="spc_form">
+				<fieldset class="spc_form">
+					<table class="spc_table_form refund_deli">
+						<colgroup>
+							<col style="width:142px">
+							<col style="width:142px">
+							<col style="width:auto ">
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="inner_tit03">부담주체 설정 구분</th>
+								<th class="inner_tit03">잔여 배송비 변경 전</th>
+								<th class="inner_tit03">잔여 배송비 변경 후</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="inner_td bdr-left0">고객</td>
+								<td class="inner_td before_active">3,000원</td>
+								<td class="inner_td active">2,000원</td>
+							</tr>
+							<tr>
+								<td class="inner_td bdr-left0">파트너</td>
+								<td class="inner_td">0원</td>
+								<td class="inner_td active">1,000원</td>
+							</tr>
+							<tr>
+								<td class="inner_td bdr-left0">티몬</td>
+								<td class="inner_td">0원</td>
+								<td class="inner_td">0원</td>
+							</tr>
+							<tr>
+								<td class="inner_td bdr-left0">티몬물류</td>
+								<td class="inner_td">0원</td>
+								<td class="inner_td">0원</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+			<ul class="spc_note">
+				<li>
+					<i class="dot"></i>고객부담 배송비 3000원이 설정된 상태에서 고객이 1000원을 선부과하여 잔여금액 2000원을 지급해야 할 경우, 잔여 반품배송비를 2000원으로 설정하면 부담주체 별 부담금액 변화는 위의 예시와 같습니다.
+				</li>
+			</ul>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 취소처리 -->
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>취소처리</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h435">
+				<h4>취소처리 방법</h4>
+				<form class="spc_form">
+					<fieldset class="spc_form">
+						<!--
+						tr element에 class="hide" 를 추가 해주시면 해당 영역이 숨겨 집니다.
+						-->
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>처리 방식</th>
+									<td>
+										<label for="ly_radio3-1" class="spc_radio checked"><input type="radio" id="ly_radio3-1" name="ly_radio2" checked><i class="symbol"></i>취소 승인</label>
+										<label for="ly_radio3-2" class="spc_radio"><input type="radio" id="ly_radio3-1" name="ly_radio2"><i class="symbol"></i>취소 거절</label>
+										<label for="ly_checkbox3-1" class="all_proc spc_check checked"><input type="checkbox" name="" id="ly_checkbox3-1" checked><i class="symbol"></i>선택 대상 일괄 처리</label>
+									</td>
+								</tr>
+								<tr>
+									<th>거절 사유</th>
+									<td>
+										<div class="spc_select" style="width: 210px; ">
+											<div class="value"><span class="selected">상품출고완료</span><i></i></div>
+											<select>
+												<option>상품출고완료</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>상품 출고 송장</th>
+									<td>
+										<div class="btnWrap">
+											<button type="button" class="btn init2">양식 다운로드</button>
+											<div class="btn fileUpload">
+												<input type="file">
+												<span>파일첨부</span>
+											</div>
+										</div>
+										<div class="fileInfo_wrap">
+											<p class="fileInfo">
+												<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+												<button class="del">delete</button>
+											</p>
+										</div>
+										<ul class="spc_note">
+											<li><i class="dot"></i>반드시 지정된 양식을 다운로드 받으셔서 등록해주세요.</li>
+											<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 송장번호가 등록 됩니다.</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>선택 대상 <span class="txt_point">10건</span></h4>
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:94px">
+								<col style="width:106px">
+								<col style="width:101px">
+								<col style="width:89px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>묶음클레임 번호</th>
+									<td>000000000</td>
+									<th>클레임 번호</th>
+									<td>-</td>
+									<th>주문번호</th>
+									<td>00000000000</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종 [균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종</p>
+										<button class="btn_hide hide">열기/닫기</button>
+									</td> 
+								</tr>
+								<tr class="hide">
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>거절 사유</th>
+									<td colspan="5">
+										<div class="spc_select" style="width: 210px; ">
+											<div class="value"><span class="selected">상품출고완료</span><i></i></div>
+											<select>
+												<option>상품출고완료</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원</p>
+										<button class="btn_hide">열기/닫기</button>
+									</td>
+								</tr>
+								<tr>
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>거절 사유</th>
+									<td colspan="5">
+										<div class="spc_select" style="width: 210px; ">
+											<div class="value"><span class="selected">상품출고완료</span><i></i></div>
+											<select>
+												<option>상품출고완료</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>상품 출고 송장</th>
+									<td colspan="5">
+										<!--
+										.spc_select에 disabled를 추가하고 select element에 disabled 넣어주시면 disabled 처리가 됩니다.
+										input type="text" 또한 disabled 처리를 해주시면 디자인이 변경 됩니다.
+										-->
+										<div class="spc_select disabled" style="width: 210px;">
+											<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+											<select disabled>
+												<option>택배사 선택</option>
+											</select>
+										</div>
+										<input type="text" class="spc_text" value="" placeholder="운송장 번호 (-없이 입력해주세요.)" style="width:220px;">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:94px">
+								<col style="width:106px">
+								<col style="width:101px">
+								<col style="width:89px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>묶음클레임 번호</th>
+									<td>000000000</td>
+									<th>클레임 번호</th>
+									<td>-</td>
+									<th>주문번호</th>
+									<td>00000000000</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종 [균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종</p>
+										<button class="btn_hide hide">열기/닫기</button>
+									</td> 
+								</tr>
+								<tr class="hide">
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>거절 사유</th>
+									<td colspan="5">
+										<div class="spc_select" style="width: 210px; ">
+											<div class="value"><span class="selected">상품출고완료</span><i></i></div>
+											<select>
+												<option>상품출고완료</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원</p>
+										<button class="btn_hide">열기/닫기</button>
+									</td>
+								</tr>
+								<tr>
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>거절 사유</th>
+									<td colspan="5">
+										<div class="spc_select" style="width: 210px; ">
+											<div class="value"><span class="selected">상품출고완료</span><i></i></div>
+											<select>
+												<option>상품출고완료</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>상품 출고 송장</th>
+									<td colspan="5">
+										<!--
+										.spc_select에 disabled를 추가하고 select element에 disabled 넣어주시면 disabled 처리가 됩니다.
+										input type="text" 또한 disabled 처리를 해주시면 디자인이 변경 됩니다.
+										-->
+										<div class="spc_select disabled" style="width: 210px;">
+											<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+											<select disabled>
+												<option>택배사 선택</option>
+											</select>
+										</div>
+										<input type="text" class="spc_text" value="" placeholder="운송장 번호 (-없이 입력해주세요.)" style="width:220px;">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 환불처리 -->
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>환불처리</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h435">
+				<h4>환불처리 방법</h4>
+				<form class="spc_form">
+					<fieldset class="spc_form">
+						<!--
+						tr element에 class="hide" 를 추가 해주시면 해당 영역이 숨겨 집니다.
+						-->
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>처리 방식</th>
+									<td>
+										<label for="ly_radio3-1" class="spc_radio checked"><input type="radio" id="ly_radio3-1" name="ly_radio2" checked><i class="symbol"></i>환불 승인</label>
+										<label for="ly_radio3-2" class="spc_radio"><input type="radio" id="ly_radio3-1" name="ly_radio2"><i class="symbol"></i>환불 거절</label>
+										<label for="check09300" class="all_proc spc_check checked"><input type="checkbox" name="" id="check09300" checked><i class="symbol"></i>선택 대상 일괄 처리</label>
+									</td>
+								</tr>
+								<tr>
+									<th>거절 사유</th>
+									<td>
+										<ul class="form_ls">
+											<li>
+												<div class="spc_select" style="width: 210px; ">
+													<div class="value"><span class="selected">선택</span><i></i></div>
+													<select>
+														<option>옵션1</option>
+														<option>옵션2</option>
+														<option>옵션3</option>
+													</select>
+												</div>
+											</li>
+											<li><input type="text" class="spc_text" value="" placeholder="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:460px;"></li>
+										</ul>
+										<ul class="spc_note">
+											<li><i class="dot"></i>명확한 거절 사유 확인이 어려울 경우, 임의 환불 승인 될 수 있습니다.</li>
+											<li><i class="dot"></i>반품배송비, 상품 풰손등에 따른 비용이 발생한 경우, ‘추가비용청구’ 처리해주세요.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>수거 송장</th>
+									<td>
+										<label for="check09301" class="spc_check chk_invoice"><input type="checkbox" id="check09301"><i class="symbol"></i>반품 내역 없음</label>
+										<div class="btnWrap">
+											<button type="button" class="btn init2">양식 다운로드</button>
+											<div class="btn fileUpload">
+												<input type="file">
+												<span>파일첨부</span>
+											</div>
+										</div>
+										<div class="fileInfo_wrap">
+											<p class="fileInfo">
+												<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+												<button class="del">delete</button>
+											</p>
+										</div>
+										<ul class="spc_note">
+											<li><i class="dot"></i>반드시 지정된 양식을 다운로드 받으셔서 등록해주세요.</li>
+											<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 송장번호가 등록 됩니다.</li>
+											<li class="notlist"><i class="dot"></i>상품의 송장번호를 알고 계실 경우, ‘반품 내역 없음’을 체크 해지하신 후 입력해주세요.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>반송 송장</th>
+									<td>
+										<label for="check09305" class="spc_check chk_invoice"><input type="checkbox" id="check09305"><i class="symbol"></i>반송 내역 없음</label>
+										<div class="btnWrap">
+											<button type="button" class="btn init2">양식 다운로드</button>
+											<div class="btn fileUpload">
+												<input type="file">
+												<span>파일첨부</span>
+											</div>
+										</div>
+										<div class="fileInfo_wrap">
+											<p class="fileInfo">
+												<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+												<button class="del">delete</button>
+											</p>
+										</div>
+										<ul class="spc_note">
+											<li><i class="dot"></i>회수된 상품을 고객들에게 반송처리 하신 경우 반송 송장번호를 입력해 주세요.<br >반송시에는 고객과 충분히 협의 하여 처리해 주셔야 합니다.</li>
+											<li><i class="dot"></i>반드시 지정된 양식을 다운로드 받으셔서 등록해주세요.</li>
+											<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 송장번호가 등록 됩니다.</li>
+											<li class="notlist"><i class="dot"></i>상품의 송장번호를 알고 계실 경우, ‘반송 내역 없음’을 체크 해지하신 후 입력해주세요.</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>선택 대상 <span class="txt_point">10건</span></h4>
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:94px">
+								<col style="width:106px">
+								<col style="width:101px">
+								<col style="width:89px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>묶음클레임 번호</th>
+									<td>000000000</td>
+									<th>클레임 번호</th>
+									<td>-</td>
+									<th>주문번호</th>
+									<td>00000000000</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종 [균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종</p>
+										<button class="btn_hide hide">열기/닫기</button>
+									</td> 
+								</tr>
+								<tr class="hide">
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원</p>
+										<button class="btn_hide">열기/닫기</button>
+									</td>
+								</tr>
+								<tr>
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>수거 송장</th>
+									<td colspan="5">
+										<!--
+										.spc_select에 disabled를 추가하고 select element에 disabled 넣어주시면 disabled 처리가 됩니다.
+										input type="text" 또한 disabled 처리를 해주시면 디자인이 변경 됩니다.
+										-->
+										<div class="spc_select disabled" style="width: 210px;">
+											<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+											<select disabled>
+												<option>택배사 선택</option>
+											</select>
+										</div>
+										<input type="text" class="spc_text" value="" placeholder="운송장 번호 (-없이 입력해주세요.)" style="width:220px;">
+									</td>
+								</tr>
+								<tr>
+									<th>반송 송장</th>
+									<td colspan="5">
+										<label for="check09304" class="spc_check chk_invoice"><input type="checkbox" id="check09304"><i class="symbol"></i>반송 내역 없음</label>
+										<div class="btnWrap">
+											<button type="button" class="btn init2">양식 다운로드</button>
+											<div class="btn fileUpload">
+												<input type="file">
+												<span>파일첨부</span>
+											</div>
+										</div>
+										<div class="fileInfo_wrap">
+											<p class="fileInfo">
+												<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+												<button class="del">delete</button>
+											</p>
+										</div>
+										<ul class="spc_note">
+											<li><i class="dot"></i>회수된 상품을 고객들에게 반송처리 하신 경우 반송 송장번호를 입력해 주세요.<br >반송시에는 고객과 충분히 협의 하여 처리해 주셔야 합니다.</li>
+											<li><i class="dot"></i>반드시 지정된 양식을 다운로드 받으셔서 등록해주세요.</li>
+											<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 송장번호가 등록 됩니다.</li>
+											<li class="notlist"><i class="dot"></i>상품의 송장번호를 알고 계실 경우, ‘반송 내역 없음’을 체크 해지하신 후 입력해주세요.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>환불 금액</th>
+									<td colspan="5">
+										<div class="return_price">
+											<div class="result"><em>총 환불 금액</em><span class="txt_point">2,080원</span></div>
+											<ul>
+												<li>상품주문금액(배송비 포함) 2,080원</li>
+												<li class="remove">반품배송비 0원</li>
+												<li class="remove">쿠폰할인 취소 0원</li>
+												<li class="remove">즉시할인 취소 0원</li>
+												<li class="remove">환불 차감액 취소 0원</li>
+												<li class="add">품절보상적립금 0원</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 교환처리 -->
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>교환처리</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h435">
+				<h4>교환처리 방법</h4>
+				<form class="spc_form">
+					<fieldset class="spc_form">
+						<!--
+						tr element에 class="hide" 를 추가 해주시면 해당 영역이 숨겨 집니다.
+						-->
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>처리 방식</th>
+									<td>
+										<label for="ly_radio3-1" class="spc_radio checked"><input type="radio" id="ly_radio3-1" name="ly_radio2" checked><i class="symbol"></i>교환 승인</label>
+										<label for="ly_radio3-2" class="spc_radio"><input type="radio" id="ly_radio3-1" name="ly_radio2"><i class="symbol"></i>교환 거절</label>
+										<label for="check09306" class="all_proc spc_check checked"><input type="checkbox" name="" id="check09306" checked><i class="symbol"></i>선택 대상 일괄 처리</label>
+									</td>
+								</tr>
+								<tr>
+									<th>거절 사유</th>
+									<td>
+										<ul class="form_ls">
+											<li>
+												<div class="spc_select" style="width: 210px; ">
+													<div class="value"><span class="selected">선택</span><i></i></div>
+													<select>
+														<option>옵션1</option>
+														<option>옵션2</option>
+														<option>옵션3</option>
+													</select>
+												</div>
+											</li>
+											<li><input type="text" class="spc_text" value="" placeholder="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:460px;"></li>
+										</ul>
+										<ul class="spc_note">
+											<li><i class="dot"></i>교환배송비, 상품 훼손등에 따른 협의가 필요할 경우 ‘교환보류’ 처리해주시기 바랍니다.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>교환 출고 송장</th>
+									<td>
+										<div class="btnWrap">
+											<button type="button" class="btn init2">양식 다운로드</button>
+											<div class="btn fileUpload">
+												<input type="file">
+												<span>파일첨부</span>
+											</div>
+										</div>
+										<div class="fileInfo_wrap">
+											<p class="fileInfo">
+												<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+												<button class="del">delete</button>
+											</p>
+										</div>
+										<ul class="spc_note">
+											<li><i class="dot"></i>반드시 지정된 양식을 다운로드 받으셔서 등록해주세요.</li>
+											<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 송장번호가 등록 됩니다.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>수거 송장</th>
+									<td>
+										<label for="check09309" class="spc_check chk_invoice"><input type="checkbox" id="check09309"><i class="symbol"></i>반품 내역 없음</label>
+										<div class="btnWrap">
+											<button type="button" class="btn init2">양식 다운로드</button>
+											<div class="btn fileUpload">
+												<input type="file">
+												<span>파일첨부</span>
+											</div>
+										</div>
+										<div class="fileInfo_wrap">
+											<p class="fileInfo">
+												<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+												<button class="del">delete</button>
+											</p>
+										</div>
+										<ul class="spc_note">
+											<li><i class="dot"></i>반드시 지정된 양식을 다운로드 받으셔서 등록해주세요.</li>
+											<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 송장번호가 등록 됩니다.</li>
+											<li class="notlist"><i class="dot"></i>상품의 송장번호를 알고 계실 경우, ‘반품 내역 없음’을 체크 해지하신 후 입력해주세요.</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>반송 송장</th>
+									<td>
+										<label for="check09308" class="spc_check chk_invoice"><input type="checkbox" id="check09308"><i class="symbol"></i>반송 내역 없음</label>
+										<div class="btnWrap">
+											<button type="button" class="btn init2">양식 다운로드</button>
+											<div class="btn fileUpload">
+												<input type="file">
+												<span>파일첨부</span>
+											</div>
+										</div>
+										<div class="fileInfo_wrap">
+											<p class="fileInfo">
+												<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+												<button class="del">delete</button>
+											</p>
+										</div>
+										<ul class="spc_note">
+											<li><i class="dot"></i>회수된 상품을 고객들에게 반송처리 하신 경우 반송 송장번호를 입력해 주세요.<br >반송시에는 고객과 충분히 협의 하여 처리해 주셔야 합니다.</li>
+											<li><i class="dot"></i>반드시 지정된 양식을 다운로드 받으셔서 등록해주세요.</li>
+											<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 송장번호가 등록 됩니다.</li>
+											<li class="notlist"><i class="dot"></i>상품의 송장번호를 알고 계실 경우, ‘반송 내역 없음’을 체크 해지하신 후 입력해주세요.</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>선택 대상 <span class="txt_point">10건</span></h4>
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:94px">
+								<col style="width:106px">
+								<col style="width:101px">
+								<col style="width:89px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>묶음클레임 번호</th>
+									<td>000000000</td>
+									<th>클레임 번호</th>
+									<td>-</td>
+									<th>주문번호</th>
+									<td>00000000000</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종 [균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종</p>
+										<button class="btn_hide hide">열기/닫기</button>
+									</td> 
+								</tr>
+								<tr class="hide">
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원</p>
+										<button class="btn_hide">열기/닫기</button>
+									</td>
+								</tr>
+								<tr>
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>교환 출고 송장</th>
+									<td colspan="5">
+										<!--
+										.spc_select에 disabled를 추가하고 select element에 disabled 넣어주시면 disabled 처리가 됩니다.
+										input type="text" 또한 disabled 처리를 해주시면 디자인이 변경 됩니다.
+										-->
+										<div class="spc_select" style="width: 210px;">
+											<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+											<select>
+												<option>택배사 선택</option>
+											</select>
+										</div>
+										<input type="text" class="spc_text" value="" placeholder="운송장 번호 (-없이 입력해주세요.)" style="width:220px;">
+									</td>
+								</tr>
+								<tr>
+									<th>수거 송장</th>
+									<td colspan="5">
+										<ul class="form_ls">
+											<li>
+												<label for="check093010" class="spc_check"><input type="checkbox" id="check093010"><i class="symbol"></i>반품 내역 없음</label>
+											</li>
+											<li>
+												<!--
+												.spc_select에 disabled를 추가하고 select element에 disabled 넣어주시면 disabled 처리가 됩니다.
+												input type="text" 또한 disabled 처리를 해주시면 디자인이 변경 됩니다.
+												-->
+												<div class="spc_select" style="width: 210px;">
+													<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+													<select>
+														<option>택배사 선택</option>
+													</select>
+												</div>
+												<input type="text" class="spc_text" value="" placeholder="운송장 번호 (-없이 입력해주세요.)" style="width:220px;">
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>반송 송장</th>
+									<td colspan="5">
+										<!--
+										.spc_select에 disabled를 추가하고 select element에 disabled 넣어주시면 disabled 처리가 됩니다.
+										input type="text" 또한 disabled 처리를 해주시면 디자인이 변경 됩니다.
+										-->
+										<div class="spc_select" style="width: 210px;">
+											<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+											<select>
+												<option>택배사 선택</option>
+											</select>
+										</div>
+										<input type="text" class="spc_text" value="" placeholder="운송장 번호 (-없이 입력해주세요.)" style="width:220px;">
+									</td>
+								</tr>
+								<tr>
+									<th>반송 송장</th>
+									<td colspan="5">
+										<label for="check093011" class="spc_check checked chk_invoice"><input type="checkbox" id="check093011" checked><i class="symbol"></i>반송 내역 없음</label>
+										<ul class="form_ls">
+											<li>
+												<!--
+												.spc_select에 disabled를 추가하고 select element에 disabled 넣어주시면 disabled 처리가 됩니다.
+												input type="text" 또한 disabled 처리를 해주시면 디자인이 변경 됩니다.
+												-->
+												<div class="spc_select" style="width: 210px;">
+													<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+													<select>
+														<option>택배사 선택</option>
+													</select>
+												</div>
+												<input type="text" class="spc_text" value="" placeholder="운송장 번호 (-없이 입력해주세요.)" style="width:220px;">
+											</li>
+										</ul>
+										<ul class="spc_note">
+											<li class="notlist"><i class="dot"></i>회수된 상품을 반송처리 하신 경우, “반송 내역 없음”을 체크 해지하신 후 입력해주세요.</li>
+											<li class="notlist"><i class="dot"></i>반송시에는 고객과 충분히 협의 하여 처리해 주셔야 합니다.</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 재배송처리 -->
+	<div class="spc_layer claim" style="width:648px;">
+		<div class="layer_hd">
+			<h3>재배송처리</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h435">
+				<h4>재배송처리 방법</h4>
+				<form class="spc_form">
+					<fieldset class="spc_form">
+						<!--
+						tr element에 class="hide" 를 추가 해주시면 해당 영역이 숨겨 집니다.
+						-->
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>처리 방식</th>
+									<td>
+										<label for="ly_radio3-1" class="spc_radio checked"><input type="radio" id="ly_radio3-1" name="ly_radio2" checked><i class="symbol"></i>재배송 승인</label>
+										<label for="ly_radio3-2" class="spc_radio"><input type="radio" id="ly_radio3-1" name="ly_radio2"><i class="symbol"></i>재배송 거절</label>
+										<label for="check09306" class="all_proc spc_check checked"><input type="checkbox" name="" id="check09306" checked><i class="symbol"></i>선택 대상 일괄 처리</label>
+									</td>
+								</tr>
+								<tr>
+									<th>거절 사유</th>
+									<td>
+										<ul class="form_ls">
+											<li>
+												<div class="spc_select" style="width: 210px; ">
+													<div class="value"><span class="selected">선택</span><i></i></div>
+													<select>
+														<option>옵션1</option>
+														<option>옵션2</option>
+														<option>옵션3</option>
+													</select>
+												</div>
+											</li>
+											<li><input type="text" class="spc_text" value="" placeholder="상세사유를 입력해 주세요. (10자 이상 50자 이내)" style="width:460px;"></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>재배송 출고 송장</th>
+									<td>
+										<div class="btnWrap">
+											<button type="button" class="btn init2">양식 다운로드</button>
+											<div class="btn fileUpload">
+												<input type="file">
+												<span>파일첨부</span>
+											</div>
+										</div>
+										<div class="fileInfo_wrap">
+											<p class="fileInfo">
+												<span class="title">반송장 번호 일괄등록 엑셀파일_201712</span>
+												<button class="del">delete</button>
+											</p>
+										</div>
+										<ul class="spc_note">
+											<li><i class="dot"></i>반드시 지정된 양식을 다운로드 받으셔서 등록해주세요.</li>
+											<li><i class="dot"></i>파일 첨부 버튼을 통해 엑셀파일을 업로드 하면 송장번호가 등록 됩니다.</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>선택 대상 <span class="txt_point">10건</span></h4>
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:130px;">
+								<col style="width:94px">
+								<col style="width:106px">
+								<col style="width:101px">
+								<col style="width:89px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>묶음클레임 번호</th>
+									<td>000000000</td>
+									<th>클레임 번호</th>
+									<td>-</td>
+									<th>주문번호</th>
+									<td>00000000000</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종 [균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원 밴드/집게핀 84종</p>
+										<button class="btn_hide hide">열기/닫기</button>
+									</td> 
+								</tr>
+								<tr class="hide">
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>딜명</th>
+									<td colspan="5">
+										<p class="title_abbr">[균일가]스마트통신 기본 머리끈50개/밴드/집게핀 84종 990원</p>
+										<button class="btn_hide">열기/닫기</button>
+									</td>
+								</tr>
+								<tr>
+									<th>옵션/수량</th>
+									<td colspan="5" class="inner_table">
+										<table>
+											<colgroup>
+												<col style="width:342px;">
+												<col style="width:64px;">
+												<col style="width:auto;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>01. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+												<tr>
+													<td>02. 카카오 큐티 젤리 케이스</td>
+													<th>수량</th>
+													<td>1개</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>요청 사유</th>
+									<td colspan="5">단순변심 (#상세사유#)</td>
+								</tr>
+								<tr>
+									<th>재배송 출고 송장</th>
+									<td colspan="5">
+										<!--
+										.spc_select에 disabled를 추가하고 select element에 disabled 넣어주시면 disabled 처리가 됩니다.
+										input type="text" 또한 disabled 처리를 해주시면 디자인이 변경 됩니다.
+										-->
+										<div class="spc_select" style="width: 210px;">
+											<div class="value"><span class="selected">택배사 선택</span><i></i></div>
+											<select>
+												<option>택배사 선택</option>
+											</select>
+										</div>
+										<input type="text" class="spc_text" value="" placeholder="운송장 번호 (-없이 입력해주세요.)" style="width:220px;">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 재배송처리(처리 실패 사유) -->
+	<div class="spc_layer claim" style="width:840px;">
+		<div class="layer_hd">
+			<h3>재배송처리</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="alert_box">
+				<p>
+					<span class="txt_point">처리성공 30건 / 처리실패 10건</span> <br>
+					처리 실패 사유 확인하시고, 재처리 부탁 드립니다.
+				</p>
+			</div>
+			<h4>처리 실패 사유</h4>
+			<div class="scroll_box h277">
+				<form class="spc_form">
+					<fieldset class="spc_form">
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:115px">
+								<col style="width:110px">
+								<col style="width:110px">
+								<col style="width: auto ">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="inner_tit03">묶음클레임 번호</th>
+									<th class="inner_tit03">클레임 번호</th>
+									<th class="inner_tit03">주문번호</th>
+									<th class="inner_tit03">실패사유</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td">1212312</td>
+									<td class="inner_td"><p class="txt_point">클레임정보를 찾을 수 없습니다.</p></td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td">1212312</td>
+									<td class="inner_td"><p class="txt_point">형식에 맞지 않는 송장번호입니다.</p></td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td">1212312</td>
+									<td class="inner_td"><p class="txt_point">중복된 송장입니다.</p></td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td">1212312</td>
+									<td class="inner_td">
+										<p class="txt_point">
+											반품 수거 및 배송이 완료되었습니다. 정확한 거절 사유를 선택해주세요.<br >
+											추가 비용 청구가 필요한 경우, '추가비용청구' 처리 부탁 드립니다.
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="inner_td bdr-left0">1234567890</td>
+									<td class="inner_td">123456789</td>
+									<td class="inner_td">1212312</td>
+									<td class="inner_td">
+										<p class="txt_point">
+											반품 상품 수거까지 +2영업일 이상 소요될 수 있습니다.<br >
+											수거 현황 파악 후, 거절 처리 부탁 드립니다.
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<div class="btn_area center">
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 재배송처리(완료) -->
+	<div class="spc_layer claim" style="width:461px;">
+		<div class="layer_hd">
+			<h3>재배송처리</h3>
+		</div>
+		<div class="layer_ct">
+			<p class="message">요청한 <em class="point">30건</em>의 처리가 완료되었습니다.</p>
+			<div class="btn_area center">
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 티몬확인요청 -->
+	<div class="spc_layer claim" style="width:532px;">
+		<div class="layer_hd">
+			<h3>티몬확인요청</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>주문번호 <span class="txt_point">123456789</span> / 묶음클레임번호 <span class="txt_point">123456789</span></h4>
+			<div class="tb_wrap">
+				<form class="spc_form">
+					<fieldset class="spc_form">
+						<table class="spc_table_form">
+							<colgroup>
+								<col style="width:115px;">
+								<col style="width:327px">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>딜명</th>
+									<td colspan="2">[균일가] 딜명이 노출되는 영역입니다.</td>
+								</tr>
+								<tr>
+									<th rowspan="2">옵션명</th>
+									<td>002_옵션명이 노출되는 영영입니다.</td>
+									<td>1개</td>
+								</tr>
+								<tr>
+									<td>003_옵션명이 노출되는 영영입니다.</td>
+									<td>100개</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<h4>확인 요청 사유</h4>
+			<form class="spc_form">
+				<fieldset class="spc_form">
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width:115px;">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>사유 구분</th>
+								<td>
+									<div class="spc_select" style="width: 210px; ">
+										<div class="value"><span class="selected">사유선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>상세 내용</th>
+								<td class="textarea">
+									<textarea name="" class="spc_textarea" placeholder="내용을 입력해주세요. (10자이상 3,000자 이내)"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+			<div class="btn_area center">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="button" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+	
+	// 딜검색 레이어 딜명 클릭 시 
+	$('.btn_menu').on('click', function(e){
+		e.preventDefault();
+		
+		var $this = $(this);
+		var $parent = $this.parent();
+		
+		if(!$parent.hasClass('on')){
+			$('.deal_name.on').removeClass('on');
+		}
+		$parent.toggleClass('on');
+	});
+});
+</script>
+</body>
+</html>

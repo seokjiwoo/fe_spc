@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 브랜드 파트너 센터 :: 회원가입</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/membership.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc store"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc store"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc store"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc store"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc store"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global_brand.html')
+	</div>
+	<div id="container">
+		<div id="content" class="membership">
+			<h2 class="membership_title">회원가입</h2>
+			<p class="membership_desc">사업자등록증을 보유한 사업자만 회원가입하실 수 있습니다.</p>
+			<div class="membership_box">
+				<p class="join_step">
+					<span class="step_elem off"><b class="circle">01</b>사업자 인증</span>
+					<span class="step_arrow"></span>
+					<span class="step_elem off"><b class="circle">02</b>정보입력</span>
+					<span class="step_arrow"></span>
+					<span class="step_elem on"><b class="circle">03</b>가입완료</span>
+				</p>
+				<p class="comlete_message">
+					<b>bb_tmon</b> 파트너님<br />
+					가입을 환영합니다.
+				</p>
+				<p class="comlete_desc">
+					티몬의 파트너 회원으로 가입되셨습니다.<br />
+					파트너 추가정보를 꼭 입력해주세요. 입력 후에는<br />
+					파트너교육센터에서 서비스이용 교육 및 매뉴얼을 숙지해주세요
+				</p>
+				<p class="button_area">
+					<button class="half_btn btn1 left">스토어 가이드 보기</button>
+					<button class="half_btn btn2 right">파트너 추가정보 입력하기</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+});
+</script>
+</body>
+</html>

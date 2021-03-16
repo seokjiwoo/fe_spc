@@ -1,0 +1,93 @@
+div.helpWrap div.header a:after, div.helpWrap div.contentWrap div.srchWrap:after, div.helpWrap div.contentWrap .helpContWrap > ul.list > li.active h3:after, div.helpWrap div.contentWrap .helpContWrap > ul.list > li h3:after, div.helpWrap div.contentWrap .helpContWrap ul.cate > li:before, div.helpWrap div.footer button.prev:before, div.helpWrap div.footer button.prev.active:before, div.helpWrap div.footer button.prev:hover:before, div.helpWrap div.footer button.next:before, div.helpWrap div.footer button.next.active:before, div.helpWrap div.footer button.next:hover:before, div.helpWrap div.footer button.expand:after, div.helpWrap div.footer button.fold:after, div.helpWrap div.footer button.close { background: url("../im/sp-help.png?v=20210121101628") no-repeat; display: inline-block; overflow: hidden; }
+
+div.helpWrap { width: 420px; border: 1px solid #30343b; font-family: dotum; position: absolute; }
+div.helpWrap, div.helpWrap * { box-sizing: border-box; }
+div.helpWrap div.header { height: 66px; padding: 0px 30px; padding-top: 27px; }
+div.helpWrap div.header h2 { font-size: 20px; color: #16181a; margin-left: -1px; letter-spacing: -1.4px; display: inline-block; }
+div.helpWrap div.header a { font-size: 11px; color: #7d7e80; display: inline-block; text-decoration: underline; margin-left: 9px; }
+div.helpWrap div.header a:after { content: ''; display: inline-block; width: 10px; height: 10px; background-position: -48px -18px; -webkit-background-position: -48px -18px; margin-left: 5px; vertical-align: -1px; }
+div.helpWrap div.contentWrap { padding: 0px 30px; }
+div.helpWrap div.contentWrap div.srchWrap { position: relative; font-size: 0px; }
+div.helpWrap div.contentWrap div.srchWrap input[type=text], div.helpWrap div.contentWrap div.srchWrap input[type=submit], div.helpWrap div.contentWrap div.srchWrap input[type=button] { outline: none; vertical-align: top; }
+div.helpWrap div.contentWrap div.srchWrap input[type=text] { border: 2px solid #f27935; border-right: 0px; width: 312px; height: 42px; font-size: 14px; padding-left: 14px; }
+div.helpWrap div.contentWrap div.srchWrap input[type=text]::-webkit-input-placeholder { color: #a6a9ad; }
+div.helpWrap div.contentWrap div.srchWrap input[type=text]::-moz-placeholder { color: #a6a9ad; }
+div.helpWrap div.contentWrap div.srchWrap input[type=text]:-ms-input-placeholder { color: #a6a9ad; }
+div.helpWrap div.contentWrap div.srchWrap input[type=text]:-moz-placeholder { color: #a6a9ad; }
+div.helpWrap div.contentWrap div.srchWrap input[type=submit], div.helpWrap div.contentWrap div.srchWrap input[type=button] { background-color: #f27935; width: 46px; height: 42px; border: 0px; font-size: 0px; line-height: 0px; cursor: pointer; }
+div.helpWrap div.contentWrap div.srchWrap:after { content: ''; display: block; width: 21px; height: 21px; background-position: 0px 0px; -webkit-background-position: 0px 0px; position: absolute; right: 12px; top: 11px; }
+div.helpWrap div.contentWrap .recommendation { margin-top: 11px; margin-left: -1px; margin-bottom: 23px; word-break: keep-all; }
+div.helpWrap div.contentWrap .recommendation > a, div.helpWrap div.contentWrap .recommendation > button { color: #a6a9ad; font-size: 11px; margin-right: 3px; }
+div.helpWrap div.contentWrap .recommendation > a:hover, div.helpWrap div.contentWrap .recommendation > button:hover { text-decoration: underline; }
+div.helpWrap div.contentWrap .helpContWrap { height: 432px; overflow-x: hidden; overflow-y: auto; margin-right: -30px; padding-bottom: 30px; }
+div.helpWrap div.contentWrap .helpContWrap > ul.list { /* dpeth 1 */ border-top: 1px solid #b7bfc8; max-width: 358px; }
+div.helpWrap div.contentWrap .helpContWrap > ul.list > li { height: 51px; overflow: hidden; }
+div.helpWrap div.contentWrap .helpContWrap > ul.list > li.active { overflow: visible; height: auto; }
+div.helpWrap div.contentWrap .helpContWrap > ul.list > li.active h3 { border-bottom: 0px; }
+div.helpWrap div.contentWrap .helpContWrap > ul.list > li.active h3:after { width: 12px; height: 8px; background-position: -17px -43px; -webkit-background-position: -17px -43px; margin-top: -1px; }
+div.helpWrap div.contentWrap .helpContWrap > ul.list > li h3 { font-size: 12px; font-weight: bold; color: #16181a; display: block; height: 51px; line-height: 52px; border-bottom: 1px solid #e3e5e8; position: relative; cursor: pointer; }
+div.helpWrap div.contentWrap .helpContWrap > ul.list > li h3 span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 300px; padding-left: 11px; letter-spacing: 0.6px; }
+div.helpWrap div.contentWrap .helpContWrap > ul.list > li h3:after { content: ''; display: block; width: 13px; height: 8px; background-position: 0px -43px; -webkit-background-position: 0px -43px; position: absolute; right: 12px; top: calc( 50% + 1px ); transform: translateY(-50%); }
+div.helpWrap div.contentWrap .helpContWrap .descWrap { border-bottom: 1px solid #e3e5e8; padding-bottom: 19px; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list { /* dpeth 2 */ margin-top: -7px; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li { line-height: 27px; padding-left: 19px; position: relative; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li:before { content: ''; display: inline-block; width: 2px; height: 2px; font-size: 0px; line-height: 0px; background-color: #16181a; vertical-align: middle; margin-right: 5px; margin-top: -3px; position: absolute; left: 12px; top: 14px; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li.active span { font-weight: bold; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li.active ul.list { visibility: visible; position: static; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li span { font-weight: 11.93px; display: inline-block; cursor: pointer; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li ul.list { visibility: hidden; position: absolute; /* dpeth 3 */ padding-top: 2px; padding-bottom: 6px; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li ul.list > li { padding-left: 12px; line-height: 24px; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li ul.list > li a { font-size: 11.09px; color: #7d7e80; }
+div.helpWrap div.contentWrap .helpContWrap .descWrap > ul.list > li ul.list > li a:hover { text-decoration: underline; }
+div.helpWrap div.contentWrap .helpContWrap ul.cate { border-top: 1px solid #b7bfc8; border-bottom: 1px solid #e3e5e8; max-width: 358px; padding: 13px 0px 13px 11px; }
+div.helpWrap div.contentWrap .helpContWrap ul.cate > li { display: inline-block; }
+div.helpWrap div.contentWrap .helpContWrap ul.cate > li:first-child:before { display: none; }
+div.helpWrap div.contentWrap .helpContWrap ul.cate > li:before { content: ''; display: inline-block; vertical-align: middle; width: 5px; height: 9px; background-position: -62px 0px; -webkit-background-position: -62px 0px; margin-left: 5px; margin-right: 9px; }
+div.helpWrap div.contentWrap .helpContWrap ul.cate > li a, div.helpWrap div.contentWrap .helpContWrap ul.cate > li span { font-size: 11px; color: #7d7e80; vertical-align: middle; }
+div.helpWrap div.contentWrap .helpContWrap ul.cate > li a:hover { text-decoration: underline; }
+div.helpWrap div.contentWrap .helpContWrap dl.desc { max-width: 358px; padding-top: 23px; padding-left: 12px; padding-right: 12px; }
+div.helpWrap div.contentWrap .helpContWrap dl.desc dt { font-size: 14px; color: #16181a; font-weight: bold; padding-bottom: 14px; }
+div.helpWrap div.contentWrap .helpContWrap dl.desc dd { font-size: 12px; color: #7d7e80; word-break: keep-all; line-height: 22px; }
+div.helpWrap div.contentWrap .helpContWrap p.noData { border-top: 1px solid #b7bfc8; max-width: 358px; font-size: 12px; color: #7d7e80; text-align: center; padding-top: 209px; text-indent: 4px; }
+div.helpWrap div.footer { background-color: #f8f8f8; border-top: 1px solid #e3e5e8; height: 40px; }
+div.helpWrap div.footer:after { content: ''; display: block; clear: both; font-size: 0px; line-height: 0px; }
+div.helpWrap div.footer button { /* &.prev {
+	&:before {
+		content: ''; display: block; 
+		@include sp-help( 'btn_prev_before' ) ; 
+		position: absolute; 
+	}
+	&.active , &:hover {
+		@include sp-help( 'btn_prev_after' ) ; 
+	}
+
+	&:after {
+		content: ''; display: inline-block; 
+		width: 1px; height: 16px; 
+		font-size: 0px; line-height: 0px; 
+		background-color: #e3e5e8; 
+	}
+}
+
+&.next {
+	@include sp-help( 'btn_next_before' ) ; 
+	&.active , &:hover {
+		@include sp-help( 'btn_next_after' ) ; 
+	}
+} */ }
+div.helpWrap div.footer button.expand, div.helpWrap div.footer button.fold { color: #8d7e80; font-size: 12px; position: relative; width: 70px; height: 30px; line-height: 30px; margin: 5px 3px 0px 0px; }
+div.helpWrap div.footer button.prev, div.helpWrap div.footer button.next { display: inline-block; width: 34px; height: 29px; font-size: 0px; line-height: 0px; vertical-align: top; margin-top: 5px; position: relative; }
+div.helpWrap div.footer button.prev { margin-left: 5px; }
+div.helpWrap div.footer button.prev:before { content: ''; display: block; width: 10px; height: 14px; background-position: -48px 0px; -webkit-background-position: -48px 0px; position: absolute; left: 15px; top: 7px; }
+div.helpWrap div.footer button.prev.active:before, div.helpWrap div.footer button.prev:hover:before { width: 10px; height: 14px; background-position: -28px -25px; -webkit-background-position: -28px -25px; }
+div.helpWrap div.footer button.prev:after { content: ''; display: inline-block; width: 1px; height: 16px; font-size: 0px; line-height: 0px; background-color: #e3e5e8; margin-left: 38px; margin-top: -1px; }
+div.helpWrap div.footer button.next { margin-left: 5px; }
+div.helpWrap div.footer button.next:before { content: ''; display: block; width: 10px; height: 14px; background-position: -14px -25px; -webkit-background-position: -14px -25px; position: absolute; right: 16px; top: 7px; }
+div.helpWrap div.footer button.next.active:before, div.helpWrap div.footer button.next:hover:before { width: 10px; height: 14px; background-position: 0px -25px; -webkit-background-position: 0px -25px; }
+div.helpWrap div.footer button.expand:after { content: ''; display: inline-block; width: 10px; height: 5px; background-position: -48px -32px; -webkit-background-position: -48px -32px; margin-left: 6px; vertical-align: 2px; }
+div.helpWrap div.footer button.fold { width: 60px; padding-left: 1px; }
+div.helpWrap div.footer button.fold:after { content: ''; display: inline-block; width: 10px; height: 5px; background-position: -33px -43px; -webkit-background-position: -33px -43px; margin-left: 6px; vertical-align: 2px; }
+div.helpWrap div.footer button.close { width: 19px; height: 19px; background-position: -25px 0px; -webkit-background-position: -25px 0px; font-size: 0px; line-height: 0px; position: absolute; right: 12px; top: 12px; }
+div.helpWrap div.footer .hidden { display: none; }
+div.helpWrap div.footer .opt1 { float: left; }
+div.helpWrap div.footer .opt2 { float: right; }

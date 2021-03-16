@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+%sp-claim3 {
+    background: url('../im/sp-claim3.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-claim3($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-claim3, $filename);
+    @extend %sp-claim3;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-claim3: (
+    spritesheet_name: sp-claim3,
+    chk_disabled: (offset_x: 0, offset_y: -34px, width: 18px, height: 18px),
+    chk_off: (offset_x: -22px, offset_y: -34px, width: 18px, height: 18px),
+    chk_on: (offset_x: -57px, offset_y: 0, width: 18px, height: 18px),
+    chked_disabled: (offset_x: -57px, offset_y: -22px, width: 18px, height: 18px),
+    ico_arrow: (offset_x: -44px, offset_y: -34px, width: 4px, height: 8px),
+    ico_balloon_arr: (offset_x: -57px, offset_y: -44px, width: 11px, height: 7px),
+    ico_btn_close: (offset_x: -34px, offset_y: 0, width: 19px, height: 19px),
+    ico_clip: (offset_x: -79px, offset_y: -21px, width: 16px, height: 16px),
+    ico_del: (offset_x: -79px, offset_y: -61px, width: 10px, height: 10px),
+    ico_down: (offset_x: -20px, offset_y: -77px, width: 17px, height: 14px),
+    ico_kc: (offset_x: 0, offset_y: 0, width: 30px, height: 30px),
+    ico_pic: (offset_x: -41px, offset_y: -77px, width: 17px, height: 14px),
+    ico_question: (offset_x: -79px, offset_y: -41px, width: 16px, height: 16px),
+    ico_radio_chkeddis: (offset_x: 0, offset_y: -56px, width: 17px, height: 17px),
+    ico_radio_dis: (offset_x: -21px, offset_y: -56px, width: 17px, height: 17px),
+    ico_radio_off: (offset_x: -42px, offset_y: -56px, width: 17px, height: 17px),
+    ico_radio_on: (offset_x: -79px, offset_y: 0, width: 17px, height: 17px),
+    ico_slct_arr: (offset_x: -63px, offset_y: -56px, width: 10px, height: 5px),
+    ico_slct_arr_reverse: (offset_x: -63px, offset_y: -65px, width: 10px, height: 5px),
+    ico_tooltip: (offset_x: 0, offset_y: -77px, width: 16px, height: 16px),
+    operator_minus: (offset_x: -62px, offset_y: -77px, width: 13px, height: 13px),
+    operator_plus: (offset_x: -79px, offset_y: -77px, width: 13px, height: 13px),
+    tooltip_triangle: (offset_x: -34px, offset_y: -23px, width: 11px, height: 6px),
+);

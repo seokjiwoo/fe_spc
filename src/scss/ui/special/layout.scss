@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body.spc{
+	#content{
+		padding-top:35px ; 
+	}
+	.h2_head{
+		margin-bottom: 30px;
+		@include after();
+
+		h2{ float: left; }
+		.btn_area{ float: right; }
+	}
+}
+
+form.spc_form:first-of-type { 
+	margin-top: 20px; 
+}
+form.spc_form table.spc_table_form { 
+	margin-bottom: 40px;
+}

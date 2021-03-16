@@ -1,0 +1,783 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc.css">
+<link rel="stylesheet" type="text/css" href="../../css/special.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		<div class="top_wrap">
+	<div class="inner">
+		<div class="account_area">
+			<!-- 하위목록을 노출시키려면 active 클래스를 넣어주세요  -->
+			<div class="state_list">
+				<button class="account"><em>티켓몬스터</em> 님</button>
+				<ul>
+					<li><a href="#">나의 정보 확인</a></li>
+					<li><a href="#">비밀번호 변경</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div> <!-- end of state_list -->
+			<span><a href="#">공지사항</a></span>
+			<span><a href="#">매출증진 TIP</a></span>
+			<span><a href="#">담당자 연락처</a></span>
+			<span class="ad">슈퍼클릭(키워드/검색광고)문의 <em>1661-8200</em></span>	
+			<span class="ad">티몬광고상품문의 <em>02-2098-8690</em></span>
+		</div>
+		<!-- 오픈마켓 로고는 om 멀티클래스, 티몬특가 로고는 mmp 멀티클래스를 주시면 됩니다 -->
+		<!-- <h1 class="spc_logo om"><a href="#">TMON 스토어파트너 센터</a></h1> -->
+		<h1 class="spc_logo dp"><a href="#">TMON 배송상품 파트너센터</a></h1>
+	</div>
+</div>
+		<div class="fixed_area">
+		<!-- 페이지 스크롤시 gnb 고정상태일때 gnb_area fixed 클래스를 넣어주세요 -->
+		<div class="gnb_area">
+			<div class="inner_area">
+				<ul class="gnb_wrap" id="gnb">
+					<li class="">
+						<a href="#">티몬특가 신청</a>
+					</li>
+					<li class="">
+						<a href="#">딜관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">베이직딜등록</a></li>
+								<li><a href="#">베이직딜 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<a href="#">주문관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">미확인 주문</a></li>
+								<li><a href="#">송장등록 대기주문</a></li>
+								<li><a href="#">송장등록 완료주문</a></li>
+								<li><a href="#">배송중 주문</a></li>
+								<li><a href="#">배송템플릿 관리</a></li>
+								<li><a href="#">배송지연패널티 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="on">
+						<a href="#">클레임관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">출고전 취소 관리</a></li>
+								<li><a href="#">환불관리</a></li>
+								<li><a href="#">교환관리</a></li>
+								<li><a href="#">재배송관리</a></li>
+								<li><a href="#">수취처리관리</a></li>
+								<li><a href="#">클레임 등록</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<a href="#">문의∙리뷰관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">고객문의 관리</a></li>
+								<li><a href="#">CS문의 관리</a></li>
+								<li><a href="#">고객리뷰 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<a href="#">정산관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">판매현황조회</a></li>
+								<li><a href="#">파트너 단위 정산서</a></li>
+								<li><a href="#">딜 단위 정산서</a></li>
+								<li><a href="#">세금계산서</a></li>
+								<li><a href="#">매출·매입내역</a></li>
+								<li><a href="#">PG결제수수료 환급조회</a></li>
+							</ul>
+						</div>
+					</li>
+					<!-- <li class="">
+						<a href="#">계약관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">계약서작성</a></li>
+								<li><a href="#">계약서관리</a></li>
+								<li><a href="#">서명승인요청</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class="@@mystore_on">
+						<a href="#">광고주센터</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">광고주센터 바로가기</a></li>
+								<li><a href="#">즉시할인 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<a href="#">My 스토어</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">스토어 생성</a></li>
+								<li><a href="#">기본정보관리</a></li>
+								<li><a href="#">추천상품관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="@@adcener_on">
+						<a href="#">파트너지원</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">자주하는질문</a></li>
+								<li><a href="#">1:1문의</a></li>
+								<li><a href="#">약관변경확인</a></li>
+								<li><a href="#">(구)계약관리 확인</a></li>
+								<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+								<li><a href="#">자료실</a></li>
+								<li><a href="#">파트너교육센터</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 전체메뉴 노출시 btn_sitemap active 클래스를 넣어주세요 -->
+				<a href="#/" class="btn_sitemap"><span>전체메뉴보기</span></a>
+				<!-- 전체메뉴 노출시 sitemap active 클래스를 넣어주세요 -->
+				<div class="sitemap">
+					<!-- 
+						컬럼갯수에 따라 원하는 클래스를 추가해주세요
+						메뉴컬럼4개 : col4
+						메뉴컬럼5개 : col5
+						-->
+					<div class="sitemap_wrap col4">
+						<div>
+							<a href="#">딜관리</a>
+							<ul class="sub">
+								<li><a href="#">베이직딜등록</a></li>
+								<li><a href="#">베이직딜 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">주문관리</a>
+							<ul class="sub">
+								<li><a href="#">미확인 주문</a></li>
+								<li><a href="#">송장등록 대기주문</a></li>
+								<li><a href="#">송장등록 완료주문</a></li>
+								<li><a href="#">배송중 주문</a></li>
+								<li><a href="#">배송템플릿 관리</a></li>
+								<li><a href="#">배송지연패널티 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">클레임관리</a>
+							<ul class="sub">
+								<li><a href="#">출고전 취소 관리</a></li>
+								<li><a href="#">환불관리</a></li>
+								<li><a href="#">교환관리</a></li>
+								<li><a href="#">재배송관리</a></li>
+								<li><a href="#">수취처리관리</a></li>
+								<li><a href="#">클레임 등록</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">문의∙리뷰관리</a>
+							<ul class="sub">
+								<li><a href="#">고객문의 관리</a></li>
+								<li><a href="#">CS문의 관리</a></li>
+								<li><a href="#">고객리뷰 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">정산관리</a>
+							<ul class="sub">
+								<li><a href="#">판매현황조회</a></li>
+								<li><a href="#">파트너 단위 정산서</a></li>
+								<li><a href="#">딜 단위 정산서</a></li>
+								<li><a href="#">세금계산서</a></li>
+								<li><a href="#">매출·매입내역</a></li>
+								<li><a href="#">PG결제수수료 환급조회</a></li>
+							</ul>
+						</div>
+						<!-- <div>
+							<a href="#">계약관리</a>
+							<ul class="sub">
+								<li><a href="#">계약서작성</a></li>
+								<li><a href="#">계약서관리</a></li>
+								<li><a href="#">서명승인요청</a></li>
+							</ul>
+						</div> -->
+						<div>
+							<a href="#">광고주센터</a>
+							<ul class="sub">
+								<li><a href="#">광고주센터 바로가기</a></li>
+								<li><a href="#">즉시할인 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">My 스토어</a>
+							<ul class="sub">
+								<li><a href="#">스토어 생성</a></li>
+								<li><a href="#">기본정보관리</a></li>
+								<li><a href="#">추천상품관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">파트너지원</a>
+							<ul class="sub">
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">1:1문의</a></li>
+								<li><a href="#">약관변경확인</a></li>
+								<li><a href="#">(구)계약관리 확인</a></li>
+								<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+								<li><a href="#">자료실</a></li>
+								<li><a href="#">파트너교육센터</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--  전체메뉴 고정하기 활성화시 active 클래스를 넣어주세요 -->
+					<div class="bottom-area" style="display:none"><button class="menu_fixed">전체메뉴 고정하기</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="container">
+		<div id="content">
+            <div class="h2_head">
+                <h2>특가매장 신청 관리</h2>
+                <div class="btn_area">
+                    <a href="#;" class="btn-type1 lg">목록으로</a>
+                </div>
+            </div>
+
+            <div class="step_apply">
+                <ol class="lst">
+                    <!-- 현재 스텝에 active 클래스 추가해주세요 -->
+                    <li class="active">참여신청</li>
+                    <li class="">검수중</li>
+                    <li class="">딜제출요청</li>
+                    <li class="">딜제출완료</li>
+                </ol>
+            </div>
+
+            <!--
+            기획요청으로 삭제
+            <div class="tmon_answer">
+                <strong class="tit">티몬답변</strong>
+                <ul class="spc_note">
+                    <li><i class="dot"></i>티몬답변과 신청정보와 동일한 딜 생성 후 딜 제출 마감일 까지 관리페이지에 딜번호를 입력해주세요</li>
+                    <li><i class="dot"></i>제출한 딜의 조건이 일치하지 않다면 진행이 취소될 수 있습니다.</li>
+                    <li><i class="dot"></i>진행 관련 문의사항은 제출한 딜의 담당 MD에게 연락해주세요.</li>
+                </ul>
+                <table class="spc_table_form">
+                    <colgroup>
+                        <col style="width: 190px">
+                        <col style="width: 190px">
+                        <col style="width: 190px">
+                        <col style="width: 190px">
+                        <col style="width: 190px">
+                        <col style="width: auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>예정 특가매장</th>
+                            <td>1212타임</td>
+                            <th>예정 진행일시</th>
+                            <td>YYYY-MM-DD hh</td>
+                            <th>딜 제출 마감일</th>
+                            <td><span class="point">YYYY-MM-DD</span></td>
+                        </tr>
+                        <tr>
+                            <th>기타 요청사항</th> 
+                            <td colspan="5">내용</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            -->
+
+            <form action="" class="spc_form">
+                <fieldset>
+                    <table class="spc_table_form mb18">
+                        <colgroup>
+                            <col style="width: 200px">
+                            <col style="width: 200px">
+                            <col style="width: 200px">
+                            <col style="width: 200px">
+                            <col style="width: 200px">
+                            <col style="width: auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>담당자명</th>
+                                <td>김티몬</td>
+                                <th>전화번호</th>
+                                <td>010-4321-4321</td>
+                                <th>이메일</th>
+                                <td>tmon@spcpartner.com</td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+
+            <ul class="spc_note">
+                <li><i class="dot"></i>위 담당자 정보로 프로모션 협의가 진행되며, 신청제출 이후 변경이 불가능합니다. <a href="#;" class="btn-type1">변경하기</a></li>
+            </ul>
+
+            <div class="explanation">
+                <strong class="tit">신청 전, 확인해 주세요!</strong>
+                <ul class="spc_note">
+                    <li><i class="dot"></i>배송비 정책은 <span class="point">무료배송</span>, 전 옵션 <span class="point">균일가</span>는 필수입니다.</li>
+                    <li><i class="dot"></i>신청내용은 검수 과정에서 변경될 수 있으며, <span class="point">티몬답변 확인 후 딜 제출까지 완료</span>되어야 특가매장 진행이 가능합니다.</li>
+                    <li><i class="dot"></i>특가매장 참여를 위해 기재한 내용이 사실과 다름이 없음을 확인합니다.</li>
+                    <li><i class="dot"></i>특가매장 참여 상담을 위한 개인정보 이용에 동의합니다.</li>
+                </ul>
+            </div>
+
+            <div class="detail_head">
+                <span class="spc_label active">step01</span>
+                <strong>희망하는 특가매장을 선택해주세요.</strong>
+            </div>
+
+            <form action="" class="spc_form">
+                <fieldset>
+                    <table class="spc_table_form">
+                        <colgroup>
+                            <col style="width: 200px">
+                            <col style="width: auto"> 
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3"><span class="bullet">*</span>희망 특가매장</th>
+                                <td>
+                                    <label for="check1" class="spc_check">
+                                        <input type="checkbox" id="check1"><i class="symbol"></i>
+                                        모든 매장 가능
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="select_list_wrap">
+                                        <ul class="select_list inc_bn">
+                                            <li>
+                                                <div class="spc_select">
+                                                    <div class="value">
+                                                        <span class="selected">
+                                                            <strong>1순위</strong>
+                                                            선택한 옵션
+                                                        </span>
+                                                        <i></i>
+                                                    </div>
+                                                    <select>
+                                                        <option>옵션1</option>
+                                                        <option>옵션2</option>
+                                                        <option>옵션3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="bn_img">
+                                                    <img src="../../img/special/bn_01.jpg" alt="">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="spc_note noti">
+                                            <li><i class="dot"></i><span>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오</span></li>
+                                            <li><i class="dot"></i><span>평균 매출 1천만원 이상(오픈일 기준)</span></li>
+                                            <li><i class="dot"></i><span>매일 밤 12시 오픈</span></li>
+                                            <li><i class="dot"></i><span>균일가(3단계) : 균일가 권장, 3단계 균일가까지 허용</span></li>
+                                            <li><i class="dot"></i><span>최저가 : 파트너사 할인 쿠폰 적용 전 최저가</span></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="select_list_wrap">
+                                        <ul class="select_list inc_bn">
+                                            <li>
+                                                <div class="spc_select">
+                                                    <div class="value">
+                                                        <span class="selected">
+                                                            <strong>2순위</strong>
+                                                            선택한 옵션
+                                                        </span>
+                                                        <i></i>
+                                                    </div>
+                                                    <select>
+                                                        <option>옵션1</option>
+                                                        <option>옵션2</option>
+                                                        <option>옵션3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="bn_img">
+                                                    <img src="../../img/special/bn_02.jpg" alt="">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="spc_note noti">
+                                            <li><i class="dot"></i><span>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오</span></li>
+                                            <li><i class="dot"></i><span>평균 매출 1천만원 이상(오픈일 기준)</span></li>
+                                            <li><i class="dot"></i><span>매일 밤 12시 오픈</span></li>
+                                            <li><i class="dot"></i><span>균일가(3단계) : 균일가 권장, 3단계 균일가까지 허용</span></li>
+                                            <li><i class="dot"></i><span>최저가 : 파트너사 할인 쿠폰 적용 전 최저가</span></li>
+                                        </ul>
+                                        <ul class="spc_note noti">
+                                            <li><i class="dot"></i><span>무료배송 : 1개만 사도 무료배송</span></li>
+                                            <li><i class="dot"></i><span>상품의 옵션별 무한 특가 진행되어 전 상품 최저가</span></li>
+                                            <li><i class="dot"></i><span>판매되는 전 상품 무한수량</span></li>
+                                            <li><i class="dot"></i><span>전상품 무한기간으로 판매종료일에 대한 제한이 없음</span></li>
+                                            <li><i class="dot"></i><span>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사</span></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2"><span class="bullet">*</span>특가매장 참여 가능일</th>
+                                <td>
+                                    <label for="check1" class="spc_check">
+                                        <input type="checkbox" id="check1"><i class="symbol"></i>
+                                        상시 참여 가능
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="calendar_wrap">
+                                        <div class="spc_calendar">
+                                            <input type="text" class="spc_text" value="2016.04.30"><button class="btn_calendar">달력</button>
+                                        </div> ~
+                                        <div class="spc_calendar">
+                                            <input type="text" class="spc_text" value="2016.04.30"><button class="btn_calendar">달력</button>
+                                        </div>
+                                    </div>
+                                    <ul class="spc_note">
+                                        <li><i class="dot"></i>특가매장에 참여 가능한 기간을 설정해주세요.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+
+            <div class="detail_head">
+                <span class="spc_label active">step02</span>
+                <strong>대표상품정보를 입력해주세요.</strong>
+            </div>
+
+            <form action="" class="spc_form">
+                <fieldset>
+                    <table class="spc_table_form">
+                        <colgroup>
+                            <col style="width: 200px">
+                            <col style="width: 144px">
+                            <col style="width: 360px">
+                            <col style="width: 144px">
+                            <col style="width: auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3" class="ta_c">
+                                    <span class="bullet">*</span>상품 이미지
+                                    <div class="img_wrap mt12">
+                                        <img src="https://picsum.photos/id/55/105/105">
+                                        <div class="btn_wrap">
+                                            <button class="view">
+                                                <i>확대</i>
+                                            </button>
+                                            <button class="edit">
+                                                <i>편집</i>
+                                            </button>
+                                            <button class="del">
+                                                <i>삭제</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th><span class="bullet">*</span>대표상품명</th>
+                                <td><input type="text" class="spc_text w300" placeholder="브랜드+상품명+모델번호+구성/용량 으로 입력해주세요"></td>
+                                <th>브랜드</th>
+                                <td><input type="text" class="spc_text w300" placeholder="브랜드명을 입력해주세요."></td></td>
+                            </tr>
+                            <tr>
+                                <th><span class="bullet">*</span>행사가격 (균일가)</th>
+                                <td><input type="text" class="spc_text w300" placeholder="끝자리를 5,9 단위로 입력해주세요"><span class="won">원</span></td>
+                                <th><span class="bullet">*</span>공급가격</th>
+                                <td><input type="text" class="spc_text w300" placeholder="티몬에 공급 가능한 가격을 입력해주세요"><span class="won">원</span></td>
+                            </tr>
+                            <tr>
+                                <th><span class="bullet">*</span>판매가능수량</th>
+                                <td><input type="text" class="spc_text w300" placeholder="판매가능한 대표상품 재고수량을 입력해주세요"></td>
+                                <th><span class="bullet">*</span>카테고리</th>
+                                <td>
+                                    <ul class="select_list">
+                                        <li>
+                                            <div class="spc_select w140">
+                                                <div class="value"><span class="selected">선택한 옵션</span><i></i></div>
+                                                <select>
+                                                    <option>옵션1</option>
+                                                    <option>옵션2</option>
+                                                    <option>옵션3</option>
+                                                </select>
+                                            </div>
+                                            <ul class="spc_note type_point">
+                                                <li><i class="dot"></i>제조일자/유통기한 항목을 <br> 꼭 입력해주세요.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>제조일자/유통기한</th>
+                                <td colspan="4">
+                                    <input type="text" class="spc_text w948" placeholder="제조연월일, 유통기한 또는 품질유지기한을 입력해주세요.">
+                                    <div class="upload_area">
+                                        <div class="fileUpload">
+                                            <input type="file">
+                                            <span>파일첨부</span>
+                                        </div>
+                                        <span class="btnDown upload">
+                                            <span class="title">첨부파일명첨부파일명첨부파일명첨부파일명.xlsx</span>
+                                            <button type="button" class="del"><i>삭제</i></button>
+                                        </span>
+                                        <ul class="spc_note">
+                                            <li><i class="dot"></i>상품의 제조일자 유통기한이 나타난 이미지 또는 자료를 첨부해주세요<li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>타사 판매 이력</th>
+                                <td colspan="4">
+                                    <input type="text" class="spc_text w948" placeholder="대표상품을 판매했던 사이트 url 을 입력해주세요.">
+                                    <div class="upload_area">
+                                        <div class="fileUpload">
+                                            <input type="file">
+                                            <span>파일첨부</span>
+                                        </div>
+                                        <span class="btnDown upload">
+                                            <span class="title">첨부파일명첨부파일명첨부파일명첨부파일명.xlsx</span>
+                                            <button type="button" class="del"><i>삭제</i></button>
+                                        </span>
+                                        <ul class="spc_note">
+                                            <li><i class="dot"></i>유효한 url 이 없을 경우, 전체 상품 구성을 알 수 있는 이미지 또는 자료를첨부해주세요.<li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>추천사유 및 특이사항</th>
+                                <td colspan="4">
+                                    <textarea name="" class="spc_textarea w948" placeholder="상품의 특성 또는 파트너사가 해당 상품을 판매하는 방식(최저가, 단독판매 등)을 자유롭게 기재해주세요."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+
+            <div class="detail_head">
+                <span class="spc_label">option</span>
+                <strong>상품 구성이 다양할 경우, 전체 상품 정보를 입력하면 특가매장 승인률이 높아집니다.</strong>
+            </div>
+
+            <div class="product_info_input">
+                <p>현재 판매대기 판매중 판매종료 딜의 옵션정보를 불러올 수 있습니다</p>
+                <div class="input_area">
+                    <div class="deal_num">
+                        <input type="text" class="spc_text w320" placeholder="딜번호">
+                        <a href="#;" class="btn-type1 lg">옵션정보 불러오기</a>
+                    </div>
+                    <div class="btn_area">
+                        <a href="#;" class="btn-type1 lg">엑셀로 일괄등록</a>
+                        <a href="#;" class="btn-type1 lg">상품 엑셀 다운로드</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modify_area">
+                <a href="#;" class="btn-type1 active">추가</a>
+                <a href="#;" class="btn-type1 disabled">삭제</a>
+            </div>
+            <div class="scroll_box">
+                <table class="basic_tb">
+                    <colgroup>
+                        <col style="width: 80px">
+                        <col style="width: 100px">
+                        <col style="width: 740px">
+                        <col style="width: 140px">
+                        <col style="width: auto">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></th>
+                            <th>No.</th>
+                            <th>상품명</th>
+                            <th>수량</th>
+                            <th>행사가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <ul class="spc_note">
+                <li><i class="dot"></i>상품명에 숫자 1, 2, 3...10 이 포함되는 경우 01, 02, 03과 같이 자릿수를 맞추어 등록해야 합니다.</li>
+                <li><i class="dot"></i>업로드하려는 엑셀 파일에 공백, 특수문자가 포함된 경우 업로드 되지 않습니다.</li>
+                <li><i class="dot"></i>이미 입력한 상품명이 있을 경우, 반드시 최신버전의 엑셀을 다운받아서 다시 업로드 해주세요. 엑셀파일 업로드 시, 입력되어 있는 정보는 삭제됩니다.</li>
+                <li><i class="dot"></i>전체상품정보는 최대 1000개까지 등록 가능합니다.</li>
+            </ul>
+
+            <div class="submit_area">
+                <a href="#;" class="btn-type2 active">신청취소</a>
+            </div>
+
+		</div>
+		<div class="aside_left">
+	<!-- <a href="#" class="banner admon"><i>광고주 센터, 광고등록하면 매출이 UP</i></a> -->
+	<!-- <button type="button" class="mmp"><span class="blind">티몬특가 신청하기</span></button> -->
+	<a href="#" class="banner black_deal"><i>티몬블랙딜 참여하기</i></a>
+	<!-- <button type="button" class="extra one_stop">
+		<i></i>
+		<span>ONE STOP<br>딜검색</span>
+	</button> -->
+	<ul class="aside_lst_pic">
+		<li><a href="#" class="pic onestop"><span class="blind">ONE STOP 딜 검색</span></a></li>
+		<li><a href="#" class="pic partner"><span class="blind">파트너 교육센터</span></a></li>
+		<li><a href="#" class="pic video"><span class="blind">동영상 가이드</span></a></li>
+		<li><a href="#" class="pic report"><span class="blind">비윤리/불친절 직원신고</span></a></li>
+		<!-- <li><a href="#" class="pic faq"><span class="blind">자주하는 질문</span></a></li> -->
+		<li><a href="#" class="pic holiday"><span class="blind">휴무일 공지등록</span></a></li>
+		<!-- <li><a href="#" class="pic excel"><span class="blind">Excel 뷰어 다운로드</span></a></li> -->
+		<!-- <li><a href="#" class="pic econtract"><span class="blind">전자계약서 안내</span></a></li> -->
+		<!-- <li><a href="#" class="pic certificate"><span class="blind">공인인증서 발급</span></a></li> -->
+	</ul>	
+	<!-- <button type="button" class="record_inquiry"><span>Facebook<br />딜 실적 조회</span></button>
+	<a href="#" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</a>
+	<button type="button" class="discount"><span class="blind">할인혜택 적용안내</span></button> -->
+	<!-- <ul class="aside_lst">
+		<li><a href="#" class="point"><span>파트너<br>교육센터</span></a></li>
+		<li><button type="button" class="point"><span>동영상<br>가이드</span></button></li>
+		<li><button type="button"><span>비윤리/불친절<br>직원신고</span></button></li>
+		<li><button type="button"><span>자주하는<br>질문</span></button></li>
+		<li><a href="#"><span>전자계약서<br>안내</span></a></li>
+		<li><a href="#"><span>공인인증서<br>발급</span></a></li>
+	</ul> -->
+	<!-- <button type="button" class="extra">
+		<span>오픈마켓<br>동의</span>
+	</button>
+	<button type="button" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</button> -->
+	<button type="button" class="feedback">
+		<em>페이지 별점 주기</em>
+		<span><i></i><i></i><i></i></span>
+	</button>
+</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+	<ul class="footer_link">
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#"><b>개인정보처리방침</b></a></li>
+		<li><a href="#">전자금융거래</a></li>
+		<li><a href="#">청소년보호정책</a></li>
+	</ul>
+	<span class="footer_logo">TMON</span>
+	<p>사업자등록번호 211-88-41856<span class="dv">|</span>통신판매업신고 제2013-서울강남-02403호</p>
+	<p>서울특별시 강남구 테헤란로 114길 38 동일타워<span class="dv">|</span>대표자 이진원<span class="dv">|</span><a href="#">사업자정보확인</a></p>
+	<p>COPYRIGHT(c) TMON INC. ALL RIGHTS RESERVED.</p>
+	<div class="cs_center">
+		<p class="cs_center_top">
+			파트너센터 <strong>1644-0552</strong>
+		</p>
+		<p class="holiday">
+			평일 09~18시 (점심시간 12~13시)<br >
+			주말/공휴일 휴무
+		</p>
+	</div>
+	<div class="footer_bottom">
+		<img src="../../img/common/footer_iso_banner.png" />
+	</div>
+</div>
+	</div>
+</div>
+
+</body>
+</html>

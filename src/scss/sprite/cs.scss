@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+%sp-cs {
+    background: url('../im/sp-cs.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-cs($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-cs, $filename);
+    @extend %sp-cs;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-cs: (
+    spritesheet_name: sp-cs,
+    btn_next_after: (offset_x: 0, offset_y: -34px, width: 24px, height: 24px),
+    btn_next_before: (offset_x: -28px, offset_y: -34px, width: 24px, height: 24px),
+    btn_nextend_after: (offset_x: -56px, offset_y: -34px, width: 24px, height: 24px),
+    btn_nextend_before: (offset_x: 0, offset_y: -62px, width: 24px, height: 24px),
+    btn_prev_after: (offset_x: -28px, offset_y: -62px, width: 24px, height: 24px),
+    btn_prev_before: (offset_x: -56px, offset_y: -62px, width: 24px, height: 24px),
+    btn_prevfirst_after: (offset_x: -92px, offset_y: 0, width: 24px, height: 24px),
+    btn_prevfirst_before: (offset_x: -92px, offset_y: -28px, width: 24px, height: 24px),
+    chk_off: (offset_x: -23px, offset_y: -90px, width: 18px, height: 18px),
+    chk_on: (offset_x: -45px, offset_y: -90px, width: 18px, height: 18px),
+    ico_add: (offset_x: -67px, offset_y: -90px, width: 18px, height: 18px),
+    ico_arrow: (offset_x: -142px, offset_y: -89px, width: 4px, height: 8px),
+    ico_balloon_arr: (offset_x: -142px, offset_y: -60px, width: 11px, height: 7px),
+    ico_btn_arr: (offset_x: -142px, offset_y: -44px, width: 8px, height: 12px),
+    ico_btn_close: (offset_x: -92px, offset_y: -56px, width: 19px, height: 19px),
+    ico_btn_round: (offset_x: 0, offset_y: 0, width: 54px, height: 30px),
+    ico_calendar: (offset_x: -120px, offset_y: -85px, width: 16px, height: 16px),
+    ico_clip: (offset_x: 0, offset_y: -113px, width: 16px, height: 16px),
+    ico_del: (offset_x: -142px, offset_y: -16px, width: 10px, height: 10px),
+    ico_down: (offset_x: -100px, offset_y: -113px, width: 17px, height: 14px),
+    ico_kc: (offset_x: -58px, offset_y: 0, width: 30px, height: 30px),
+    ico_kc_gray: (offset_x: -20px, offset_y: -113px, width: 16px, height: 16px),
+    ico_kc_min: (offset_x: -40px, offset_y: -113px, width: 16px, height: 16px),
+    ico_keyword_del: (offset_x: -142px, offset_y: -30px, width: 10px, height: 10px),
+    ico_page_top: (offset_x: -142px, offset_y: -71px, width: 10px, height: 5px),
+    ico_pic: (offset_x: -121px, offset_y: -113px, width: 17px, height: 14px),
+    ico_quest: (offset_x: -60px, offset_y: -113px, width: 16px, height: 16px),
+    ico_quest2: (offset_x: -142px, offset_y: 0, width: 12px, height: 12px),
+    ico_question: (offset_x: -80px, offset_y: -113px, width: 16px, height: 16px),
+    ico_radio_dis: (offset_x: -120px, offset_y: -22px, width: 17px, height: 17px),
+    ico_radio_off: (offset_x: -120px, offset_y: -43px, width: 17px, height: 17px),
+    ico_radio_on: (offset_x: -120px, offset_y: -64px, width: 17px, height: 17px),
+    ico_refresh: (offset_x: 0, offset_y: -90px, width: 19px, height: 19px),
+    ico_remove: (offset_x: -89px, offset_y: -90px, width: 18px, height: 18px),
+    ico_slct_arr: (offset_x: -142px, offset_y: -80px, width: 10px, height: 5px),
+    ico_time: (offset_x: -120px, offset_y: 0, width: 18px, height: 18px),
+);

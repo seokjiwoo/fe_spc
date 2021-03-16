@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		* {margin:0; padding:0}
+		html, body {color:#6773a9; font-size:12px; font-family:consolas, Dutum, "돋움", vardana}
+		div.wrap {border:5px solid #1865b3; padding:10px;}
+		.folder {color:#ff2e81; font-weight:bold}
+		table {margin:0; padding:0; table-layout:fixed; width: 100%; border:1px solid #eee;  border-collapse: collapse;}
+		tr {background:#ffffff}
+		th {padding: 7px 0 5px 0; color:#6c8cd7; font-size:11px; text-align:center; background:#d4d4d4; border:1px solid #bbb;}
+		td {padding: 10px; color:#6c8cd7; font-size:11px;text-align:left; border:1px solid #bbb;}
+		td p {
+			line-height: 1.6;
+		}
+		table td.depthTitle {color:#777777; font-weight:bold; font-size:11px; text-align:left; padding-left:10px}
+		table td.etc {color:#393939; text-align:left; padding-left:5px;}
+		table td.link{text-align:left; padding-left:7px; color:blue;}
+		table td.link a {color:blue;}
+		table tr:hover{background-color:#d4d4d4;}
+		h2.title {padding:10px 0 15px 0; color:#000000; margin-bottom:8px; font-size:14px; text-align:center}
+		p.pageLink {margin:20px 0 10px 0; color:#0019a9;  font-size:11px}
+		a {color:#838383; text-decoration:none}
+		a:hover {color:#919191; text-decoration:underline}
+		dl.list dt {border-bottom: 1px dashed #ccc; font-size: 14px; line-height: 2em; padding: 5px; color: #000; overflow: hidden;}
+		dl.list dt button {padding: 2px 5px; margin-left: 20px; width: 180px; cursor: pointer; display: block; float: right; font-family:Dutum, "돋움", vardana}
+		dl.list dt span {font-weight: bold; color: #6c8cd7}
+		dl.list dd {padding:10px 0;}
+		.menu_line td {background:#efefef;}
+		.delete {text-decoration:line-through; color:red; font-weight:bold;}
+		.delete a{font-weight:normal; color:red !important;}
+		.ing td{background:#FFFBC8 ;}
+		.del td{background:#FF8606;}
+		.end td {background:#ffeaea;}
+		.wait td{background-color: #c8e9ec;}
+
+		tr.none {
+			display: none;
+		}
+
+		dt {
+			display: flex;
+			flex: 1 1 auto;
+		}
+
+		.opt {
+			display: flex;
+			flex: 1 1 auto;
+		}
+		.explain {
+			display: inline-flex;
+			margin-right: 20px;
+			margin-left: auto;
+		}
+		.explain > * {
+			display: flex;
+			align-items: center;
+			color: #555 !important;
+			font-size: 12px;
+			font-weight: normal !important;
+			margin-left: 10px;
+		}
+		.explain > *:before {
+			content: '';
+			display: inline-block;
+			width: 6px; height: 6px;
+			margin-right: 6px;
+		}
+
+		.explain .inProgress:before {
+			background: #999;
+		}
+
+		.explain .complete:before {
+			background: indianred;
+		}
+
+
+
+		table.tbl thead tr:nth-child(1) th {
+			position: sticky;
+			top: 0;
+		}
+
+		table.tbl th {
+			height: 40px;
+			color: #333;
+		}
+		table.tbl td {
+			height: 40px;
+		}
+
+		table.tbl th , table.tbl td {
+			border: 1px solid #999;
+		}
+		table.tbl tr:hover td {
+			background-color: #ffc299;
+		}
+
+		table.tbl td:nth-child(2) {
+			color: #333;
+			font-weight: 700;
+		}
+
+		table.tbl td:nth-child(4) {
+			padding: 0;
+		}
+		table.tbl td a {
+			display: block;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding: 0px 10px;
+			line-height: 1.2;
+		}
+
+		table.tbl td:nth-child(4) a {
+			color: #333;
+		}
+		table.tbl td:nth-child(4) a:hover {
+			color: #f60 !important;
+		}
+
+		.end td {
+			background-color: #fff2ca;
+			color: #63562e;
+		}
+
+		.end td a {
+		/*   color: #ff0 !important;  */
+		}
+
+		tr.bks td:nth-child(3) {
+			background-color: #feff8a;
+		}
+		tr.lkh td:nth-child(3) {
+			background-color: #ffb7e6;
+		}
+		tr.sjw td:nth-child(3) {
+			background-color: #bcd9f3;
+		}
+		tr.sms td:nth-child(3) {
+			background-color: #ceffbb;
+		}
+		tr.kkl td:nth-child(3) {
+			background-color: #e7a8b9;
+		}
+
+		tr.inProgress td:not(:nth-child(3)) {
+			background-color: #eee;
+			color: #999 !important;
+		}
+
+		tr.complete td:nth-child(1) {
+			color: indianred;
+		}
+
+		ul.explainList {
+			margin: 20px 0;
+			font-size: 12px;
+			color: #555;
+		}
+
+		ul.explainList > li {
+			line-height: 1.4;
+			padding-bottom: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	 <div class="wrap">
+			<dl class="list">
+				 <dt>
+					<h1>SDUMU 784</h1>
+					<div class="opt">
+
+						<div class="explain">
+							<span class="inProgress">진행중</span>
+							<span class="complete">완료</span>
+						</div>
+						<select class="workers">
+							<option value="0">전체</option>
+							<option value="1">석지우</option>
+							<option value="2">이근호</option>
+							<option value="3">신민식</option>
+							<option value="4">배경수</option>
+						</select>
+					</div>
+				 </dt>
+				 <dd>
+						<h2>공통 이슈정리</h2>
+						<ul class="explainList">
+							<li>
+								<p></p>
+							</li>
+						</ul>
+
+						<table class="tbl">
+							<colgroup>
+								<col style="width:150px" />
+								<col style="width:300px" />
+								<col style="width:150px" />
+								<col style="width:250px" />
+								<col style="width:auto" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>진행상황</th>
+									<th>페이지명</th>
+									<th>작업자</th>
+									<th>링크</th>
+									<th>설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="end">
+									<td>진행중</td>
+									<td>공통  </td>
+									<td>이근호</td>
+									<td><a href="common.html" target="_blank">common.html</a></td>
+									<td>
+										 전체 페이지내에서 사용할 수 있는 공통 부분들만을 따로 구분지어 정리하여두었습니다.
+									</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션_참여관리_00</td>
+									<td>신민식</td>
+									<td><a href="participation0.html" target="_blank">participation0.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>
+										PC_SPC_특가프로모션_참여관리_01<br />
+										PC_SPC_특가프로모션_티몬답변 팝업<br />
+										PC_SPC_특가프로모션_딜 번호 제출하기 팝업
+										</td>
+									<td>신민식</td>
+									<td><a href="participation1.html" target="_blank">participation1.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션_참여관리_empty</td>
+									<td>신민식</td>
+									<td><a href="participation_empty.html" target="_blank">participation_empty.html</a></td>
+									<td></td>
+								</tr>
+								 <tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여신청_참여신청</td>
+									<td>석지우</td>
+									<td><a href="special_store_participation.html" target="_blank">special_store_participation.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+								 <td>완료</td>
+								 <td>PC_SPC_특가프로모션참여신청_희망특가매장 변경 UI, 팝업 추가</td>
+								 <td>이근호</td>
+								 <td><a href="special_store_participation_popup.html" target="_blank">special_store_participation_popup.html</a></td>
+								 <td></td>
+							 </tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여신청_참여신청(임시저장)</td>
+									<td>석지우</td>
+									<td><a href="special_store_temporary_save.html" target="_blank">special_store_temporary_save.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여신청_접수중</td>
+									<td>석지우</td>
+									<td><a href="special_store_receipt.html" target="_blank">special_store_receipt.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여신청_딜제출요청</td>
+									<td>석지우</td>
+									<td><a href="special_store_request.html" target="_blank">special_store_request.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여신청_딜제출완료</td>
+									<td>석지우</td>
+									<td><a href="special_store_submitted.html" target="_blank">special_store_submitted.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여연락처 관리 팝업</td>
+									<td>석지우</td>
+									<td><a href="contact_layer.html" target="_blank">contact_layer.html</a></td>
+									<td></td>
+								</tr>								
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여신청_모든선택시, 팝업_대표이미지</td>
+									<td>김기락</td>
+									<td><a href="special_promotion_all.html" target="_blank">special_promotion_all.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여신청_반려</td>
+									<td>김기락</td>
+									<td><a href="special_promotion_return.html" target="_blank">special_promotion_return.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>PC_SPC_특가프로모션참여신청_취소</td>
+									<td>김기락</td>
+									<td><a href="special_promotion_cancel.html" target="_blank">special_promotion_cancel.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="">
+									<td>진행중</td>
+									<td>SPC_티몬 내부용 이메일 템플릿</td>
+									<td>이근호</td>
+									<td><a href="mail_internal_01.html" target="_blank">mail_internal_01.html</a></td>
+									<td>기획 수정으로 대기중입니다.</td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>SPC_파트너 발송용 이메일 템플릿</td>
+									<td>이근호</td>
+									<td><a href="mail_partner_01.html" target="_blank">mail_partner_01.html</a></td>
+									<td></td>
+								</tr>
+								<tr class="end">
+									<td>완료</td>
+									<td>SPC_파트너 발송용 이메일 템플릿2</td>
+									<td>이근호</td>
+									<td><a href="mail_partner_02.html" target="_blank">mail_partner_02.html</a></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+				 </dd>
+			</dl>
+	 </div>
+
+<script>
+
+	let tdsWorkers = document.querySelectorAll( 'table tr > td:nth-child(3)' ) ;
+	let tdsStatus = document.querySelectorAll( 'table tr > td:nth-child(1)' ) ;
+
+	[].forEach.call( tdsWorkers , ( td , idx ) => {
+		let cName = null ;
+		switch ( td.textContent ) {
+			case '배경수' :
+				cName = 'bks' ;
+				break ;
+			case '이근호' :
+				cName = 'lkh' ;
+				break ;
+			case '석지우' :
+				cName = 'sjw' ;
+				break ;
+			case '신민식' :
+				cName = 'sms' ;
+				break ;
+			case '김기락' :
+				cName = 'kkl' ;
+				break ;
+			default :
+		}
+
+		if ( cName != null ) {
+			td.closest( 'tr' ).classList.add( cName ) ;
+		}
+	}) ;
+
+	[].forEach.call( tdsStatus , ( td , idx ) => {
+		let cName = null ;
+		switch ( td.textContent ) {
+			case '진행중' :
+				cName = 'inProgress' ;
+				break ;
+			case '완료' :
+				cName = 'complete' ;
+				break ;
+			default :
+		}
+
+		if ( cName != null ) {
+			td.closest( 'tr' ).classList.add( cName ) ;
+		}
+	}) ;
+
+	let slctWorkers = document.querySelector( 'select.workers' ) ;
+	slctWorkers.addEventListener( 'change' , () => {
+		console.log( 'a' , slctWorkers.selectedIndex ) ;
+		let workerName = '' ;
+		switch ( slctWorkers.selectedIndex ) {
+			case 1 :
+				workerName = '석지우' ;
+				break ;
+			case 2 :
+				workerName = '이근호' ;
+				break ;
+			case 3 :
+				workerName = '신민식' ;
+				break ;
+			case 4 :
+				workerName = '배경수' ;
+				break ;
+			case 5 :
+				workerName = '김기락' ;
+				break ;
+			default :
+				workerName = '전체' ;
+		}
+
+		[].forEach.call( tdsWorkers , ( td , idx ) => {
+			let cName = null ;
+			if ( workerName == '전체' ) {
+				td.closest( 'tr' ).classList.remove( 'none' ) ;
+			} else {
+				if ( td.textContent != workerName ) {
+					td.closest( 'tr' ).classList.add( 'none' ) ;
+				} else {
+					td.closest( 'tr' ).classList.remove( 'none' ) ;
+				}
+			}
+		}) ;
+	}) ;
+</script>
+
+</body>
+</html>

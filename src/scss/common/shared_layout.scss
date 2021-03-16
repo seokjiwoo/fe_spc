@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// text hidden
+.blind{
+	visibility:hidden;
+	overflow:hidden;
+	position:absolute;
+	@include size(0, 0);
+	font:0/0 a;
+}
+
+html{height:100%;}
+
+body.spc{ // 기존 css파일들과의 순서에 상관없이 화면이 깨지지 않고 적용시키도록 하기 위함
+	height:100%;
+	
+	#wrap{
+		min-width:1450px;
+		min-height:100%;
+		background-color:#fff;
+	}
+	
+	#header{
+		position: relative;
+		min-height: 120px;
+		margin: 0 auto;
+		z-index: 20;
+		background-color: #fff;
+	}
+	
+	#container{
+		position: relative;
+		z-index: 10;
+	}
+	
+	#content{
+		width: 1200px;
+		min-height: 530px;
+		margin: 0 auto;
+		padding: 50px 0 63px;
+	}
+	
+	#footer{
+		border-top: 1px solid #dadde0;
+		background-color: #fff;
+	}
+}

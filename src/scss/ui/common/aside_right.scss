@@ -1,0 +1,129 @@
+.aside_right{
+	$clr-bn-bd : #dedede;
+	position:absolute;
+	top:35px;
+	left:50%;
+	z-index:60;
+	margin-left:610px;
+	text-align: center;
+	.banner_list{
+		a{
+			display:block;
+			img{
+				vertical-align:top;
+			}
+		}
+	}
+	.bx_banner_event{
+		width:120px;
+		background-color: #fff;
+		ul.banner_list{
+			border:1px solid $clr-bn-bd;
+			li{		
+				border-top:1px solid $clr-bn-bd;		
+				&:first-child{
+					border-top:0;
+				}
+			}
+		}
+		.control{
+			position: relative;
+			margin-top:-1px;
+			border:1px solid $clr-bn-bd;
+			background-color: #fff;
+			vertical-align: top;
+			.num{
+				display:inline-block;
+				width:100%;
+				height:28px; line-height: 28px;
+				padding:1px 26px;
+				text-align:center;
+				font-size:13px; 
+				color:#16181a ;
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				.crnt{
+					font-weight: bold;
+				}
+			}
+			.btn_move{
+				display:block;
+				width:28px; height:26px;
+				position: absolute; top:1px;
+				font-size:0; text-indent: -99999em;
+				&.prev{ 
+					left : 0; background: url(../img/common/btn_prev_bn2.jpg) no-repeat 0 0; 
+				}
+				&.next{ 
+					right : 0; background: url(../img/common/btn_next_bn2.jpg) no-repeat 0 0; 
+				}
+			}
+		}
+	} // end of bx_banner_event
+	.bx_banner_service{
+		margin-top:10px;
+		width:120px;
+		position: relative;
+		.banner_list{
+		}
+		.control{
+			.paging{
+				position: absolute;
+				left:0; bottom:10px;
+				width:100%;
+				text-align: center;
+				font-size:0;
+				button{
+					display:inline-block;
+					width:10px;
+					height:10px;
+					margin:0 2px;
+					background-color: rgba(255, 255, 255, 0.75);
+					border: solid 1px rgba(0, 0, 0, 0.2);
+					border-radius:50%;
+					-webkit-border-radius:50%;
+					-moz-border-radius:50%;
+					-ms-border-radius:50%;
+					-o-border-radius:50%;
+					box-sizing:border-box;
+					-webkit-box-sizing:border-box;
+					-moz-box-sizing:border-box;
+					-ms-box-sizing:border-box;
+					-o-box-sizing:border-box;
+					text-indent:-9999em;
+					font-size:0;
+					&.on{
+						background-color: #f27935;
+						border:none;
+					}
+				}
+			}
+		}
+	} // end of bx_banner_service
+	ul.aside_nav{
+		position:absolute;
+		top:0;
+		right:-28px;
+		li{
+			width:20px;
+			height:20px;
+			overflow: hidden;
+			background: url(../img/home/aside_btn.png) no-repeat 0 0;
+			line-height:20px;
+			text-align:center;
+			display:block !important;
+			cursor: pointer;
+			margin-top:5px;
+			font-family: $font_nanum_gothic;
+			color:#fff;
+			&:first-child{
+				margin-top:0;
+			}
+			&.on{
+				background-position:0 -20px;
+			}
+		}
+	}
+	
+}

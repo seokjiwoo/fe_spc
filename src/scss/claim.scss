@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@import "./common/variables";
+@import "./mixins/mixins";
+@import "./sprite/mixins";
+@import "./sprite/common";
+@import "./sprite/claim2";
+
+// LAYER
+@import "./ui/layer/claim";
+
+// 클레임관리
+@import "./ui/claim/process_state";
+@import "./ui/claim/summary_area";
+@import "./ui/claim/layout"; // layout은 마지막

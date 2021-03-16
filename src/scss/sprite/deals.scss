@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+%sp-deals {
+    background: url('../im/sp-deals.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-deals($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-deals, $filename);
+    @extend %sp-deals;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-deals: (
+    spritesheet_name: sp-deals,
+    chk_on: (offset_x: -64px, offset_y: -34px, width: 20px, height: 20px),
+    guide_arr: (offset_x: 0, offset_y: 0, width: 26px, height: 84px),
+    ico_accordion_down: (offset_x: -111px, offset_y: -25px, width: 10px, height: 6px),
+    ico_accordion_up: (offset_x: -111px, offset_y: -35px, width: 10px, height: 6px),
+    ico_add: (offset_x: -88px, offset_y: -23px, width: 18px, height: 18px),
+    ico_arrow: (offset_x: -111px, offset_y: -63px, width: 4px, height: 8px),
+    ico_balloon_arr: (offset_x: 0, offset_y: -109px, width: 11px, height: 7px),
+    ico_balloon_arr2: (offset_x: -111px, offset_y: -14px, width: 9px, height: 7px),
+    ico_btn_close: (offset_x: -88px, offset_y: 0, width: 19px, height: 19px),
+    ico_btn_round: (offset_x: -30px, offset_y: 0, width: 54px, height: 30px),
+    ico_clip: (offset_x: -30px, offset_y: -68px, width: 16px, height: 16px),
+    ico_del: (offset_x: -70px, offset_y: -68px, width: 10px, height: 10px),
+    ico_down: (offset_x: -61px, offset_y: -88px, width: 17px, height: 14px),
+    ico_kc: (offset_x: -30px, offset_y: -34px, width: 30px, height: 30px),
+    ico_kc_gray: (offset_x: -50px, offset_y: -68px, width: 16px, height: 16px),
+    ico_kc_min: (offset_x: -21px, offset_y: -88px, width: 16px, height: 16px),
+    ico_keyword_del: (offset_x: -111px, offset_y: 0, width: 10px, height: 10px),
+    ico_page_top: (offset_x: -111px, offset_y: -45px, width: 10px, height: 5px),
+    ico_pic: (offset_x: -82px, offset_y: -88px, width: 17px, height: 14px),
+    ico_question: (offset_x: -41px, offset_y: -88px, width: 16px, height: 16px),
+    ico_radio_off: (offset_x: -88px, offset_y: -67px, width: 17px, height: 17px),
+    ico_radio_on: (offset_x: 0, offset_y: -88px, width: 17px, height: 17px),
+    ico_remove: (offset_x: -88px, offset_y: -45px, width: 18px, height: 18px),
+    ico_slct_arr: (offset_x: -111px, offset_y: -54px, width: 10px, height: 5px),
+);

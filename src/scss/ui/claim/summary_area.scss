@@ -1,0 +1,46 @@
+.summary_area{
+	margin-bottom:36px;
+	border:1px solid #c1c6cc;
+	ul{
+		@include after();
+		li{
+			position:relative;
+			width:130px;
+			float:left;
+			text-align:center;
+			font-size:11px;
+			&:after{
+				position:absolute;
+				left:0;
+				top:20px;
+				content:'';
+				display: block;
+				width:1px;
+				height:7px;
+				background:#c1c6cc;
+			}
+			div.wp{
+				height:48px;
+				line-height:48px;
+			}
+			strong{
+				color:#82859f;
+			}
+			&:first-child{
+				width:150px;
+				border-right:1px solid #c1c6cc;
+				span, strong{
+					color:#5785d3;
+				}
+				&:after{
+					display:none;
+				}
+			}
+			&:first-child + li{
+				&:after{
+					display:none;
+				}
+			}
+		}
+	}
+};

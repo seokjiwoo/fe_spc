@@ -1,0 +1,736 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc.css">
+<link rel="stylesheet" type="text/css" href="../../css/special.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		<div class="top_wrap">
+	<div class="inner">
+		<div class="account_area">
+			<!-- 하위목록을 노출시키려면 active 클래스를 넣어주세요  -->
+			<div class="state_list">
+				<button class="account"><em>티켓몬스터</em> 님</button>
+				<ul>
+					<li><a href="#">나의 정보 확인</a></li>
+					<li><a href="#">비밀번호 변경</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div> <!-- end of state_list -->
+			<span><a href="#">공지사항</a></span>
+			<span><a href="#">매출증진 TIP</a></span>
+			<span><a href="#">담당자 연락처</a></span>
+			<span class="ad">슈퍼클릭(키워드/검색광고)문의 <em>1661-8200</em></span>	
+			<span class="ad">티몬광고상품문의 <em>02-2098-8690</em></span>
+		</div>
+		<!-- 오픈마켓 로고는 om 멀티클래스, 티몬특가 로고는 mmp 멀티클래스를 주시면 됩니다 -->
+		<!-- <h1 class="spc_logo om"><a href="#">TMON 스토어파트너 센터</a></h1> -->
+		<h1 class="spc_logo dp"><a href="#">TMON 배송상품 파트너센터</a></h1>
+	</div>
+</div>
+		<div class="fixed_area">
+		<!-- 페이지 스크롤시 gnb 고정상태일때 gnb_area fixed 클래스를 넣어주세요 -->
+		<div class="gnb_area">
+			<div class="inner_area">
+				<ul class="gnb_wrap" id="gnb">
+					<li class="">
+						<a href="#">티몬특가 신청</a>
+					</li>
+					<li class="">
+						<a href="#">딜관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">베이직딜등록</a></li>
+								<li><a href="#">베이직딜 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<a href="#">주문관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">미확인 주문</a></li>
+								<li><a href="#">송장등록 대기주문</a></li>
+								<li><a href="#">송장등록 완료주문</a></li>
+								<li><a href="#">배송중 주문</a></li>
+								<li><a href="#">배송템플릿 관리</a></li>
+								<li><a href="#">배송지연패널티 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="on">
+						<a href="#">클레임관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">출고전 취소 관리</a></li>
+								<li><a href="#">환불관리</a></li>
+								<li><a href="#">교환관리</a></li>
+								<li><a href="#">재배송관리</a></li>
+								<li><a href="#">수취처리관리</a></li>
+								<li><a href="#">클레임 등록</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<a href="#">문의∙리뷰관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">고객문의 관리</a></li>
+								<li><a href="#">CS문의 관리</a></li>
+								<li><a href="#">고객리뷰 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<a href="#">정산관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">판매현황조회</a></li>
+								<li><a href="#">파트너 단위 정산서</a></li>
+								<li><a href="#">딜 단위 정산서</a></li>
+								<li><a href="#">세금계산서</a></li>
+								<li><a href="#">매출·매입내역</a></li>
+								<li><a href="#">PG결제수수료 환급조회</a></li>
+							</ul>
+						</div>
+					</li>
+					<!-- <li class="">
+						<a href="#">계약관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">계약서작성</a></li>
+								<li><a href="#">계약서관리</a></li>
+								<li><a href="#">서명승인요청</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class="@@mystore_on">
+						<a href="#">광고주센터</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">광고주센터 바로가기</a></li>
+								<li><a href="#">즉시할인 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<a href="#">My 스토어</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">스토어 생성</a></li>
+								<li><a href="#">기본정보관리</a></li>
+								<li><a href="#">추천상품관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="@@adcener_on">
+						<a href="#">파트너지원</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">자주하는질문</a></li>
+								<li><a href="#">1:1문의</a></li>
+								<li><a href="#">약관변경확인</a></li>
+								<li><a href="#">(구)계약관리 확인</a></li>
+								<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+								<li><a href="#">자료실</a></li>
+								<li><a href="#">파트너교육센터</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 전체메뉴 노출시 btn_sitemap active 클래스를 넣어주세요 -->
+				<a href="#/" class="btn_sitemap"><span>전체메뉴보기</span></a>
+				<!-- 전체메뉴 노출시 sitemap active 클래스를 넣어주세요 -->
+				<div class="sitemap">
+					<!-- 
+						컬럼갯수에 따라 원하는 클래스를 추가해주세요
+						메뉴컬럼4개 : col4
+						메뉴컬럼5개 : col5
+						-->
+					<div class="sitemap_wrap col4">
+						<div>
+							<a href="#">딜관리</a>
+							<ul class="sub">
+								<li><a href="#">베이직딜등록</a></li>
+								<li><a href="#">베이직딜 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">주문관리</a>
+							<ul class="sub">
+								<li><a href="#">미확인 주문</a></li>
+								<li><a href="#">송장등록 대기주문</a></li>
+								<li><a href="#">송장등록 완료주문</a></li>
+								<li><a href="#">배송중 주문</a></li>
+								<li><a href="#">배송템플릿 관리</a></li>
+								<li><a href="#">배송지연패널티 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">클레임관리</a>
+							<ul class="sub">
+								<li><a href="#">출고전 취소 관리</a></li>
+								<li><a href="#">환불관리</a></li>
+								<li><a href="#">교환관리</a></li>
+								<li><a href="#">재배송관리</a></li>
+								<li><a href="#">수취처리관리</a></li>
+								<li><a href="#">클레임 등록</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">문의∙리뷰관리</a>
+							<ul class="sub">
+								<li><a href="#">고객문의 관리</a></li>
+								<li><a href="#">CS문의 관리</a></li>
+								<li><a href="#">고객리뷰 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">정산관리</a>
+							<ul class="sub">
+								<li><a href="#">판매현황조회</a></li>
+								<li><a href="#">파트너 단위 정산서</a></li>
+								<li><a href="#">딜 단위 정산서</a></li>
+								<li><a href="#">세금계산서</a></li>
+								<li><a href="#">매출·매입내역</a></li>
+								<li><a href="#">PG결제수수료 환급조회</a></li>
+							</ul>
+						</div>
+						<!-- <div>
+							<a href="#">계약관리</a>
+							<ul class="sub">
+								<li><a href="#">계약서작성</a></li>
+								<li><a href="#">계약서관리</a></li>
+								<li><a href="#">서명승인요청</a></li>
+							</ul>
+						</div> -->
+						<div>
+							<a href="#">광고주센터</a>
+							<ul class="sub">
+								<li><a href="#">광고주센터 바로가기</a></li>
+								<li><a href="#">즉시할인 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">My 스토어</a>
+							<ul class="sub">
+								<li><a href="#">스토어 생성</a></li>
+								<li><a href="#">기본정보관리</a></li>
+								<li><a href="#">추천상품관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">파트너지원</a>
+							<ul class="sub">
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">1:1문의</a></li>
+								<li><a href="#">약관변경확인</a></li>
+								<li><a href="#">(구)계약관리 확인</a></li>
+								<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+								<li><a href="#">자료실</a></li>
+								<li><a href="#">파트너교육센터</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--  전체메뉴 고정하기 활성화시 active 클래스를 넣어주세요 -->
+					<div class="bottom-area" style="display:none"><button class="menu_fixed">전체메뉴 고정하기</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="container">
+		<div id="content">
+      <div class="participation">
+        
+        <div class="history_box">
+          <h4 class="label">
+            나의 참여신청 이력
+            <div class="ic-tooltip">
+              <div class="tooltip_box">
+                <ul>
+                  <li>최근 3개월의 신청 제출한 참여 신청서의 승인(딜 제출 완료) 또는 반려의 비율입니다.</li>
+                  <li>승인율이 높고, 반려율이 낮을수록 특가매장 진행 가능성이 높아집니다.</li>
+                  <li>중복된 내용의 신청서는 반려될 수 있습니다.</li>
+                </ul>
+              </div>
+            </div>
+          </h4>
+          <ul class="history_per">
+            <li>승인율 :<span class="num1">55%</span><span class="num2">(00건/00건)</span></li>
+            <li>반려율 :<span class="num1">55%</span><span class="num2">(00건/00건)</span></li>
+          </ul>
+        </div>
+        <div class="dashboard">
+          <ul class="lst">
+            <li class="all active">
+              <a href="#;" class="item">
+                <dl>
+                  <dt>전체</dt>
+                  <dd>99건</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="save">
+              <a href="#;" class="item">
+                <dl>
+                  <dt>임시저장</dt>
+                  <dd>9건</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="apply">
+              <a href="#;" class="item">
+                <dl>
+                  <dt>참여신청</dt>
+                  <dd>29건</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="test">
+              <a href="#;" class="item">
+                <dl>
+                  <dt>검수중</dt>
+                  <dd>9999건</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="return">
+              <a href="#;" class="item">
+                <dl>
+                  <dt>반려</dt>
+                  <dd>2319건</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="send">
+              <a href="#;" class="item">
+                <dl>
+                  <dt>딜제출요청</dt>
+                  <dd>9건</dd>
+                </dl>
+              </a>
+              <div class="balloonWrap b">
+                <i class="arr"></i>
+                <p>확정된 프로모션 진행조건으로 딜 등록을 완료해주세요.</p>
+              </div>
+            </li>
+            <li class="comp">
+              <a href="#;" class="item">
+                <dl>
+                  <dt>딜제출완료</dt>
+                  <dd>9건</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="cancel">
+              <a href="#;" class="item">
+                <dl>
+                  <dt>신청취소</dt>
+                  <dd>9건</dd>
+                </dl>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="outer_line">
+          <div class="parti_info">
+              <i class="ico_kc_min"></i>
+              <p>
+                  신청 취소는 참여 신청 상태에서만 가능합니다. 진행 중 변경 외 필요하다면 담당 MD와 논의해 주세요.<br >
+                  티몬 답변과 제출한 달 정보가 일치해야 진행 가능하며, 딜 제출 후에도 반려될 수 있습니다.
+              </p>
+              <div class="btns">
+                <a href="#;" class="btn-type3 lg">특가 프로모션 혜택안내</a>
+                <a href="#;" class="btn-type1 lg">특가매장 참여안내</a>
+              </div>
+          </div>
+          <div class="states">
+              <div class="left_cont">
+                <ul class="step title">
+                    <li>참여신청상태</li>
+                    <li>검수중상태</li>
+                    <li></li>
+                    <li>딜제출요청 상태</li>
+                    <li></li>
+                </ul>
+                <p class="participation_step1"></p>
+                <ul class="step txt">
+                    <li>
+                        상품정보 작성 후<br >
+                        신청서 제출
+                    </li>
+                    <li>
+                        검수결과<br >
+                        확인
+                    </li>
+                    <li>
+                        티몬특가 딜<br >
+                        생성 후 제출
+                    </li>
+                    <li>
+                        제출한 딜<br >
+                        번호 기입
+                    </li>
+                    <li>
+                        특가매장<br >
+                        진행가능
+                    </li>
+                </ul>
+                <button class="btn-type2">상품제안으로 신청하기</button>
+              </div>
+              <div class="right_cont">
+                <ul class="step title">
+                    <li>참여신청상태</li>
+                    <li>검수중상태</li>
+                    <li>딜제출완료 상태</li>
+                </ul>
+                <p class="participation_step2"></p>
+                <ul class="step txt">
+                    <li>
+                        딜 번호 입력하여<br >
+                        신청서 제출
+                    </li>
+                    <li>
+                        검수결과<br >
+                        확인
+                    </li>
+                    <li>
+                        특가매장<br >
+                        진행가능
+                    </li>
+                </ul>
+                <button class="btn-type2 active">
+                    티몬 딜로 빠른신청하기
+                    <span class="ic-tooltip">
+                        <span class="tooltip-box">
+                            현재 판매 중인 티몬 상품을 바로 제안하여,<br >
+                            상품정보 입력 없이 빠르게 신청할 수 있습니다.
+                        </span>
+                    </span>
+                </button>
+            </div>
+          </div>
+        </div>
+        <div class="parti_tb">
+          <div class="tb_top">
+            <a href="#;" class="btn-type1 lg active">신청 취소</a>
+            <a href="#;" class="btn-type1 lg active">삭제</a>
+          </div>
+          <table class="spc_table_form">
+            <colgroup>
+              <col style="width: 56px; ">
+              <col style="width: 120px; ">
+              <col style="width: 120px; ">
+              <col style="width: auto; ">
+              <col style="width: 120px; ">
+              <col style="width: 120px; ">
+              <col style="width: 129px; ">
+              <col style="width: 120px; ">
+              <col style="width: 120px; ">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <label for="check0" class="spc_check"><input type="checkbox" id="check0"><i class="symbol"></i></label>
+                </th>
+                <th scope="col">신청번호</th>
+                <th scope="col">참여신청일</th>
+                <th scope="col">대표상품명</th>
+                <th scope="col">행사가격</th>
+                <th scope="col">처리상태</th>
+                <th scope="col">딜번호</th>
+                <th scope="col" colspan="2">특가매장 선정결과</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+                </td>
+                <td><a href="#">12345</a></td>
+                <td>2020-02-02</td>
+                <td class="ta_l">
+                  <div class="deal_name">
+                    <a href="#">딜 타이틀 명</a>
+                    <div class="img_deal">
+                      <img src="https://i.picsum.photos/id/574/400/400.jpg" alt="대표이미지">
+                    </div>
+                  </div>
+                </td>
+                <td>3,900</td>
+                <td>딜제출요청</td>
+                <td><a href="#;" class="btn-type1 lg">제출하기</a></td>
+                <td>2020-02-02</td>
+                <td>1212타임</td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+                </td>
+                <td><a href="#">12345</a></td>
+                <td>2020-02-02</td>
+                <td class="ta_l">딜 타이틀 명</td>
+                <td>3,900</td>
+                <td><a href="#" class="point">딜제출완료</a></td>
+                <td><a href="#" class="point bd">123456 (승인중)</a></td>
+                <td>2020-02-02</td>
+                <td>1212타임</td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+                </td>
+                <td><a href="#">12345</a></td>
+                <td>2020-02-02</td>
+                <td class="ta_l">딜 타이틀 명</td>
+                <td>3,900</td>
+                <td>임시저장</td>
+                <td></td>
+                <td>2020-02-02</td>
+                <td>1212타임</td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+                </td>
+                <td><a href="#">12345</a></td>
+                <td>2020-02-02</td>
+                <td class="ta_l">딜 타이틀 명</td>
+                <td>3,900</td>
+                <td>참여신청</td>
+                <td></td>
+                <td>2020-02-02</td>
+                <td>1212타임</td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+                </td>
+                <td><a href="#">12345</a></td>
+                <td>2020-02-02</td>
+                <td class="ta_l">딜 타이틀 명</td>
+                <td>3,900</td>
+                <td><a href="#" class="deny">반려</a></td>
+                <td></td>
+                <td>2020-02-02</td>
+                <td>1212타임</td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+                </td>
+                <td><a href="#">12345</a></td>
+                <td>2020-02-02</td>
+                <td class="ta_l">딜 타이틀 명</td>
+                <td>3,900</td>
+                <td>신청취소</td>
+                <td></td>
+                <td>2020-02-02</td>
+                <td>1212타임</td>
+              </tr>
+            </tbody>
+          </table>  
+          <div class="pagingWrap">
+            <span class="numPage">
+              <a href="#" class="first">prev jump</a>
+              <a href="#" class="prev">prev</a>
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">9</a>
+              <a href="#">10</a>
+              <a href="#" class="next">next</a>
+              <a href="#" class="end">next jump</a>
+            </span>
+          </div>  
+        </div>
+        <div class="btn_wrap">
+          <a href="#;" class="btn-type2 active">참여 신청하기</a>
+        </div>
+      </div>
+		</div>
+		<div class="aside_left">
+	<!-- <a href="#" class="banner admon"><i>광고주 센터, 광고등록하면 매출이 UP</i></a> -->
+	<!-- <button type="button" class="mmp"><span class="blind">티몬특가 신청하기</span></button> -->
+	<a href="#" class="banner black_deal"><i>티몬블랙딜 참여하기</i></a>
+	<!-- <button type="button" class="extra one_stop">
+		<i></i>
+		<span>ONE STOP<br>딜검색</span>
+	</button> -->
+	<ul class="aside_lst_pic">
+		<li><a href="#" class="pic onestop"><span class="blind">ONE STOP 딜 검색</span></a></li>
+		<li><a href="#" class="pic partner"><span class="blind">파트너 교육센터</span></a></li>
+		<li><a href="#" class="pic video"><span class="blind">동영상 가이드</span></a></li>
+		<li><a href="#" class="pic report"><span class="blind">비윤리/불친절 직원신고</span></a></li>
+		<!-- <li><a href="#" class="pic faq"><span class="blind">자주하는 질문</span></a></li> -->
+		<li><a href="#" class="pic holiday"><span class="blind">휴무일 공지등록</span></a></li>
+		<!-- <li><a href="#" class="pic excel"><span class="blind">Excel 뷰어 다운로드</span></a></li> -->
+		<!-- <li><a href="#" class="pic econtract"><span class="blind">전자계약서 안내</span></a></li> -->
+		<!-- <li><a href="#" class="pic certificate"><span class="blind">공인인증서 발급</span></a></li> -->
+	</ul>	
+	<!-- <button type="button" class="record_inquiry"><span>Facebook<br />딜 실적 조회</span></button>
+	<a href="#" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</a>
+	<button type="button" class="discount"><span class="blind">할인혜택 적용안내</span></button> -->
+	<!-- <ul class="aside_lst">
+		<li><a href="#" class="point"><span>파트너<br>교육센터</span></a></li>
+		<li><button type="button" class="point"><span>동영상<br>가이드</span></button></li>
+		<li><button type="button"><span>비윤리/불친절<br>직원신고</span></button></li>
+		<li><button type="button"><span>자주하는<br>질문</span></button></li>
+		<li><a href="#"><span>전자계약서<br>안내</span></a></li>
+		<li><a href="#"><span>공인인증서<br>발급</span></a></li>
+	</ul> -->
+	<!-- <button type="button" class="extra">
+		<span>오픈마켓<br>동의</span>
+	</button>
+	<button type="button" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</button> -->
+	<button type="button" class="feedback">
+		<em>페이지 별점 주기</em>
+		<span><i></i><i></i><i></i></span>
+	</button>
+</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+	<ul class="footer_link">
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#"><b>개인정보처리방침</b></a></li>
+		<li><a href="#">전자금융거래</a></li>
+		<li><a href="#">청소년보호정책</a></li>
+	</ul>
+	<span class="footer_logo">TMON</span>
+	<p>사업자등록번호 211-88-41856<span class="dv">|</span>통신판매업신고 제2013-서울강남-02403호</p>
+	<p>서울특별시 강남구 테헤란로 114길 38 동일타워<span class="dv">|</span>대표자 이진원<span class="dv">|</span><a href="#">사업자정보확인</a></p>
+	<p>COPYRIGHT(c) TMON INC. ALL RIGHTS RESERVED.</p>
+	<div class="cs_center">
+		<p class="cs_center_top">
+			파트너센터 <strong>1644-0552</strong>
+		</p>
+		<p class="holiday">
+			평일 09~18시 (점심시간 12~13시)<br >
+			주말/공휴일 휴무
+		</p>
+	</div>
+	<div class="footer_bottom">
+		<img src="../../img/common/footer_iso_banner.png" />
+	</div>
+</div>
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+	
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+	
+	/* [D] 레이어 버튼에 있는 "_layer" 클래스와 "data-id" 속성은 레이어를 띄우기위한 스크립트용 입니다. */
+	$('._layer').on('click', function(){
+		var $this = $(this);
+		var $layer = $('#'+$this.attr('data-id'));
+		var winHeight = $(window).height();
+		var lyHeight = $layer.outerHeight();
+		var lyWidth = $layer.outerWidth();
+		
+		$('.spc_dim').show();
+		$layer.show();
+		if(lyHeight > winHeight){
+			$layer.css({
+				'position': 'absolute',
+				'top': '30px',
+				'left': '50%',
+				'margin-left': -(lyWidth/2)+'px'
+			});
+			$(document).scrollTop(0);
+		}else{
+			$layer.css({
+				'position': 'fixed',
+				'top': '50%',
+				'left': '50%',
+				'margin-top': -(lyHeight/2)+'px',
+				'margin-left': -(lyWidth/2)+'px'
+			});
+		}
+	});
+	
+	$('.spc_layer').on('click', '.btn_close', function(){
+		$(this).closest('.spc_layer').css({
+			'position': 'relative',
+			'top': 'auto',
+			'left': 'auto',
+			'margin-top': 0+'px',
+			'margin-left': 0+'px'
+		});
+		$('.spc_dim').hide();
+	});
+	
+	var $soldoutGuideTabCt = $('#soldoutGuide .tab_ct');
+	$soldoutGuideTabCt.not(':eq(0)').hide();
+	$('#soldoutGuide .spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+		
+		$soldoutGuideTabCt.hide();
+		$soldoutGuideTabCt.eq(idx).show();
+	});
+});
+</script>
+</body>
+</html>

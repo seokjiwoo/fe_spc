@@ -1,0 +1,2731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PTN CMS</title>
+	<link rel="stylesheet" type="text/css" href="../../css/ptn.css">
+</head>
+<body>
+	<article class="containerWrap">
+		<div class="topWrap">
+	<h1 class="logo">티몬</h1>
+
+	<div class="opts">
+		<div class="opt type1">
+			<div class="slctWrap @@slctActive">
+				<button>연계사이트</button>
+				<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<div class="slctWrap type2 @@slctActive">
+				<button>메뉴</button>
+				<ul>
+					<li>
+						<label>상담내역</label>
+						<ul>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">OB예약</a></li>
+							<li><a href="#">발신문자</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>커뮤니티</label>
+						<ul>
+							<li><a href="#">달별 공지사항</a></li>
+							<li><a href="#">지식관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>운영</label>
+						<ul>
+							<li><a href="#">전체상담</a></li>
+							<li><a href="#">전체OB예약</a></li>
+							<li><a href="#">전체발신문자</a></li>
+							<li><a href="#">전체CS문의</a></li>
+							<li><a href="#">상담재배정</a></li>
+							<li><a href="#">상담사 스킬 등록</a></li>
+							<li><a href="#">상담사 스킬 현황</a></li>
+							<li><a href="#">상담 라우팅</a></li>
+							<li><a href="#">사용자정보</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<a href="#" class="link">CS ADMIN</a>
+		</div><!-- end of opt type1 -->
+
+		<div class="opt type2">
+			<div class="userInfo">
+				<span class="num">44916</span>
+				<span class="name">tmontest님</span>
+				<span class="status 대기중Icon">대기중</span>
+				<span class="timer">00:00:05</span>
+			</div>
+
+			<div class="chkStatus">
+				<button class="@@btnActive" @@btnDisabled>대기</button>
+				<button class="@@btnActive" @@btnDisabled>보류</button>
+				<button class="@@btnActive" @@btnDisabled>호전환</button>
+				<div class="slctWrap @@chkStatusSlctActive @@slctWrapDisabled">
+					<button>이석</button>
+					<ul>
+						<li><a href="#">OB일반</a></li>
+						<li><a href="#">게시판</a></li>
+						<li><a href="#">메일</a></li>
+						<li><a href="#">이관</a></li>
+						<li><a href="#">IB수동등록</a></li>
+						<li><a href="#">관리</a></li>
+						<li><a href="#">교육&amp;면담</a></li>
+						<li><a href="#">휴식&amp;식사</a></li>
+					</ul>
+				</div><!-- end of slctWrap -->
+			</div>
+
+			<div class="slctWrap white @@slctActive">
+				<button>OB유형</button>
+				<ul>
+					<li><a href="#">OB일반</a></li>
+					<li><a href="#">게시판</a></li>
+					<li><a href="#">메일</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+
+			<div class="phoneCall">
+				<input type="text" placeholder="전화번호" value="">
+				<button class="call">걸기</button>
+			</div>
+
+			<div class="slctWrap logOpt @@slctActive">
+				<button>로그아웃</button>
+				<ul>
+					<li><a href="#">퇴근</a></li>
+					<li><a href="#">조퇴</a></li>
+					<li><a href="#">휴가(반차)</a></li>
+					<li><a href="#">기타(장기이석)</a></li>
+					<li><a href="#">전산오류</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+		</div><!-- end of opt type2 -->
+	</div><!-- end of opts -->
+</div><!-- end of topWrap -->
+
+		<main class="content">
+			<section class="contLeft" style="width:480px;">
+	<!--
+	@@idViewLayer : id보기 레이어 노출 여부 [ 값 : "active" or "" ]
+	@@detailViewLayer : 파트너 상세정보 보기 레이어 노출 여부 [ 값 : "active" or "" ]
+	 -->
+	<div class="ptnInfoWrap">
+
+	<div class="sarchBar scrhType1">
+		<div class="slctWrapOrigin " >
+	<select>
+			<option>전화번호</option>
+			<option>010-1234-5678</option>
+			<option>010-1234-5678</option>
+			<option>010-1234-5678</option>
+			</select>
+</div><!-- end of slctWrap -->
+
+		<input type="text">
+		<button class="srch">조회</button>
+	</div>
+
+	<div class="ptnInfoArea">
+
+		<table class="tbDataWrap_ptnInfo">
+			<colgroup>
+				<col style="width:85px;" />
+				<col style="width:auto;" />
+				<col style="width:85px;" />
+				<col style="width:auto;" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>ID</th>
+					<td class="ptn_id">
+						leetmon
+						<div class="pos_r">
+							<a href="#;" class="btn_df arr-r">SPC</a>
+						</div>
+					</td>
+					<th>파트너유형</th>
+					<td class="ptn_type">
+						<i class="ico cr"></i>큐레이션
+						<!-- <i class="ico om"></i>오픈마켓 -->
+					</td>
+				</tr>
+				<tr>
+					<th>파트너명</th>
+					<td>티켓몬스터</td>
+					<th>대표자명</th>
+					<td>이티몬</td>
+				</tr>
+				<tr>
+					<th>파트너연락처</th>
+					<td>
+						010-1234-5678
+						<a href="#;" class="btn_copy">복사하기</a>
+					</td>
+					<th>대표자연락처</th>
+					<td>
+						010-1234-5678
+						<a href="#;" class="btn_copy">복사하기</a>
+					</td>
+				</tr>
+				<tr>
+					<th>사업자번호</th>
+					<td class="ptn_num">
+						152-81-12345
+						<div class="pos_r">
+							<a href="#;" class="btn_df">
+								ID
+							</a>
+							<div class="balloonWrap type2 b">
+								<i class="arr"></i>
+								<h3>ID 보기</h3>
+								<table class="tbDataWrap bg_odd">
+									<colgroup>
+										<col style="width:50%" />
+										<col style="width:50%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">ID</th>
+											<th scope="col">파트너명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>leetmon</td>
+											<td>이티몬</td>
+										</tr>
+										<tr>
+											<td>leetmon</td>
+											<td>이티몬</td>
+										</tr>
+										<tr>
+											<td>leetmon</td>
+											<td>이티몬</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</td>
+					<th>전체발신문자</th>
+					<td>
+						<a href="#;" class="btn_df">보기</a>
+					</td>
+				</tr>
+				<tr>
+					<th>계층구분</th>
+					<td>서브(지점)</td>
+					<th>상위파트너</th>
+					<td>티몬㈜</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="btns_opt">
+			<a href="#;" class="btnMembReset">
+				<i class="ico_reset"></i>비회원 전환
+			</a>
+			<a href="#;">상세정보 보기</a>
+			<div class="balloonWrap type2 b detailViewLayer" style="display:block;">
+				<i class="arr" style="margin-left:183px;"></i>
+				<h3>파트너상세정보</h3>
+				<div class="scrWrap">
+					<table class="tbDataWrap_ptnInfo">
+						<colgroup>
+							<col style="width:85px;" />
+							<col style="width:auto;" />
+							<col style="width:85px;" />
+							<col style="width:auto;" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>가입일자</th>
+								<td>2018.01.06</td>
+								<th>담당자명</th>
+								<td>티몬담당자</td>
+							</tr>
+							<tr>
+								<th>댓글알림방법</th>
+								<td>
+									<label class="chkWrap">
+										<input type="checkbox">
+										<span>E-Mail</span>
+									</label>
+									<label class="chkWrap">
+										<input type="checkbox">
+										<span>SMS</span>
+									</label>
+								</td>
+								<th>대표자연락처</th>
+								<td>010-9876-5432<a href="#;" class="btn_copy">복사하기</a></td>
+							</tr>
+							<tr>
+								<th>대표자이메일</th>
+								<td>leetmon@tmon.co.kr</td>
+								<th>담당자이메일</th>
+								<td>leetmon@tmon.co.kr</td>
+							</tr>
+							<tr>
+								<th>파트너FAX</th>
+								<td>152-81-12345</td>
+								<th></th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>계약담당</th>
+								<td>152-81-12345</td>
+								<th>연락처</th>
+								<td>010-2345-9876</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<table class="tbDataWrap_ptnInfo">
+			<colgroup>
+				<col style="width:104px;" />
+				<col style="width:auto;" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>최근 진행 딜</th>
+					<td>
+						<a href="#;" class="btn_full_link">
+							[단하루] [크록스] 크록밴드 II 슬라이드 2종 슬라이드슬라 2종 슬라이드슬라
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<th>최근 진행 클레임</th>
+					<td>
+						<a href="#;" class="btn_full_link">
+							2018-10-01 고객케어요청
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<th>OB 예약</th>
+					<td>
+						<a href="#;" class="btn_full_link">
+							2018-10-02 13:30
+							<span class="txt_status">[등록]</span>
+							<span class="label_status delay">지연</span>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<th>중대클레임</th>
+					<td>
+						<a href="#;" class="btn_full_link">
+							2018-09-26 정산금액상이
+							<span class="txt_status">[등록]</span>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div><!-- end of ptnInfoArea -->
+
+</div><!-- end of ptnInfoWrap -->
+	<div class="timelineWrap">
+
+	<div class="sarchBar scrhType2">
+		<div class="slctWrapOrigin " >
+	<select>
+			<option>전체</option>
+			<option>010-1234-5678</option>
+			<option>010-1234-5678</option>
+			<option>010-1234-5678</option>
+			</select>
+</div><!-- end of slctWrap -->
+
+		<input type="text">
+		<button class="srch">조회</button>
+		<button class="reset">초기화</button>
+	</div><!-- end of sarchBar -->
+
+	<div class="listBoxWrap">
+		<ul class="timeLineList">
+
+			<li class="item">
+
+				<!--
+				서브 상담이력 보기 버튼 클릭 시 consultContainer 요소에 showSubConsult 클래스 추가가 필요합니다.
+				showSubConsult 클래스 추가 시 서브 상담 리스트 노출됩니다.
+				-->
+				<div class="consultContainer showSubConsult">
+					<div class="mainConsultArea">
+						<!--
+							상담 유형별 추가되는 클래스 목록입니다.
+							* IB : ib
+							* OB : ob
+							* 1:1문의 : qu
+							* 이관 : tr
+							* CS문의 : cs
+							* 기타 : etc
+						-->
+
+						<!--
+						상담 제목 버튼 클릭 시 consultBx 요소에 showDetail 클래스 추가가 필요합니다.
+						showDetail 클래스 추가 시 상담 상세 노출됩니다.
+						-->
+						<dl class="consultBx cs showDetail">
+							<dt>
+								<span class="cat">[CS문의]</span>
+								<span class="date">2018-10-02 11:53:59</span>
+								<span class="status">[완료][이관완료]</span>
+								<button type="button" class="btnRecord">녹취듣기</button>
+							</dt>
+							<dd class="deal">[단하루] 비욘 롱패딩 / 역시즌 특가 / 여성패딩_묶음</dd>
+							<dd class="tit">
+								<button type="button">배송지연 환불 &gt; 환불요청</button>
+							</dd>
+							<dd class="detail">
+								1. 문의내용: 배송지연되어 환불 요청<br />
+								2. 안내내용: 이미 배송된 상태로 배송중 문제가 발생. 고객이 강하게 환불 클레임<br />
+								3. 처리내용: 파트너에게 환불 문의<br />
+								4. 약속여부: 약속 없음
+							</dd>
+						</dl>
+						<a href="#;" class="btnViewConsult">파트너 문의 보기</a>
+					</div><!-- end of mainConsultArea -->
+
+					<!-- 서브 상담 이력이 있을 경우만 버튼이 추가됩니다. -->
+					<button type="button" class="btnViewSubConsult">서브 상담이력 보기</button>
+
+					<div class="subConsultArea">
+
+						<!-- 전체 열기 기본 -->
+						<!-- <button type="button" class="btnToggle active">전체 열기</button> -->
+
+						<!-- 전체 열기 클릭 시 : active 클래스 추가 , 전체닫기로 텍스트 변경 -->
+						<button type="button" class="btnToggle active">전체닫기</button>
+
+						<ul class="lstSubConsult">
+							<li>
+								<dl class="consultBx tr showDetail">
+									<dt>
+										<span class="cat">[이관]</span>
+										<span class="date">2018-10-02 11:53:59</span>
+									</dt>
+									<dd class="tit">
+										<button type="button">배송지연 환불 &gt; 환불요청</button>
+									</dd>
+									<dd class="detail">
+										1. 문의내용: 환불요청문의 환불가능문의 2. 안내내용: 환불불가, 부분환불은 가능 3. 약속여부: 약속 내용 없음
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="consultBx etc showDetail">
+									<dt>
+										<span class="cat">[기타]</span>
+										<span class="date">2018-10-02 11:53:59</span>
+									</dt>
+									<dd class="tit">
+										<button type="button">배송지연 환불 &gt; 환불요청</button>
+									</dd>
+									<dd class="detail">
+										1. 문의내용: 환불요청문의 환불가능문의 2. 안내내용: 환불불가, 부분환불은 가능 3. 약속여부: 약속 내용 없음
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="consultBx ib showDetail">
+									<dt>
+										<span class="cat">[IB]</span>
+										<span class="date">2018-10-02 11:53:59</span>
+									</dt>
+									<dd class="tit">
+										<button type="button">배송지연 환불 &gt; 환불요청</button>
+									</dd>
+									<dd class="detail">
+										1. 문의내용: 환불요청문의 환불가능문의 2. 안내내용: 환불불가, 부분환불은 가능 3. 약속여부: 약속 내용 없음
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div><!-- end of subConsultArea -->
+				</div><!-- end of consultContainer -->
+			</li>
+
+			<li class="item">
+				<div class="consultContainer">
+					<div class="mainConsultArea">
+						<dl class="consultBx tr">
+							<dt>
+								<span class="cat">[이관]</span>
+								<span class="date">2018-10-02 11:53:59</span>
+								<span class="status">[완료][이관완료]</span>
+							</dt>
+							<dd class="deal">[단하루] 비욘 롱패딩 / 역시즌 특가 / 여성패딩_묶음</dd>
+							<dd class="tit">
+								<button type="button">배송지연 환불 &gt; 환불요청</button>
+							</dd>
+							<dd class="detail">
+								1. 문의내용: 배송지연되어 환불 요청<br />
+								2. 안내내용: 이미 배송된 상태로 배송중 문제가 발생. 고객이 강하게 환불 클레임<br />
+								3. 처리내용: 파트너에게 환불 문의<br />
+								4. 약속여부: 약속 없음
+							</dd>
+						</dl>
+						<a href="#;" class="btnViewConsult">파트너 문의 보기</a>
+					</div><!-- end of mainConsultArea -->
+				</div><!-- end of consultContainer -->
+			</li>
+
+			<li class="item">
+				<div class="consultContainer">
+					<div class="mainConsultArea">
+						<dl class="consultBx ib">
+							<dt>
+								<span class="cat">[IB]</span>
+								<span class="date">2018-10-02 11:53:59</span>
+								<span class="status">[완료]</span>
+								<button type="button" class="btnRecord">녹취듣기</button>
+							</dt>
+							<dd class="deal">[단하루] 비욘 롱패딩 / 역시즌 특가 / 여성패딩_묶음</dd>
+							<dd class="tit">
+								<button type="button">배송지연 환불 &gt; 환불요청</button>
+							</dd>
+							<dd class="detail">
+								1. 문의내용: 배송지연되어 환불 요청<br />
+								2. 안내내용: 이미 배송된 상태로 배송중 문제가 발생. 고객이 강하게 환불 클레임<br />
+								3. 처리내용: 파트너에게 환불 문의<br />
+								4. 약속여부: 약속 없음
+							</dd>
+						</dl>
+						<a href="#;" class="btnViewConsult">파트너 문의 보기</a>
+					</div><!-- end of mainConsultArea -->
+					<button type="button" class="btnViewSubConsult">서브 상담이력 보기</button>
+				</div><!-- end of consultContainer -->
+			</li>
+
+			<li class="item">
+				<div class="consultContainer">
+					<div class="mainConsultArea">
+						<dl class="consultBx etc">
+							<dt>
+								<span class="cat">[기타]</span>
+								<span class="date">2018-10-02 11:53:59</span>
+								<span class="status">[완료]</span>
+								<button type="button" class="btnRecord">녹취듣기</button>
+							</dt>
+							<dd class="deal">[단하루] 비욘 롱패딩 / 역시즌 특가 / 여성패딩_묶음</dd>
+							<dd class="tit">
+								<button type="button">배송지연 환불 &gt; 환불요청</button>
+							</dd>
+							<dd class="detail">
+								1. 문의내용: 배송지연되어 환불 요청<br />
+								2. 안내내용: 이미 배송된 상태로 배송중 문제가 발생. 고객이 강하게 환불 클레임<br />
+								3. 처리내용: 파트너에게 환불 문의<br />
+								4. 약속여부: 약속 없음
+							</dd>
+						</dl>
+						<a href="#;" class="btnViewConsult">파트너 문의 보기</a>
+					</div><!-- end of mainConsultArea -->
+					<button type="button" class="btnViewSubConsult">서브 상담이력 보기</button>
+				</div><!-- end of consultContainer -->
+			</li>
+
+		</ul><!-- end of timeLineList -->
+
+	</div><!-- end of listBoxWrap -->
+
+</div><!-- end of timelineWrap -->
+</section>
+			<section class="contCenter">
+	<div class="searchBar">
+		<div class="slctWrapOrigin " >
+	<select>
+			<option>유효기간 종료일</option>
+			<option>010-1234-5678</option>
+			<option>010-1234-5678</option>
+			<option>010-1234-5678</option>
+			</select>
+</div><!-- end of slctWrap -->
+
+		<div class="calendarWrap">
+			<div class="calendar">
+				<input type="text" placeholder="YYYY-MM-DD" readonly>
+				<button class="srch">검색</button>
+			</div>
+			<span class="gap">-</span>
+			<div class="calendar">
+				<input type="text" placeholder="YYYY-MM-DD" readonly>
+				<button class="srch">검색</button>
+			</div>
+		</div>
+		<div class="sarchBar" style="width: 334px; ">
+			<div class="slctWrapOrigin " >
+	<select>
+				<option>딜명</option>
+				<option>010-1234-5678</option>
+				<option>010-1234-5678</option>
+				<option>010-1234-5678</option>
+				</select>
+</div><!-- end of slctWrap -->
+
+			<input type="text">
+		</div>
+		<span class="progress">진행상태</span>
+		<div class="sarchBar scrhType1">
+			<div class="slctWrapOrigin " >
+	<select>
+				<option>전체</option>
+				<option>010-1234-5678</option>
+				<option>010-1234-5678</option>
+				<option>010-1234-5678</option>
+				</select>
+</div><!-- end of slctWrap -->
+
+			<button class="srch">조회</button>
+		</div>
+	</div>
+	<div class="centerTableWrap">
+		<p class="total">총 <span class="number">300</span>건</p>
+
+		<div class="headFixedTable">
+			<table class="centerTable">
+				<colgroup>
+					<col style="width: 98px; ">
+					<col style="width: 296px; ">
+					<col style="width: 112px; ">
+					<col style="width: 92px; ">
+					<col style="width: 100px; ">
+					<col style="width: 100px; ">
+					<col style="width: auto; ">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>딜번호</th>
+						<th>딜명</th>
+						<th>매출카테고리</th>
+						<th>진행상태</th>
+						<th>판매 시작일</th>
+						<th>판매 종료일</th>
+						<th>유효기간 종료일</th>
+					</tr>
+				</thead>
+			</table>
+			<div class="scrlWrap" style="max-height: 753px; ">
+				<table class="centerTable" style="width: 910px; ">
+					<colgroup>
+						<col style="width: 98px; ">
+						<col style="width: 296px; ">
+						<col style="width: 112px; ">
+						<col style="width: 92px; ">
+						<col style="width: 100px; ">
+						<col style="width: 100px; ">
+						<col style="width: auto; ">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td>381245030</td>
+							<td  class="deals">
+								<div class="icons">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<span class="icon-card" style="background-color: #ef2942; ">100%환불</span>
+									<span class="icon-card" style="background-color: #ffb620; ">다이렉트딜</span>
+									<span class="icon-card" style="background-color: #2bb6c2; ">전지점사용</span>
+								</div>
+								<span class="ellipsisWrap-multiline-2">[에어컨][스탠드][캐리어][모델변경 등록 제품][KMC16VX1HCGK]</span>
+							</td>
+							<td>
+								<div class="category">
+									<p><span>티몬스토어</span> <i class="arr_right"></i></p>
+									<p><span>마트식품</span> <button class="reset"></button></p>
+								</div>
+							</td>
+							<td>진행예정</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+						</tr>
+						<tr>
+							<td>381245030</td>
+							<td  class="deals">
+								<div class="icons">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<span class="icon-card" style="background-color: #ef2942; ">100%환불</span>
+									<span class="icon-card" style="background-color: #ffb620; ">다이렉트딜</span>
+									<span class="icon-card" style="background-color: #2bb6c2; ">전지점사용</span>
+								</div>
+								<span class="ellipsisWrap-multiline-2">[에어컨][스탠드][캐리어][모델변경 등록 제품][KMC16VX1HCGK]</span>
+							</td>
+							<td>
+								<div class="category">
+									<p><span>티몬스토어</span> <i class="arr_right"></i></p>
+									<p><span>마트식품</span> <button class="reset"></button></p>
+								</div>
+							</td>
+							<td>진행</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+						</tr>
+						<tr>
+							<td>381245030</td>
+							<td  class="deals">
+								<div class="icons">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<span class="icon-card" style="background-color: #ef2942; ">100%환불</span>
+									<span class="icon-card" style="background-color: #ffb620; ">다이렉트딜</span>
+									<span class="icon-card" style="background-color: #2bb6c2; ">전지점사용</span>
+								</div>
+								<span class="ellipsisWrap-multiline-2">[에어컨][스탠드][캐리어][모델변경 등록 제품][KMC16VX1HCGK]</span>
+							</td>
+							<td>
+								<div class="category">
+									<p><span>티몬스토어</span> <i class="arr_right"></i></p>
+									<p><span>마트식품</span> <button class="reset"></button></p>
+								</div>
+							</td>
+							<td>진행</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+						</tr>
+						<tr>
+							<td>381245030</td>
+							<td  class="deals">
+								<div class="icons">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<span class="icon-card" style="background-color: #ef2942; ">100%환불</span>
+									<span class="icon-card" style="background-color: #ffb620; ">다이렉트딜</span>
+									<span class="icon-card" style="background-color: #2bb6c2; ">전지점사용</span>
+								</div>
+								<span class="ellipsisWrap-multiline-2">[에어컨][스탠드][캐리어][모델변경 등록 제품][KMC16VX1HCGK]</span>
+							</td>
+							<td>
+								<div class="category">
+									<p><span>티몬스토어</span> <i class="arr_right"></i></p>
+									<p><span>마트식품</span> <button class="reset"></button></p>
+								</div>
+							</td>
+							<td>진행</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+						</tr>
+						<tr>
+							<td>381245030</td>
+							<td  class="deals">
+								<div class="icons">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<span class="icon-card" style="background-color: #ef2942; ">100%환불</span>
+									<span class="icon-card" style="background-color: #ffb620; ">다이렉트딜</span>
+									<span class="icon-card" style="background-color: #2bb6c2; ">전지점사용</span>
+								</div>
+								<span class="ellipsisWrap-multiline-2">[에어컨][스탠드][캐리어][모델변경 등록 제품][KMC16VX1HCGK]</span>
+							</td>
+							<td>
+								<div class="category">
+									<p><span>티몬스토어</span> <i class="arr_right"></i></p>
+									<p><span>마트식품</span> <button class="reset"></button></p>
+								</div>
+							</td>
+							<td>중지</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+						</tr>
+						<tr>
+							<td>381245030</td>
+							<td  class="deals">
+								<div class="icons">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<span class="icon-card" style="background-color: #ef2942; ">100%환불</span>
+									<span class="icon-card" style="background-color: #ffb620; ">다이렉트딜</span>
+									<span class="icon-card" style="background-color: #2bb6c2; ">전지점사용</span>
+								</div>
+								<span class="ellipsisWrap-multiline-2">[에어컨][스탠드][캐리어][모델변경 등록 제품][KMC16VX1HCGK]</span>
+							</td>
+							<td>
+								<div class="category">
+									<p><span>티몬스토어</span> <i class="arr_right"></i></p>
+									<p><span>마트식품</span> <button class="reset"></button></p>
+								</div>
+							</td>
+							<td>취소</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+						</tr>
+						<tr>
+							<td>381245030</td>
+							<td  class="deals">
+								<div class="icons">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<span class="icon-card" style="background-color: #ef2942; ">100%환불</span>
+									<span class="icon-card" style="background-color: #ffb620; ">다이렉트딜</span>
+									<span class="icon-card" style="background-color: #2bb6c2; ">전지점사용</span>
+								</div>
+								<span class="ellipsisWrap-multiline-2">[에어컨][스탠드][캐리어][모델변경 등록 제품][KMC16VX1HCGK]</span>
+							</td>
+							<td>
+								<div class="category">
+									<p><span>티몬스토어</span> <i class="arr_right"></i></p>
+									<p><span>마트식품</span> <button class="reset"></button></p>
+								</div>
+							</td>
+							<td>종료</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+						</tr>
+						<tr>
+							<td>381245030</td>
+							<td  class="deals">
+								<div class="icons">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<span class="icon-card" style="background-color: #ef2942; ">100%환불</span>
+									<span class="icon-card" style="background-color: #ffb620; ">다이렉트딜</span>
+									<span class="icon-card" style="background-color: #2bb6c2; ">전지점사용</span>
+								</div>
+								<span class="ellipsisWrap-multiline-2">[에어컨][스탠드][캐리어][모델변경 등록 제품][KMC16VX1HCGK]</span>
+							</td>
+							<td>
+								<div class="category">
+									<p><span>티몬스토어</span> <i class="arr_right"></i></p>
+									<p><span>마트식품</span> <button class="reset"></button></p>
+								</div>
+							</td>
+							<td>종료</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+							<td>2018-10-18</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="pagingWrap">
+		<span class="numPage">
+			<a href="#" class="first">prev jump</a>
+			<a href="#" class="prev">prev</a>
+			<a href="#" class="active">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a href="#">8</a>
+			<a href="#">9</a>
+			<a href="#">10</a>
+			<a href="#" class="next">next</a>
+			<a href="#" class="end">next jump</a>
+		</span>
+	</div>
+</section>
+			<section class="contRight">
+	<!-- 
+	알림 상태에 따른 컬러 변경은 아래에 나온 클래스를 넣어주세요
+
+	- 백그라운드 스타일 
+		<div class="noticeSelect bg-red"></div>
+		bg-red, bg-orange, bg-purple, bg-cyan, bg-green, bg-blue
+
+	- 보더 스타일
+	<div class="noticeSelect bd-red"></div>
+		bd-red, bd-orange, bd-purple, bd-cyan, bd-green, bd-blue
+ -->
+<div class="noticeSelect">
+	<div class="defaultState">
+		<!-- 
+			알림이 없을때 ico_off
+			알림이 있을때 ico_on
+			<div class="value ico_off"></div>
+		 -->
+		<div class="value ico_off">수신된 알림이 없습니다.</div>
+		<button class="count">200</button>
+	</div>
+	<!-- 
+		알림 리스트 노출시 active 클래스를 넣어주세요
+		<div class="showState active"></div> 
+	-->
+	<div class="showState">
+		<div class="top">
+			<div class="title">알림리스트</div>
+			<button class="close"></button>
+		</div>
+		<ul class="list">
+			<li><a href="#" class="ft-green">[이관] 2018-12-26 14:53:15 이티몬 2018-12-26 14:53:15 이티몬 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#" class="ft-red emergency">[긴급이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#" class="ft-purple">[지식관리] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#" class="ft-cyan">[1:1문의] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+		</ul>
+	</div>
+</div>
+	<div class="titleArea">
+		<div class="tit">
+			<h2>Today 상담 통계</h2>
+				<div class="slctWrapOrigin " >
+	<select>
+					<option>IB</option>
+					<option>내용</option>
+					<option>내용</option>
+					<option>내용</option>
+					</select>
+</div><!-- end of slctWrap -->
+
+		</div>
+		<div class="cont">
+			<button class="detailsMore">자세히보기</button>
+		</div>
+	</div>
+
+	<table class="statistics">
+		<colgroup>
+			<col style="width:155px;" > 
+			<col style="width:141px;" > 
+			<col style="width:auto;" > 
+		</colgroup>
+		<tbody>
+			<tr>
+				<td>
+					<div class="res">
+						<span>실적</span>
+						<em>60건</em>
+					</div>
+				</td>
+				<td colspan="2">
+					<div class="res">
+						<span>나의 할일</span>
+						<em>1000건</em>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="res ft-blue">
+						<span>달성률</span>
+						<em>100%</em>
+					</div>
+				</td>
+				<td>
+					<div class="res ft-orange">
+						<span>OB 지연</span>
+						<em>100건</em>
+					</div>
+				</td>
+				<td>
+					<div class="res">
+						<span>OB 잔여</span>
+						<em>200건</em>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="tabWrap todayTab">
+	<ul class="nav">
+		<li class="active"><a href="#">나의할일</a></li>
+		<li><a href="#">예약</a></li>
+		<li><a href="#">지식관리</a></li>
+	</ul>
+
+	<div class="cont">
+		<div class="active">
+			<div class="searchArea">
+				<div>
+					<em class="tit">유형구분</em>
+						<div class="slctWrapOrigin " >
+	<select>
+							<option>전체</option>
+							<option>내용</option>
+							<option>내용</option>
+							<option>내용</option>
+							</select>
+</div><!-- end of slctWrap -->
+
+					</div>
+				<div>
+					<em class="tit">키워드</em>
+					<div class="sarchBar scrhType2">
+						<input type="text" placeholder="검색하실 키워드나 Tag 입력하세요.">
+						<button class="srch">조회</button>
+						<button class="reset">초기화</button>
+					</div>
+				</div>
+			</div>
+			<div class="result">총 <em>100</em> 건</div>
+
+			<div class="scrollWrap">
+				<ul class="tables">
+					<li>
+						<table class="stateTable">
+							<colgroup>
+								<col style="width:108px;">
+								<col style="width:40px;">
+								<col style="width:155px;">
+								<col style="width:68px;">
+								<col style="width:auto;">
+		     				</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="2">
+										<span class="stateWrap">
+											<em><strong>[이관]</strong>24H이내</em>
+											<span class="state">이관등록</span>
+										</span>
+									</td>
+									<td><em class="tit">딜명</em></td>
+									<td><p class="txt ellipsisWrap">[슈퍼마트] 샘표 참기름 110ml</p></td>
+									<td rowspan="2">
+										<p class="date">
+											<span>2018-10-10</span>
+											<span>11:11:15</span>
+										</p>
+									</td>
+									<td rowspan="2"><button class="stateBtn">진행</button></td>
+								</tr>
+								<tr>
+									<td><em class="tit">문의</em></td>
+									<td><p class="txt ellipsisWrap">정산오류의심강성문의</p></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li class="active">
+						<table class="stateTable">
+							<colgroup>
+								<col style="width:108px;">
+								<col style="width:40px;">
+								<col style="width:155px;">
+								<col style="width:68px;">
+								<col style="width:auto;">
+		     				</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="2">
+										<span class="stateWrap">
+											<em><strong>[이관]</strong>24H이내</em>
+											<span class="state">이관진행</span>
+										</span>
+									</td>
+									<td><em class="tit">딜명</em></td>
+									<td><p class="txt ellipsisWrap">[슈퍼마트] 샘표 참기름 110ml</p></td>
+									<td rowspan="2">
+										<p class="date">
+											<span>2018-10-10</span>
+											<span>11:11:15</span>
+										</p>
+									</td>
+									<td rowspan="2"><button class="stateBtn">진행중</button></td>
+								</tr>
+								<tr>
+									<td><em class="tit">문의</em></td>
+									<td><p class="txt ellipsisWrap">정산오류의심강성문의</p></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="stateTable">
+							<colgroup>
+								<col style="width:108px;">
+								<col style="width:40px;">
+								<col style="width:155px;">
+								<col style="width:68px;">
+								<col style="width:auto;">
+		     				</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="2">
+										<span class="stateWrap">
+											<em><i>긴급</i><strong>[1:1문의]</strong>48H이내</em>
+											<span class="state">할당</span>
+										</span>
+									</td>
+									<td><em class="tit">딜명</em></td>
+									<td><p class="txt ellipsisWrap">[슈퍼마트] 샘표 참기름 110ml</p></td>
+									<td rowspan="2">
+										<p class="date">
+											<span>2018-10-10</span>
+											<span>11:11:15</span>
+										</p>
+									</td>
+									<td rowspan="2"><button class="stateBtn off">진행중</button></td>
+								</tr>
+								<tr>
+									<td><em class="tit">문의</em></td>
+									<td><p class="txt ellipsisWrap">정산오류의심강성문의</p></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="stateTable">
+							<colgroup>
+								<col style="width:108px;">
+								<col style="width:40px;">
+								<col style="width:155px;">
+								<col style="width:68px;">
+								<col style="width:auto;">
+		     				</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="2">
+										<span class="stateWrap">
+											<em><i>긴급</i><strong>[진행]</strong>24H이내</em>
+											<span class="state">진행</span>
+										</span>
+									</td>
+									<td><em class="tit">딜명</em></td>
+									<td><p class="txt ellipsisWrap">[슈퍼마트] 샘표 참기름 110ml</p></td>
+									<td rowspan="2">
+										<p class="date">
+											<span>2018-10-10</span>
+											<span>11:11:15</span>
+										</p>
+									</td>
+									<td rowspan="2"><button class="stateBtn off">진행중</button></td>
+								</tr>
+								<tr>
+									<td><em class="tit">문의</em></td>
+									<td><p class="txt ellipsisWrap">정산오류의심강성문의</p></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<div class="searchArea flex-reset">
+				<div>
+					<em class="tit">키워드</em>
+					<div class="sarchBar scrhType3">
+						<input type="text" placeholder="검색하실 키워드나 Tag 입력하세요.">
+						<button class="srch">조회</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="result">총 <em>100</em> 건</div>
+
+			<div class="scrollWrap">
+				<ul class="tables">
+					<li>
+						<table class="stateTable">
+							<colgroup>
+								<col style="width:80px;">
+								<col style="width:60px;">
+								<col style="width:206px;">
+								<col style="width:auto;">
+		     				</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="3">
+										<span class="stateWrap">
+											<em><strong>OB 예약</strong></em>
+										</span>
+									</td>
+									<td><em class="tit">딜명</em></td>
+									<td><p class="txt ellipsisWrap">[슈퍼마트] 샘표 참기름 110ml</p></td>
+									<td rowspan="2">
+										<p class="date">
+											<span>2018-10-10</span>
+											<span>11:11:15</span>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td><em class="tit">문의유형</em></td>
+									<td><p class="txt ellipsisWrap">정산문의</p></td>
+								</tr>
+								<tr>
+									<td><em class="tit">예약정보</em></td>
+									<td colspan="2">
+										<span class="reservation_info">
+											<em>2019-01-31 18:00:00 - 홍길동</em> 
+											<span>010-7216-8513</span>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li class="active">
+						<table class="stateTable">
+							<colgroup>
+								<col style="width:80px;">
+								<col style="width:60px;">
+								<col style="width:206px;">
+								<col style="width:auto;">
+		     				</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="3">
+										<span class="stateWrap">
+											<em><strong>OB 예약</strong></em>
+										</span>
+									</td>
+									<td><em class="tit">딜명</em></td>
+									<td><p class="txt ellipsisWrap">[슈퍼마트] 샘표 참기름 110ml</p></td>
+									<td rowspan="2">
+										<p class="date">
+											<span>2018-10-10</span>
+											<span>11:11:15</span>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td><em class="tit">문의유형</em></td>
+									<td><p class="txt ellipsisWrap">정산문의</p></td>
+								</tr>
+								<tr>
+									<td><em class="tit">예약정보</em></td>
+									<td colspan="2">
+										<span class="reservation_info">
+											<em>2019-01-31 18:00:00 - 홍길동</em> 
+											<span>010-7216-8513</span>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="stateTable">
+							<colgroup>
+								<col style="width:80px;">
+								<col style="width:60px;">
+								<col style="width:206px;">
+								<col style="width:auto;">
+		     				</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="3">
+										<span class="stateWrap">
+											<em><i>긴급</i><strong>OB 예약</strong></em>
+											<span class="state">할당</span>
+										</span>
+									</td>
+									<td><em class="tit">딜명</em></td>
+									<td><p class="txt ellipsisWrap">[슈퍼마트] 샘표 참기름 110ml</p></td>
+									<td rowspan="2">
+										<p class="date">
+											<span>2018-10-10</span>
+											<span>11:11:15</span>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td><em class="tit">문의유형</em></td>
+									<td><p class="txt ellipsisWrap">정산문의</p></td>
+								</tr>
+								<tr>
+									<td><em class="tit">예약정보</em></td>
+									<td colspan="2">
+										<span class="reservation_info">
+											<em>2019-01-31 18:00:00 - 홍길동</em> 
+											<span>010-7216-8513</span>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="stateTable">
+							<colgroup>
+								<col style="width:80px;">
+								<col style="width:60px;">
+								<col style="width:206px;">
+								<col style="width:auto;">
+		     				</colgroup>
+							<tbody>
+								<tr>
+									<td rowspan="3">
+										<span class="stateWrap">
+											<em><i>긴급</i><strong>OB 예약</strong></em>
+											<span class="state">할당</span>
+										</span>
+									</td>
+									<td><em class="tit">딜명</em></td>
+									<td><p class="txt ellipsisWrap">[슈퍼마트] 샘표 참기름 110ml</p></td>
+									<td rowspan="2">
+										<p class="date">
+											<span>2018-10-10</span>
+											<span>11:11:15</span>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td><em class="tit">문의유형</em></td>
+									<td><p class="txt ellipsisWrap">정산문의</p></td>
+								</tr>
+								<tr>
+									<td><em class="tit">예약정보</em></td>
+									<td colspan="2">
+										<span class="reservation_info">
+											<em>2019-01-31 18:00:00 - 홍길동</em> 
+											<span>010-7216-8513</span>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<div class="scrollWrap h278 mt16">
+				<table class="stateTable custom">
+					<colgroup>
+						<col style="width:83px;">
+						<col style="width:246px;">
+						<col style="width:auto;">
+     				</colgroup>
+     				<thead>
+     					<th>분류</th>
+     					<th>제목</th>
+     					<th>수정일자</th>
+     				</thead>
+					<tbody>
+						<tr>
+							<td>공지</td>
+							<td>
+								<p class="ellipsisWrap">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<a href="#">통합응대가이드</a>
+								</p>
+							</td>
+							<td>2018-10-10</td>
+						</tr>
+						<tr>
+							<td>베스트콜</td>
+							<td>
+								<p class="ellipsisWrap">
+									<span class="icon-card" style="background-color: #ef2942; ">긴급</span>
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<a href="#">베스트콜</a>
+								</p>
+							</td>
+							<td>2018-10-10</td>
+						</tr>
+						<tr>
+							<td>업무길잡이</td>
+							<td>
+								<p class="ellipsisWrap">
+									<span class="icon-card" style="background-color: #ffb620; ">N</span>
+									<a href="#">통합응대가이드</a>
+								</p>
+							</td>
+							<td>2018-10-10</td>
+						</tr>
+						<tr>
+							<td>프로모션</td>
+							<td>
+								<p class="ellipsisWrap">
+									<span class="icon-card" style="background-color: #ffb620; ">N</span>
+									<a href="#">프로모션</a>
+								</p>
+							</td>
+							<td>2018-10-10</td>
+						</tr>
+						<tr>
+							<td>지식나눔</td>
+							<td>
+								<p class="ellipsisWrap">
+									<span class="icon-card" style="background-color: #7f61d9; ">U</span>
+									<a href="#">지식나눔</a>
+								</p>
+							</td>
+							<td>2018-10-10</td>
+						</tr>
+						<tr>
+							<td>지식나눔</td>
+							<td>
+								<p class="ellipsisWrap">
+									<a href="#">통합응대가이드</a>
+								</p>
+							</td>
+							<td>2018-10-10</td>
+						</tr>
+						<tr>
+							<td>공지</td>
+							<td>
+								<p class="ellipsisWrap">
+									<span class="icon-card" style="background-color: #2bb6c2; ">딜</span>
+									<a href="#">공지</a>
+								</p>
+							</td>
+							<td>2018-10-10</td>
+						</tr>
+						<tr>
+							<td>공지</td>
+							<td>
+								<p class="ellipsisWrap">
+									<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+									<a href="#">통합응대가이드</a>
+								</p>
+							</td>
+							<td>2018-10-10</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="titleArea">
+	<div class="tit"><h2>이티몬 파트너(leetmon)</h2></div>
+	<div class="cont">
+		<ul class="iconWrap">
+			<li>
+				<a href="#" class="answerWrap">
+					<button class="ob active">OB예약</button>
+					<span class="answer">OB예약 이력</span>
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>OB 예약 이력 3건</p>
+					</div>
+				</a>
+			</li>
+			<li style="display:none">
+				<a href="#" class="answerWrap">
+					<button class="mail active">답변</button>
+					<span class="answer">미답변 2건</span>
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>미답변 1:1 상담</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<button class="tolk">1:1문의
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>1:1문의[No.문의번호]</p>
+					</div>
+				</button>
+			</li>
+			<li>
+				<button class="incall">이관
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>이관[No.이관번호]</p>
+					</div>
+				</button>
+			</li>
+			<li>
+				<button class="cart">딜
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>[몬스터딜][의류] 젤리스푼 가을신상_1015</p>
+					</div>
+				</button>
+			</li>
+			<li>
+				<button class="member">회원
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>이파트너(TMONPARTNER1)</p>
+					</div>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<ul class="partnerNav">
+	<li><button class="baseBtn">OB예약</button></li>
+	<li class="active"><button class="baseBtn">SMS 전송</button></li>
+	<li><button class="baseBtn">스크립트</button></li>
+	<!-- 
+		활성화 클래스는 li 태그에 넣어주시면 됩니다.
+		active : 기본 버튼 활성화
+		sel_active : 셀렉트활성화
+	 -->
+	<li>
+		<div class="claimSelect">
+			<button class="baseBtn">중대클레임</button>
+			<ul>
+				<li><a href="#">선택없음</a></li>
+				<li><a href="#">욕설/폭언</a></li>
+				<li><a href="#">VIP급 대우 필요</a></li>
+				<li><a href="#">법적 이슈 발생</a></li>
+				<li><a href="#">보상 요청</a></li>
+				<li><a href="#">티몬불만 (영업/운영/시스템)</a></li>
+				<li><a href="#">정산 금액 불만</a></li>
+			</ul>
+		</div>
+	</li>
+</ul>
+
+<div class="ptnInfoArea">
+	<table class="tbDataWrap_ptnInfo cus_type">
+		<colgroup>
+			<col style="width:85px;" />
+			<col style="width:160px;" />
+			<col style="width:85px;" />
+			<col style="width:auto;" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>상담대상</th>
+				<td colspan="3">
+					<div class="sarchBar">
+						<div class="slctWrapOrigin " >
+	<select>
+							<option>선택</option>
+							<option>내용</option>
+							<option>내용</option>
+							<option>내용</option>
+							</select>
+</div><!-- end of slctWrap -->
+
+						<input type="text">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>상담유형</th>
+				<td colspan="3">
+					<!-- 
+						상담유형 셀렉트 활성화
+						활성화 클래스는 div.sarchBar 에 넣어주시면 됩니다.
+						active : 셀렉트 활성화 클래스
+					 -->
+					<div class="sarchBar scrhType3">
+						<input type="text" value="주문/결제/환불&gt; 주문/결제/환불&gt; 환불문의">
+						<button class="delete">삭제</button>
+						<button class="add">팝업링크</button>
+						<ul>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 환불문의</a></li>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 환불불가</a></li>
+							<li>
+								<a href="#">
+									주문/결제/환불&gt; 주문/결제/환불&gt; 환불기간지남 &gt; 주문/결제/환
+									주문/결제/환불&gt; 주문/결제/환불&gt; 환불기간지남 
+								</a>
+							</li>
+							<li><a href="#">주문/결제/환불> 주문/결제/환불> 계좌별 환불 방법 문의</a></li>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 영수증/세금계산서관련</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>상담유형</th>
+				<td colspan="3">
+					<!-- 
+						상담유형 셀렉트 활성화
+						활성화 클래스는 div.sarchBar 에 넣어주시면 됩니다.
+						active : 셀렉트 활성화 클래스
+						-->
+					<div class="sarchBar scrhType3 active">
+
+						<div class="bxInp">
+
+							<!-- 
+								* contenteditable 속성 값
+								- true : 수정 가능
+								- false : 수정 불가능
+								* .inp div 박스에 최대 가로길이 지정 필요합니다.(말줄임 표현)
+								- max-width: 가로길이px
+								-->
+							<div class="inp" contenteditable="true" readonly="true" style="max-width:293px;">주문/결제/환불&gt; 주문/결제/환불</div> 
+							<button class="del">삭제</button>
+						</div>
+						
+						<button class="add">팝업링크</button>
+						<ul>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 환불문의</a></li>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 환불불가</a></li>
+							<li>
+								<a href="#">
+									주문/결제/환불&gt; 주문/결제/환불&gt; 환불기간지남 &gt; 주문/결제/환
+									주문/결제/환불&gt; 주문/결제/환불&gt; 환불기간지남 
+								</a>
+							</li>
+							<li><a href="#">주문/결제/환불> 주문/결제/환불> 계좌별 환불 방법 문의</a></li>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 영수증/세금계산서관련</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>메인상담</th>
+				<td>
+					<!-- 
+						메인상담 활성화
+						활성화 클래스는 div.sarchBar 에 넣어주시면 됩니다.
+						active : 셀렉트 활성화 클래스
+					 -->
+					<div class="sarchBar scrhType4">
+						<input type="text">
+						<button class="delete">삭제</button>
+						<ul>
+							<li>
+								<a href="#">
+									<span>2018-10-22 14:41:52</span>
+									<span>배송문의 | [몬스터]티탁 1016티탁 1016티탁 1016티탁 1016티탁 10</span>
+									<span>147100339 | 배송문의</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>2018-10-22 14:41:52</span>
+									<span>배송문의 | [몬스터]티탁 1016티탁 1016티탁 1016티탁 1016티탁 10</span>
+									<span>147100339 | 배송문의</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>2018-10-22 14:41:52</span>
+									<span>배송문의 | [몬스터]티탁 1016티탁 1016티탁 1016티탁 1016티탁 10</span>
+									<span>147100339 | 배송문의</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>2018-10-22 14:41:52</span>
+									<span>배송문의 | [몬스터]티탁 1016티탁 1016티탁 1016티탁 1016티탁 10</span>
+									<span>147100339 | 배송문의</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</td>
+				<th>주문번호</th>
+				<td>
+					<div class="sarchBar default">
+						<input type="text">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>상담제목</th>
+				<td colspan="3">
+					<div class="sarchBar default">
+						<input type="text">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<textarea class="textArea" placeholder="1. 문의사항: &#13;&#10;2. 안내사항:&#13;&#10;3. 처리내용:&#13;&#10;4. 약속여부: 약속없음/ oo 약속 (00시까지)"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th>파일첨부</th>
+				<td colspan="3">
+					<div class="fileUpload">
+						<input type="file">
+						<span>파일첨부</span>
+					</div>
+					<span>첨부파일 3건</span>
+				</td>
+			</tr>
+			<tr>
+				<th>통화결과</th>
+				<td colspan="3">
+					<div class="saveWrap">
+						<div class="radios">
+							<label class="radioWrap">
+								<input type="radio" checked="checked">
+								<span>성공</span>
+							</label>
+							<label class="radioWrap">
+								<input type="radio">
+								<span>실패</span>
+							</label>
+							<label class="radioWrap">
+								<input type="radio">
+								<span>끊김</span>
+							</label>
+							<label class="radioWrap">
+								<input type="radio">
+								<span>호전환</span>
+							</label>
+						</div>
+						<!-- 
+							저장버튼(셀렉트) 활성화
+							활성화 클래스는 div.slctWrap에 넣어주시면 됩니다.
+							active : 셀렉트 활성화 클래스
+						 -->
+						<div class="slctWrap  " >
+	<button>저장</button>
+	<ul>
+							<li class="groupSel">
+								<a href="#">그룹이관</a>
+								<!-- 
+									이관 유형선택 활성화
+									활성화 클래스는 div.groupSel에 넣어주시면 됩니다.
+									active : 셀렉트 활성화 클래스
+								 -->
+								<div class="typeSelect">
+									<em class="tit">이관 유형선택</em>
+									<ul>
+										<li class="active">
+											<button>정산</button>
+											<div class="innerBox">
+												<label class="radioWrap">
+													<input type="radio" name="group1">
+													<span>정산 1팀</span>
+												</label>
+												<label class="radioWrap">
+													<input type="radio" name="group1">
+													<span>정산 2팀</span>
+												</label>
+											</div>
+										</li>
+										<li>
+											<button>배송</button>
+											<div class="innerBox">
+												<label class="radioWrap">
+													<input type="radio" name="group2">
+													<span>배송 1팀</span>
+												</label>
+												<label class="radioWrap">
+													<input type="radio" name="group2">
+													<span>배송 2팀</span>
+												</label>
+											</div>
+										</li>
+										<li>
+											<button>고객케어</button>
+											<div class="innerBox">
+												<label class="radioWrap">
+													<input type="radio" name="group3">
+													<span>test1</span>
+												</label>
+												<label class="radioWrap">
+													<input type="radio" name="group3">
+													<span>test2</span>
+												</label>
+											</div>
+										</li>
+										<li>
+											<button>1:1문의</button>
+											<div class="innerBox">
+												<label class="radioWrap">
+													<input type="radio" name="group4">
+													<span>test1</span>
+												</label>
+												<label class="radioWrap">
+													<input type="radio" name="group4">
+													<span>test2</span>
+												</label>
+											</div>
+										</li>
+									</ul>
+
+									<div class="btn_wrap">
+										<button class="btn orangeBorder">취소</button>
+										<button class="btn orangeBg">이관</button>
+									</div>
+
+								</div>
+							</li>
+							<li><a href="#">개인이관</a></li>
+							<li><a href="#">진행</a></li>
+							<li><a href="#">완료</a></li>
+							</ul>
+</div><!-- end of slctWrap -->
+					</div>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+	<!-- Today 상담 실적 상세 내역-->
+<div class="layerPopWrap today_history" style="width: 488px ; height: @@height; display: none;">
+	<div class="header">Today 상담 실적 상세 내역</div>
+	<div class="cont">
+	<h2 class="title">주요 지표 상담 실적</h2>
+	<table class="sideTable">
+		<colgroup>
+			<col style="width:149px;">
+			<col style="width:149px;">
+			<col style="width:auto;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th><div class="tit_type01">IB상담</div></th>
+				<th><div class="tit_type01">1:1 상담</div></th>
+				<th><div class="tit_type01">OB 시간 준수</div></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><p class="result complete"><span>60건</span><em>(100%)</em></p></td>
+				<td><p class="result"><span>0건</span><em>(0%)</em></p></td>
+				<td><p class="result"><span>10건</span><em>(66%)</em></p></td>
+			</tr>
+		</tbody>
+	</table>
+	<h2 class="title">고객 인입 상담 건수</h2>
+	<table class="sideTable">
+		<colgroup>
+			<col style="width:111px;">
+			<col style="width:111px;">
+			<col style="width:111px;">
+			<col style="width:auto;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th colspan="2">
+					<div class="tit_type01">IB상담
+						<div class="balloonWrap t sm">
+							<i class="arr"></i>
+							<p>OneCall상담 / IB상담</p>
+						</div>
+					</div>
+				</th>
+				<th colspan="2"><div class="tit_type01">1:1 상담</div></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><p class="result"><span>60건</span></p></td>
+				<td><p class="result"><span>50건</span></p></td>
+				<td><p class="result"><span>10건</span></p></td>
+				<td><p class="result"><span>20건</span></p></td>
+			</tr>
+		</tbody>
+	</table>
+	<h2 class="title">나의할일 &gt; 받은이관 처리실적</h2>
+	<h3 class="title">개인</h3>
+	<div class="progress_bar">
+		<div class="box" style="background-color:#f27935;width:20.08%;">2</div>
+		<div class="box" style="background-color:#ffb620;width:25%;">3</div>
+		<div class="box" style="background-color:#4a90e2;width:35.26%;">4</div>
+		<div class="box" style="background-color:#ccd2d8;width:20.08%;">2
+			<div class="balloonWrap t sm">
+				<i class="arr"></i>
+				<p>잔여</p>
+			</div>
+		</div>
+	</div>
+	<h3 class="title">그룹</h3>
+	<div class="progress_bar"></div>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!-- // Today 상담 실적 상세 내역 -->
+
+<!--  1:1 문의 상세 -->
+<div class="layerPopWrap qna_detail" style="width: 440px ; height: @@height; display: none;">
+	<div class="header"> 1:1 문의 상세</div>
+	<div class="cont">
+	 <table class="sideTable type02">
+		<colgroup>
+			<col style="width:83px;">
+			<col style="width:90px;">
+			<col style="width:83px;">
+			<col style="width:auto;">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>딜명</th>
+				<td colspan="3"><p class="txt ellipsisWrap">[단하루] 극세사 무릎담요/이불 모음/초저가/최저가/최저가/최저가</p></td>
+			</tr>
+			<tr>
+				<th>딜번호</th>
+				<td>45635432</td>
+				<th>파트너</th>
+				<td>㈜티몬파트너(tminptn1)</td>
+			</tr>
+			<tr>
+				<th>문의유형</th>
+				<td colspan="3">
+					<div class="qna_type">
+						<span class="info">2018-10-18 15:00:00 김티몬</span>
+						<a href="#"><span class="phone">010-1234-5678</span></a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>문의제목</th>
+				<td colspan="3"><p class="txt">OB 시간 엄수 요청</p></td>
+			</tr>
+			<tr>
+				<th>문의내용<div class="date"><span>2018-10-10</span><span>15:50:20</span></div></th>
+				<td colspan="3" class="pd0">
+					<div class="scrollWrap">
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>첨부파일</th>
+				<td colspan="3">
+					<div class="downWrap">
+						<!-- <a href="#;" class="btnDown_full">전체 다운로드</a> -->
+						<div class="fileList">
+							<a href="#">#파일 1
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 2
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 3
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 4</a>
+							<a href="#">#파일 5</a>
+							<a href="#">#파일 6</a>
+							<a href="#">#파일 7</a>
+							<a href="#">#파일 8</a>
+							<a href="#">#파일 9</a>
+							<a href="#">#파일 10</a>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!--//  1:1 문의 상세-->
+
+<!-- 예약 상세 -->
+<div class="layerPopWrap qna_detail" style="width: 440px ; height: @@height; display: none;">
+	<div class="header">예약 상세</div>
+	<div class="cont">
+	 <table class="sideTable type02">
+		<colgroup>
+			<col style="width:83px;">
+			<col style="width:90px;">
+			<col style="width:83px;">
+			<col style="width:auto;">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>딜명</th>
+				<td colspan="3"><p class="txt ellipsisWrap">[단하루] 극세사 무릎담요/이불 모음/초저가/최저가/최저가/최저가</p></td>
+			</tr>
+			<tr>
+				<th>딜번호</th>
+				<td>45635432</td>
+				<th>파트너</th>
+				<td>㈜티몬파트너(tminptn1)</td>
+			</tr>
+			<tr>
+				<th>예약정보</th>
+				<td colspan="3">
+					<div class="qna_type">
+						<span class="info">2018-10-18 15:00:00 김티몬</span>
+						<span class="phone">010-1234-5678</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>예약메모</th>
+				<td colspan="3"><p class="txt ellipsisWrap">OB 시간 엄수 요청</p></td>
+			</tr>
+			<tr>
+				<th>이전문의유형</th>
+				<td colspan="3"><p class="txt ellipsisWrap">주문/결제/환불 &gt; 주문/결제/환불 &gt; 주문/결제/환불</p></td>
+			</tr>
+			<tr>
+				<th>이전문의제목</th>
+				<td colspan="3"><p class="txt ellipsisWrap">환불 불가 고객 명단</p></td>
+			</tr>
+			<tr>
+				<th>
+					<span class="icon-card" style="background-color: #ef2942; ">긴급</span>
+					<div class="gap">이전상담내용</div>
+					<div class="date"><span>2018-10-10</span><span>15:50:20</span></div>
+					<div class="slctWrapOrigin " >
+	<select>
+							<option>진행</option>
+							<option>고객취소요청</option>
+							<option>내용</option>
+							<option>재등록</option>
+							<option>오등록</option>
+							<option>그룹코드 관리 테스트</option>
+							</select>
+</div><!-- end of slctWrap -->
+
+					</div>
+				</th>
+				<td colspan="3" class="pd0">
+					<div class="scrollWrap h176">
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>첨부파일</th>
+				<td colspan="3">
+					<div class="downWrap">
+						<!-- <a href="#;" class="btnDown_full">전체 다운로드</a> -->
+						<div class="fileList">
+							<a href="#">#파일 1
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 2
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 3
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 4</a>
+							<a href="#">#파일 5</a>
+							<a href="#">#파일 6</a>
+							<a href="#">#파일 7</a>
+							<a href="#">#파일 8</a>
+							<a href="#">#파일 9</a>
+							<a href="#">#파일 10</a>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!--// 예약 상세 -->
+
+<!-- 파일첨부 -->
+<div class="layerPopWrap file_upload" style="width: 440px ; height: @@height; display: none;">
+	<div class="header"> 파일 첨부</div>
+	<div class="cont">
+	<div class="fileArea">
+		<!-- 첨부파일이 있을때 -->
+		<ul>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+			<li><a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a></li>
+		</ul>
+	</div>
+	<!-- 첨부파일 없을때 -->
+	<div class="fileArea notFile" style="display:none"><p>이곳에 파일을 끌어다 놓으세요.</p></div>
+
+	<div class="uploadArea">
+		<div class="fileUpload type02">
+			<input type="file">
+			<span>파일첨부</span>
+		</div>
+		<p>
+			<span>첨부파일타입 : gif, png, jpg, docs, docx, xls, xlsx, pptx, txt, pdf</span>
+			<em>최대 50MB 이하, 10개까지 첨부 가능</em>
+		</p>
+	</div>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!-- // 파일첨부 -->
+
+<!-- 미답변 1:1 문의 -->
+<div class="layerPopWrap unanswered" style="width: 440px ; height: @@height; display: none;">
+	<div class="header"> 미답변 1:1 문의</div>
+	<div class="cont">
+	<table class="sideTable type03">
+		<colgroup>
+			<col style="width:276px;">
+			<col style="width:auto;">
+		</colgroup>
+		<tbody>
+			<tr>
+				<td><p class="ellipsisWrap"><span class="icon-card" style="background-color: #2bb6c2; ">딜</span> 정산문의</p></td>
+				<td>
+					<button class="stateBtn">내가하기
+						<div class="balloonWrap t sm">
+							<i class="arr"></i>
+							<p>1:1 문의 나에게 재할당하기 - <em>취소불가</em></p>
+						</div>
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td><p class="ellipsisWrap">고객 응대 요청</p></td>
+				<td>
+					<button class="stateBtn">진행하기
+						<div class="balloonWrap t sm">
+							<i class="arr"></i>
+							<p>1:1 문의 나에게 재할당하기 - <em>취소불가</em></p>
+						</div>
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td><p class="ellipsisWrap"><span class="icon-card" style="background-color: #2bb6c2; ">딜</span> 고객 응대 요청</p></td>
+				<td><button class="stateBtn off">진행중</button></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="pagingWrap">
+		<span class="numPage">
+			<a href="#" class="first">prev jump</a>
+			<a href="#" class="prev">prev</a>
+			<a href="#" class="active">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a href="#" class="next">next</a>
+			<a href="#" class="end">next jump</a>
+		</span>
+	</div>
+
+	<table class="sideTable type02">
+		<colgroup>
+			<col style="width:83px;">
+			<col style="width:auto;">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>딜명</th>
+				<td><p class="txt ellipsisWrap">[단하루] 극세사 무릎담요/이불 모음/초저가/최저가</p></td>
+			</tr>
+			<tr>
+				<th>
+					<div class="gap">문의내용</div>
+					<div class="date"><span>2018-10-10</span><span>15:50:20</span></div>
+				</th>
+				<td class="pd0">
+					<div class="scrollWrap h176">
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+						환불 불가 고객 명단 내용<br>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>첨부파일</th>
+				<td>
+					<div class="downWrap">
+						<div class="fileList">
+							<a href="#">#파일 1
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 2
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 3
+								<div class="balloonWrap t sm">
+									<i class="arr"></i>
+									<p>환불 불가 고객 명단1.xlsx</p>
+								</div>
+							</a>
+							<a href="#">#파일 4</a>
+							<a href="#">#파일 5</a>
+							<a href="#">#파일 6</a>
+							<a href="#">#파일 7</a>
+							<a href="#">#파일 8</a>
+							<a href="#">#파일 9</a>
+							<a href="#">#파일 10</a>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!-- // 미답변 1:1 문의 -->
+
+<!-- OB 예약 -->
+<div class="layerPopWrap reservation" style="width: 440px ; height: @@height; display: none;">
+	<div class="header"> OB 예약</div>
+	<div class="cont">
+<table class="sideTable type03">
+	<colgroup>
+		<col style="width:83px;">
+		<col style="width:auto;">
+	</colgroup>
+	<tbody>
+		<tr>
+			<th>상담대상</th>
+			<td>
+				<div class="radios">
+					<label class="radioWrap">
+						<input type="radio" checked="checked">
+						<span>파트너</span>
+					</label>
+					<label class="radioWrap">
+						<input type="radio">
+						<span>택배</span>
+					</label>
+					<label class="radioWrap">
+						<input type="radio">
+						<span>그외</span>
+					</label>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td><div class="sarchBar default"><input type="text"></div></td>
+		</tr>
+		<tr>
+			<th>연락처</th>
+			<td>
+				<div class="sarchBar">
+					<div class="slctWrapOrigin " >
+	<select>
+						<option>직접입력</option>
+						<option>010-1234-5678</option>
+						<option>010-1234-5678</option>
+						<option>010-1234-5678</option>
+						</select>
+</div><!-- end of slctWrap -->
+
+					<input type="text">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>예약일시</th>
+			<td>
+				<div class="calendarWrapper">
+					<div class="calendar">
+						<input type="text" placeholder="YYYY-MM-DD" readonly="">
+						<button class="srch">검색</button>
+					</div>
+					<div class="slctWrapOrigin " >
+	<select>
+						<option>17</option>
+						<option>test</option>
+						<option>test</option>
+						<option>test</option>
+						</select>
+</div><!-- end of slctWrap -->
+
+					<span class="gap">:</span>
+					<div class="slctWrapOrigin " >
+	<select>
+						<option>00</option>
+						<option>test</option>
+						<option>test</option>
+						<option>test</option>
+						</select>
+</div><!-- end of slctWrap -->
+
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>메모</th>
+			<td><div class="sarchBar default"><input type="text"></div></td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="btnWrap">
+	<div class="checks">
+		<label class="chkWrap">
+			<input type="checkbox" checked="checked">
+			<span>메일문의</span>
+		</label>
+		<label class="chkWrap">
+			<input type="checkbox">
+			<span>긴급</span>
+		</label>
+	</div>
+	<div class="btns">
+		<button class="btn orangeBg">변경</button>
+		<button class="btn orangeBorder">예약취소</button>
+		<button class="btn orangeBg disabled">저장</button>
+	</div>
+</div>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!--// OB 예약 -->
+
+<!-- SMS -->
+<div class="layerPopWrap sms" style="width: 440px ; height: @@height; display: none;">
+	<div class="header"> SMS</div>
+	<div class="cont">
+	<table class="sideTable type03">
+	<colgroup>
+		<col style="width:83px;">
+		<col style="width:auto;">
+	</colgroup>
+	<tbody>
+		<tr>
+			<th>이름</th>
+			<td><div class="sarchBar default"><input type="text"></div></td>
+		</tr>
+		<tr>
+			<th>연락처</th>
+			<td>
+				<div class="sarchBar">
+					<div class="slctWrapOrigin " >
+	<select>
+						<option>직접입력</option>
+						<option>010-1234-5678</option>
+						<option>010-1234-5678</option>
+						<option>010-1234-5678</option>
+						</select>
+</div><!-- end of slctWrap -->
+
+					<input type="text">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>발신번호</th>
+			<td>
+				<div class="tal">
+					<div class="slctWrapOrigin sent" >
+	<select>
+						<option>SPC</option>
+						<option>CS 고객센터</option>
+						<option>VIP 고객센터</option>
+						</select>
+</div><!-- end of slctWrap -->
+
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>서식</th>
+			<td>
+				<!--
+					상담유형 셀렉트 활성화
+					활성화 클래스는 div.sarchBar 에 넣어주시면 됩니다.
+					active : 셀렉트 활성화 클래스
+				 -->
+				<div class="sarchBar scrhType4">
+					<input type="text" value="고객 OB 기본 서식">
+					<button class="delete">삭제</button>
+					<ul>
+						<li><a href="#">고객 OB 기본 <span>서식</span></a></li>
+						<li><a href="#">고객 IB 기본 <span>서식</span></a></li>
+						<li><a href="#">FN <span>서식</span></a></li>
+						<li><a href="#">환불안내 <span>서식</span></a></li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+				<th>서식</th>
+				<td>
+					<!--
+						상담유형 셀렉트 활성화
+						활성화 클래스는 div.sarchBar 에 넣어주시면 됩니다.
+						active : 셀렉트 활성화 클래스
+					 -->
+					 <!-- 2019.04.26 수정 버전 -->
+					<div class="sarchBar scrhType4 active">
+						<div class="bxInp">
+							<!-- 
+								* contenteditable 속성 값
+								- true : 수정 가능
+								- false : 수정 불가능
+								* .inp div 박스에 최대 가로길이 지정 필요합니다.(말줄임 표현)
+								- max-width: 가로길이px
+								-->
+							<div class="inp" contenteditable="true" readonly="true" style="max-width:250px;">고객 OB 기본 서식 고객 OB 기본 서식 고객 OB 기본 서식고객 OB 기본 서식</div> 
+							<button class="del">삭제</button>
+						</div>
+						<ul>
+							<li><a href="#">고객 OB 기본 <span>서식</span></a></li>
+							<li><a href="#">고객 IB 기본 <span>서식</span></a></li>
+							<li><a href="#">FN <span>서식</span></a></li>
+							<li><a href="#">환불안내 <span>서식</span></a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+		<tr>
+			<th>발신내용</th>
+			<td><div class="txtArea"><textarea placeholder="안녕하세요. 고객님&#13;&#10;환불안내도와드리겠습니다."></textarea></div></td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="btnWrap">
+	<div class="btns">
+		<button class="btn orangeBg">전송</button>
+	</div>
+</div>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!-- // SMS -->
+
+<!-- 상담이력등록 -->
+<div class="layerPopWrap enrollment" style="width: 439px ; height: @@height; display: none;">
+	<div class="header"></div>
+	<div class="cont">
+<textarea class="textArea type02" placeholder="1. 문의사항: &#13;&#10;2. 안내사항:&#13;&#10;3. 처리내용:&#13;&#10;4. 약속여부: 약속없음/ oo 약속 (00시까지)"></textarea>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!-- // 상담이력등록 -->
+
+<!-- 스크립트 -->
+<div class="layerPopWrap script" style="width: 439px ; height: @@height; display: none;">
+	<div class="header">스크립트</div>
+	<div class="cont">
+<div class="searchArea">
+	<em>분류</em>
+	<div class="slctWrapOrigin " >
+	<select>
+		<option>상담결과</option>
+		<option>이관서식</option>
+		<option>콜 상담결과 서식</option>
+		</select>
+</div><!-- end of slctWrap -->
+
+
+	<div class="sarchBar default"><input type="text"></div>
+</div>
+
+<div class="scrollBox">
+	<table class="sideTable type02">
+		<colgroup>
+			<col style="width:94px;">
+			<col style="width:auto;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>제목</th>
+				<th>스크립트</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>자체판단</td>
+				<td><a href="#" class="link">[자체판단] 사유/상세사유/보상or환불/금액 – 제목기제상세한 상담 내용 기제 – 내용</a></td>
+			</tr>
+			<tr>
+				<td>선환불</td>
+				<td><a href="#" class="link">[자체판단] 사유/상세사유/보상or환불/금액 – 제목기제상세한 상담 내용 기제 – 내용</a></td>
+			</tr>
+			<tr>
+				<td>고객케어요청</td>
+				<td><a href="#" class="link">[자체판단] 사유/상세사유/보상or환불/금액 – 제목기제상세한 상담 내용 기제 – 내용</a></td>
+			</tr>
+			<tr>
+				<td>자체판단</td>
+				<td><a href="#" class="link">[자체판단] 사유/상세사유/보상or환불/금액 – 제목기제상세한 상담 내용 기제 – 내용</a></td>
+			</tr>
+			<tr>
+				<td>자체판단</td>
+				<td><a href="#" class="link">[자체판단] 사유/상세사유/보상or환불/금액 – 제목기제상세한 상담 내용 기제 – 내용</a></td>
+			</tr>
+			<tr>
+				<td>선환불</td>
+				<td><a href="#" class="link">[자체판단] 사유/상세사유/보상or환불/금액 – 제목기제상세한 상담 내용 기제 – 내용</a></td>
+			</tr>
+			<tr>
+				<td>고객케어요청</td>
+				<td><a href="#" class="link">[자체판단] 사유/상세사유/보상or환불/금액 – 제목기제상세한 상담 내용 기제 – 내용</a></td>
+			</tr>
+			<tr>
+				<td>자체판단</td>
+				<td><a href="#" class="link">[자체판단] 사유/상세사유/보상or환불/금액 – 제목기제상세한 상담 내용 기제 – 내용</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!-- // 스크립트 -->
+
+<!-- OB 예약 이력 -->
+<div class="layerPopWrap ob_his" style="width: 439px ; height: @@height; display: none;">
+	<div class="header">OB 예약 이력</div>
+	<div class="cont">
+<table class="sideTable type02">
+	<colgroup>
+		<col style="width:90px;">
+		<col style="width:215px;">
+		<col style="width:auto;">
+	</colgroup>
+	<thead>
+		<tr>
+			<th>예약 상태</th>
+			<th>메모</th>
+			<th>예약시간</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>취소(재배정)</td>
+			<td><p>배송지연 교환 요청 배송지연 교환 요 요청 배송지연 교환</p></td>
+			<td>2019-05-10<br>12:13:00</td>
+		</tr>
+		<tr>
+			<td>취소(재배정)</td>
+			<td><p>배송지연 교환 요청 배송지연 교환 요 요청 배송지연 교환</p></td>
+			<td>2019-05-10<br>12:13:00</td>
+		</tr>
+		<tr>
+			<td>취소(상담사)</td>
+			<td><p>배송지연 교환 요청 배송지연 교환</p></td>
+			<td>2019-05-10<br>12:13:00</td>
+		</tr>
+		<tr>
+			<td>완료</td>
+			<td><p>배송지연 교환 요청 배송지연 교환</p></td>
+			<td>2019-05-10<br>12:13:00</td>
+		</tr>
+		<tr>
+			<td>완료</td>
+			<td><p>배송지연 교환 요청 배송지연 교환</p></td>
+			<td>2019-05-10<br>12:13:00</td>
+		</tr>
+		<tr>
+			<td>완료</td>
+			<td><p>배송지연 교환 요청 배송지연 교환</p></td>
+			<td>2019-05-10<br>12:13:00</td>
+		</tr>
+		<tr>
+			<td>완료</td>
+			<td><p>배송지연 교환 요청 배송지연 교환</p></td>
+			<td>2019-05-10<br>12:13:00</td>
+		</tr>
+	</tbody>
+</table>
+	</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+<!-- // OB 예약 이력 -->
+</section>
+		</main>
+
+	</article>
+	<!-- // end of containerWrap -->
+
+	<div class="layerpopCenterWrap">
+		<div class="layerPopWrap hasBorder layerDealNotice" style="width: 730px ; height: 570px; display: @@display;">
+	<div class="header">딜 공지</div>
+	<div class="cont">
+
+		<div class="tabWrap">
+			<ul class="nav">
+				<li><a href="#">딜별공지사항</a></li>
+				<li><a href="#">지식관리</a></li>
+				<li class="active"><a href="#">컨텐츠공지</a></li>
+				<li><a href="#">상품문의</a></li>
+				<li><a href="#">취소환불규정</a></li>
+				<li><a href="#">딜주의사항</a></li>
+			</ul>
+			<div class="cont">
+				<div>content1</div>
+				<div>content2</div>
+				<div class="active">
+					<div class="scrollWrap">
+
+						<ul class="lstNotice type2">
+							<li>
+								<div class="tit">
+									이벤트 당첨 안내 2018.10.31 / 10:51 공지
+									<span class="date">2018-10-31 11:00:00</span>
+								</div>
+								<div class="desc">
+									안녕하세요 티몬입니다.<br />
+									본 상품을 이용해주시는 고객님들께 감사드립니다.<br /><br />
+									이벤트 당첨자는 상품문의 게시판에서 확인 가능합니다.<br /> 감사합니다.
+								</div>
+							</li>
+							<li>
+								<div class="tit">
+									필독! 조기발권 안내  2018.10.24 / 11:39 공지
+									<span class="date">2018-10-31 11:00:00</span>
+								</div>
+								<div class="desc">
+									안녕하세요 티몬입니다.<br />
+									본 상품을 이용해주시는 고객님들께 감사드립니다.<br /><br />
+									이벤트 당첨자는 상품문의 게시판에서 확인 가능합니다.
+								</div>
+							</li>
+							<li>
+								<div class="tit">
+									이벤트 당첨 안내 2018.10.31 / 10:51 공지
+									<span class="date">2018-10-31 11:00:00</span>
+								</div>
+								<div class="desc">
+									안녕하세요 티몬입니다.<br />
+									본 상품을 이용해주시는 고객님들께 감사드립니다.<br /><br />
+									이벤트 당첨자는 상품문의 게시판에서 확인 가능합니다.<br /> 감사합니다.
+								</div>
+							</li>
+							<li>
+								<div class="tit">
+									필독! 조기발권 안내  2018.10.24 / 11:39 공지
+									<span class="date">2018-10-31 11:00:00</span>
+								</div>
+								<div class="desc">
+									안녕하세요 티몬입니다.<br />
+									본 상품을 이용해주시는 고객님들께 감사드립니다.<br /><br />
+									이벤트 당첨자는 상품문의 게시판에서 확인 가능합니다.
+								</div>
+							</li>
+						</ul><!-- end of lstNotice -->
+
+					</div><!-- end of scrollWrap -->
+
+					<!-- <div class="pagingWrap">
+						<span class="numPage">
+							<a href="#" class="first">prev jump</a>
+							<a href="#" class="prev">prev</a>
+							<a href="#" class="active">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+							<a href="#" class="next">next</a>
+							<a href="#" class="end">next jump</a>
+						</span>
+					</div> --><!-- end of pagingWrap -->
+
+				</div>
+				<div>content4</div>
+				<div>content5</div>
+				<div>content6</div>
+			</div>
+		</div><!-- end of tabWrap -->
+
+			</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+	</div><!-- end of layerpopCenterWrap -->
+
+</body>
+</html>

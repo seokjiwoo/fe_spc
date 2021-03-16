@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 딜관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/template.css">
+<style>
+	/* [D] UI 확인용 */
+	body {
+		padding: 20px;
+	}
+	.temp_layer{
+		display: block;
+		position: relative;
+		margin-top: 20px;
+	}
+</style>
+</head>
+<body>
+
+	<!-- 반품/교환주소 불일치 알림 -->
+	<div class="temp_layer addr_confirm" style="width:463px;">
+		<div class="layer_hd">
+			<h3>반품/교환주소 불일치 알림</h3>
+		</div>
+		<div class="layer_ct">
+			<table class="temp_tb01">
+			 	<colgroup>
+			 		<col style="width:114px;">
+			 		<col style="width:auto;">
+			 	</colgroup>
+			 	<tbody>
+			 		<tr>
+			 			<th>이전 반송지</th>
+			 			<td>10539 경기도 고양시 덕양구 덕은동 123</td>
+			 		</tr>
+			 		<tr>
+			 			<th>변경할 반송지</th>
+			 			<td>10538 서울시 강남구 동일타워 123</td>
+			 		</tr>
+			 	</tbody>
+			</table>
+
+			<div class="bx_caution">
+				<p>
+					<span class="txt_point">이미 주문이 완료된 고객의 반품/교환지도 함께 변경될 수 있습니다. 변경을 완료하시겠습니까?</span>
+				</p>
+			</div>
+
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">아니오</button>
+				<button type="submit" class="btn submit2">네</button>
+			</div>
+
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!-- //반품/교환주소 불일치 알림 -->
+
+	<!-- 변경 완료 질문 문구 -->
+	<div class="temp_layer chg_info" style="width:423px;">
+		<div class="layer_ct">
+
+			<div class="bx_single_txt">이후 발생하는 주문부터<br /><strong class="point">변경된 배송템플릿 정보 (배송비 등)로 적용됩니다.</strong><br />변경을 완료하시겠어요?</div>
+
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">아니오</button>
+				<button type="submit" class="btn submit2">네</button>
+			</div>
+
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!-- //변경 완료 질문 문구 -->
+
+	<!-- 변경 완료 문구 -->
+	<div class="temp_layer chg_info_chk" style="width:423px;">
+		<div class="layer_ct">
+
+			<div class="bx_single_txt">변경이 정상적으로 완료되었습니다.<span class="link">지금 연결된 딜을 확인하시려면, <a href="#;">연결딜 조회 바로가기</a>를 클릭하세요.</span></div>
+
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">닫기</button>
+				<button type="submit" class="btn submit2">연결딜 조회</button>
+			</div>
+
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!-- //변경 완료 문구 -->
+
+	<!-- 변경 실패 문구 -->
+	<div class="temp_layer chg_fail" style="width:423px;">
+		<div class="layer_ct">
+
+			<div class="bx_single_txt">123개 중 <span class="point">3개</span>의 딜이 정상적으로 변경되지 않았습니다.
+				<span class="link">닫기 버튼을 클릭하신 후, 다시 진행해주세요.</span>
+			</div>
+
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">닫기</button>
+			</div>
+
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!-- //변경 실패 문구 -->
+
+	<script>
+		let elem_ulBox = document.querySelector( '.listWrap ul.list' ) ;
+		let elem_li = elem_ulBox.querySelector( 'li' ) ;
+
+		function addEvents ( elem ) {
+			let btnAdd = elem.querySelector( 'button.add' ) ;
+			let btnRemove = elem.querySelector( 'button.remove' ) ;
+
+			btnAdd.addEventListener( 'click' , function () {
+				if ( elem_ulBox.querySelectorAll( 'li' ).length >= 5 ) return ;
+				let elemClone = elem.cloneNode( true ) ;
+				elem_ulBox.appendChild( elemClone ) ;
+
+				addEvents( elemClone ) ;
+			}) ;
+
+			btnRemove.addEventListener( 'click' , function () {
+				elem.parentNode.removeChild( elem ) ;
+			}) ;
+		}
+
+		addEvents( elem_li ) ;
+	</script>
+
+</body>
+</html>

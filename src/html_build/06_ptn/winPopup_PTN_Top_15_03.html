@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PTN CMS</title>
+	<link rel="stylesheet" type="text/css" href="../../css/ptn.css">
+</head>
+<body>
+	<div class="winPopWrap popRouting" style="width: 600px ; height: 530px ;">
+	<div class="header">상담 라우팅 관리</div>
+	<div class="cont">
+
+	<form>
+		<fieldset class="formWrap">
+			<span class="inp">
+				<em class="tit">상담선택</em>
+
+				<div class="slctWrapOrigin " >
+	<select>
+					<option>선택하세요</option>
+					<option>1:1문의</option>
+					<option>딜타입별 이관</option>
+					<option>중대클레임</option>
+					<option>채팅 콜백</option>
+					<option>중대클레임</option>
+					<option>이관01</option>
+					<option>이관02</option>
+					<option>그룹이관TEST02</option>
+					</select>
+</div><!-- end of slctWrap -->
+
+
+			</span>
+			<span class="inp">
+				<em class="tit">라우팅방법</em>
+
+				<div class="slctWrapOrigin readonly" >
+	<select>
+					<option>자동</option>
+					<option>수동</option>
+					</select>
+</div><!-- end of slctWrap -->
+
+
+			</span>
+		</fieldset>
+	</form>
+
+	<div class="titArea">
+		<strong class="tit1">라우팅 세팅</strong>
+	</div><!-- end of titArea -->
+
+	<ul class="lstRouting">
+		<li>
+
+			<!-- input에 값이 없을 경우 empty 클래스 추가 -->
+			라우팅 최대 배정 건수<input type="number" class="" value="10" />건
+			<span class="alert">최소 배정 건수보다 큰 수를 입력하여주세요.</span>
+		</li>
+		<li>
+
+			<!-- input에 값이 없을 경우 empty 클래스 추가 -->
+			라우팅 시작 가능 건수<input type="number" class="" value="5" />건
+			<span class="alert">최대 배정 건수보다 작은 수를 입력하여주세요.</span>
+		</li>
+	</ul>
+
+	<div class="titArea">
+		<strong class="tit1">라우팅 세팅 가이드</strong>
+	</div><!-- end of titArea -->
+
+	<ul class="lstRouting guide">
+		<li>
+			<strong>라우팅 최대 배정 건수</strong>
+			상담사에게 배정될 수 있는 최대 상담 건수
+		</li>
+		<li>
+			<strong>라우팅 시작 가능 건수</strong>
+			라우팅을 통해 상담 배정을 받을 수 있는 상담 보유 건수<br />상담사의 잔여 상담건이 라우팅 시작 가능 건수 미만일 경우 상담 배정
+		</li>
+		<li class="str">
+			<strong>라우팅 최대 배정 건수 &#8807; 라우팅 시작 가능 건수로 세팅</strong>
+		</li>
+	</ul>
+
+	<div class="footBtnWrap">
+		<div class="ct">
+			<a href="#;" class="btnFt">취소</a>
+			<a href="#;" class="btnFt bg-org">저장</a>
+		</div>
+	</div><!-- end of footBtnWrap -->
+
+		</div>
+</div><!-- end of winPopWrap -->
+</body>
+</html>

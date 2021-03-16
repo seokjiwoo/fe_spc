@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sales.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "on", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>판매현황 조회</h2>
+			</div>
+
+			<div class="spc_tab_wp type2">
+				<ul class="spc_tab">
+					<li><button type="button">판매현황</button></li>
+					<li><button type="button"><span>수수료 및<br />공제·환급현황</span></button></li>
+					<li><button type="button">서비스수수료</button></li>
+					<li class="on"><button type="button">할인현황</button></li>
+					<li><button type="button">가격비교<br >대행 서비스</button></li>
+				</ul>
+				<div class="btns">
+					<button type="button" class="btn default">정산정책 보기</button>
+					<button type="button" class="btn default">정산FAQ 보기</button>
+				</div>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>기간설정</th>
+								<td>
+									<div class="spc_calendar">
+										<input type="text" class="spc_text" readonly="true" value="2018.01.02"><button type="button" class="btn_calendar">달력</button>
+									</div>
+									<span class="dash">~</span>
+									<div class="spc_calendar">
+										<input type="text" class="spc_text" readonly="true" value="2018.01.02"><button type="button" class="btn_calendar">달력</button>
+									</div>
+
+									<div class="spc_select" style="width: 130px; ">
+										<div class="value"><span class="selected">간편설정</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>진행 딜 선택</th>
+								<td>
+									<div class="groupWrap">
+										<label for="tmp_radio1" class="spc_radio checked"><input type="radio" id="tmp_radio1" name="tmp_radio" checked="checked"><i class="symbol"></i>딜명으로 검색</label>
+										<label for="tmp_radio2" class="spc_radio"><input type="radio" id="tmp_radio2" name="tmp_radio"><i class="symbol"></i>딜번호로 검색</label>
+									</div>
+							
+									<div class="spc_select" style="width: 508px; ">
+										<div class="value"><span class="selected">전체 (진행중 딜)</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+
+				<div class="btns">
+					<button class="btn orange-border">초기화</button>
+					<button class="btn orange">검색</button>
+				</div>
+			</form>
+
+			<div class="detailWrap mt39">
+				<div class="topWrap">
+					<div class="opt type1">
+						<h3>할인현황</h3>
+						<span>(2018.04.18 기준)</span>
+					</div>
+				</div>
+				<table>
+					<colgroup>
+						<col style="width: 361px;">
+						<col style="width: auto;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>할인구분</th>
+							<th>금액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>딜 쿠폰 사용금액</td>
+							<td><p class="ta-r">0</p></td>
+						</tr>
+						<tr>
+							<td>카드 쿠폰 사용금액</td>
+							<td><p class="ta-r">0</p></td>
+						</tr>
+						<tr>
+							<td>즉시할인 쿠폰 사용금액</td>
+							<td><p class="ta-r">0</p></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>합계</td>
+							<td><p class="ta-r">0</p></td>
+						</tr>
+					</tfoot>
+				</table>
+			</div><!-- end of detailWrap -->
+
+			<ul class="noti">
+				<li>매일 16시 이후 정확한 금액 확인이 가능합니다.</li>
+				<li>상기 금액은 파트너 부담으로 사용된 할인금액입니다.</li>
+			</ul>
+
+		</div><!-- end of content -->
+
+		<!-- @@include('common/aside_left.html') -->
+		<!-- @@include('common/aside_right.html') -->
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+</script>
+
+</body>
+</html>

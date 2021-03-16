@@ -1,0 +1,177 @@
+<form action="" class="spc_form">
+    <fieldset>
+        <table class="spc_table_form">
+            <colgroup>
+                <col style="width: 173px ; ">
+                <col style="width: * ; ">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th><span class="bullet">*</span>성인인증</th>
+                    <td colspan="2">
+                        <label for="ly_radio1-1" class="spc_radio"><input type="radio" id="ly_radio1-1" name="ly_radio1"><i class="symbol"></i>사용</label>
+                        <label for="ly_radio1-2" class="spc_radio checked"><input type="radio" id="ly_radio1-2" name="ly_radio1" checked="checked"><i class="symbol"></i>미사용</label>
+                        <span class="cert_note">※ (미사용)-&gt;사용 변경만 가능하며, 사용-&gt;(미사용) 변경은 딜 재등록 필요</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>식품 원산지 표기<button class="help">도움</button></th>
+                    <td colspan="2">
+                        <label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>미대상</label>
+                        <label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>상품상세 참조</label>
+                        <label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>국내산</label>
+                        <label for="ly_radio2-1" class="spc_radio checked"><input type="radio" id="ly_radio2-1" name="ly_radio2" checked="checked"><i class="symbol"></i>직접 입력</label>
+                        <div class="limitTextWrap type2">
+                            <input type="text" class="spc_text" placeholder="최대 10자 이내로 입력해주세요.">
+                            <p class="crntText"><span>0</span>/<span>10자</span></p>
+                        </div>
+                        <ul class="spc_note">
+                            <li><i class="dot"></i>허위 표기시 관련법에 의하여 처벌 받을 수 있습니다. 정확한 원산지 정보만 입력해 주시기 바랍니다. <br>상세페이지에 원산지 정보가있거나 복수원산지, 가공식품등의 경우 [상품상세참조]를 선택해 주시기 바랍니다. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="bullet">*</span>병행수입<button class="help">도움</button></th>
+                    <td colspan="2">
+                        <label for="ly_radio5-1" class="spc_radio checked"><input type="radio" id="ly_radio5-1" name="ly_radio5" checked="checked"><i class="symbol"></i>대상</label>
+                        <label for="ly_radio5-2" class="spc_radio"><input type="radio" id="ly_radio5-2" name="ly_radio5"><i class="symbol"></i>미대상</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btn fileUpload disabled">
+                            <input type="file" disabled="true">
+                            <span>파일첨부</span>
+                        </div>
+                        <ul class="spc_note">
+                            <li><i class="dot"></i>병행수입 상품 등록 시 수입신고필증/인보이스 증빙서류를 첨부해주세요.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="bullet">*</span>정상가근거</th>
+                    <td colspan="2">
+                        <div class="spc_select" style="width: 210px; ">
+                            <div class="value"><span class="selected">홈쇼핑 판매가</span><i></i></div>
+                            <select>
+                                <option>옵션1</option>
+                                <option>옵션2</option>
+                                <option>옵션3</option>
+                            </select>
+                        </div>
+                        <ul class="spc_note">
+                            <li><i class="dot"></i>최근 홈쇼핑에서 판매된 판매가입니다. 단, 수입브랜드 상품들의 경우 국내 정식 수입원의 가격을 기준으로 표기하였기에 병행수입 상품의 경우 차이가 있을 수 있으니 참고해 주시기 바랍니다.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btnWrap">
+                            <button type="button" class="btn init docsDown">양식 다운로드</button>
+                            <div class="btn fileUpload">
+                                <input type="file">
+                                <span>파일첨부</span>
+                            </div>
+                        </div>
+                        <div class="fileInfo_wrap">
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="3"><span class="bullet">*</span>KC 인증</th>
+                    <td colspan="2">
+                        <label for="ly_radio6-1" class="spc_radio checked"><input type="radio" id="ly_radio6-1" name="ly_radio6" checked="checked"><i class="symbol"></i>대상</label>
+                        <label for="ly_radio6-2" class="spc_radio"><input type="radio" id="ly_radio6-2" name="ly_radio6"><i class="symbol"></i>미대상</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul class="con_ls">
+                            <li>
+                                <input type="text" class="spc_text regist" placeholder="- 를 포함하여 등록">
+                                <div class="btnWrap">
+                                    <button type="button" class="btn init">인증확인</button>
+                                    <button type="button" class="btn add"><span class="blind">추가</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="text" class="spc_text regist" placeholder="- 를 포함하여 등록">
+                                <div class="btnWrap">
+                                    <button type="button" class="btn init">인증확인</button>
+                                    <button type="button" class="btn add"><span class="blind">삭제</span></button>
+                                    <button type="button" class="btn remove"><span class="blind">삭제</span></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btnWrap">
+                            <div class="btn fileUpload disabled">
+                                <input type="file" disabled="true">
+                                <span>파일첨부</span>
+                            </div>
+                        </div>
+                        <div class="fileInfo_wrap">
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="bullet">*</span>판매허가 신고대상<button class="help">도움</button></th>
+                    <td colspan="2">
+                        <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i>해당없음</label>
+                        <label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i>건강식품</label>
+                        <label for="check3" class="spc_check"><input type="checkbox" id="check3"><i class="symbol"></i>의료기기</label>
+                        <label for="check4" class="spc_check"><input type="checkbox" id="check4"><i class="symbol"></i>기능성 화장품</label>
+                        <label for="check5" class="spc_check"><input type="checkbox" id="check5"><i class="symbol"></i>특수용도 화장품</label>
+                        <label for="check6" class="spc_check"><input type="checkbox" id="check6"><i class="symbol"></i>의약외품</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btn fileUpload">
+                            <input type="file">
+                            <span>파일첨부</span>
+                        </div>
+                        <div class="fileInfo_wrap">
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>기타 구비서류</th>
+                    <td colspan="2">
+                        <div class="btn fileUpload">
+                            <input type="file">
+                            <span>파일첨부</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form>

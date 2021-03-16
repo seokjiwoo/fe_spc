@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 브랜드 파트너 센터 :: 브랜드 파트너 정보</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/membership.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc store"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc store"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc store"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc store"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc store"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		<div class="global membership_global">
+	<div class="spc_account">
+		<p><a href="#" class="link_account">티켓몬스터</a>님 반갑습니다</p>
+		<!-- <button type="button" class="btn_account">로그아웃</button> --><!-- [D] button타입이 필요할 경우 -->
+		<a href="#" class="btn_account">로그아웃</a>
+	</div>
+</div>
+<!-- <h1 class="membership_logo brand_logo"><a href="#">TMON 브랜드 파트너 센터</a></h1> -->
+<h1 class="membership_logo spc_logo dp"><a href="#">TMON 배송상품 파트너 센터</a></h1>
+	</div>
+	<div id="container">
+		<div id="content" class="brand_content">
+			<h2 class="mypage_title">나의 정보 관리</h2>
+			<ul class="mypage_tab">
+				<li><a href="#">나의 정보 확인</a></li>
+				<li><a href="#" class="active">비밀번호 변경</a></li>
+				<li><a href="#">주소지 관리</a></li>
+			</ul>
+			<h3 class="mypage_subtitle">
+				비밀번호 변경
+			</h3>
+			<table class="mypage_tbl input_area">
+				<colgroup>
+					<col width="187px" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+				<tr>
+					<th>현재 비밀번호</th>
+					<td><input type="text" name="" value="" class="spc_text" placeholder="비밀번호" /></td>
+				</tr>
+				<tr>
+					<th>새로운 비밀번호</th>
+					<td>
+						<input type="text" name="" value="" class="spc_text" placeholder="비밀번호" />
+						<p class="input_desc">
+							6~15자의 영문 대소문자, 숫자, 특수문자 2개 이상을 사용해주세요.<br />
+							연속된 숫자 문자(4개 이상)는 제한합니다.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th>새로운 비밀번호 확인</th>
+					<td>
+						<input type="text" name="" value="" class="spc_text" placeholder="비밀번호 확인" />
+						<p class="input_desc">
+							설정하신 비밀번호를 다시 입력해주세요.
+						</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<p class="button_base_area">
+				<button class="btn cancel">다음에 변경</button>
+				<button class="btn submit">비밀번호 변경</button>
+			</p>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+	<ul class="footer_link">
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#"><b>개인정보처리방침</b></a></li>
+		<li><a href="#">전자금융거래</a></li>
+		<li><a href="#">청소년보호정책</a></li>
+	</ul>
+	<span class="footer_logo">TMON</span>
+	<p>사업자등록번호 211-88-41856<span class="dv">|</span>통신판매업신고 제2013-서울강남-02403호</p>
+	<p>서울특별시 강남구 테헤란로 114길 38 동일타워<span class="dv">|</span>대표자 이진원<span class="dv">|</span><a href="#">사업자정보확인</a></p>
+	<p>COPYRIGHT(c) TMON INC. ALL RIGHTS RESERVED.</p>
+	<div class="cs_center">
+		<p class="cs_center_top">
+			파트너센터 <strong>1644-0552</strong>
+		</p>
+		<p class="holiday">
+			평일 09~18시 (점심시간 12~13시)<br >
+			주말/공휴일 휴무
+		</p>
+	</div>
+	<div class="footer_bottom">
+		<img src="../../img/common/footer_iso_banner.png" />
+	</div>
+</div>
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+});
+</script>
+</body>
+</html>

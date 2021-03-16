@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+%sp-etc {
+    background: url('../im/sp-etc.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-etc($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-etc, $filename);
+    @extend %sp-etc;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-etc: (
+    spritesheet_name: sp-etc,
+    link_btm1: (offset_x: 0, offset_y: 0, width: 466px, height: 118px),
+    link_btm2: (offset_x: 0, offset_y: -122px, width: 466px, height: 118px),
+    link_kakao1: (offset_x: 0, offset_y: -244px, width: 270px, height: 70px),
+    link_kakao2: (offset_x: 0, offset_y: -318px, width: 270px, height: 70px),
+);

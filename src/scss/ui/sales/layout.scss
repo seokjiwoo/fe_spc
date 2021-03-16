@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+#content {
+	width: 970px !important; 
+
+	dl.guideAccordion {
+		margin-top: 50px; 
+	}
+}
+
+table.spc_table_form {
+	tbody {
+		th , td {
+			height: 57px; 
+			box-sizing: border-box; 
+			padding-top: 10px; 
+			.groupWrap {
+				padding-top: 6px; 
+				& + .spc_select {
+					margin-bottom: 6px; 
+					& + .noti {
+						margin-top: -12px; 
+						margin-bottom: 1px; 
+					}
+				}
+				& + input[type=text] {
+					margin-bottom: 6px; 
+				}
+			}
+		}
+	}
+}

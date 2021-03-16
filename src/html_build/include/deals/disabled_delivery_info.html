@@ -1,0 +1,120 @@
+<form action="" class="spc_form">
+        <fieldset>
+            <table class="spc_table_form">
+                <colgroup>
+                    <col style="width: 173px ; ">
+                    <col style="width: * ; ">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>
+                            <span class="bullet">*</span>
+                            <!-- 새로 추가된 기능과 정책 때문에 마크업이 수정되었습니다 .
+                            기존 제목 텍스트는 감싸는 태그 없이 홀로 존재하였지만 추가된 정책의 
+                            '말풍선'이 추가되면서 디자인과 동일하게 보여지기 위해 마크업이 추가되었습니다.  -->
+                            <div class="stitle">상품유형
+                                <div class="balloon type2 active">
+                                    <p>확인이 필요합니다.</p>
+                                </div>
+                            </div>
+                            <button class="help">도움</button>
+                        </th>
+                        <td>
+                            <div class="radioWrap">
+                                <label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked="checked"><i class="symbol"></i>냉장/냉동/신선 식품</label>
+                                <label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>해외직배송</label>
+                                <label for="ly_radio1-3" class="spc_radio"><input type="radio" id="ly_radio1-3" name="ly_radio1"><i class="symbol"></i>해외 구매대행</label>
+                                <label for="ly_radio1-4" class="spc_radio"><input type="radio" id="ly_radio1-4" name="ly_radio1"><i class="symbol"></i>화물/설치</label>
+                                <label for="ly_radio1-5" class="spc_radio"><input type="radio" id="ly_radio1-5" name="ly_radio1"><i class="symbol"></i>주문제작</label>
+                                <label for="ly_radio1-6" class="spc_radio"><input type="radio" id="ly_radio1-6" name="ly_radio1"><i class="symbol"></i>주문 후 발주</label>
+                                <label for="ly_radio1-7" class="spc_radio"><input type="radio" id="ly_radio1-7" name="ly_radio1"><i class="symbol"></i>일반 상품</label>
+                                <label for="ly_radio1-8" class="spc_radio"><input type="radio" id="ly_radio1-8" name="ly_radio1"><i class="symbol"></i>예외상품</label>
+                            </div>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i><span class="gray">예외상품</span>선택은 렌탈, 응모, 추첨 등 비배송상품만 가능합니다. (배송상품이 선택된 경우, 딜 진행이 불가합니다.)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                     <tr>
+                         <th><span class="bullet">*</span>택배사<button class="help">도움</button></th>
+                         <td>
+                             <div class="spc_select" style="width: 210px; ">
+                                <div class="value"><span class="selected">선택</span><i></i></div>
+                                <select>
+                                    <option>옵션1</option>
+                                    <option>옵션2</option>
+                                    <option>옵션3</option>
+                                </select>
+                            </div>
+                         </td>
+                     </tr>
+                     <tr>
+                         <th><span class="bullet">*</span>편의점 픽업 서비스<button class="help">도움</button></th>
+                         <td>
+                             <label for="ly_radio1-13" class="spc_radio"><input type="radio" id="ly_radio1-13" name="ly_radio3"><i class="symbol"></i>가능</label>
+                            <label for="ly_radio1-14" class="spc_radio checked"><input type="radio" id="ly_radio1-14" name="ly_radio3" checked="checked"><i class="symbol"></i>불가능</label>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>무게 5kg 이상, 박스 3변의 합 160cm 이상의 제품을 제외하고 모두 편의점 픽업 이용이 가능하며, 가능 선택시 일반상품(상품유형)으로 자동 적용됩니다.</li>
+                                <li><i class="dot"></i><strong class="point">픽업 이용 불가 택배사</strong> : 한진택배, 천일택배, 경동택배, 합동택배, 대신택배, 로젠택배 <a href="#" class="detail_view">서비스 자세히 보기</a></li>
+                            </ul>
+                         </td>
+                     </tr>
+                     <tr>
+                        <th><span class="bullet">*</span>지역별 차등배송<button class="help">도움</button></th>
+                        <td>
+                            <label for="ly_radio1-21" class="spc_radio checked"><input type="radio" id="ly_radio1-20" name="ly_radio6" checked=""><i class="symbol"></i>대상</label>
+                            <label for="ly_radio1-22" class="spc_radio"><input type="radio" id="ly_radio1-21" name="ly_radio6"><i class="symbol"></i>미대상</label>
+                            <div class="plate_box">
+                                <input type="text" class="spc_text" value="지역이나 품목에 따라 배송비가 추가로 발생할 경우 해당 상세 내용 기입해주세요" style="width:100%;">
+                            </div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <th><span class="bullet">*</span>단순변심 환불<button class="help">도움</button></th>
+                        <td>
+                            <label for="ly_radio1-27" class="spc_radio"><input type="radio" id="ly_radio1-27" name="ly_radio9"><i class="symbol"></i>예</label>
+                            <label for="ly_radio1-28" class="spc_radio checked"><input type="radio" id="ly_radio1-28" name="ly_radio9" checked><i class="symbol"></i>아니오</label>
+                            <div class="plate_box"><input type="text" class="spc_text" value="단숨변심 불가 사유를 입력해주세요" style="width:100%;" disabled="true"></div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <th><span class="bullet">*</span>개인통관고유부호<button class="help">도움</button></th>
+                        <td>
+                            <label for="ly_radio1-29" class="spc_radio"><input type="radio" id="ly_radio1-29" name="ly_radio10"><i class="symbol"></i>수집함</label>
+                            <label for="ly_radio1-30" class="spc_radio checked"><input type="radio" id="ly_radio1-30" name="ly_radio10" checked><i class="symbol"></i>수집안함</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="bullet">*</span>추가문구<button class="help">도움</button></th>
+                        <td>
+                            <label for="ly_radio1-31" class="spc_radio"><input type="radio" id="ly_radio1-31" name="ly_radio11"><i class="symbol"></i>예</label>
+                            <label for="ly_radio1-32" class="spc_radio checked"><input type="radio" id="ly_radio1-32" name="ly_radio11" checked=""><i class="symbol"></i>아니오</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="bullet">*</span>배송템플릿<button class="help">도움</button></th>
+                        <td>
+                            <div class="btntemplateBtns">
+                                <div class="spc_select" style="width: 368px; ">
+                                    <div class="value"><span class="selected">배송템플릿 선택</span><i></i></div>
+                                    <select>
+                                        <option>옵션1</option>
+                                        <option>옵션2</option>
+                                        <option>옵션3</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn init">새로고침</button>
+                                <button type="button" class="btn init">신규생성</button>
+                                <button type="button" class="btn init">배송템플릿 관리</button>
+                            </div>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>배송템플릿은 딜등록 이후에는 수정이 불가능합니다.</li>
+                                <li><i class="dot"></i>배송정보의 묶음 배송여부와 상품유형이 같은 배송템플릿만 선택 가능합니다.</li>
+                                <li><i class="dot"></i>배송템플릿 신규생성 후에는 ‘새로고침’을 꼭 해주세요.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>

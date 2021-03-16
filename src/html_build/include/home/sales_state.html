@@ -1,0 +1,318 @@
+<div class="sales_state @@loading">
+	<div class="head">
+		<h3>@@title_state</h3>
+		<p class="subscript">보고서 반영 시간으로 실제 매출과 상이할 수 있습니다.</p>
+		<p class="right_time">(2020.08.05 오후 1시 기준)</p>
+	 	<button class="btn_refresh">새로고침</button>
+	</div>
+
+	<!-- TYPE1 ORANGE -->
+	<div class="graph_wrap">
+		<div class="graph_data">
+			<div class="top">
+				<div class="left_box">
+					오늘 누적 판매
+					<i class="ico_exclamation"></i>
+					<div class="tooltip_box">
+						<ul>
+							<li>
+								오늘 00시부터 조회 시간 -1시간까지의 누적 판매 데이터입니다.
+							</li>
+							<li>
+								누적 판매 데이터는 매시간당 두 번(5분, 35분) 매출 집계 처리되어,<br >
+								조회 시 데이터가 상이할 수 있습니다.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="total_box">
+					<h5 class="title">
+						판매금액
+						<!-- 
+							화살표가 위를 향할때 : <span class="change_per up">
+							화살표가 아래를 향할때 : <span class="change_per down">
+						-->
+						<span class="change_per up">
+							-999,999.8%
+						</span>
+					</h5>
+					<p class="data">
+						119,925,159,000<span class="won">원</span>
+					</p>
+				</div>
+				<div class="data_box">
+					<h5 class="title">주문수</h5>
+					<p class="data">
+						9,999,999+
+					</p>
+				</div>
+				<div class="data_box">
+					<h5 class="title">수량</h5>
+					<p class="data">
+						9,999,999+
+					</p>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="left_box">
+					시간대 별 판매
+					<i class="ico_exclamation"></i>
+					<div class="tooltip_box">
+						<ul>
+							<li>
+								최근 1시간 동안의 누적 판매 금액입니다.
+							</li>
+							<li>
+								시간대 별 판매 데이터는 매시간당 두 번(5분, 35분) 매출 집계<br >
+								처리되어, 조회 시 데이터가 상이할 수 있습니다.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="total_box">
+					<h5 class="title">
+						판매금액 <span class="small">(취소, 환불 제외)</span>
+						<p class="data">
+							9,912,159,000<span class="won">원</span>
+						</p>
+					</h5>
+				</div>
+			</div>
+		</div>
+		<div class="graph">
+			<div id="chart-area"></div>
+		</div>
+	</div>
+	<div class="msg">@@msg</div>
+</div>
+
+<script type="text/javascript">
+var options = {
+	colors: ['#f27935', '#a6a9ad'], 
+	series: [{
+			name: "오늘",
+			data: [45243621, 52652372, 38642792, 24156849, 33369342, 32563733, 41682357, 6212217, 42872318, 13532672, 45243621, 52652372, 38642792, 24156849, 33369342, 32563733, 41682357, 6212217, 42872318, 13532672, 45243621, 52652372, 38642792, 24156849, 33369342]
+		},
+		{
+			name: "평균",
+			data: [32563733, 41682357, 6212217, 42872318, 13532672, 45243621, 52652372, 38642792, 24156849, 33369342, 32563733, 41682357, 6212217, 42872318, 13532672, 45243621, 52652372, 38642792, 24156849, 33369342, 32563733, 41682357, 6212217, 42872318, 13532672]
+		}
+	],
+	chart: {
+		width: document.querySelector("#chart-area").clientWidth,
+		height: 270,
+		type: 'line',
+		fontFamily: 'Nanum Gothic, sans-serif',
+		foreColor: '#16181a',
+		zoom: {
+			enabled: false
+		},
+		group: 'social',
+		stacked: false,
+		offsetX: 0,
+		offsetY: 0,
+		toolbar: {
+			show: false,
+		}
+	},
+	dataLabels: {
+		enabled: false
+	},
+	stroke: {
+		width: [2, 2],
+		colors: ['#f27935','#ccd2d8'],
+		curve: 'smooth',
+		dashArray: [0, 5]
+	},
+	title: {
+		text: '',
+		align: 'left'
+	},
+	legend: {
+		show: true,
+		horizontalAlign: 'center', 
+		fontSize: '12px',
+		fontFamily: 'Nanum Gothic',
+		fontWeight: 400,
+		onClick: undefined,
+		offsetX: 0,
+		offsetY: -5,
+		markers: {
+			width: 10,
+			height: 10,
+			strokeWidth: 0,
+			strokeColor: '#fff',
+			radius: 12,
+			customHTML: function() {
+				return '';
+			},
+			offsetX: 0,
+			offsetY: 0
+		},
+		itemMargin: {
+			horizontal: 15,
+			vertical: 0
+		},
+		onItemClick: {
+			toggleDataSeries: false
+		},
+		onItemHover: {
+			highlightDataSeries: false
+		},
+		tooltipHoverFormatter: function(val, opts) {
+			return '<span class="graph-legend">' + val + '</span>';
+		}
+	},
+	markers: {
+		size: 0,
+		strokeWidth: 0,
+		showNullDataPoints: true,
+		hover: {
+			size: 4,
+			sizeOffset: 0
+		}
+	},
+	xaxis: {
+		type: 'category',
+		// categories: [
+		// 	'00시',
+		// 	'01시',
+		// 	'02시',
+		// 	'03시',
+		// 	'04시',
+		// 	'05시',
+		// 	'06시',
+		// 	'07시',
+		// 	'08시',
+		// 	'09시',
+		// 	'10시',
+		// 	'11시',
+		// 	'12시',
+		// 	'13시',
+		// 	'14시',
+		// 	'15시',
+		// 	'16시',
+		// 	'17시',
+		// 	'18시',
+		// 	'19시',
+		// 	'20시',
+		// 	'21시',
+		// 	'22시',
+		// 	'23시',
+		// 	'24시',
+		// ],
+		categories: [
+			'오전 12시',
+			'오전 1시',
+			'오전 2시',
+			'오전 3시',
+			'오전 4시',
+			'오전 5시',
+			'오전 6시',
+			'오전 7시',
+			'오전 8시',
+			'오전 9시',
+			'오전 10시',
+			'오전 11시',
+			'오후 12시',
+			'오후 1시',
+			'오후 2시',
+			'오후 3시',
+			'오후 4시',
+			'오후 5시',
+			'오후 6시',
+			'오후 7시',
+			'오후 8시',
+			'오후 9시',
+			'오후 10시',
+			'오후 11시',
+			'오전 12시',
+		],
+		tickPlacement: 'on',
+		tickAmount: undefined,
+		axisBorder: {
+			show: true,
+			color: '#7d7e80',
+			height: 1,
+			width: '100%',
+			offsetX: 0,
+			offsetY: 0
+		},
+		axisTicks: {
+			show: true,
+			borderType: 'solid',
+			color: '#7d7e80',
+			height: 5,
+			offsetX: 0,
+			offsetY: 0
+		},
+		labels: {
+			show: true,
+			rotate: 0,
+			rotateAlways: false,
+			hideOverlappingLabels: true,
+			showDuplicates: true,
+			style: {
+				colors: ['#16181a'],
+				fontSize: '12px',
+				fontFamily: 'Nanum Gothic, sans-serif',
+				fontWeight: 300,
+				cssClass: 'apexcharts-xaxis-label',
+			},
+			offsetX: 0,
+			offsetY: -2,
+			formatter: function(value) {
+				return value;
+			}
+		},
+		tooltip: {
+			enabled: false,
+			formatter: function(val, opts) {
+				return val;
+			}
+		}
+	},
+	yaxis: {
+		labels: {
+				show: false,
+				minWidth: 'auto'
+		},
+	},
+	tooltip: {
+		enabled: true,
+		enabledOnSeries: undefined,
+		shared: true,
+		followCursor: false,
+		intersect: false,
+		inverseOrder: false,
+		custom: function(params) {
+			var series = params.series;
+			var seriesIndex = params.seriesIndex;
+			var dataPointIndex = params.dataPointIndex;
+			var w = params.w;
+			return '<div class="custom-tooltip"><span class="title">'+w.globals.categoryLabels[dataPointIndex]+'</span><span class="cont">판매 : ' + series[0][seriesIndex].toLocaleString() + '</span><span class="cont">(평균 : ' + series[1][seriesIndex].toLocaleString() + ')</span></div>';
+		},
+		fillSeriesColor: false,
+		theme: false,
+		onDatasetHover: {
+			highlightDataSeries: true,
+		},
+	},
+	grid: {
+		borderColor: '#f8f8f8',
+		xaxis: {
+			lines: {
+				show: false
+			}
+		},   
+		yaxis: {
+			lines: {
+				show: true
+			}
+		},  
+	},
+};
+
+var chart = new ApexCharts(document.querySelector("#chart-area"), options);
+chart.render();
+</script>

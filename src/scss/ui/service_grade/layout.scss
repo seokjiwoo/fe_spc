@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+#content {
+	width: 970px; 
+	padding-bottom: 87px; 
+	$colorDark: #16181a; 
+
+	.serviceGrade {
+		background-color: #4f79c0; 
+		padding: 30px 50px;  
+
+		.descWrap {
+			float: left; 
+			color: #fff; 
+			padding-top: 18px; 
+			margin-left: -1px; 
+			> h3 {
+				font-size: 24px; 
+				font-weight: bold; 
+				margin-bottom: 8px; 
+			}
+			> p {
+				font-size: 12px; 
+				line-height: 20px; 
+				margin-bottom: 15px; 
+			}
+			.detail {
+				height: 34px; 
+				line-height: 34px; 
+				border: 1px solid #a7bce0; 
+				font-weight: bold; 
+				padding: 0px 19px 0px 16px;  
+				color: #fff; 
+				box-sizing: border-box; 
+				margin-left: 1px; 
+			}
+		}
+
+		.graphWrap {
+			float: right; 
+			width: 490px; height: 200px; 
+			background-color: rgba( 0, 0, 0, 0.2 ); 
+
+		}
+
+		.notification {
+			padding-top: 27px; 
+			clear: both; 
+			> li {
+				font-size: 11px; 
+				color: #fff; 
+				opacity: 0.5; 
+				padding-left: 9px; 
+				position: relative; 
+
+				&:before {
+					content: ''; display: block; 
+					width: 2px; height: 2px; 
+					font-size: 0px; line-height: 0px; 
+					background-color: #aec2e2; 
+					position: absolute; left: 0px; top: 4px; 
+				}
+			}
+		}
+	} // end of .serviceGrade
+
+	.h2_head {
+		text-align: center; 
+		color: $colorDark; 
+		margin-top: 97px; 
+		h2 {
+			font-size: 26px; 
+			font-weight: bold; 
+		}
+		p {
+			margin-top: 11px; 
+			font-size: 14px; 
+		}
+	}
+
+	.fl { float: left; }
+	.fr { float: right; }
+
+	.graphWrap {
+		margin-top: 68px; 
+		.opts {
+			.grade {
+				margin-left: -2px; 
+				display: inline-block; 
+				.title {
+					font-size: 18px; 
+					font-weight: bold; 
+					color: $colorDark; 
+					vertical-align: middle; 
+				}
+				
+				.thumbsUp {
+					display: inline-block; 
+					height: 26px; width: 146px; 
+					font-size: 0px; line-height: 0px; 
+					background: url( '../img/service_grade/ico_thumb_before.png' ) repeat-x left top; 
+					vertical-align: middle; 
+					margin-left: 14px; 
+					margin-top: -3px; 
+					position: relative; 
+
+					&:after {
+						content: ''; display: block; 
+						background: url( '../img/service_grade/ico_thumb_after.png' ) repeat-x left top; 
+						display: inline-block; 
+						height: 26px; 
+						font-size: 0px; line-height: 0px; 
+						position: absolute; left: 0px; top: 0px; 
+					}
+
+					&.num1:after { width: 20%; }
+					&.num2:after { width: 40%; }
+					&.num3:after { width: 60%; }
+					&.num4:after { width: 80%; }
+					&.num5:after { width: 100%; }
+				}
+			}
+			.descText {
+				&:before {
+					content: ''; display: inline-block;
+					vertical-align: 4px; margin-right: 7px; 
+					width: 2px; height: 2px; 
+					font-size: 0px; line-height: 0px; 
+					background-color: #8d9097; 
+				}
+				margin-top: 5px; 
+				color: #7d7e80; 
+				font-size: 12px; 
+			}
+
+			.chkpoint {
+				display: inline-block; 
+				margin-left: 8px; 
+				vertical-align: 1px; 
+
+				.pointClr {
+					font-size: 12px; 
+					color: #8d9097; 
+					margin-left: 12px; 
+
+					&:nth-child(1) {
+						margin-left: 0px; 
+					}
+
+					&:before {
+						content: ''; display: inline-block; 
+						width: 13px; height: 13px; 
+						display: inline-block; 
+						background-repeat: no-repeat; 
+						background-position: left top; 
+						font-size: 0px; line-height: 0px; 
+						margin-left: 3px; 
+						margin-right: 4px;
+						vertical-align: -3px;
+					}
+
+					&.red:before { @include sp-service_grade( 'ico_red_before' ) ; }
+					&.red.active:before { @include sp-service_grade( 'ico_red_after' ) ; }
+					&.green:before { @include sp-service_grade( 'ico_green_before' ) ; }
+					&.green.active:before { @include sp-service_grade( 'ico_green_after' ) ; }
+					&.orange:before { @include sp-service_grade( 'ico_orange_before' ) ; }
+					&.orange.active:before { @include sp-service_grade( 'ico_orange_after' ) ; }
+				}
+			}
+
+			&:after {
+				content: ''; display: block; 
+				clear: both; display: 0px; line-height: 0px; 
+				height: 0px; 
+			}
+		}
+
+		.graphWrap {
+			clear: both; 
+			margin-top: 16px; 
+			width: 970px; height: 330px; 
+			border: 1px solid #e0e0e0; 
+			box-sizing: border-box; 
+		}
+	} // end of .graphWrap
+}
+
+
+// 66px

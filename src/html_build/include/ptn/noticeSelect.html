@@ -1,0 +1,45 @@
+<!-- 
+	알림 상태에 따른 컬러 변경은 아래에 나온 클래스를 넣어주세요
+
+	- 백그라운드 스타일 
+		<div class="noticeSelect bg-red"></div>
+		bg-red, bg-orange, bg-purple, bg-cyan, bg-green, bg-blue
+
+	- 보더 스타일
+	<div class="noticeSelect bd-red"></div>
+		bd-red, bd-orange, bd-purple, bd-cyan, bd-green, bd-blue
+ -->
+<div class="noticeSelect">
+	<div class="defaultState">
+		<!-- 
+			알림이 없을때 ico_off
+			알림이 있을때 ico_on
+			<div class="value ico_off"></div>
+		 -->
+		<div class="value ico_off">수신된 알림이 없습니다.</div>
+		<button class="count">200</button>
+	</div>
+	<!-- 
+		알림 리스트 노출시 active 클래스를 넣어주세요
+		<div class="showState active"></div> 
+	-->
+	<div class="showState">
+		<div class="top">
+			<div class="title">알림리스트</div>
+			<button class="close"></button>
+		</div>
+		<ul class="list">
+			<li><a href="#" class="ft-green">[이관] 2018-12-26 14:53:15 이티몬 2018-12-26 14:53:15 이티몬 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#" class="ft-red emergency">[긴급이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#" class="ft-purple">[지식관리] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#" class="ft-cyan">[1:1문의] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+			<li><a href="#">[이관] 2018-12-26 14:53:15 이티몬</a></li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+// TEXT BOX
+.spc_text {
+	display: inline-block;
+	height: 36px;
+	padding: 0 10px;
+	border: 1px solid #cacdd1;
+	background-color: #fff;
+	color: $color_base;
+	font-size: 14px;
+	vertical-align: middle;
+	line-height: 37px;
+	
+	&:disabled, &.disabled{
+		background-color: #fafbfb;
+		color: #b5b5b9;
+	}
+}
+
+// CALENDAR
+.spc_calendar {
+	display: inline-block;
+	position: relative;
+	.spc_text {
+		width: 120px;
+		font-weight: bold;
+	}
+	.btn_calendar {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		@include sp-common("ico_calendar");
+		@include txt-hide-with-sprite();
+	}
+}

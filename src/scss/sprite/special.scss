@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+%sp-special {
+    background: url('../im/sp-special.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-special($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-special, $filename);
+    @extend %sp-special;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-special: (
+    spritesheet_name: sp-special,
+    arrow-close: (offset_x: -550px, offset_y: -148px, width: 21px, height: 11px),
+    arrow-open: (offset_x: -575px, offset_y: -148px, width: 21px, height: 11px),
+    arrow-over: (offset_x: -600px, offset_y: -148px, width: 21px, height: 11px),
+    chk_on: (offset_x: -616px, offset_y: -90px, width: 20px, height: 20px),
+    chk_on_disabled: (offset_x: -640px, offset_y: -90px, width: 20px, height: 20px),
+    ic-all-active: (offset_x: -384px, offset_y: -90px, width: 54px, height: 54px),
+    ic-all: (offset_x: -442px, offset_y: -90px, width: 54px, height: 54px),
+    ic-apply-active: (offset_x: -500px, offset_y: -90px, width: 54px, height: 54px),
+    ic-apply: (offset_x: -558px, offset_y: -90px, width: 54px, height: 54px),
+    ic-arr-org: (offset_x: -638px, offset_y: -198px, width: 12px, height: 12px),
+    ic-arr-wht: (offset_x: -638px, offset_y: -214px, width: 12px, height: 12px),
+    ic-btn-close: (offset_x: -616px, offset_y: -114px, width: 20px, height: 20px),
+    ic-cancel-active: (offset_x: 0, offset_y: -180px, width: 54px, height: 54px),
+    ic-cancel: (offset_x: -58px, offset_y: -180px, width: 54px, height: 54px),
+    ic-clip: (offset_x: -428px, offset_y: -148px, width: 16px, height: 16px),
+    ic-comp-active: (offset_x: -116px, offset_y: -180px, width: 54px, height: 54px),
+    ic-comp: (offset_x: -174px, offset_y: -180px, width: 54px, height: 54px),
+    ic-del: (offset_x: -625px, offset_y: -148px, width: 10px, height: 10px),
+    ic-down: (offset_x: -508px, offset_y: -148px, width: 17px, height: 14px),
+    ic-edit: (offset_x: -640px, offset_y: -114px, width: 18px, height: 18px),
+    ic-pic: (offset_x: -529px, offset_y: -148px, width: 17px, height: 14px),
+    ic-q: (offset_x: -232px, offset_y: -180px, width: 54px, height: 54px),
+    ic-question-wht: (offset_x: -448px, offset_y: -148px, width: 16px, height: 16px),
+    ic-question: (offset_x: -468px, offset_y: -148px, width: 16px, height: 16px),
+    ic-remove: (offset_x: -384px, offset_y: -148px, width: 18px, height: 18px),
+    ic-return-active: (offset_x: -290px, offset_y: -180px, width: 54px, height: 54px),
+    ic-return: (offset_x: -348px, offset_y: -180px, width: 54px, height: 54px),
+    ic-save-active: (offset_x: -406px, offset_y: -180px, width: 54px, height: 54px),
+    ic-save: (offset_x: -464px, offset_y: -180px, width: 54px, height: 54px),
+    ic-send-active: (offset_x: -522px, offset_y: -180px, width: 54px, height: 54px),
+    ic-send: (offset_x: -580px, offset_y: -180px, width: 54px, height: 54px),
+    ic-test-active: (offset_x: 0, offset_y: -238px, width: 54px, height: 54px),
+    ic-test: (offset_x: -58px, offset_y: -238px, width: 54px, height: 54px),
+    ic-tooltip: (offset_x: -638px, offset_y: -180px, width: 14px, height: 14px),
+    ic-zoom: (offset_x: -406px, offset_y: -148px, width: 18px, height: 18px),
+    ico_balloon_arr: (offset_x: -639px, offset_y: -148px, width: 11px, height: 7px),
+    ico_kc_min: (offset_x: -488px, offset_y: -148px, width: 16px, height: 16px),
+    participation_step1: (offset_x: 0, offset_y: 0, width: 660px, height: 86px),
+    participation_step2: (offset_x: 0, offset_y: -90px, width: 380px, height: 86px),
+    step-off: (offset_x: 0, offset_y: -296px, width: 25px, height: 56px),
+    step-on: (offset_x: -29px, offset_y: -296px, width: 25px, height: 56px),
+);

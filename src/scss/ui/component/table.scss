@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+.spc_table_form{
+	border-top: 1px solid #e8e9ea;
+	th, td{
+		height: 38px;
+		padding: 10px 10px 9px 20px;
+		border-left: 1px solid #e8e9ea;
+		border-bottom: 1px solid #e8e9ea;
+	}
+	
+	th{
+		font-size: 14px;
+		font-weight: normal;
+		color: $color_base;
+		text-align: left;
+		
+		&:first-child{
+			border-left: 0;
+		}
+	}
+	
+	td{
+		.at{
+			font-size: 14px;
+		}
+	}
+	
+	.set_date{
+		display: inline-block;
+		margin-left: 7px;
+		.btn{
+			margin-right: 3px;
+		}
+	}
+	
+	.tel{
+		.spc_select{
+			margin-right: 0;
+		}
+	}
+	
+	.t_area{
+		padding: 17px 20px;
+	}
+}
+
+// IE7
+.lt-ie8{
+	.spc_table_form{
+		position: relative;
+		td{
+			.spc_select, .spc_check, .spc_radio, .spc_text, .spc_calendar, .dash, .at, .set_date, .alias{
+				float: left;
+			}
+			
+			.spc_select{
+				margin-right: 10px;
+			}
+			
+			.spc_check{
+				padding: 10px 0;
+			}
+			
+			.dash, .at{
+				margin: 12px 10px 0;
+			}
+			
+			.set_date{
+				margin-left: 10px;
+				.btn{
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+.spc_table_board{
+	border-top: 1px solid #babcc0;
+	th, td{
+		height: 33px;
+		padding: 5px 0;
+		border-bottom: 1px solid #e8e9ea;
+		font-size: 14px;
+	}
+	
+	th{
+		position: relative;
+		font-weight: normal;
+		color: $color_base;
+		
+		.bar{
+			position: absolute;
+			left: 0;
+			top: 16px;
+			width: 1px;
+			height: 11px;
+			background: #e7e8e9;
+		}
+		
+		&:first-child{
+			.bar{
+				display: none;
+			}
+		}
+	}
+	
+	td{
+		color: $color_dark;
+		line-height: 21px;
+		text-align: center;
+		
+		&.tl{
+			padding: 5px 10px;
+			text-align: left;
+		}
+		
+		.notable{
+			color: $color_notable;
+		}
+
+		&.last{
+			text-align:left;
+			div{
+				padding-left:20px;
+				span{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

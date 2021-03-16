@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 딜관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+<style>
+	/* [D] UI 확인용 */
+	body {
+		padding: 20px; 
+	}
+	.deals_layer{
+		display: block;
+		position: relative; 
+		margin-top: 20px; 
+	}
+</style>
+</head>
+<body>
+  <!-- 대표 딜 이미지 제작 -->
+	<div class="deals_layer make_deaImg" style="width:742px;">
+		<div class="layer_hd">
+			<h3>대표 딜 이미지 제작</h3>
+		</div>
+		<div class="layer_ct">
+      <div class="scrollWrap">
+        <h4>대표 딜 이미지 종류</h4>
+        <!-- 
+          대표 딜 이미지 타입선택 컬럼은 최대 4개까지 표현가능합니다.
+          기본 컬럼이 2개 이며 3개이상부터는 아래에 나와있는 클래스를 추가해주시면 되고
+
+          - 컬럼 3개 : <div class="dealImageType col3"></div>
+          - 컬럼 4개 : <div class="dealImageType col4"></div>
+
+          마크업 구조는 사용자가 이미지타입 선택시 UI 가 활성화 되어야 하기에
+          input[type=radio] 와 div[class="box"]가 한쌍을 이루고 있는 형태입니다.
+          참고 부탁드립니다.
+
+          <div class="dealImageType>
+            <input type="radio" />
+            <div class="box"></div>
+
+            <input type="radio" />
+            <div class="box"></div>
+          </div>
+         -->
+        <div class="dealImageType">
+          <input type="radio" checked="true" name="type_image">
+          <div class="box">
+            <header>
+              <strong>A</strong>
+              <p>30,000원</p>
+            </header>
+            <article>
+              <p>2열뷰 썸네일(700X700)</p>
+              <p>카드뷰 썸네일(756X383)</p>
+              <p>누끼 이미지</p>
+              <p>소스 제공되는 경우</p>
+            </article>
+            <footer>
+              <p>수정1회</p>
+              <p>추가: 20,000원</p>
+              <p>A TYPE 선택</p>
+            </footer>
+          </div>
+          <input type="radio" name="type_image">
+          <div class="box">
+            <header>
+              <strong>B</strong>
+              <p>50,000원</p>
+            </header>
+            <article>
+              <p>2열뷰 썸네일(700X700)</p>
+              <p>카드뷰 썸네일(756X383)</p>
+              <p>누끼 이미지</p>
+              <p>유료소스 사용</p>
+              <p>합성컷(연출)</p>
+            </article>
+            <footer>
+              <p>수정1회</p>
+              <p>추가: 30,000원</p>
+              <p>B TYPE 선택</p>
+            </footer>
+          </div>
+        </div>
+
+        <h4>대표 딜 이미지 스타일</h4>
+        <ul class="imglist">
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>01</strong>
+              <p>C/D 연출 딜이미지_001</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" checked /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>02</strong>
+              <p>C/D 연출 딜이미지_002</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>03</strong>
+              <p>C/D 연출 딜이미지_003</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>04</strong>
+              <p>C/D 연출 딜이미지_004</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>05</strong>
+              <p>C/D 연출 딜이미지_005</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>06</strong>
+              <p>C/D 연출 딜이미지_006</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>07</strong>
+              <p>C/D 연출 딜이미지_007</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>08</strong>
+              <p>C/D 연출 딜이미지_008</p>
+            </div>
+          </li>
+
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>09</strong>
+              <p>C/D 연출 딜이미지_009</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>10</strong>
+              <p>C/D 연출 딜이미지_010</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>11</strong>
+              <p>C/D 연출 딜이미지_011</p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" /><hr />
+            <div>
+              <img src="https://i.picsum.photos/id/110/172/172.jpg?hmac=Pjjg4gu_v04fxJ3ygZqEhh80ovGB8L8RkPYKtgwVSUM" alt="">
+              <strong>12</strong>
+              <p>C/D 연출 딜이미지_012</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h4>디자인 포인트 정보</h4>
+      <table class="deals_point">
+        <colgroup>
+          <col style="width:130px;">
+          <col style="width:auto">
+        </colgroup>
+        <tbody>
+           <tr>
+             <th>딜 이미지 종류</th>
+             <td>
+               <div class="image_item">
+                 <span>B TYPE</span>
+                 <button>삭제</button>
+               </div>
+               <div class="image_item">
+                <span>B 연출 딜 이미지_023</span>
+                <button>삭제</button>
+              </div>
+             </td>
+           </tr>
+           <tr>
+             <th>추가 옵션</th>
+             <td>
+               <div class="add_opt">
+                 <button>감소</button>
+                 <div>2</div>
+                 <button>증가</button>
+               </div>
+             </td>
+           </tr>
+        </tbody>
+     </table>
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="submit" class="btn submit2">선택</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+  <!--// 대표 딜 이미지 제작 -->
+  
+  <!-- 이미지사용, 저작권 안내 -->
+  <div class="deals_layer copyright_Img" style="width:492px;">
+    <div class="layer_hd">
+			<h3>이미지사용, 저작권 안내</h3>
+    </div>
+    <div class="layer_ct">
+      <h4>상품 이미지</h4>
+      <ul>
+        <li>디자인 제작에 필요한 상품 이미지는 파트너사가 제공 해야합니다.</li>
+        <li>파트너사가 보유한 상품 이미지가 원 저작권자가 아닌 경우 해당 이미지의 원 저작권자와 합의가
+          완료되어야만 사용이 가능합니다.</li>
+        <li class="point">(원 저작권자가 허용한 활용범위에 대해 별도로 동의를 받았는지 여부 등 확인)</li>
+      </ul>
+      <h4>저작권 안내</h4>
+      <ul>
+        <li>디자인 의뢰를 포함한 티몬에서 제작한 모든 디자인 및 이미지의 저작권은 티몬에 있습니다.
+          티몬의 저작권은 저작권법에 의해 보호 받습니다. </li>
+        <li>제작에 사용되는 이미지중 티몬과 라이센스 계약을 맺은 회사의 저작권이 있을 수 있으며,
+          제공한 이미지의 사용으로 인한 저작권침해 문제가 발생 할 경우 티몬의 책임은 없습니다.</li>
+        <li>티몬 썸네일 외 다른 용도로 사용을 금지하며 무단사용 적발시 저작권법에 의해 처벌받을 수 있습니다.</li>
+        <li class="point">(2차 저작권물에 관한 당사 소유권 등 세부 내용 반영)</li>
+      </ul>
+      <div class="agreement">
+        <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i>위 내용에 모두 동의합니다.</label>
+      </div>
+      <div class="btn_area">
+				<button type="submit" class="btn submit2">동의</button>
+			</div>
+    </div>
+		<button type="button" class="btn_close">닫기</button>
+  </div>
+  <!-- // 이미지사용, 저작권 안내 -->
+</body>
+</html>

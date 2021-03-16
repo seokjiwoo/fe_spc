@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.spc{
+	.h2_head{
+		margin-bottom: 30px;
+	}
+	
+	.search_result {
+		margin-top: 50px;
+		
+		.h3_head{
+			margin-bottom: 14px;
+		}
+	}
+	
+	.spc_note{
+		margin-top: 12px;
+	}
+
+	.process_step{
+		margin-bottom: 43px;
+		.h3_head{
+			margin-bottom: 18px;
+		}
+	}
+
+	/* SDUMU-193 */
+	.spc_radio_line{
+		padding-bottom:10px;
+	}
+}

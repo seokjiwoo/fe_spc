@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+// SELECT BOX
+.spc_select{
+	display: inline-block;
+	position: relative;
+	height: 36px;
+	width: 200px;
+	margin-right: 7px;
+	border: 1px solid #cacdd1;
+	background-color: #fff;
+	line-height: 38px;
+	vertical-align: middle;
+	&.disabled{
+		background-color: #fafbfb;
+		.value{
+			color: #b5b5b9;
+		}
+	}
+	
+	.value{
+		height: 100%;
+		width: 100%;
+		font-size: 14px;
+		font-weight: bold;
+		color: $color_base;
+		text-align: left;
+		.selected{
+			display: block;
+			margin: 0 31px 0 10px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		i{
+			position: absolute;
+			top: 16px;
+			right: 10px;
+			@include sp-common("ico_select");
+		}
+		&.on{
+			i{
+				top: 15px;
+				@include sp-common("ico_select_on");
+			}
+		}
+	}//.value
+	select{
+		position: absolute;
+		left: 0;
+		top: 0;
+		-webkit-appearance: none;
+		@include size(100%, 38px);
+		@include opacity(0);
+	}
+}

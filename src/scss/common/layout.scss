@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// text hidden
+.blind{
+	visibility:hidden;
+	overflow:hidden;
+	position:absolute;
+	@include size(0, 0);
+	font:0/0 a;
+}
+
+html, body{height:100%;}
+
+// wrap
+#wrap{
+	min-width:1450px;
+	min-height:100%;
+	background-color:#fff;
+}
+
+#header{
+	position: relative;
+	min-height: 120px;
+	background-color: #fff;
+	z-index: 20;
+}
+
+#container{
+	position: relative;
+	z-index: 10;
+}
+
+#content{
+	width: 1200px;
+	min-height: 530px;
+	margin: 0 auto;
+	padding: 50px 0 63px;
+}
+
+#footer{
+	border-top: 1px solid #dadde0;
+	background-color: #fff;
+}
+
+.spc.home_bg #header{
+	background-color :#f3f4f6;
+}

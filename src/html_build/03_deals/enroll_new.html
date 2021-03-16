@@ -1,0 +1,1711 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 신규 상품 등록</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+
+
+<div id="container">
+	<div id="content">
+
+		<!-- 신규 상품 등록 -->
+		<div class="enroll_new_wrap">
+			<div class="header">
+				<h2>신규 상품 등록하기</h2>
+			</div>
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th><span class="bullet">*</span>노출 카테고리<button class="help">도움</button></th>
+								<td>
+									<div class="cate_use"><button type="button" class="btn link catUse">카테고리 템플릿 사용</button><button type="button" class="btn init catSee">전체 카테고리 보기</button></div>
+									<div class="spc_select">
+										<div class="value"><span class="selected">대분류</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="spc_select">
+										<div class="value"><span class="selected">중분류</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="spc_select">
+										<div class="value"><span class="selected">소분류</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="spc_select">
+										<div class="value"><span class="selected">세분류</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<label for="cate_save" class="spc_check cate_chk"><input type="checkbox" id="cate_save"><i class="symbol"></i>카테고리 템플릿 등록</label>
+									<ul class="spc_note">
+										<li><i class="dot"></i>입력한 카테고리는 차후에 오픈될 상품단위 노출/판매에서 활용됩니다.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>상품명<button class="help">도움</button></th>
+								<td>
+									<div class="limitTextWrap">
+										<span class="inputTitle">상품 홍보제목</span>
+										<div class="inputWrap">
+											<input type="text" class="spc_text" value="상품 홍보제목">
+											<p class="crntText on"><span>6</span>/<span>20자</span></p>
+										</div>
+									</div>
+									<div class="limitTextWrap">
+										<span class="inputTitle">메인 상품이름</span>
+										<div class="inputWrap">
+											<input type="text" class="spc_text">
+											<p class="crntText"><span>0</span>/<span>20자</span></p>
+										</div>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>입력한 카테고리는 차후에 오픈될 상품단위 노출/판매에서 활용됩니다.</li>
+									</ul>
+									<div class="tblBtnWrap">
+										<button type="button" class="btn link">미리보기</button>
+										<button type="button" class="btn init">심의 키워드 확인</button>
+										<button type="button" class="btn init">제작 가이드</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>브랜드<button class="help">도움</button></th>
+								<td>
+									<div class="inputWrap">
+										<input type="text" class="spc_text brandInput" value="LG전자">
+										<button type="button" class="btn init">수정하기</button>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>입력된 브랜드정보는 외부 채널(네이버, 다음 등), 검색, 카테고리 필터 및 정렬가중치에 활용됩니다.</li>
+										<li><i class="dot"></i>브랜드 활용서비스 혜택에서 제외될 수 있습니다.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>제조사<button class="help">도움</button></th>
+								<td>
+									<button type="button" class="btn init">등록하기</button>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>성인인증</th>
+								<td>
+									<div class="labelWrap">
+										<label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked="checked"><i class="symbol"></i>미사용</label>
+										<label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>상</label>
+										<label for="ly_radio1-3" class="spc_radio"><input type="radio" id="ly_radio1-3" name="ly_radio1"><i class="symbol"></i>중</label>
+										<label for="ly_radio1-4" class="spc_radio"><input type="radio" id="ly_radio1-4" name="ly_radio1"><i class="symbol"></i>하</label>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>입력한 성인인증 설정은 차후에 오픈될 상품단위 노출/판매에서 활용됩니다.</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th><span class="bullet">*</span>가격<button class="help">도움</button></th>
+								<td>
+									<div class="inputNumWrap">
+										<span class="inputTitle">정상가</span>
+										<div class="inputWrap">
+											<input type="text" class="spc_text">
+										</div>
+										<span class="won">원</span>
+									</div>
+									<div class="inputNumWrap">
+										<span class="inputTitle">할인가</span>
+										<div class="inputWrap">
+											<input type="text" class="spc_text">
+										</div>
+										<span class="won">원</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>수수료율 또는 입금가액<button class="help">도움</button></th>
+								<td>
+									<div class="inputNumWrap">
+										<div class="inputWrap">
+											<input type="text" class="spc_text">
+										</div>
+										<span class="won">%</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>수량<button class="help">도움</button></th>
+								<td>
+									<div class="inputNumWrap">
+										<div class="inputWrap">
+											<input type="text" class="spc_text">
+										</div>
+										<span class="won">개</span>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>옵션 별 재고수량을 입력하면, 옵션의 재고수량 총합으로 입력이 변경됩니다.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>1인당 최대 구매수량<button class="help">도움</button></th>
+								<td>
+									<div class="inputNumWrap">
+										<div class="inputWrap">
+											<input type="text" class="spc_text">
+										</div>
+										<span class="won">개</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>편의점 픽업여부<button class="help">도움</button></th>
+								<td>
+									<label for="ly_radio2-1" class="spc_radio checked"><input type="radio" id="ly_radio2-1" name="ly_radio2" checked="checked"><i class="symbol"></i>가능</label>
+										<label for="ly_radio2-2" class="spc_radio"><input type="radio" id="ly_radio2-2" name="ly_radio2"><i class="symbol"></i>불가능</label>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>판매자 상품코드<button class="help">도움</button></th>
+								<td>
+									<div class="inputWrap">
+										<input type="text" class="spc_text brandInput" placeholder="판매자 상품코드">
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>상품정보 저장 후에 그리드에서 옵션별 수정이 가능합니다.</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: auto ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th rowspan="2"><span class="bullet">*</span>병행수입<button class="help">도움</button></th>
+								<td colspan="2">
+									<label for="ly_radio3-1" class="spc_radio checked"><input type="radio" id="ly_radio3-1" name="ly_radio3" checked="checked"><i class="symbol"></i>대상</label>
+									<label for="ly_radio3-2" class="spc_radio"><input type="radio" id="ly_radio3-2" name="ly_radio3"><i class="symbol"></i>미대상</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="btn fileUpload">
+										<input type="file">
+										<span>파일첨부</span>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>병행수입 상품 등록 시 수입신고필증/인보이스 증빙서류를 첨부해주세요.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="2"><span class="bullet">*</span>정상가근거</th>
+								<td colspan="2">
+									<div class="spc_select" style="width: 210px; ">
+										<div class="value"><span class="selected">홈쇼핑 판매가</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>최근 홈쇼핑에서 판매된 판매가입니다. 단, 수입브랜드 상품들의 경우 국내 정식 수입원의 가격을 기준으로 표기하였기에 병행수입 상품의 경우 차이가 있을 수 있으니 참고해 주시기 바랍니다.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="btnWrap">
+										<button type="button" class="btn init docsDown">양식 다운로드</button>
+										<div class="btn fileUpload">
+											<input type="file">
+											<span>파일첨부</span>
+										</div>
+									</div>
+									<div class="fileInfo_wrap">
+										<p class="fileInfo">
+											<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+											<button class="del">delete</button>
+										</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="3"><span class="bullet">*</span>KC 인증</th>
+								<td colspan="2">
+									<label for="ly_radio4-1" class="spc_radio checked"><input type="radio" id="ly_radio4-1" name="ly_radio4" checked="checked"><i class="symbol"></i>대상</label>
+									<label for="ly_radio4-2" class="spc_radio"><input type="radio" id="ly_radio4-2" name="ly_radio4"><i class="symbol"></i>미대상</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<ul class="con_ls">
+										<li>
+											<input type="text" class="spc_text regist" placeholder="- 를 포함하여 등록">
+											<div class="btnWrap">
+												<button type="button" class="btn init">인증확인</button>
+												<button type="button" class="btn add"><span class="blind">추가</span></button>
+											</div>
+										</li>
+										<li>
+											<input type="text" class="spc_text regist" placeholder="- 를 포함하여 등록">
+											<div class="btnWrap">
+												<button type="button" class="btn init">인증확인</button>
+												<button type="button" class="btn add"><span class="blind">삭제</span></button>
+												<button type="button" class="btn remove"><span class="blind">삭제</span></button>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="btnWrap">
+										<div class="btn fileUpload">
+											<input type="file">
+											<span>파일첨부</span>
+										</div>
+									</div>
+									<div class="fileInfo_wrap">
+										<p class="fileInfo">
+											<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+											<button class="del">delete</button>
+										</p>
+										<p class="fileInfo">
+											<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+											<button class="del">delete</button>
+										</p>
+										<p class="fileInfo">
+											<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+											<button class="del">delete</button>
+										</p>
+										<p class="fileInfo">
+											<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+											<button class="del">delete</button>
+										</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="2"><span class="bullet">*</span>판매허가 신고대상<button class="help">도움</button></th>
+								<td colspan="2">
+									<label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i>해당없음</label>
+									<label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i>건강식품</label>
+									<label for="check3" class="spc_check"><input type="checkbox" id="check3"><i class="symbol"></i>의료기기</label>
+									<label for="check4" class="spc_check"><input type="checkbox" id="check4"><i class="symbol"></i>기능성 화장품</label>
+									<label for="check5" class="spc_check"><input type="checkbox" id="check5"><i class="symbol"></i>특수용도 화장품</label>
+									<label for="check6" class="spc_check"><input type="checkbox" id="check6"><i class="symbol"></i>의약외품</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="btn fileUpload">
+										<input type="file">
+										<span>파일첨부</span>
+									</div>
+									<div class="fileInfo_wrap">
+										<p class="fileInfo">
+											<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+											<button class="del">delete</button>
+										</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>기타 구비서류</th>
+								<td colspan="2">
+									<div class="btn fileUpload">
+										<input type="file">
+										<span>파일첨부</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: 155px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th rowspan="2"><span class="bullet">*</span>상품정보 제공공시<button class="help">도움</button></th>
+								<td>직접 등록</td>
+								<td>
+									<button type="button" class="btn init">등록/수정하기</button>
+									<span class="point">등록완료</span>
+								</td>
+							</tr>
+							<tr>
+								<td>엑셀 등록</td>
+								<td>
+									<div class="btn_wp product_offer">
+										<button type="button" class="btn init">양식 다운로드</button>
+										<div class="btn fileUpload">
+											<input type="file">
+											<span>파일첨부</span>
+										</div>
+										<button type="button" class="btn init">미리보기</button>
+									</div>
+									<div class="fileInfo_wrap">
+										<p class="fileInfo">
+											<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+											<button class="del">delete</button>
+										</p>
+										<p class="fileInfo">
+											<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+											<button class="del">delete</button>
+										</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th><span class="bullet">*</span>식품 원산지 표기<button class="help">도움</button></th>
+								<td>
+									<label for="ly_radio5-1" class="spc_radio"><input type="radio" id="ly_radio5-1" name="ly_radio5"><i class="symbol"></i>미대상</label>
+									<label for="ly_radio5-1" class="spc_radio"><input type="radio" id="ly_radio5-1" name="ly_radio5"><i class="symbol"></i>상품상세 참조</label>
+									<label for="ly_radio5-1" class="spc_radio"><input type="radio" id="ly_radio5-1" name="ly_radio5"><i class="symbol"></i>국내산</label>
+									<label for="ly_radio5-1" class="spc_radio checked"><input type="radio" id="ly_radio5-1" name="ly_radio5" checked="checked"><i class="symbol"></i>직접 입력</label>
+									<div class="limitTextWrap type3">
+										<div class="inputWrap">
+											<input type="text" class="spc_text">
+											<p class="crntText"><span>0</span>/<span>15자</span></p>
+										</div>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>입력한 원산지 표기 정보는 차후에 오픈될 상품단위 노출/판매에서 활용됩니다.</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th><span class="bullet">*</span>상품이미지 1<br />(700x700px)<button class="help">도움</button></th>
+								<td>
+									<ul class="imgList small">
+										<li>
+											<div class="img_wrap">
+												<img src="http://d1.tmonc.net/~nbass/?190x190_bag_y_FFB4B4_50" width="190" height="190" alt="임시 이미지">
+												<div class="btn_wrap">
+													<button class="view"></button>
+													<button class="del "></button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="add_img">
+												<input type="file" />
+												<div class="ico_plus"></div>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>상품이미지 2<br />(756x383px)<button class="help">도움</button></th>
+								<td>
+									<ul class="imgList medium">
+										<li>
+											<div class="img_wrap">
+												<img src="http://d1.tmonc.net/~nbass/?307x190_bag_y_FFB4B4_50" width="307" height="190" alt="임시 이미지">
+												<div class="btn_wrap">
+													<button class="view"></button>
+													<button class="del "></button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="add_img">
+												<input type="file" />
+												<div class="ico_plus"></div>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: auto ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th rowspan="2"><span class="bullet">*</span>옵션등록<button class="help">도움</button></th>
+								<td colspan="2">
+									<label for="ly_radio6-1" class="spc_radio checked"><input type="radio" id="ly_radio6-1" name="ly_radio6" checked="checked"><i class="symbol"></i>등록</label>
+									<label for="ly_radio6-2" class="spc_radio"><input type="radio" id="ly_radio6-2" name="ly_radio6"><i class="symbol"></i>등록안함</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div class="prodOptWrap name">
+										<p class="title">옵션명</p>
+										<input type="text" class="spc_text" value="색상">
+										<input type="text" class="spc_text" value="사이즈">
+									</div>
+									<div class="prodOptWrap opt">
+										<p class="title">
+											옵션값
+											<span class="subtxt">,콤마로 구분하여 입력해주세요</span>
+										</p>
+										<div class="prodInputWrap">
+											<input type="text" class="spc_text" value="빨강, 파랑, 노랑">
+											<button type="button" class="btn optAdd">추가</button>
+											<button type="button" class="btn add"><span class="blind">추가</span></button>
+										</div>
+										<div class="prodInputWrap">
+											<input type="text" class="spc_text" value="S,M,L">
+											<button type="button" class="btn optAdd">추가</button>
+											<button type="button" class="btn remove"><span class="blind">삭제</span></button>
+										</div>
+									</div>
+									<div class="optDetail">
+										<span class="optTit">색상</span>
+										<div class="optWrap">
+											<div class="opt">
+												<span>빨강</span><button class="close"></button>
+											</div>
+										</div>
+										<div class="optWrap">
+											<div class="opt">
+												<span>파랑</span><button class="close"></button>
+											</div>
+										</div>
+										<div class="optWrap">
+											<div class="opt">
+												<span>노랑</span><button class="close"></button>
+											</div>
+										</div>
+									</div>
+									<div class="optDetail">
+										<span class="optTit">사이즈</span>
+										<div class="optWrap">
+											<div class="opt">
+												<span>빨강</span><button class="close"></button>
+											</div>
+										</div>
+										<div class="optWrap">
+											<div class="opt">
+												<span>파랑</span><button class="close"></button>
+											</div>
+										</div>
+										<div class="optWrap">
+											<div class="opt">
+												<span>노랑</span><button class="close"></button>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<div class="prod_btn_area right">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="submit" class="btn submit2">옵션 목록에 적용</button>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>심의 키워드 확인</th>
+								<td>
+									<div class="keywordWrap">
+										<div class="keyIcon blue">확인</div>
+										<span class="keyDesc">올림픽</span>
+									</div>
+									<div class="keywordWrap">
+										<div class="keyIcon green">입증</div>
+										<span class="keyDesc">여드름</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<div class="repreProd">
+				<div class="repIcon">대표</div>
+				<p class="repTitle">1. 노트북 울트라 PC 14U380-EU1TK (상품번호 87654321)</p>
+			</div>
+			
+			<div class="btn_wp box optionBtns">
+				<div class="fl_l">
+					<button class="btn slim">숨김</button>
+					<button class="btn slim">노출</button>
+					<div class="spc_select type2">
+						<div class="value"><span class="selected">전체 옵션 보기</span><i></i></div>
+						<select>
+							<option>옵션1</option>
+							<option>옵션2</option>
+							<option>옵션3</option>
+						</select>
+					</div>
+				</div>
+				<div class="fl_r">
+					<button class="btn slim">선택 옵션 삭제</button>
+				</div>
+			</div>
+
+			<div class="scroll_tb scrlWrap">
+				<div class="thead">
+					<table class="deals_tb02">
+						<colgroup>
+							<col style="width: 59px; ">
+							<col style="width: 46px; ">
+							<col style="width: 80px; ">
+							<col style="width: 88px; ">
+							<col style="width: 70px; ">
+							<col style="width: 75px; ">
+							<col style="width: 99px; ">
+							<col style="width: 80px; ">
+							<col style="width: 80px; ">
+							<col style="width: 114px; ">
+							<col style="width: 147px; ">
+							<col style="width: 147px; ">
+							<col style="width: 229px; ">
+							<col style="width: 204px; ">
+							<col style="width: 204px; ">
+							<col style="width: 204px; ">
+							<col style="width: 199px; ">
+							<col style="width: *; ">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+								</th>
+								<th scope="col">No.</th>
+								<th scope="col">상태</th>
+								<th scope="col">옵션번호</th>
+								<th scope="col"><span class="bullet">*</span>색상</th>
+								<th scope="col"><span class="bullet">*</span>사이즈</th>
+								<th scope="col">
+									<span class="bullet">*</span>재고수량<br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+								<th scope="col">판매수량</th>
+								<th scope="col">최소수량</th>
+								<th scope="col">
+									판매자 상품코드<br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+								<th scope="col">
+									<span class="bullet">*</span>상품 이미지1 <span class="thReg">(700x700)</span><br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+								<th scope="col">
+									<span class="bullet">*</span>상품 이미지2 <span class="thReg">(756x383)</span><br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+								<th scope="col">
+									모델명/품번 <span class="thReg">(다중선택)</span><br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+								<th scope="col">
+									휴대용 게임기 <span class="thReg">(다중선택)</span><br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+								<th scope="col">
+									휴대용 게임기<br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+								<th scope="col">
+									휴대용 게임기<br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+								<th scope="col">
+									휴대용 게임기<br />
+									<button class="btn all">일괄 적용</button>
+								</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+				<div class="tbody" >
+					<!-- <table class="deals_tb02" style="width: 2125px;"> -->
+					<table class="deals_tb02">
+						<colgroup>
+							<col style="width: 59px; ">
+							<col style="width: 46px; ">
+							<col style="width: 80px; ">
+							<col style="width: 88px; ">
+							<col style="width: 70px; ">
+							<col style="width: 75px; ">
+							<col style="width: 99px; ">
+							<col style="width: 80px; ">
+							<col style="width: 80px; ">
+							<col style="width: 114px; ">
+							<col style="width: 147px; ">
+							<col style="width: 147px; ">
+							<col style="width: 229px; ">
+							<col style="width: 204px; ">
+							<col style="width: 204px; ">
+							<col style="width: 204px; ">
+							<col style="width: 199px; ">
+							<col style="width: *; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="rsltWrap">
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>나이키</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>아디다스</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>텍스트열글자이후말줄임</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>나이키</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>아디다스</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>텍스트열글자이후말줄임</span>
+											</div>
+											<button class="close"></button>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="rsltWrap">
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>RADEON HD 시리즈</span>
+											</div>
+											<button class="close"></button>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+
+			<!-- <div class="scroll_tb">
+				<table class="deals_tb02">
+					<colgroup>
+						<col style="width: 59px; ">
+						<col style="width: 46px; ">
+						<col style="width: 80px; ">
+						<col style="width: 88px; ">
+						<col style="width: 70px; ">
+						<col style="width: 75px; ">
+						<col style="width: 99px; ">
+						<col style="width: 80px; ">
+						<col style="width: 80px; ">
+						<col style="width: 114px; ">
+						<col style="width: 147px; ">
+						<col style="width: 147px; ">
+						<col style="width: 229px; ">
+						<col style="width: 204px; ">
+						<col style="width: 204px; ">
+						<col style="width: 204px; ">
+						<col style="width: 199px; ">
+						<col style="width: *; ">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">
+								<label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+							</th>
+							<th scope="col">No.</th>
+							<th scope="col">상태</th>
+							<th scope="col">옵션번호</th>
+							<th scope="col"><span class="bullet">*</span>색상</th>
+							<th scope="col"><span class="bullet">*</span>사이즈</th>
+							<th scope="col">
+								<span class="bullet">*</span>재고수량<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">판매수량</th>
+							<th scope="col">최소수량</th>
+							<th scope="col">
+								판매자 상품코드<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								<span class="bullet">*</span>상품 이미지1 <span class="thReg">(700x700)</span><br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								<span class="bullet">*</span>상품 이미지2 <span class="thReg">(756x383)</span><br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								모델명/품번 <span class="thReg">(다중선택)</span><br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								휴대용 게임기 <span class="thReg">(다중선택)</span><br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								휴대용 게임기<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								휴대용 게임기<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								휴대용 게임기<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+						</tr>
+						<tbody>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="rsltWrap">
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>나이키</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>아디다스</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>텍스트열글자이후말줄임</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>나이키</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>아디다스</span>
+											</div>
+											<button class="close"></button>
+										</div>
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>텍스트열글자이후말줄임</span>
+											</div>
+											<button class="close"></button>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="rsltWrap">
+										<div class="rslt">
+											<div class="ellipsisWrap" style="width: 116px; ">
+												<span>RADEON HD 시리즈</span>
+											</div>
+											<button class="close"></button>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></span></td>
+								<td><span>1</span></td>
+								<td>
+									<button class="btn slim">숨김</button>
+								</td>
+								<td><span>1000000</span></td>
+								<td><span>브라운</span></td>
+								<td><span>M</span></td>
+								<td><span>9999<span class="orange">(품절)</span></span></td>
+								<td><span>8888</span></td>
+								<td><span>1</span></td>
+								<td><input type="text" class="prodInput code" placeholder="상품코드"></td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td>
+									<button class="btn slim fcb">수정</button>
+									<button class="btn slim fcb">미리보기</button>
+								</td>
+								<td><input type="text" class="prodInput model" placeholder=""></td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="spc_select prod">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</thead>
+				</table>
+			</div> -->
+
+			<!-- 임시 저장 상태  -->
+			<div class="scroll_tb">
+				<table class="deals_tb02">
+					<colgroup>
+						<col style="width: 59px; ">
+						<col style="width: 46px; ">
+						<col style="width: 80px; ">
+						<col style="width: 88px; ">
+						<col style="width: 70px; ">
+						<col style="width: 75px; ">
+						<col style="width: 99px; ">
+						<col style="width: 80px; ">
+						<col style="width: 80px; ">
+						<col style="width: 114px; ">
+						<col style="width: 147px; ">
+						<col style="width: 147px; ">
+						<col style="width: 229px; ">
+						<col style="width: 204px; ">
+						<col style="width: 204px; ">
+						<col style="width: 204px; ">
+						<col style="width: 199px; ">
+						<col style="width: *; ">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">
+								<label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label>
+							</th>
+							<th scope="col">No.</th>
+							<th scope="col">상태</th>
+							<th scope="col">옵션번호</th>
+							<th scope="col"><span class="bullet">*</span>색상</th>
+							<th scope="col"><span class="bullet">*</span>사이즈</th>
+							<th scope="col">
+								<span class="bullet">*</span>재고수량<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">판매수량</th>
+							<th scope="col">최소수량</th>
+							<th scope="col">
+								판매자 상품코드<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								<span class="bullet">*</span>상품 이미지1 <span class="thReg">(700x700)</span><br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								<span class="bullet">*</span>상품 이미지2 <span class="thReg">(756x383)</span><br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								모델명/품번 <span class="thReg">(다중선택)</span><br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								휴대용 게임기 <span class="thReg">(다중선택)</span><br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								휴대용 게임기<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								휴대용 게임기<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+							<th scope="col">
+								휴대용 게임기<br />
+								<button class="btn all">일괄 적용</button>
+							</th>
+						</tr>
+						<tbody>
+							<tr>
+								<td colspan="17" class="tempSave"><span>임시저장 상태입니다. 상품정보를 입력 완료해주세요.</span></td>
+							</tr>
+						</tbody>
+					</thead>
+				</table>
+			</div>
+			<div class="bottomBtnWrap">
+				<button class="btn slim">네이버 쇼핑 매칭</button>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>검색어 제안</th>
+								<td>
+									<div class="srcWrap">
+										<input type="text" class="spc_text srcInput" placeholder="검색 키워드">
+										<div class="selWrap">
+											<div class="sel">
+												<span>나이키</span><button class="close"></button>
+											</div>
+											<div class="sel">
+												<span>아디다스</span><button class="close"></button>
+											</div>
+										</div>
+									</div>
+									<ul class="spc_note">
+										<li><i class="dot"></i>,콤마로 구분하여 입력해주세요. 최대 10개까지 등록 가능합니다.</li>
+										<li><i class="dot"></i>입력한 검색어는 차후 검색이나 필터로 활용됩니다.상품과 관계없는 검색어는 티몬관리자에 의해 삭제/변경될 수 있습니다.</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<div class="prod_btn_area last right">
+				<button type="submit" class="btn save">임시저장</button>
+			</div>
+
+
+		</div>
+<!-- // 신규 상품 등록 -->
+
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	
+	/* [D] 탭 클릭 */
+	$('.spc_form .btn_toggle').on('click', function(){
+		var $this = $(this);
+		var $spcForm = $this.closest('.spc_form');
+		
+		$spcForm.toggleClass('open');
+	});
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+</script>
+</body>
+</html>

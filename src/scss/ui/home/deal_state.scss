@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+.deal_state{
+	position: relative;
+	height: 228px;
+	padding: 0 30px;
+	border: 1px solid #e3e5e8;
+	background-color: #fff;
+	
+	.head{
+		position: relative;
+		margin-top: 33px;
+		
+		h3{
+			font-size: 18px;
+			font-weight: bold;
+			color: $color_dark;
+		}
+		
+		.btn_refresh{
+			position: absolute;
+			top: -1px;
+			right: -5px;
+			@include sp-home("ico_refresh");
+			@include txt-hide-with-sprite();
+		}
+	}//.head
+	
+	.state_lst{
+		margin-top: 15px;
+		font-size: 14px;
+		
+		li{
+			overflow: hidden;
+			position: relative;
+			padding: 8px 0 8px 12px;
+			line-height: 17px;
+
+			&.submsg {
+				font-size: 11px;
+				line-height: 14px;
+				color: #595963;
+				letter-spacing: -1px;
+				padding-top: 0;
+			}
+			
+			.dot{
+				position: absolute;
+				top: 14px;
+				left: 0;
+				display: block;
+				width: 2px;
+				height: 2px;
+				background-color: #737476;
+			}
+			
+			.tit{
+				float: left;
+				color: $color_dark;
+			}//.tit
+			
+			.state{
+				float: right;
+				> a {
+					display: inline-block;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+				.total{
+					color: $color_dark;
+				}
+				.highlight{
+					color: $color_point;
+				}
+				.dv{
+					display: inline-block;
+					width: 1px;
+					height: 11px;
+					margin: 0 10px;
+					background-color: #d1d1d1;
+				}
+			}//.state
+		}//li
+	}//.state_lst
+	
+	.msg{
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		font-size: 15px;
+		font-weight: bold;
+		color: $color_dark;
+		text-align: center;
+		line-height: 22px;
+	}//.msg
+	
+	&.loading{
+		.state_lst{
+			display: none;
+		}
+		.msg{
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+.spc_note{
+	$color-point: #f27935;
+	$color-gray: #7d7e80;
+
+	vertical-align: middle;
+	li{
+		font-size: 11px; 
+		color: $color-gray; 
+		line-height: 20px; 
+		letter-spacing: -0.2px; 
+		padding-left: 7px;
+
+		.dot{ background-color: $color-gray; }
+		.point{ color: $color-point; }
+		.btn-type1{ position: absolute; top: -5px; margin-left: 12px }
+		.sub_txt{ padding-left: 14px; color: #a2a2a2; }
+	}
+
+	&.type_point{
+		li{ 
+			color: $color-point; 
+			.dot{ 
+				background-color: $color-point;
+			}
+		}
+	}
+} // end of spc_note
+
+.tmon_answer{
+	margin-top: 25px;
+	padding: 30px;
+	border: 1px solid #e8e9ea;
+
+	.tit, .spc_note{ margin-bottom: 18px; }
+	
+	.tit{
+		display: block; color: #f27935;
+		font: {
+			size : 16px;
+			weight: 700;
+		}
+	 }
+}
+
+.explanation{
+	margin-top: 34px; 
+	margin-bottom: 60px; 
+	padding: 20px 20px 22px 20px; 
+	background-color: #f8f8f8;
+
+	.tit{
+		display: block; 
+		margin-bottom: 10px; 
+		font-size: 16px; 
+		color:#f27935;
+
+		&:before{ 
+			content: ""; 
+			margin-right: 6px; 
+			vertical-align: -1px;
+			@include sp-special("ico_kc_min");
+		 }
+	}
+
+	.spc_note{ margin-left: 25px; }
+}
+
+.calendar_wrap { 
+	display: inline-block; 
+	.spc_calendar{ width: 130px; }
+	& + .spc_note{ display: inline-block; margin-left: 10px; }
+}
+
+.select_list{
+	> li{
+		margin-top: 4px;
+		&:first-child{ margin-top: 0; }
+	}
+	.spc_note{ display: inline-block; margin-left: 10px;}
+	
+	&.inc_bn{
+		$bnWid : 220px ; 
+		@include after ; 
+		> li {
+			float:left; 
+			margin-top:0 ;
+			width:$bnWid ; 
+			.spc_note{
+				display:block; 
+				margin-left: 0 ;
+			}
+			&:not(:first-child){ margin-left: 8px ; }
+			.spc_select{ width:100%; }
+			.bn_img{
+				width:100% ; 
+				margin:8px 0 ;
+				img{ max-width:100% ; height: auto ; vertical-align: top }
+			}
+		}
+	}
+
+	@at-root .select_list_wrap{
+		.select_list , .noti{ display: inline-block; }
+		.noti{
+			vertical-align: top; margin: 48px 0 0 18px;
+			li{
+				height: 20px;
+				line-height: 20px;
+				.dot{ top: 8px; }
+				span{
+					max-width: 342px; display: inline-block;
+					@include ellipsis();
+				}
+			}
+		}
+	}
+}
+
+.spc_table_form{
+	td{
+		label + .spc_note{
+			display: inline-block;
+			margin-left: 10px;
+		}
+	}
+}
+
+.upload_area{
+	margin-top: 10px;
+
+	.btnDown , .spc_note{ display: inline-block; }
+	.btnDown{ width: 360px; vertical-align: middle; }
+	.spc_note{ margin-left: 10px; }
+}
+
+.product_info_input{
+	padding: 20px; border-top: 1px solid #b7bfc8;
+	p{ font-weight: 700; }
+
+	.input_area{
+		margin-top: 12px;
+		@include after();
+		.deal_num{
+			float: left;
+			.btn-type1{ vertical-align: middle; }
+		}
+		.btn_area{ float: right; }
+	}
+}
+
+.modify_area{
+	padding: 10px;
+	border: 1px solid #e3e5e8;
+}
+
+.basic_tb{
+	width: 100%;
+	th, td{
+		padding: 12px 10px;
+		border: 1px solid #e3e5e8;
+		text-align: center;
+	}
+	td{ 
+		&.tal{ text-align: left; }
+		color: #7d7e80; 
+	}
+
+	thead {
+		td , th { border-top: 0; }
+	}
+}
+
+.scroll_box{
+	max-height: 301px;
+	overflow: hidden;
+	overflow-y: auto;
+	
+	& + .spc_note{ margin-top: 22px; }
+}
+
+.submit_area{
+	margin-top: 58px;
+	text-align: center;
+	.btn-type2{ vertical-align: top; }
+}
+
+.promotion_msg {
+	background-color: rgba(255, 0, 0, 0.05);
+	color: 	#ff0000;
+	min-height: 18px;
+	line-height: 18px;
+	padding: 19px 0;
+	text-align: center;
+	margin-bottom: -5px;
+	font: {
+		size : 14px;
+		weight: bold;
+	}
+}
+
+.deals_layer{
+
+	&.management{
+		.contact_set{
+			margin-top: 30px;
+			@include after();
+
+			.add{ float: left; margin-top: 5px; }
+			.choice{ float: right; }
+		}
+
+		.spc_form{
+			margin-top: 6px;
+			.spc_table_form{ 
+				margin-bottom: 0; 
+				tbody{
+					tr{
+						th, td{ padding: 4px 10px 4px 10px; text-align: center; }
+						td:first-child{ border-left: 0; }
+					}
+				} 
+			}
+		}
+
+		.btn_area button{ vertical-align: top; }
+
+		.pagingWrap{ 
+			position: relative;
+			margin-top: 64px;
+
+			.btn-type1{
+				position: absolute;
+				left: 0; top:-2px;
+				width: auto;
+				padding: 0 15px ;
+				height:28px ; line-height:28px ; 
+				background-color: #fff ; border:1px solid #e3e5e8 ; color:#16181a ; 	
+				letter-spacing: -.5px ; 
+				font : {
+					size : 12px ; 
+					weight : 700 ; 
+				}
+			}
+		}
+	} // end of management
+
+	&.goods_image {
+		display: inline-block;
+		.layer_hd {
+			margin-bottom: 32px;
+		}
+	} // end of goods_image
+
+} // end of deals_layer

@@ -1,0 +1,83 @@
+<div class="spc_form open">
+	<div class="h3_head">
+		<h3>처리요약정보</h3>
+		<button class="btn_toggle">검색창</button>
+	</div>
+	<form>
+		<fieldset>
+			<table class="spc_table_form">
+				<colgroup>
+					<col style="width:157px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>기간설정</th>
+						<td>
+							<div class="spc_select" style="width:193px;">
+								<div class="value"><span class="selected">미수취신고일</span><i></i></div>
+								<select>
+									<option>발송예정일</option>
+								</select>
+							</div>
+							<div class="spc_calendar">
+								<input type="text" class="spc_text" value="2016.04.27"><button class="btn_calendar">달력</button>
+							</div>
+							<span class="dash">~</span>
+							<div class="spc_calendar">
+								<input type="text" class="spc_text" value="2016.04.30"><button class="btn_calendar">달력</button>
+							</div>
+							<div class="set_date">
+								<button type="button" class="btn init">오늘</button>
+								<button type="button" class="btn init">어제</button>
+								<button type="button" class="btn init">이번주</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>상세검색</th>
+						<td>
+							<div class="spc_select" style="width:193px;">
+								<div class="value"><span class="selected">선택</span><i></i></div>
+								<select>
+									<option>주문번호</option>
+									<option>딜번호</option>
+									<option>고객명</option>
+									<option>고객ID</option>
+								</select>
+							</div>
+							<input type="text" class="spc_text" placeholder="상세검색어를 입력해주세요" style="width:428px;">
+						</td>
+					</tr>
+					<tr>
+						<th>상태검색</th>
+						<td>
+							<div class="spc_select" style="width:193px;">
+								<div class="value"><span class="selected">전체</span><i></i></div>
+								<select>
+									<option>고객 미수취 신고</option>
+									<option>고객 수취 확인</option>
+									<option>고객 미확인</option>
+									<option>발송예정일 변경</option>
+									<option>미발송사유 등록</option>
+								</select>
+							</div>
+							<div class="spc_select" style="width:193px;">
+								<div class="value"><span class="selected">전체</span><i></i></div>
+								<select>
+									<option>처리필요</option>
+									<option>처리지연</option>
+									<option>처리완료</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btn_area">
+				<button type="reset" class="btn cancel">초기화</button>
+				<button type="submit" class="btn submit">검색</button>
+			</div>
+		</fieldset>
+	</form>
+</div>

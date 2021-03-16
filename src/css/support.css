@@ -1,0 +1,89 @@
+.spc_layer.account .layer_ct .application .spc_table_form tr td label.spc_radio i.symbol, .spc_layer.account .layer_ct .application .spc_table_form tr td label.spc_radio.checked i.symbol { background: url("../im/sp-support.png?v=20210121093418") no-repeat; display: inline-block; overflow: hidden; }
+
+.spc_layer.account { box-sizing: border-box; padding: 31px 35px; border: 1px solid #30343b; letter-spacing: -0.8px; }
+.spc_layer.account .layer_hd { margin-bottom: 25px; }
+.spc_layer.account .layer_hd h3 { font-size: 18px; letter-spacing: -0.8px; }
+.spc_layer.account .layer_ct .point { color: #f27935; }
+.spc_layer.account .layer_ct .underline { text-decoration: underline; }
+.spc_layer.account .layer_ct .remind { margin-bottom: 20px; }
+.spc_layer.account .layer_ct .remind h3 { font-size: 14px; margin-bottom: 12px; letter-spacing: -0.8px; }
+.spc_layer.account .layer_ct .remind .remind_noti { margin-top: 8px; }
+.spc_layer.account .layer_ct .remind .remind_noti .spc_note { background-color: #f8f8f8; padding: 10px 10px 10px 14px; }
+.spc_layer.account .layer_ct .remind .remind_noti .spc_note li { position: relative; padding-left: 7px; font-size: 11px; line-height: 20px; color: #7d7e80; letter-spacing: -0.8px; }
+.spc_layer.account .layer_ct .remind .remind_noti .spc_note li .dot { background-color: #7d7e80; }
+.spc_layer.account .layer_ct .application .spc_table_form { border-top: 1px solid #b7bfc8; }
+.spc_layer.account .layer_ct .application .spc_table_form tr th, .spc_layer.account .layer_ct .application .spc_table_form tr td { box-sizing: border-box; height: 56px; letter-spacing: -0.8px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr th { font-size: 12px; color: #16181a; font-weight: 700; background-color: #f8f8f8; padding-left: 11px; text-align: left; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td { padding: 10px 18px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td .btn_duplication { box-sizing: border-box; width: 87px; height: 34px; line-height: 34px; font-size: 12px; color: #16181a; font-weight: 700; border: 1px solid #e3e5e8; vertical-align: middle; margin-left: 8px; letter-spacing: -0.8px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td .btn_term { box-sizing: border-box; width: 148px; height: 34px; line-height: 34px; font-size: 12px; color: #f27935; font-weight: 700; border: 1px solid #e3e5e8; letter-spacing: -0.8px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td textarea.input_reason { outline: 0px; padding: 8px 16px; font-size: 11px; color: #16181a; box-sizing: border-box; width: 100%; overflow-x: hidden; overflow-y: auto; min-height: 103px; line-height: 15px; resize: none; vertical-align: top; border: 1px solid #ccd2d8; letter-spacing: -0.8px; /* Chrome/Opera/Safari */ /* Firefox 19+ */ /* IE 10+ */ /* Firefox 18- */ }
+.spc_layer.account .layer_ct .application .spc_table_form tr td textarea.input_reason::-webkit-input-placeholder { color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td textarea.input_reason::-moz-placeholder { color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td textarea.input_reason:-ms-input-placeholder { color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td textarea.input_reason:-moz-placeholder { color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td .spc_text { width: 100%; box-sizing: border-box; font-size: 12px; height: 34px; line-height: 34px; border: 1px solid #ccd2d8; color: #16181a; padding-left: 16px; /* Chrome/Opera/Safari */ /* Firefox 19+ */ /* IE 10+ */ /* Firefox 18- */ }
+.spc_layer.account .layer_ct .application .spc_table_form tr td .spc_text::-webkit-input-placeholder { color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td .spc_text::-moz-placeholder { color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td .spc_text:-ms-input-placeholder { color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td .spc_text:-moz-placeholder { color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td label.spc_radio { font-size: 12px; margin-right: 18px; color: #a6a9ad; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td label.spc_radio i.symbol { width: 16px; height: 16px; background-position: 0px 0px; -webkit-background-position: 0px 0px; margin-right: 6px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td label.spc_radio.checked { color: #f27935; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td label.spc_radio.checked i.symbol { width: 16px; height: 16px; background-position: -20px 0px; -webkit-background-position: -20px 0px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td.txt_refer { padding: 12px 20px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td.txt_refer .spc_note li { font-size: 11px; line-height: 15px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td.txt_refer .spc_note li:not(:last-child) { margin-bottom: 5px; }
+.spc_layer.account .layer_ct .application .spc_table_form tr td .btn_duplication:disabled, .spc_layer.account .layer_ct .application .spc_table_form tr td .btn_duplication.disabled, .spc_layer.account .layer_ct .application .spc_table_form tr td textarea.input_reason:disabled, .spc_layer.account .layer_ct .application .spc_table_form tr td textarea.input_reason.disabled, .spc_layer.account .layer_ct .application .spc_table_form tr td .spc_text:disabled, .spc_layer.account .layer_ct .application .spc_table_form tr td .spc_text.disabled { background-color: #f8f8f8; border: 1px solid #e3e5e8; color: #a6a9ad; }
+.spc_layer.account .layer_ct .acc_note { margin-top: 30px; text-align: center; }
+.spc_layer.account .layer_ct .acc_note .spc_check { font-size: 12px; font-weight: bold; color: #7d7e80; }
+.spc_layer.account .layer_ct .acc_note + .btn_area { margin-top: 20px; }
+.spc_layer.account .layer_ct .btn_area { margin-top: 30px; }
+.spc_layer.account .layer_ct .btn_area.center { text-align: center; }
+.spc_layer.account .layer_ct .btn_area .btn { box-sizing: border-box; height: 40px; font-size: 14px; font-weight: 700; line-height: 40px; margin-left: 2px; min-width: 84px; }
+.spc_layer.account .layer_ct .btn_area .btn:first-child { margin-left: 0px; }
+
+.spc_check .symbol { width: 20px; height: 20px; }
+.spc_check.checked .symbol { background: url("../img/support/chk_on.png") no-repeat 0 0; }
+.spc_check.disabled { color: #a6a9ad; }
+.spc_check.disabled i.symbol { background: url("../img/support/chk_disabled.png") no-repeat 0 0; }
+.spc_check.checked.disabled i.symbol { background: url("../img/support/chked_disabled.png") no-repeat 0 0; }
+
+#content { width: 970px !important; }
+
+.account_md .h2_head { margin-bottom: 31px; color: #000; font-weight: 700; letter-spacing: -0.8px; }
+.account_md .h2_head h2 { font-size: 24px; }
+.account_md .h3_head { position: relative; margin-bottom: 17px; min-height: 34px; }
+.account_md .h3_head h3 { color: #16181a; font-size: 18px; letter-spacing: -0.23px; line-height: 34px; }
+.account_md .h3_head .btn_acc { position: absolute; right: 0; top: 0; }
+.account_md .md_top_banner { margin-bottom: 20px; }
+.account_md .md_top_banner img { vertical-align: middle; }
+.account_md .md_note { box-sizing: border-box; width: 100%; padding: 30px 40px; border: 1px solid #d9dee6; margin-bottom: 32px; }
+.account_md .md_note > dl dt { margin-bottom: 16px; font-size: 16px; font-weight: 700; line-height: 20px; color: #16181a; letter-spacing: -.18px; }
+.account_md .md_note > dl dd { margin-bottom: 28px; }
+.account_md .md_note > dl dd ul li { position: relative; padding-left: 15px; font-size: 14px; color: #595963; letter-spacing: -.23px; }
+.account_md .md_note > dl dd ul li:not(:last-child) { margin-bottom: 12px; }
+.account_md .md_note > dl dd ul li:before { content: ""; display: block; width: 3px; height: 3px; position: absolute; left: 0; top: 6px; background-color: #acb3bf; }
+.account_md .ac_application { position: relative; }
+.account_md .ac_application .btn_r { position: absolute; top: 0; right: 0; }
+.account_md .ac_application .btn_acc { font-size: 13px; font-weight: 700; letter-spacing: -0.8px; padding: 0 19px; height: 34px; line-height: 34px; color: #16181a; border: 1px solid #b6bfc8; }
+.account_md .ac_application .spc_form .spc_table_form { border-top: 1px solid #b7bfc8; margin-bottom: 0px; }
+.account_md .ac_application .spc_form .spc_table_form th, .account_md .ac_application .spc_form .spc_table_form td { font-size: 12px; box-sizing: border-box; height: 45px; line-height: 45px; text-align: center; padding: 0; border-left: 1px solid #e8e9ea; border-bottom: 1px solid #e8e9ea; }
+.account_md .ac_application .spc_form .spc_table_form th:first-child, .account_md .ac_application .spc_form .spc_table_form td:first-child { border-left: 0; }
+.account_md .ac_application .spc_form .spc_table_form th { color: #16181a; font-weight: 700; }
+.account_md .ac_application .spc_form .spc_table_form td { color: #7d7e80; }
+.account_md .ac_application .spc_form .spc_table_form td .view { font-size: 12px; font-weight: 700; color: #f27935; text-decoration: underline; }
+.account_md .ac_application .spc_form .spc_table_form td .move { width: 64px; height: 24px; line-height: 24px; font-size: 12px; color: #16181a; font-weight: 700; letter-spacing: -0.32px; border: 1px solid #e3e5e8; }
+.account_md .ac_application .spc_form .spc_table_form td.ta_l { text-align: left; padding: 0 12px; }
+.account_md .ac_application .spc_form .spc_table_form td .hidden_txt { overflow: hidden; width: 100%; white-space: nowrap; text-overflow: ellipsis; }
+.process_account { position: relative; text-align: center; font-size: 0; }
+.process_account > li { position: relative; display: inline-block; width: calc( 72px + 50px*2 ); vertical-align: top; text-align: center; font-size: 13px; color: #16181a; letter-spacing: -0.2px; font-weight: 700; }
+.process_account > li strong { display: block; }
+.process_account > li:before { content: ""; display: inline-block; width: 72px; height: 72px; background-size: 72px 72px; background-position: 0 0; margin-bottom: 14px; }
+.process_account > li.ico-apply:before { background-image: url("../img/support/ico-apply.png"); }
+.process_account > li.ico-judge:before { background-image: url("../img/support/ico-judge.png"); }
+.process_account > li.ico-confirm:before { background-image: url("../img/support/ico-confirm.png"); }
+.process_account > li.ico-finish:before { background-image: url("../img/support/ico-finish.png"); }
+.process_account > li.ico-deal:before { background-image: url("../img/support/ico-deal.png"); }
+.process_account > li:not(:last-child):after { content: ""; display: block; position: absolute; top: calc( 72px/2 ); right: -50px; width: calc( 50px * 2 ); height: 1px; background-color: rgba(34, 89, 188, 0.2); }
+.account_md div.pagingWrap { margin-top: 32px; }

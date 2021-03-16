@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "on", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>베이직딜 목록</h2>
+			</div>
+
+			<ul class="btnCollectionWrap">
+				<li><button class="type1 active"><span class="subTitle">전체</span><span class="num bold pointClr">1,350</span></button></li>
+				<li>
+					<button class="type2">
+						<span class="subTitle">
+							작성 중
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>임시저장 중인 딜 상태입니다.</span>
+								</div>
+							</div>
+						</span>
+						<span class="num bold">10</span>
+					</button>
+				</li>
+				<li>
+					<button class="type3">
+						<span class="subTitle">
+							반려
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>
+										MD가 파트너 제출 딜을 반려한 상태입니다.<br />
+										딜 목록 내에서 반려 사유를 확인해주세요.
+									</span>
+								</div>
+							</div>
+						</span>
+						<span class="num">0</span>
+					</button>
+				</li>
+				<li>
+					<button class="type4">
+						<span class="subTitle">
+							승인대기
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>
+										딜 제출 이후 MD 승인(혹은 반려)<br />
+										이전 단계입니다.
+									</span>
+								</div>
+							</div>
+						</span>
+						<span class="num bold">10</span>
+					</button>
+				</li>
+				<li>
+					<button class="type5 active">
+						<span class="subTitle">
+							승인 중
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>
+										MD가 파트너 제출 딜 검토 후<br />
+										승인이 이루어지는 단계입니다.
+									</span>
+								</div>
+							</div>
+						</span>
+						<span class="num bold pointClr">10</span>
+					</button>
+				</li>
+				<!-- <li>
+					<button class="type6">
+						<span class="subTitle">
+							승인완료
+						</span>
+						<span class="num">10</span>
+					</button>
+				</li> -->
+				<li>
+					<button class="type7">
+						<span class="subTitle">
+							판매대기
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>
+										MD 승인 완료 후 판매시작일<br />
+										이전까지의 상태입니다.
+									</span>
+								</div>
+							</div>
+						</span>
+						<span class="num">10</span>
+					</button>
+				</li>
+				<li>
+					<button class="type8">
+						<span class="subTitle">
+							판매 중
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>
+										딜이 판매 중인 상태입니다.
+									</span>
+								</div>
+							</div>
+						</span>
+						<span class="num bold">1,300</span>
+					</button>
+				</li>
+				<li>
+					<button class="type9">
+						<span class="subTitle">
+							노출차단
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>
+										티몬 서비스에서 노출되지 않는 상태입니다.<br />
+										딜 목록 내에서 차단 사유를 확인해주세요.
+									</span>
+								</div>
+							</div>
+						</span>
+						<span class="num">5</span>
+					</button>
+				</li>
+				<li>
+					<button class="type10">
+						<span class="subTitle" class="subTitle">
+							판매중지
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>
+										설정 변경에 의해 판매중지된<br />
+										상태입니다.
+									</span>
+								</div>
+							</div>
+						</span>
+						<span class="num">5</span>
+					</button>
+				</li>
+				<li>
+					<button class="type11">
+						<span class="subTitle">
+							판매종료
+							<div class="toolWrap">
+								<span class="blind">도움말</span>
+								<div class="toolbox">
+									<i class="arr"></i>
+									<span>
+										딜이 판매종료일에 맞춰<br />
+										종료된 상태입니다.
+									</span>
+								</div>
+							</div>
+						</span>
+						<span class="num">5</span>
+					</button>
+				</li>
+			</ul>
+
+			<div class="btn_wp mb20">
+				<div class="fl_l">
+					<h3>딜 조회</h3>
+				</div>
+				<div class="fl_r">
+					<button type="button" class="btn init ws">베이직 등록 가이드</button>
+					<button type="button" class="btn init ws">딜 등록 유의사항</button>
+				</div>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px; ">
+							<col style="width: 294px; ">
+							<col style="width: 174px; ">
+							<col style="width: auto; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th><span class="bullet">*</span>기간별 조회</th>
+								<td colspan="3">
+									<div class="periodWrap">
+										<div class="spc_select" style="width: 126px; ">
+											<div class="value"><span class="selected">판매 시작일</span><i></i></div>
+											<select>
+												<option>옵션1</option>
+												<option>옵션2</option>
+												<option>옵션3</option>
+											</select>
+										</div>
+										<div class="periodTab">
+											<input type="radio" name="set_period" id="set_period2" checked="true"><label for="set_period2">1개월</label>
+											<input type="radio" name="set_period" id="set_period3"><label for="set_period3">3개월</label>
+											<input type="radio" name="set_period" id="set_period4"><label for="set_period4">6개월</label>
+										</div>
+										<div class="scheduleWrap">
+											<input type="text" value="2018-01-02" style="width: 125px; ">
+											<button type="button" class="calendar">달력</button>
+										</div>
+										<div class="scheduleWrap">
+											<input type="text" value="2018-01-02" style="width: 125px; ">
+											<button type="button" class="calendar">달력</button>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<th>딜 명 조회</th>
+								<td><input type="text" class="spc_text" style="width: 210px; "></td>
+								<th>기획전 참여 딜</th>
+								<td>
+									<div class="spc_select" style="width: 210px; ">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>티몬11111</option>
+											<option>티몬블랙딜</option>
+											<option>1212타임</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>상품 상태</th>
+								<td>
+									<div class="spc_select" style="width: 210px; ">
+										<div class="value"><span class="selected">판매중</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+								<th rowspan="2" class="va-t">딜 번호 조회</th>
+								<td rowspan="2">
+									<textarea class="spc_txtarea">복수 조회가 가능합니다.
+엔터로 구분해서 입력하세요.
+
+
+</textarea>
+								</td>
+							</tr>
+							<tr>
+								<th>상품 노출 차단</th>
+								<td>
+								 	<label for="tmpRadio1" class="spc_radio checked"><input type="radio" id="tmpRadio1" name="tmpRadio" checked="true"><i class="symbol"></i><span>전체</span></label>
+								 	<label for="tmpRadio2" class="spc_radio"><input type="radio" id="tmpRadio2" name="tmpRadio"><i class="symbol"></i><span>노출</span></label>
+								 	<label for="tmpRadio3" class="spc_radio"><input type="radio" id="tmpRadio2" name="tmpRadio"><i class="symbol"></i><span>차단</span></label>
+								</td>
+							</tr>
+							<tr>
+								<th>배송템플릿 번호</th>
+								<td><input type="text" class="spc_text" style="width: 210px; "></td>
+								<th>상품별 이미지 등록</th>
+								<td>
+									<label for="tmpRadio11" class="spc_radio checked"><input type="radio" id="tmpRadio11" name="tmpRadio1" checked="true"><i class="symbol"></i><span>전체</span></label>
+									<label for="tmpRadio12" class="spc_radio"><input type="radio" id="tmpRadio12" name="tmpRadio1"><i class="symbol"></i><span>등록</span></label>
+									<label for="tmpRadio13" class="spc_radio"><input type="radio" id="tmpRadio13" name="tmpRadio1"><i class="symbol"></i><span>미등록</span></label>
+								</td>
+							</tr>
+							<tr>
+								<th>노출 카테고리</th>
+								<td colspan="3">
+									<div class="spc_select" style="width: 126px; ">
+										<div class="value"><span class="selected">1 Depth</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="spc_select" style="width: 126px; ">
+										<div class="value"><span class="selected">2 Depth</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="spc_select" style="width: 126px; ">
+										<div class="value"><span class="selected">3 Depth</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<div class="spc_select" style="width: 126px; ">
+										<div class="value"><span class="selected">4 Depth</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<div class="period_btn_area mt-10 right">
+				<button type="submit" class="btn cancel2">초기화</button>
+				<button type="submit" class="btn submit2">조회</button>
+			</div>
+
+			<div class="deals_detail_wrap">
+				<div class="btn_wp">
+					<div class="fl_l">
+						<button type="button" class="btn link reg">딜 등록</button>
+						<button type="button" class="btn link copy" disabled="true"><p class="balloon type3">승인대기 이후부터 가능합니다.</p>딜 복제</button>
+						<button type="button" class="btn init ws del" disabled="true">딜 삭제</button>
+					</div>
+					<div class="fl_r">
+						<button type="button" class="btn init ws exel">엑셀 다운로드</button>
+					</div>
+				</div>			
+				<div class="btn_wp box optionBtns">
+					<div class="fl_l">
+						<p class="total">티몬121212 딜 수(총 <span>1350건</span>)</p>
+					</div>
+					<div class="fl_r">
+						<div class="spc_select type2" style="width: 83px; ">
+							<div class="value"><span class="selected">100개</span><i></i></div>
+							<select>
+								<option>옵션1</option>
+								<option>옵션2</option>
+								<option>옵션3</option>
+							</select>
+						</div>
+						<div class="spc_select type2" style="width: 83px; ">
+							<div class="value"><span class="selected">1 / 14</span><i></i></div>
+							<select>
+								<option>옵션1</option>
+								<option>옵션2</option>
+								<option>옵션3</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!--
+				@ .mask : 
+					└ 테이블의 세로 최대길이를 가지고 있습니다. (현재 6063px; )
+					└ .mask 클래스를 가진 마크업이 두개이며, 각각 스크롤( scroll ) 이벤트를 가져 싱크가 맞아야 합니다.
+				-->
+
+				<div class="scrollWrapType2">
+					<div class="scroll_tb fixed">
+						<div class="mask">
+							<table class="deals_tb02">
+								<colgroup>
+									<col style="width: 55px;">
+									<col style="width: 84px;">
+									<col style="width: 243px;">
+									<col style="width: 104px;">
+									<col style="width: 84px;">
+									<col style="width: 84px;">
+									<col style="width: 84px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">
+											<label for="check0" class="spc_check"><input type="checkbox" id="check0"><i class="symbol"></i></label>
+										</th>
+										<th scope="col">딜 번호</th>
+										<th scope="col">딜 명</th>
+										<th scope="col">가격</th>
+										<th scope="col">상품상태</th>
+										<th scope="col">상품별<br />이미지</th>
+										<th scope="col">상품<br />노출차단</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><label for="check1" class="spc_check"><input type="checkbox" id="check1" checked="true"><i class="symbol"></i></label></td>
+										<td><span class="under">872552987</span></td>
+										<td class="title"><span class="under">컨텐츠티몬제작</span></td>
+										<td>₩12,890</td>
+										<td>계약중</td>
+										<td><button class="btn slim">등록</button></td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><label for="check1" class="spc_check"><input type="checkbox" id="check1" checked="true"><i class="symbol"></i></label></td>
+										<td><span class="under">872552987</span></td>
+										<td class="title"><span class="under">컨텐츠티몬제작</span></td>
+										<td>₩12,890</td>
+										<td>계약중</td>
+										<td><button class="btn slim">등록</button></td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><label for="check1" class="spc_check"><input type="checkbox" id="check1" checked="true"><i class="symbol"></i></label></td>
+										<td><span class="under">872552987</span></td>
+										<td class="title"><span class="under">컨텐츠티몬제작</span></td>
+										<td>₩12,890</td>
+										<td>계약중</td>
+										<td><button class="btn slim">등록</button></td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><label for="check1" class="spc_check"><input type="checkbox" id="check1" checked="true"><i class="symbol"></i></label></td>
+										<td><span class="under">872552987</span></td>
+										<td class="title"><span class="under">컨텐츠티몬제작</span></td>
+										<td>₩12,890</td>
+										<td>계약중</td>
+										<td><button class="btn slim">등록</button></td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td><label for="check1" class="spc_check"><input type="checkbox" id="check1" checked="true"><i class="symbol"></i></label></td>
+										<td><span class="under">872552987</span></td>
+										<td class="title"><span class="under">컨텐츠티몬제작</span></td>
+										<td>₩12,890</td>
+										<td>계약중</td>
+										<td><button class="btn slim">등록</button></td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="scroll_tb">
+						<div class="mask">
+							<table class="deals_tb02">
+								<colgroup>
+									<col style="width: 84px;">
+									<col style="width: 230px;">
+									<col style="width: 97px;">
+									<col style="width: 97px;">
+									<col style="width: 97px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">배송템플릿<br />번호</th>
+										<th scope="col">카테고리</th>
+										<th scope="col">판매 시작일</th>
+										<th scope="col">판매 종요일</th>
+										<th scope="col">작성일</th>
+									</tr>
+									<tbody>
+										<tr>
+											<td>2599</td>
+											<td>패션잡화>가방·잡화>여행가방·소품>이민·유학용가방</td>
+											<td>2018-06-01</td>
+											<td>2018-06-10</td>
+											<td>2018-04-12</td>
+										</tr>
+										<tr>
+											<td>2599</td>
+											<td>패션잡화>가방·잡화>여행가방·소품>이민·유학용가방</td>
+											<td>2018-06-01</td>
+											<td>2018-06-10</td>
+											<td>2018-04-12</td>
+										</tr>
+										<tr>
+											<td>2599</td>
+											<td>패션잡화>가방·잡화>여행가방·소품>이민·유학용가방</td>
+											<td>2018-06-01</td>
+											<td>2018-06-10</td>
+											<td>2018-04-12</td>
+										</tr>
+										<tr>
+											<td>2599</td>
+											<td>패션잡화>가방·잡화>여행가방·소품>이민·유학용가방</td>
+											<td>2018-06-01</td>
+											<td>2018-06-10</td>
+											<td>2018-04-12</td>
+										</tr>
+										<tr>
+											<td>2599</td>
+											<td>패션잡화>가방·잡화>여행가방·소품>이민·유학용가방</td>
+											<td>2018-06-01</td>
+											<td>2018-06-10</td>
+											<td>2018-04-12</td>
+										</tr>
+									</tbody>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div><!-- end of scrollWrapType2 -->
+
+			</div>
+
+			<div class="pagingWrap">
+				<span class="numPage">
+					<!-- <a href="#" class="first">prev jump</a> -->
+					<!-- <a href="#" class="prev">prev</a> -->
+					<a href="#" class="active">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">next</a>
+					<a href="#" class="end">next jump</a>
+				</span>
+			</div>
+						
+		</div>
+		@@include('common/aside_left.html')
+		@@include('common/aside_right.html')
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	
+	/* [D] 탭 클릭 */
+	$('.spc_form .btn_toggle').on('click', function(){
+		var $this = $(this);
+		var $spcForm = $this.closest('.spc_form');
+		
+		$spcForm.toggleClass('open');
+	});
+
+	let closeBtns = document.querySelectorAll( '.btn_close' ) ; 
+	[].forEach.call( closeBtns , function ( btn ) {
+		btn.addEventListener( 'click' , function () {
+			this.closest( '.deals_layer' ).style.display = 'none' ; 
+		}) ; 
+	}) ; 
+</script>
+</body>
+</html>

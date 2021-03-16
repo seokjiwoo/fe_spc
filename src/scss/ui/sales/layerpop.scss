@@ -1,0 +1,464 @@
+@charset "UTF-8";
+.sales_layer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 32px 35px 40px;
+	border: 1px solid #30343b;
+	background-color: #fff;
+	z-index: 80;
+	
+	.layer_hd{
+		margin-bottom: 26px;
+		h3{
+			font-size: 20px;
+			color: #16181a;
+			letter-spacing: -0.4px;
+		}
+
+	}
+
+	.layer_ct{
+		color:#7d7e80;
+		h4{
+			font:{
+				size: 14px;
+				weight: bold;
+			}
+			color: #17181a;
+			span{
+				font:{
+					size:11px;
+					weight:normal;
+				}
+			}
+			& + .sales_tb{
+				margin-top:11px;
+			}
+		}
+		.point{
+			color:#f27935;
+		}
+	}
+
+	div.scroll{
+		overflow:hidden;
+		overflow-y: auto;
+	}
+
+	.lh{
+		line-height:1.67em;
+	}
+
+	table.sales_tb{
+		thead {
+			tr {
+				th {
+					height: 44px;
+					border-top: 1px solid #b7bfc8;
+					border-bottom: 1px solid #e3e5e8;
+					border-left: 1px solid #e3e5e8;
+					color:#16181a;
+					&:first-child { border-left: 0px; }
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					text-align: center;
+					height: 44px;
+					border-bottom: 1px solid #e3e5e8;
+					border-left: 1px solid #e3e5e8;
+					color: #7d7e80;
+					font-size: 12px;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					white-space: nowrap;
+					padding: 0px 5px;
+					&:first-child { border-left: 0px; }
+
+					&.pd0{
+						padding:0;
+					}
+					p.txt{
+						line-height:1.67em;
+						text-align:left;
+						&.pd15{
+							padding-left:15px;
+						}
+						&.ws{
+							padding:5px 0;
+							white-space: normal;
+							word-break: keep-all;
+						}
+					}
+					.r_price {
+						text-align: right;
+						font-weight: bold;
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+		& + h4{
+			margin-top:29px;
+		}
+		&.type_01{
+			td{
+				padding:0  5px 0 20px;
+				height:56px;
+			}
+		}
+		&.type_02{
+			border-top:1px solid #b7bfc8;
+			th,td{
+				padding:11px 13px 11px 20px;
+				text-align:left;
+			}
+			th{
+				border-bottom: 1px solid #e3e5e8;
+				color:#16181a;
+			}
+		}
+		&.type_03{
+			border-top:1px solid #b7bfc8;
+			th,td{
+				height: 38px;
+				padding:6px 13px 5px 20px;
+				text-align:center;
+				color:#16181a;
+			}
+			th{
+				border-bottom: 1px solid #e3e5e8;
+				background-color: #f0f0f0;
+				&.bdr-left{
+					border-left:1px solid #e3e5e8;
+				}
+			}
+		}
+		&.type_04{
+			td{
+				padding:5px 5px 5px 5px;
+			}
+		}
+	}
+
+	.totalprice {
+		font-size: 12px;
+		font-weight: bold;
+		line-height: 20px;
+		padding: 11px 20px 11px 0;
+		color: #f27935;
+		border-bottom: 1px solid #e4e6e9;
+		background-color: #f8f8f8;
+		text-align: right;
+		& + h4 {
+			margin-top: 40px;
+		}
+	}
+	
+	.btn_close{
+		position: absolute;
+		top: 14px;
+		right: 15px;
+		@include sp_sales("ico_btn_close");
+		@include txt-hide-with-sprite();
+	}
+
+	.btns{
+		padding-top:30px;
+		text-align:center;
+	}
+
+	div.fileUpload{
+	    position: relative;
+	    width: 110px;
+	    height: 34px;
+	    overflow: hidden;
+	    border: 1px solid #e3e5e8;
+	    box-sizing: border-box;
+	    padding-left: 41px;
+	    cursor: pointer;
+	    display: inline-block;
+	    vertical-align: middle;
+	    text-align: left;
+	    input[type=file]{
+			position: absolute;
+		    right: 0px;
+		    top: 0px;
+		    width: 100%;
+		    height: 100%;
+		    border-right: 110px solid transparent;
+		    outline: none;
+		    cursor: pointer;
+		    opacity: 0;
+	    }
+	    span{
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: 32px;
+			color: #16181a;
+			font-size: 12px;
+			font-weight: bold;
+			font-family: dotum;
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				line-height: 34px;
+			}
+			@-moz-document url-prefix() {
+				line-height: 34px;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				@include sp_sales( 'ico_clip' ) ;
+				position: absolute; left: 15px; top: 8px;
+			}
+	    }
+	    & + .noti{
+	    	padding-top:10px !important;
+	    }
+	}
+
+	// 배송그룹번호 상세 정보
+	&.delivery_num{
+		p{
+			margin-bottom: 10px;
+		}
+		div.scroll{
+			max-height: 413px;
+		}
+	}
+
+	// 용어설명
+	&.word_dis{
+		div.scroll{
+			max-height: 405px;
+		}
+		.noti{
+			padding-top:12px;
+		}
+	}
+
+	// 1:1문의작성
+	&.question_write{
+		div.scroll{
+			max-height:437px;
+		}
+		.spc_select{
+			vertical-align:top;
+			margin-right:0;
+			&.ml6{
+				margin-left:6px;
+			}
+		}
+		.inp_wp{
+			word-spacing:-4px;
+			margin-bottom:12px;
+		}
+		.gap{
+			width:6px;
+			height:1px;
+			background:#7d7e80;
+			display: inline-block;
+			vertical-align: middle;
+			margin:0 6px 0 6px;
+		}
+		.mail{
+			display: inline-block;
+			margin:0 4px;
+			font-size:12px;
+			color:#16181a;
+		}
+		.search_box{
+			word-spacing:-4px;
+			margin-top:14px;
+			button{
+				width:73px;
+				font-weight: bold;
+				font-size: 14px;
+				font-family: dotum;
+				height: 34px;
+				color: #f27935;
+				background-color: #fff;
+				border: 1px solid #f27935;
+				vertical-align: top;
+				margin-left:7px;
+			}
+		}
+		ul.noti{
+			padding-top:14px;
+		}
+		.txt_area{
+			width:446px;
+			height:154px;
+			padding:5px;
+			box-sizing:border-box;
+			border:1px solid #ccd2d8;
+		}
+	}
+
+	// 배송지연 패널티
+	&.penalty{
+		div.scroll{
+			max-height:413px;
+		}
+		.desc {
+			color:#7d7e80;
+			font-size:12px;
+			line-height: 24px;
+			em {
+				color: #f27935;
+			}
+			& + .sales_tb {
+				margin-top: 4px;
+			}
+			.right_btns {
+				float: right;
+				font-size: 0;
+				button, a {
+					display: inline-block;
+					height: 24px;
+					border: 1px solid #b7bfc8;
+					background-color: #fff;
+					font-size: 12px;
+					color: #7d7e80;
+					padding: 0 9px;
+					vertical-align: middle;
+					margin-left: 4px;
+				}
+			}
+		}
+		.txt{
+			color:#7d7e80;
+			font-size:12px;
+			a{
+				display:inline-block;
+				color:#7d7e80;
+				text-decoration: underline;
+				&:after{
+					content:"";
+					margin-left:5px;
+					@include sp_sales("ico_txt_arrow");
+				}
+			}
+			& + .sales_tb, & + .scroll{
+				margin-top:10px;
+			}
+		}
+		.txt_area{
+			width: 950px;
+			height: 70px;
+			display:block;
+			margin-top:10px;
+			padding: 5px;
+			box-sizing: border-box;
+			border: 1px solid #ccd2d8;
+			& + .noti{
+				padding-top:11px;
+			}
+		}
+		.type_02 + .noti{
+			padding-top:11px;
+		}
+
+		.reason_tbl {
+			.spc_select {
+				width: 446px;
+			}
+			.txt_area {
+				width: 100%;
+				&::placeholder {
+					color: #a6a9ad;					
+				}
+			}
+		}
+	}
+
+	// 도움말
+   &.help{
+   		div.scroll{
+   			max-height:367px;
+   		}
+   		.tab{
+   			position:relative;
+   			word-spacing: -4px;
+   			margin-bottom:25px;
+   			li{
+   				width:50%;
+				display: inline-block;
+				margin-right: -1px;
+				text-align: center;
+				vertical-align: middle;
+				border:0;
+				button{
+					width:100%;
+					color: #7d7e80;
+					font-size: 14px;
+					font-family: dotum;
+					height: 45px;
+					line-height: 45px;
+					border: 1px solid #b7bfc8;
+					background-color: #fff;
+				}
+				&.on{
+					position: relative;
+					top: 1px;
+					margin-top: -2px;
+					button{
+						background-color: #f27935;
+						color: #fff;
+						font-weight: bold;
+						border: 0px;
+						line-height: 46px;
+						letter-spacing: 1px;
+					}
+				}
+   			}
+   		}
+   		.noti{
+   			padding-top:8px;
+   			&.type02{
+	   			padding-top:0;
+	   			li{
+	   				color:#7d7e80;
+	   				&:before{
+						color:#7d7e80;
+	   				}
+	   			}
+   			}
+   			& + h4{
+   				margin-top:24px;
+   			}
+   		}
+   }
+
+   // 매입 상세내역 요청자료
+   &.request{
+   		div.scroll{
+   			max-height:451px;
+   		}
+		p.deal_date{
+			line-height: 1.67em;
+			strong{
+				display:block;
+			}
+		}
+		.btn.default{
+			height:34px;
+			padding:0 23px;
+			font-weight:bold;
+		}
+   }
+
+// end sales_layer
+}
+
+/* CUSTOM */
+#header h1.custom_m { margin-top: 0 }
+div.scrollWrap.ovy-a > table { table-layout: auto; }
+div.scrollWrap.ovy-a > table th { white-space: nowrap; min-width: 95px; padding:0 8px;}
+div.paginationjs-pages > span.numPage > a:not(.ellipsis).disabled { display: none; }
+.sales_layer .layer_ct .txt_attention { line-height: 15px; margin-top:10px;}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+%sp-cs2 {
+    background: url('../im/sp-cs2.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-cs2($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-cs2, $filename);
+    @extend %sp-cs2;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-cs2: (
+    spritesheet_name: sp-cs2,
+    ad: (offset_x: -128px, offset_y: 0, width: 22px, height: 16px),
+    arrow-box: (offset_x: -80px, offset_y: -98px, width: 19px, height: 19px),
+    arrow: (offset_x: -98px, offset_y: -126px, width: 8px, height: 8px),
+    ask: (offset_x: -56px, offset_y: -98px, width: 20px, height: 20px),
+    assets: (offset_x: -84px, offset_y: -70px, width: 9px, height: 15px),
+    btn_arr: (offset_x: -154px, offset_y: 0, width: 6px, height: 10px),
+    btn_arr_disabled: (offset_x: -154px, offset_y: -14px, width: 6px, height: 10px),
+    btn_next_after: (offset_x: 0, offset_y: -70px, width: 24px, height: 24px),
+    btn_next_before: (offset_x: -28px, offset_y: -70px, width: 24px, height: 24px),
+    btn_nextend_after: (offset_x: -56px, offset_y: -70px, width: 24px, height: 24px),
+    btn_nextend_before: (offset_x: -100px, offset_y: 0, width: 24px, height: 24px),
+    btn_prev_after: (offset_x: -100px, offset_y: -28px, width: 24px, height: 24px),
+    btn_prev_before: (offset_x: -100px, offset_y: -56px, width: 24px, height: 24px),
+    btn_prevfirst_after: (offset_x: 0, offset_y: -98px, width: 24px, height: 24px),
+    btn_prevfirst_before: (offset_x: -28px, offset_y: -98px, width: 24px, height: 24px),
+    calendar: (offset_x: -128px, offset_y: -20px, width: 20px, height: 17px),
+    checked: (offset_x: -100px, offset_y: -84px, width: 13px, height: 9px),
+    chrome: (offset_x: -70px, offset_y: 0, width: 26px, height: 26px),
+    clip-1: (offset_x: -21px, offset_y: -126px, width: 14px, height: 14px),
+    clip-2: (offset_x: -39px, offset_y: -126px, width: 14px, height: 14px),
+    close: (offset_x: -57px, offset_y: -126px, width: 10px, height: 10px),
+    delete: (offset_x: -85px, offset_y: -126px, width: 9px, height: 10px),
+    down: (offset_x: -128px, offset_y: -81px, width: 17px, height: 14px),
+    down2: (offset_x: -128px, offset_y: -99px, width: 17px, height: 14px),
+    edit: (offset_x: -71px, offset_y: -126px, width: 10px, height: 10px),
+    error: (offset_x: 0, offset_y: 0, width: 66px, height: 66px),
+    ico_slct_arr: (offset_x: -128px, offset_y: -117px, width: 10px, height: 5px),
+    ie: (offset_x: -70px, offset_y: -30px, width: 26px, height: 26px),
+    img-gray: (offset_x: -103px, offset_y: -98px, width: 17px, height: 14px),
+    img: (offset_x: 0, offset_y: -126px, width: 17px, height: 14px),
+    radio_off: (offset_x: -128px, offset_y: -41px, width: 16px, height: 16px),
+    radio_on: (offset_x: -128px, offset_y: -61px, width: 16px, height: 16px),
+);

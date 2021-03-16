@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* 레이어 공통 */
+.deals_layer{
+	position: relative;
+	padding: 32px 32px 40px;
+	border: 1px solid #30343b;
+	background-color: #fff;
+	z-index: 40;
+	
+	.layer_hd{
+		margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+	}
+	
+	.layer_ct{
+		.tmon_reply {
+			margin-top: 10px;
+			height: 100px;
+		}
+		.spc_note.parti {
+			margin-bottom: 10px;
+		}	
+	}
+	
+	.btn_close{
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		@include sp-special("ic-btn-close");
+		@include txt-hide-with-sprite();
+	}
+
+	.btn_area {
+    padding-top:30px ;
+    text-align:center ;     
+	}
+
+	&.apply {
+		.layer_hd{ 
+			margin-bottom: 25px ;
+			font-size:18px ; 
+		}
+		.layer_ct{
+			> p {
+				margin-bottom: 12px ; 
+				font-size: 14px ; 
+				font-weight: bold ; 
+				strong{ color:#f27935; }
+			}
+			> .spc_note{
+				padding:14px ; 
+				background-color: #f8f8f8;
+				li {
+					font-size: 12px ; 
+					line-height: 17px ; 
+				}
+			}
+		}
+		&_notice{
+			padding-top:60px ; 
+			.layer_ct{
+				> p {
+					text-align:center;
+					font-size: 14px; 
+					color:#000; 
+					font-weight:bold; 
+					letter-spacing: -.5px;
+				}
+			}
+		}
+	}
+}

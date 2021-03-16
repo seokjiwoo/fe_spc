@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../../css/cs2.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+
+	<div class="csLayerPopWrap progress">
+		<h3>진행중 딜 보기</h3>
+		<div class="contWrap">
+			<div class="selectWrap">
+				<div class="slctDate">
+					<div class="slctWrap" style="width: 130px;">
+						<div class="value">판매시작일</div>
+						<select>
+							<option>옵션1</option>
+							<option>옵션2</option>
+							<option>옵션3</option>
+						</select>
+					</div>
+					<div class="calendarWrap">
+						<input type="text" placeholder="YYYY-MM-DD">
+						<button class="viewCalendar">달력보기</button>
+					</div>
+					<span class="wave">~</span>
+					<div class="calendarWrap">
+						<input type="text" placeholder="YYYY-MM-DD">
+						<button class="viewCalendar">달력보기</button>
+					</div>
+				</div>
+				<div class="slctDeal">
+					<div class="slctWrap" style="width: 130px;">
+						<div class="value">딜명</div>
+						<select>
+							<option>옵션1</option>
+							<option>옵션2</option>
+							<option>옵션3</option>
+						</select>
+					</div>
+					<input type="text" class="txtBox" style="width: 446px;">
+					<button class="btn orangeBg">조회</button>
+				</div>
+			</div>
+
+			<div class="searchResult">
+				<div class="resultNum">
+					<span>조회 딜 수 (총 <span class="pointNum">3,000</span>건)</span>
+				</div>
+				<table class="dealList">
+					<colgroup>
+						<col style="width: 60px ; ">
+						<col style="width: 79px ; ">
+						<col style="width: 319px ; ">
+						<col style="width: 98px ; ">
+						<col style="width: auto ; ">
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="inner_th">NO</th>
+							<th class="inner_th">딜번호</th>
+							<th class="inner_th">딜명</th>
+							<th class="inner_th">판매종료일</th>
+							<th class="inner_th">등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="5" class="inner_td blank">조회 결과가 없습니다.</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+
+
+		</div>
+	</div><!-- end of csLayerPopWrap  -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PTN CMS :: 공통</title>
+	<link rel="stylesheet" type="text/css" href="../../css/ptn.css">
+	<style>
+		* {
+			padding: 0; margin: 0;
+		}
+
+		body {
+			background-color: #333;
+		}
+		section.commonWrap {
+			padding: 3em;
+			background-color: #333;
+		}
+		section.commonWrap > .noti {
+			color: #fff;
+			padding-bottom: 10px;
+		}
+
+		section.commonWrap > br {
+			content: '';
+			margin: 5px 0px;
+			display: block;
+		}
+
+
+		section.commonWrap > h3 {
+			font-size: 1.4em;
+			font-weight: 700;
+			margin-bottom: 0.6em;
+			color: #fff;
+		}
+
+		section.commonWrap > dl {
+			border: 1px solid #eee;
+			background-color: #fff;
+			box-shadow: 0px 15px 100px rgba( 0, 0, 0, 0.5 );
+		}
+		section.commonWrap > dl > dt {
+			background-color: #eee;
+			padding: 2em;
+			font-size: 1.2em;
+			font-weight: 700;
+		}
+		section.commonWrap > dl > dd {
+			padding: 2em;
+		}
+
+		section.commonWrap > dl > dd > p.explain {
+			font-weight: bold;
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
+
+		.tmp {
+			height: 180px;
+			font-size: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<style>
+.custom_opt {
+	position: fixed; 
+	right: 0; top: 0; 
+	background-color: #fff; 
+	padding: 0.4em; 
+
+}
+.custom_opt > a {
+	color: #333; 
+}
+</style>
+<div class="custom_opt">
+	<a href="./index.html">back</a>
+</div>
+
+	<section class="commonWrap">
+		<h3>공통</h3>
+		<p class="noti">각 모든 공통은 기본적크기가 지정되어있습니다. 그외의 크기는 직접 작성하시면 됩니다. height , line-height 값을 변경하여 주십시오.</p>
+
+		<dl>
+
+			<dt>말줄임 한줄</dt>
+			<dd>
+
+				<p class="explain">
+					가로길이 300px의 말줄임
+				</p>
+				<div class="ellipsisWrap" style="width: 300px; ">
+					<span>[공유] 맵핑오류 관련 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 </span>
+				</div>
+
+				<p class="explain">
+					가로길이 100%의 말줄임
+				</p>
+				<div class="ellipsisWrap" style="width: 100%; ">
+					<span>[공유] 맵핑오류 관련 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 처리 가이드 [공유] 맵핑오류 관련 처리 가이드 </span>
+				</div>
+
+			</dd>
+
+			<dt>말줄임 두줄</dt>
+			<dd>
+
+				<p class="explain">
+					가로길이 300px의 두줄 말줄임<br />
+					두줄길이를 만드는것은 스타일의 line-height , max-height 값을 조정하여 제작되었습니다. <br />
+					line-height 의 배율로 max-height 값을 지정하면 2줄 이상의 값을 만들 수 있습니다. <br />
+					각각 컨텐츠에 삽입될 때에 그에 맞는 line-height , max-height 값을 수정하여 주십시오. <br /><br />
+
+					현재 기본 값 => line-height: 17px; max-height: 34px; 
+				</p>
+
+				<span class="ellipsisWrap-multiline-2" style="width: 300px; ">[즉시할인+카드사10%][몬스터딜]★우주대특가★인기과자 한정특가 98무배(1473586282) [즉시할인+카드사10%][몬스터딜]★우주대특가★인기과자 한정특가 98무배(1473586282)</span>
+
+			</dd>
+
+			<dt></dt>
+			<dd>
+
+				<style>
+					.tmpTable {
+					}
+					.tmpTable td , 
+					.tmpTable th {
+						border: 1px solid #e3e5e8; 
+						padding: 5px; 
+					}
+					.headFixedTable {
+						width: 300px; 
+						display: inline-block; 
+						margin-right: 40px; 
+						vertical-align: top; 
+					}
+				</style>
+
+				<p class="explain">
+					클래스 .scrlWrap 태그에 인라인 스타일로 원하는 최대 세로값을 적용하여주십시오. <br />
+					클래스 .scrlWrap 태그안에 존재하는 body 역할을 하는 table에 header 역할을 하는 table과 동일한 
+					가로 값을 인라인 스타일로 적용하여주십시오. <br /><br />
+
+					예시 ) <br />
+					max-height: 100px; <br />
+					width: 300px; <br />
+				</p>
+
+				<div class="headFixedTable">
+					<table class="tmpTable">
+						<colgroup>
+							<col style="width: 20%"/>
+							<col style="width: auto"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>제목1</th>
+								<th>제목2</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="scrlWrap" style="max-height: 100px; ">
+						<table class="tmpTable" style="width: 300px; ">
+							<colgroup>
+								<col style="width: 20%"/>
+								<col style="width: auto"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>내용1</td>
+									<td>내용1</td>
+								</tr>
+								<tr>
+									<td>내용2</td>
+									<td>내용2</td>
+								</tr>
+								<tr>
+									<td>내용3</td>
+									<td>내용3</td>
+								</tr>
+								<tr>
+									<td>내용4</td>
+									<td>내용4</td>
+								</tr>
+								<tr>
+									<td>내용5</td>
+									<td>내용5</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="headFixedTable">
+					<table class="tmpTable">
+						<colgroup>
+							<col style="width: 20%"/>
+							<col style="width: auto"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>제목1</th>
+								<th>제목2</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="scrlWrap" style="max-height: 100px; ">
+						<table class="tmpTable" style="width: 300px; ">
+							<colgroup>
+								<col style="width: 20%"/>
+								<col style="width: auto"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>내용1</td>
+									<td>내용1</td>
+								</tr>
+								<tr>
+									<td>내용2</td>
+									<td>내용2</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</dd>
+
+			<dt>말풍선 타입1</dt>
+			<dd>
+				<style>
+					.tmpBox {
+						display: inline-block;
+						position: relative;
+						width: 100px;
+						height: 100px;
+						border: 1px dashed red;
+					}
+				</style>
+				<p class="explain">
+					기본적으로 텍스트가 추가되면 자동으로 말풍선의 크기를 텍스트의 길이에 따라 정의하여 줍니다. <br />
+					말풍선이 뜨는 방향을 기준으로 자신을 포함한 부모의 가장자리에 위치하도록 설정되어있습니다. <br />
+					방향 - 오른쪽 ( className : balloonWrap r )
+				</p>
+				<div class="tmpBox">
+					<div class="balloonWrap r">
+						<i class="arr"></i>
+						<p>안녕하세요. 티몬파트너센터입니다. 문의주신 환불 정보는 1:1문의에 답변드렸습니다. 감사합니다.</p>
+					</div>
+				</div>
+
+				<br />
+
+				<p class="explain">
+					위치변경 - 사용자정의 스타일을 추가하여 위치를 변경할 수 있습니다. <br />
+					위치 - 좌측으로 20px 이동 ( margin-left : -20px )
+				</p>
+				<div class="tmp" style="height: 25px; ">temp box</div>
+				<div class="tmpBox">
+					<div class="balloonWrap r" style="margin-left: -20px; ">
+						<i class="arr"></i>
+						<p>안녕하세요. 티몬파트너센터입니다. 문의주신 환불 정보는 1:1문의에 답변드렸습니다. 감사합니다.</p>
+					</div>
+				</div>
+
+				<br />
+
+				<div class="tmp" style="height: 50px; ">temp box</div>
+
+				<p class="explain">말풍선 위치 : 상단</p>
+				<div class="tmp" style="height: 100px; ">temp box</div>
+				<div class="tmpBox">
+					<div class="balloonWrap t">
+						<i class="arr"></i>
+						<p>말풍선 내용이 들어갑니다.</p>
+					</div>
+				</div>
+				<div class="tmp" style="height: 50px; ">temp box</div>
+
+				<p class="explain">
+					말풍선 화살표 사용자정의 스타일로 위치를 변경할 수 있습니다. <br />
+				</p>
+				<div class="tmp" style="height: 50px; ">temp box</div>
+				<div class="tmpBox">
+					<div class="balloonWrap t" style="margin-left: 55px; margin-bottom: -12px; ">
+						<i class="arr" style="left: 20px; "></i>
+						<p>말풍선 내용이 들어갑니다.</p>
+					</div>
+				</div>
+
+				<br />
+
+				<p class="explain">말풍선 위치 : 좌측</p>
+				<div class="tmpBox" style="margin-left: 200px; ">
+					<div class="balloonWrap l">
+						<i class="arr"></i>
+						<p>말풍선 내용이 들어갑니다.</p>
+					</div>
+				</div>
+
+				<br />
+
+				<p class="explain">말풍선 위치 : 우측</p>
+				<div class="tmpBox">
+					<div class="balloonWrap r">
+						<i class="arr"></i>
+						<p>말풍선 내용이 들어갑니다.</p>
+					</div>
+				</div>
+
+				<br />
+
+				<p class="explain">말풍선 위치 : 하단</p>
+				<div class="tmpBox">
+					<div class="balloonWrap b">
+						<i class="arr"></i>
+						<p>말풍선 내용이 들어갑니다.</p>
+					</div>
+				</div>
+
+				<br />
+				<br />
+
+				<p class="explain">말풍선 사이즈 : small</p>
+				<div class="tmpBox">
+					<div class="balloonWrap b sm">
+						<i class="arr"></i>
+						<p>말풍선 내용이 들어갑니다.</p>
+					</div>
+				</div>
+
+				<br />
+			</dd>
+
+			<dt>말풍선 타입2</dt>
+			<dd>
+				<style>
+					.tmpBox {
+						display: inline-block;
+						position: relative;
+						width: 100px;
+						height: 100px;
+						border: 1px dashed red;
+					}
+				</style>
+				<p class="explain">
+					말풍선의 기본크기는 min-width 324 x min-height 274 입니다. <br />
+					크기를 변경하고 싶다면 사용자정의로 값을 변경 하여주십시오. <br />
+					가로 세로 자동 중앙정렬이기에 웹의 특성상 말풍선의 팝업 크기를 홀수로 지정할 경우 텍스트나 테두리가
+					뿌옇게 보여지는(blurry) 현상이 나타날 수 있습니다. 크기는 꼭 짝수의 값으로 지정하여 주십시오.
+				</p>
+
+				<div class="tmp" style="height: 150px; ">temp box</div>
+				<div class="tmpBox">
+					<div class="balloonWrap type2 r">
+						<i class="arr"></i>
+						<h3>AgentID 변경</h3>
+						<p>컨텐츠가 들어갑니다.</p>
+					</div>
+				</div>
+				<div class="tmp" style="height: 150px; ">temp box</div>
+
+				<p class="explain">
+					위치변경 - 사용자정의 스타일을 추가하여 위치를 변경할 수 있습니다. <br />
+					위치 - 좌측으로 20px 이동 ( margin-left : -20px )
+				</p>
+				<div class="tmpBox">
+					<div class="balloonWrap type2 r" style="margin-left: -20px; ">
+						<i class="arr"></i>
+						<h3>AgentID 변경</h3>
+						<p>컨텐츠가 들어갑니다.</p>
+					</div>
+				</div>
+
+				<br />
+
+				<div class="tmp" style="height: 150px; ">temp box</div>
+				<p class="explain">
+					말풍선의 크기 -말풍선의 크기가 필요할 경우 멀티 클래스 'size' 를 추가한 후
+					사용자정의 스타일로 크기를 지정할 수 있습니다. <br />
+					위치 - 좌측으로 20px 이동 ( margin-left : -20px , width: 120px;  )
+				</p>
+				<div class="tmp" style="height: 150px; ">temp box</div>
+				<div class="tmpBox">
+					<div class="balloonWrap type2 size r" style="margin-left: -20px; width: 120px; ">
+						<i class="arr"></i>
+						<h3>AgentID 변경</h3>
+						<p>컨텐츠가 들어갑니다.</p>
+					</div>
+				</div>
+				<div class="tmp" style="height: 150px; ">temp box</div>
+
+				<p class="explain">말풍선 위치 : 상단</p>
+				<div class="tmp" style="height: 200px; ">temp box</div>
+				<div class="tmpBox" style="margin-left:300px; ">
+					<div class="balloonWrap type2 t">
+						<i class="arr"></i>
+						<h3>AgentID 변경</h3>
+						<p>컨텐츠가 들어갑니다.</p>
+					</div>
+				</div>
+
+				<br />
+
+				<p class="explain">말풍선 위치 : 좌측</p>
+				<div class="tmp" style="height: 150px; ">temp box</div>
+				<div class="tmpBox" style="margin-left: 400px; ">
+					<div class="balloonWrap type2 l">
+						<i class="arr"></i>
+						<h3>AgentID 변경</h3>
+						<p>컨텐츠가 들어갑니다.</p>
+					</div>
+				</div>
+				<div class="tmp" style="height: 150px; ">temp box</div>
+
+				<br />
+
+				<p class="explain">말풍선 위치 : 우측</p>
+				<div class="tmp" style="height: 150px; ">temp box</div>
+				<div class="tmpBox">
+					<div class="balloonWrap type2 r">
+						<i class="arr"></i>
+						<h3>AgentID 변경</h3>
+						<p>컨텐츠가 들어갑니다.</p>
+					</div>
+				</div>
+				<div class="tmp" style="height: 150px; ">temp box</div>
+
+				<br />
+
+				<p class="explain">말풍선 위치 : 하단</p>
+				<div class="tmpBox" style="margin-left: 100px; ">
+					<div class="balloonWrap type2 b">
+						<i class="arr"></i>
+						<h3>AgentID 변경</h3>
+						<p>컨텐츠가 들어갑니다.</p>
+					</div>
+				</div>
+				<div class="tmp" style="height: 300px; ">temp box</div>
+
+				<br />
+			</dd>
+
+			<dt>아이콘</dt>
+			<dd>
+				<p class="explain">별</p>
+				<span class="icon-star"></span>
+				<span class="icon-star fill"></span>
+
+				<br />
+
+				<p class="explain">신규 라벨</p>
+				<span class="icon-card" style="background-color: #4a90e2; ">상시</span>
+				<span class="icon-card" style="background-color: #ef2942; ">긴급</span>
+				<span class="icon-card" style="background-color: #ffb620; ">new</span>
+				<span class="icon-card" style="background-color: #2bb6c2; ">딜</span>
+				<span class="icon-card" style="background-color: #7f61d9; ">update</span>
+				<span class="icon-card" style="background-color: #f27935; ">추가</span>
+
+				<br />
+				<p class="explain">기존 라벨 색상 클래스</p>
+				<span class="icon-card label-responsibility">라벨</span>
+				<span class="icon-card label-delay">라벨</span>
+				<span class="icon-card label-claim">라벨</span>
+				<span class="icon-card label-reserve-delivery">라벨</span>
+				<span class="icon-card label-freerefund">라벨</span>
+				<span class="icon-card label-tmon-membership">라벨</span>
+				<span class="icon-card label-super-save-process">라벨</span>
+				<span class="icon-card label-super-save-cancel">라벨</span>
+				<span class="icon-card label-super-save-expire">라벨</span>
+				<span class="icon-card label-reserve">라벨</span>
+				<span class="icon-card label-reserve-ob">라벨</span>
+				<span class="icon-card label-press">OB예약</span>
+			</dd>
+
+			<dt>레이어 팝업</dt>
+			<dd style="background-color: #ccc; ">
+				<p class="explain">타입1( 갭 20px )</p>
+				<div class="layerPopWrap " style="width: @@width ; height: @@height; display: @@display;">
+	<div class="header">상담내역</div>
+	<div class="cont">
+					<p>기본적으로 레이어팝업은
+					position: reletive 를
+					가지고 있습니다.
+					레이어로 띄우기 위해 사용되는 곳에서
+					position: absolute 혹은 fixed로 변경하여 주십시오.</p>
+					<p>팝업의 크기는 사용자정의로 가로와 세로를 추가하여주십시오.
+					(예 - width: 200px; height: 200px; )</p>
+					</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+
+				<br />
+
+				<p class="explain">타입2( 갭 30px )</p>
+				<div class="layerPopWrap type2" style="width: @@width ; height: @@height; display: @@display;">
+	<div class="header">상담내역</div>
+	<div class="cont">
+					컨텐츠 내용이 들어갑니다.
+					</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+
+				<br />
+
+				<p class="explain">타입3( 갭 30px 혹은 20px )</p>
+				<div class="layerPopWrap type2">
+	<div class="cont">
+					제목 태그가 없습니다.
+					</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+
+				<br />
+
+				<p class="explain">레이어 팝업 보더 추가</p>
+				<div class="layerPopWrap hasBorder">
+	<div class="cont">
+					제목 태그가 없습니다.
+					</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+
+				<br />
+
+				<p class="explain">레이어 팝업 가운데 정렬</p>
+
+				<div style="height:400px; position: relative;">
+
+					<!-- 시작 -->
+					<div class="layerpopCenterWrap">
+						<div class="layerPopWrap hasBorder" style="width: 990px ; height: auto; display: @@display;">
+	<div class="header">상담내역</div>
+	<div class="cont">
+						컨텐츠 내용이 들어갑니다.
+							</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+					</div><!-- end of layerpopCenterWrap -->
+					<!-- 끝 -->
+
+				</div>
+
+				<br />
+
+				<p class="explain">레이어 팝업 가운데 정렬 & 검은 배경처리</p>
+
+				<div style="height:400px; position: relative;">
+
+					<!-- 시작 -->
+					<div class="layerpopCenterWrap hasDim">
+						<div class="layerPopWrap hasBorder" style="width: 990px ; height: auto; display: @@display;">
+	<div class="header">상담내역</div>
+	<div class="cont">
+						컨텐츠 내용이 들어갑니다.
+							</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+					</div><!-- end of layerpopCenterWrap -->
+					<!-- 끝 -->
+
+				</div>
+
+			</dd>
+
+			<dt>윈도우 팝업</dt>
+			<dd style="background-color: #ccc; ">
+
+				<div class="winPopWrap " style="width: @@width ; height: @@height ;">
+	<div class="header">상담내역</div>
+	<div class="cont">
+					<p>기본적으로 레이어팝업은
+					position: reletive 를
+					가지고 있습니다.
+					레이어로 띄우기 위해 사용되는 곳에서
+					position: absolute 혹은 fixed로 변경하여 주십시오.</p>
+					<p>팝업의 크기는 사용자정의로 가로와 세로를 추가하여주십시오.
+					(예 - width: 200px; height: 200px; )</p>
+
+					기본 내용이 들어갑니다. <br />
+					기본적으로 컨텐츠 패딩값은 <br /><br />
+
+					상하 20px<br />
+					좌우 30px<br /><br />
+
+					로 공통으로 제어됩니다.
+
+					</div>
+</div><!-- end of winPopWrap -->
+
+				<div class="winPopWrap closeBtnType" style="width: @@width ; height: @@height ;">
+	<div class="header">상담내역<button class="close">닫기</button></div>
+	<div class="cont">
+					<p>기본적으로 레이어팝업은
+					position: reletive 를
+					가지고 있습니다.
+					레이어로 띄우기 위해 사용되는 곳에서
+					position: absolute 혹은 fixed로 변경하여 주십시오.</p>
+					<p>팝업의 크기는 사용자정의로 가로와 세로를 추가하여주십시오.
+					(예 - width: 200px; height: 200px; )</p>
+
+					기본 내용이 들어갑니다. <br />
+					기본적으로 컨텐츠 패딩값은 <br /><br />
+
+					상하 20px<br />
+					좌우 30px<br /><br />
+
+					로 공통으로 제어됩니다.
+
+					</div>
+</div><!-- end of winPopWrap -->
+			</dd>
+			<dt>페이지 버튼</dt>
+			<dd>
+				<div class="pagingWrap">
+					<span class="numPage">
+						<a href="#" class="first">prev jump</a>
+						<a href="#" class="prev">prev</a>
+						<a href="#" class="active">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<a href="#">8</a>
+						<a href="#">9</a>
+						<a href="#">10</a>
+						<a href="#" class="next">next</a>
+						<a href="#" class="end">next jump</a>
+					</span>
+				</div>
+			</dd>
+
+			<dt>파일첨부</dt>
+			<dd>
+				<div class="fileUpload">
+					<input type="file">
+					<span>파일첨부</span>
+				</div>
+			</dd>
+			<dd>
+				<div class="fileUpload type02">
+					<input type="file">
+					<span>파일첨부</span>
+				</div>
+			</dd>
+
+			<dt>체크박스</dt>
+			<dd>
+				<label class="chkWrap">
+					<input type="checkbox">
+					<span>샘플 체크박스 텍스트1</span>
+				</label>
+
+				<br>
+
+				<label class="chkWrap">
+					<input type="checkbox">
+					<span>샘플 체크박스 텍스트2</span>
+				</label>
+
+				<label class="chkWrap">
+					<input type="checkbox">
+					<span>샘플 체크박스 텍스트3</span>
+				</label>
+
+				<br>
+
+				<label class="chkWrap">
+					<input type="checkbox" disabled="">
+					<span>샘플 체크박스 텍스트4</span>
+				</label>
+
+				<label class="chkWrap">
+					<input type="checkbox" disabled="true">
+					<span>샘플 체크박스 텍스트4</span>
+				</label>
+
+				<label class="chkWrap onlyChk">
+					<input type="checkbox">
+					<span>체크박스만 있는 상태</span>
+				</label>
+			</dd>
+
+			<dt>라디오박스</dt>
+			<dd>
+				<label class="radioWrap">
+					<input type="radio">
+					<span>샘플 라디오박스 텍스트1</span>
+				</label>
+
+				<br>
+
+				<label class="radioWrap">
+					<input type="radio" name="tmpR1">
+					<span>샘플 라디오박스 텍스트2</span>
+				</label>
+
+				<label class="radioWrap">
+					<input type="radio" name="tmpR1">
+					<span>샘플 라디오박스 텍스트3</span>
+				</label>
+
+				<br>
+
+				<label class="radioWrap">
+					<input type="radio" name="tmpR1" disabled="">
+					<span>샘플 라디오박스 텍스트2</span>
+				</label>
+
+				<label class="radioWrap">
+					<input type="radio" name="tmpR1" disabled="true">
+					<span>샘플 라디오박스 텍스트3</span>
+				</label>
+			</dd>
+
+			<dt>탭</dt>
+			<dd>
+
+				<p class="explain">확인용으로 content 에 min-ehgith와 border 가 들어가있습니다. 사용시에 css로 초기화하여주십시오.</p>
+				<br>
+				<p class="explain">가로사이즈 반응형</p>
+				<div class="tabWrap">
+					<ul class="nav">
+						<li class="active"><a href="#">나의할일</a></li>
+						<li><a href="#">파트너문의</a></li>
+						<li><a href="#">예약</a></li>
+						<li><a href="#">공지</a></li>
+					</ul>
+					<div class="cont">
+						<div class="active">content1</div>
+						<div>content2</div>
+						<div>content3</div>
+						<div>content4</div>
+					</div>
+				</div>
+
+				<br />
+
+				<p class="explain">가로 사이즈 변경( width: 400px )</p>
+
+				<div class="tabWrap" style="width: 400px; ">
+					<ul class="nav">
+						<li class="active"><a href="#">나의할일</a></li>
+						<li><a href="#">파트너문의</a></li>
+						<li><a href="#">예약</a></li>
+						<li><a href="#">공지</a></li>
+					</ul>
+					<div class="cont">
+						<div class="active">content1</div>
+						<div>content2</div>
+						<div>content3</div>
+						<div>content4</div>
+					</div>
+				</div>
+
+			</dd>
+
+			<dt>달력</dt>
+			<dd>
+				<div class="calendar">
+					<input type="text" placeholder="YYYY-MM-DD" readonly>
+					<button class="srch">검색</button>
+				</div>
+
+				<br />
+
+				<div class="calendarWrap">
+					<div class="calendar">
+						<input type="text" placeholder="YYYY-MM-DD" readonly>
+						<button class="srch">검색</button>
+					</div>
+					<span class="gap">-</span>
+					<div class="calendar">
+						<input type="text" placeholder="YYYY-MM-DD" readonly>
+						<button class="srch">검색</button>
+					</div>
+				</div>
+			</dd>
+
+			<dt>첨부파일</dt>
+			<dd>
+				<p class="explain">첨부된 파일 (다운로드 아이콘 노출, 클릭 영역은 전체)</p>
+				<div style="width:220px">
+					<a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a>
+				</div>
+				<p class="explain">첨부 중인 파일 (삭제 버튼 노출, 클릭영역은 아이콘 영역)</p>
+				<div style="width:220px">
+					<span class="btnDown upload">
+						<span class="title">첨부파일명첨부파일명첨부파일명첨부파일명.xlsx</span>
+						<button type="button" class="del"><i>삭제</i></button>
+					</span>
+				</div>
+			</dd>
+
+			<dt>검색 Input box + 삭제버튼</dt>
+			<dd>
+
+					<div class="sarchBar scrhType4 active">
+
+						<div class="bxInp" style="width:314px;">
+
+							<!-- 
+								* contenteditable 속성 값
+								- true : 수정 가능
+								- false : 수정 불가능
+								* .inp div 박스에 최대 가로길이 지정 필요합니다.(말줄임 표현)
+								- max-width: 가로길이px
+								-->
+							<div class="inp" contenteditable="true" readonly="true" style="max-width:293px;">주문/결제/환불> 주문/결제/환불> 환불문의</div> 
+							<button class="del">삭제</button>
+						</div>
+						<ul style=" display: block;">
+							<li><a href="#">고객 OB 기본 <span>서식</span></a></li>
+							<li><a href="#">고객 IB 기본 <span>서식</span></a></li>
+							<li><a href="#">FN <span>서식</span></a></li>
+							<li><a href="#">환불안내 <span>서식</span></a></li>
+						</ul>
+					</div>
+			</dd>
+
+			<dt>셀렉트박스 - 기본</dt>
+			<dd>
+				<div class="slctWrapOrigin " >
+	<select>
+					<option>STEPS</option>
+					<option>FNSTAT</option>
+					<option>Bill36524</option>
+					<option>Service Admin</option>
+					</select>
+</div><!-- end of slctWrap -->
+
+
+			</dd>
+			<dt>셀렉트박스 - 커스텀, 멀티 선택</dt>
+			<dd>
+				<p class="explain">기본</p>
+				<div class="slctWrap multi " style="width: 100px; " >
+	<button>연계사이트</button>
+	<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->				
+			</dd>
+			<dd style="height:120px">
+				<p class="explain">마우스 오버 효과</p>
+				<div class="slctWrap multi active" style="width: 100px; " >
+	<button>연계사이트</button>
+	<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+			</dd>
+			<dd style="height:120px">
+				<p class="explain">멀티선택</p>
+				<div class="slctWrap multi active" style="width: 100px; " >
+		<div>
+			<div class="bxInp">
+				<div class="inp" contenteditable="false" readonly="true" style="width:49px;">2 선택</div> 
+				<a class="del">삭제</a>
+			</div>			
+		</div>
+		<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#" class="chk">FNSTAT</a></li>
+					<li><a href="#" class="chk">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+			</dd>
+			<dd style="height:140px">
+				<p class="explain">선택 완료</p>
+				<div class="slctWrap multi " style="width: 100px; " >
+		<div>
+			<div class="bxInp">
+				<div class="inp" contenteditable="false" readonly="true" style="width:49px;">연계사이트</div> 
+				<a class="del">삭제</a>
+			</div>			
+		</div>
+		<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+			</dd>
+
+			<dt>셀렉트박스 - 커스텀</dt>
+			<dd>
+				<p class="explain">기본</p>
+				<div class="slctWrap  " style="width: 100px; " >
+	<button>연계사이트</button>
+	<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+
+				<div class="slctWrap  active" style="width: 100px; " >
+	<button>연계사이트</button>
+	<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+
+				<div class="tmp" style="height: 110px; ">temp box</div>
+
+				<p class="explain">읽기 전용(비활성화)</p>
+				<div class="slctWrap readonly " >
+	<button>연계사이트</button>
+	<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+
+				<p class="explain">가로 사이즈 사용자 지정 ( width : 200px ) </p>
+				<div class="slctWrap  " style="width: 200px; " >
+	<button>연계사이트</button>
+	<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+
+				<div class="slctWrap  active" style="width: 200px; " >
+	<button>연계사이트</button>
+	<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+				<div class="tmp" style="height: 110px; ">temp box</div>
+
+				<p class="explain">검색바 - 전화번호 옵션 오버사이즈 ( 사용자정의로 각각 가로 사이즈를 변경할 수 있습니다. 사이즈 변경이 없을 경우 부모의 가로길이를 100%로 갖습니다. )</p>
+				<div class="sarchBar">
+					<div class="slctWrap over " >
+	<button>전화번호</button>
+	<ul>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						</ul>
+</div><!-- end of slctWrap -->
+					<input type="text">
+				</div>
+
+				<br />
+
+				<div class="sarchBar">
+					<div class="slctWrap over active" >
+	<button>전화번호</button>
+	<ul>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						</ul>
+</div><!-- end of slctWrap -->
+					<input type="text">
+				</div>
+				<div class="tmp" style="height: 110px; ">temp box</div>
+
+				<p class="explain">검색바 - 전화번호 옵션 동일사이즈</p>
+				<div class="sarchBar over">
+					<div class="slctWrap  " >
+	<button>전화번호</button>
+	<ul>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						</ul>
+</div><!-- end of slctWrap -->
+					<input type="text">
+				</div>
+
+				<br />
+
+				<div class="sarchBar over">
+					<div class="slctWrap  active" >
+	<button>전화번호</button>
+	<ul>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						</ul>
+</div><!-- end of slctWrap -->
+					<input type="text">
+				</div>
+				<div class="tmp" style="height: 110px; ">temp box</div>
+
+				<div class="sarchBar scrhType1">
+					<div class="slctWrap  " >
+	<button>전화번호</button>
+	<ul>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						</ul>
+</div><!-- end of slctWrap -->
+					<input type="text">
+					<button class="srch">조회</button>
+				</div>
+
+				<br>
+
+				<div class="sarchBar scrhType2">
+					<div class="slctWrap  " >
+	<button>전체</button>
+	<ul>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						</ul>
+</div><!-- end of slctWrap -->
+					<input type="text">
+					<button class="srch">조회</button>
+					<button class="reset">초기화</button>
+				</div>
+
+				<br />
+
+				<div class="sarchBar" style="width: 334px; ">
+					<div class="slctWrap  " >
+	<button>딜명</button>
+	<ul>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						</ul>
+</div><!-- end of slctWrap -->
+					<input type="text">
+				</div>
+
+				<br />
+
+				<div class="slctWrap  " >
+	<button>유효기간 종료일</button>
+	<ul>
+					<li><a href="#">010-1234-5678</a></li>
+					<li><a href="#">010-1234-5678</a></li>
+					<li><a href="#">010-1234-5678</a></li>
+					<li><a href="#">010-1234-5678</a></li>
+					</ul>
+</div><!-- end of slctWrap -->
+
+				<br />
+
+				<div class="sarchBar scrhType1">
+					<div class="slctWrap  " >
+	<button>전체</button>
+	<ul>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						<li><a href="#">010-1234-5678</a></li>
+						</ul>
+</div><!-- end of slctWrap -->
+					<button class="srch">조회</button>
+				</div>
+
+				<br />
+
+				<div class="sarchBar scrhType3">
+					<input type="text">
+					<button class="add">추가</button>
+				</div>
+
+			</dd>
+
+			<dt>인풋박스</dt>
+			<dd>
+				<input type="text" class="txtBox" />
+
+				<br>
+
+				<input type="password" class="txtBox" value="12345" />
+
+				<br>
+
+				<input type="text" class="txtBox" />
+				<input type="text" class="txtBox" />
+				<input type="text" class="txtBox" />
+
+				<br />
+
+				<input type="text" class="txtBox" placeholder="가로 길이를 직접 줄 수 있습니다. ( width : 300px )" style="width: 300px; ">
+
+				<br />
+
+				<input type="text" class="txtBox" placeholder="가로 길이를 직접 줄 수 있습니다. ( width : 100% )" style="width: 100%; ">
+
+				<br />
+
+				<input type="text" class="txtBox ta-l" placeholder="텍스트 정렬 &#58; 왼쪽( 기본 )" style="width: 250px; ">
+
+				<br />
+
+				<input type="text" class="txtBox ta-c" placeholder="텍스트 정렬 &#58; 중앙" style="width: 250px; ">
+
+				<br />
+
+				<input type="text" class="txtBox ta-r" placeholder="텍스트 정렬 &#58; 오른쪽" style="width: 250px; ">
+
+			</dd>
+
+			<dt>버튼</dt>
+			<dd>
+				<p class="explain">버튼의 크기와 삽입되는 아이콘의 크기가 제각각이기에 기본적으로 버튼의 사이드를 제거하였습니다. 각 컨텐츠안에서 css로 크기를 작성하여주십시오.</p>
+				<button class="btn orangeBorder">버튼 오렌지 테두리</button>
+				<button class="btn orangeBg">버튼 오렌지 배경</button>
+				<button class="btn grayBorder">버튼 회색 테두리</button>
+
+				<br />
+
+				<button class="btn orangeBorder" disabled>버튼 비활성화( disabled )</button>
+				<button class="btn orangeBorder" disabled="true">버튼 비활성화( disabled=true )</button>
+				<button class="btn orangeBg" readonly>버튼 비활성화( readonly )</button>
+
+			</dd>
+
+		</dl>
+	</section>
+
+	<section class="commonWrap">
+		<h3>GNB</h3>
+		<dl>
+			<dt>
+				상단 메뉴 - 기본 - 대기중
+			</dt>
+			<dd>
+				<div class="topWrap">
+	<h1 class="logo">티몬</h1>
+
+	<div class="opts">
+		<div class="opt type1">
+			<div class="slctWrap @@slctActive">
+				<button>연계사이트</button>
+				<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<div class="slctWrap type2 @@slctActive">
+				<button>메뉴</button>
+				<ul>
+					<li>
+						<label>상담내역</label>
+						<ul>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">OB예약</a></li>
+							<li><a href="#">발신문자</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>커뮤니티</label>
+						<ul>
+							<li><a href="#">달별 공지사항</a></li>
+							<li><a href="#">지식관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>운영</label>
+						<ul>
+							<li><a href="#">전체상담</a></li>
+							<li><a href="#">전체OB예약</a></li>
+							<li><a href="#">전체발신문자</a></li>
+							<li><a href="#">전체CS문의</a></li>
+							<li><a href="#">상담재배정</a></li>
+							<li><a href="#">상담사 스킬 등록</a></li>
+							<li><a href="#">상담사 스킬 현황</a></li>
+							<li><a href="#">상담 라우팅</a></li>
+							<li><a href="#">사용자정보</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<a href="#" class="link">CS ADMIN</a>
+		</div><!-- end of opt type1 -->
+
+		<div class="opt type2">
+			<div class="userInfo">
+				<span class="num">44916</span>
+				<span class="name">tmontest님</span>
+				<span class="status 대기중Icon">대기중</span>
+				<span class="timer">00:00:05</span>
+			</div>
+
+			<div class="chkStatus">
+				<button class="@@btnActive" @@btnDisabled>대기</button>
+				<button class="@@btnActive" @@btnDisabled>보류</button>
+				<button class="@@btnActive" @@btnDisabled>호전환</button>
+				<div class="slctWrap @@chkStatusSlctActive @@slctWrapDisabled">
+					<button>이석</button>
+					<ul>
+						<li><a href="#">OB일반</a></li>
+						<li><a href="#">게시판</a></li>
+						<li><a href="#">메일</a></li>
+						<li><a href="#">이관</a></li>
+						<li><a href="#">IB수동등록</a></li>
+						<li><a href="#">관리</a></li>
+						<li><a href="#">교육&amp;면담</a></li>
+						<li><a href="#">휴식&amp;식사</a></li>
+					</ul>
+				</div><!-- end of slctWrap -->
+			</div>
+
+			<div class="slctWrap white @@slctActive">
+				<button>OB유형</button>
+				<ul>
+					<li><a href="#">OB일반</a></li>
+					<li><a href="#">게시판</a></li>
+					<li><a href="#">메일</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+
+			<div class="phoneCall">
+				<input type="text" placeholder="전화번호" value="">
+				<button class="call">걸기</button>
+			</div>
+
+			<div class="slctWrap logOpt @@slctActive">
+				<button>로그아웃</button>
+				<ul>
+					<li><a href="#">퇴근</a></li>
+					<li><a href="#">조퇴</a></li>
+					<li><a href="#">휴가(반차)</a></li>
+					<li><a href="#">기타(장기이석)</a></li>
+					<li><a href="#">전산오류</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+		</div><!-- end of opt type2 -->
+	</div><!-- end of opts -->
+</div><!-- end of topWrap -->
+			</dd>
+
+			<dt>
+				상단 메뉴 - 셀렉트 박스 활성화 - 기타
+			</dt>
+			<dd>
+				<div class="topWrap">
+	<h1 class="logo">티몬</h1>
+
+	<div class="opts">
+		<div class="opt type1">
+			<div class="slctWrap active">
+				<button>연계사이트</button>
+				<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<div class="slctWrap type2 active">
+				<button>메뉴</button>
+				<ul>
+					<li>
+						<label>상담내역</label>
+						<ul>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">OB예약</a></li>
+							<li><a href="#">발신문자</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>커뮤니티</label>
+						<ul>
+							<li><a href="#">달별 공지사항</a></li>
+							<li><a href="#">지식관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>운영</label>
+						<ul>
+							<li><a href="#">전체상담</a></li>
+							<li><a href="#">전체OB예약</a></li>
+							<li><a href="#">전체발신문자</a></li>
+							<li><a href="#">전체CS문의</a></li>
+							<li><a href="#">상담재배정</a></li>
+							<li><a href="#">상담사 스킬 등록</a></li>
+							<li><a href="#">상담사 스킬 현황</a></li>
+							<li><a href="#">상담 라우팅</a></li>
+							<li><a href="#">사용자정보</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<a href="#" class="link">CS ADMIN</a>
+		</div><!-- end of opt type1 -->
+
+		<div class="opt type2">
+			<div class="userInfo">
+				<span class="num">44916</span>
+				<span class="name">tmontest님</span>
+				<span class="status 기타Icon">기타</span>
+				<span class="timer">00:00:05</span>
+			</div>
+
+			<div class="chkStatus">
+				<button class="@@btnActive" @@btnDisabled>대기</button>
+				<button class="@@btnActive" @@btnDisabled>보류</button>
+				<button class="@@btnActive" @@btnDisabled>호전환</button>
+				<div class="slctWrap @@chkStatusSlctActive @@slctWrapDisabled">
+					<button>이석</button>
+					<ul>
+						<li><a href="#">OB일반</a></li>
+						<li><a href="#">게시판</a></li>
+						<li><a href="#">메일</a></li>
+						<li><a href="#">이관</a></li>
+						<li><a href="#">IB수동등록</a></li>
+						<li><a href="#">관리</a></li>
+						<li><a href="#">교육&amp;면담</a></li>
+						<li><a href="#">휴식&amp;식사</a></li>
+					</ul>
+				</div><!-- end of slctWrap -->
+			</div>
+
+			<div class="slctWrap white active">
+				<button>OB유형</button>
+				<ul>
+					<li><a href="#">OB일반</a></li>
+					<li><a href="#">게시판</a></li>
+					<li><a href="#">메일</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+
+			<div class="phoneCall">
+				<input type="text" placeholder="전화번호" value="">
+				<button class="call">걸기</button>
+			</div>
+
+			<div class="slctWrap logOpt active">
+				<button>로그아웃</button>
+				<ul>
+					<li><a href="#">퇴근</a></li>
+					<li><a href="#">조퇴</a></li>
+					<li><a href="#">휴가(반차)</a></li>
+					<li><a href="#">기타(장기이석)</a></li>
+					<li><a href="#">전산오류</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+		</div><!-- end of opt type2 -->
+	</div><!-- end of opts -->
+</div><!-- end of topWrap -->
+				<div class="tmp">temp box</div>
+			</dd>
+
+			<dt>
+				상단 메뉴 - 사용자 상태 비활성화 - 후처리중
+			</dt>
+			<dd>
+				<div class="topWrap">
+	<h1 class="logo">티몬</h1>
+
+	<div class="opts">
+		<div class="opt type1">
+			<div class="slctWrap @@slctActive">
+				<button>연계사이트</button>
+				<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<div class="slctWrap type2 @@slctActive">
+				<button>메뉴</button>
+				<ul>
+					<li>
+						<label>상담내역</label>
+						<ul>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">OB예약</a></li>
+							<li><a href="#">발신문자</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>커뮤니티</label>
+						<ul>
+							<li><a href="#">달별 공지사항</a></li>
+							<li><a href="#">지식관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>운영</label>
+						<ul>
+							<li><a href="#">전체상담</a></li>
+							<li><a href="#">전체OB예약</a></li>
+							<li><a href="#">전체발신문자</a></li>
+							<li><a href="#">전체CS문의</a></li>
+							<li><a href="#">상담재배정</a></li>
+							<li><a href="#">상담사 스킬 등록</a></li>
+							<li><a href="#">상담사 스킬 현황</a></li>
+							<li><a href="#">상담 라우팅</a></li>
+							<li><a href="#">사용자정보</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<a href="#" class="link">CS ADMIN</a>
+		</div><!-- end of opt type1 -->
+
+		<div class="opt type2">
+			<div class="userInfo">
+				<span class="num">44916</span>
+				<span class="name">tmontest님</span>
+				<span class="status 후처리중Icon">후처리중</span>
+				<span class="timer">00:00:05</span>
+			</div>
+
+			<div class="chkStatus">
+				<button class="@@btnActive" disabled>대기</button>
+				<button class="@@btnActive" disabled>보류</button>
+				<button class="@@btnActive" disabled>호전환</button>
+				<div class="slctWrap @@chkStatusSlctActive disabled">
+					<button>이석</button>
+					<ul>
+						<li><a href="#">OB일반</a></li>
+						<li><a href="#">게시판</a></li>
+						<li><a href="#">메일</a></li>
+						<li><a href="#">이관</a></li>
+						<li><a href="#">IB수동등록</a></li>
+						<li><a href="#">관리</a></li>
+						<li><a href="#">교육&amp;면담</a></li>
+						<li><a href="#">휴식&amp;식사</a></li>
+					</ul>
+				</div><!-- end of slctWrap -->
+			</div>
+
+			<div class="slctWrap white @@slctActive">
+				<button>OB유형</button>
+				<ul>
+					<li><a href="#">OB일반</a></li>
+					<li><a href="#">게시판</a></li>
+					<li><a href="#">메일</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+
+			<div class="phoneCall">
+				<input type="text" placeholder="전화번호" value="">
+				<button class="call">걸기</button>
+			</div>
+
+			<div class="slctWrap logOpt @@slctActive">
+				<button>로그아웃</button>
+				<ul>
+					<li><a href="#">퇴근</a></li>
+					<li><a href="#">조퇴</a></li>
+					<li><a href="#">휴가(반차)</a></li>
+					<li><a href="#">기타(장기이석)</a></li>
+					<li><a href="#">전산오류</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+		</div><!-- end of opt type2 -->
+	</div><!-- end of opts -->
+</div><!-- end of topWrap -->
+			</dd>
+
+			<dt>
+				상단 메뉴 - 사용자 상태 활성화 - IB통화중
+			</dt>
+			<dd>
+				<div class="topWrap">
+	<h1 class="logo">티몬</h1>
+
+	<div class="opts">
+		<div class="opt type1">
+			<div class="slctWrap @@slctActive">
+				<button>연계사이트</button>
+				<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<div class="slctWrap type2 @@slctActive">
+				<button>메뉴</button>
+				<ul>
+					<li>
+						<label>상담내역</label>
+						<ul>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">OB예약</a></li>
+							<li><a href="#">발신문자</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>커뮤니티</label>
+						<ul>
+							<li><a href="#">달별 공지사항</a></li>
+							<li><a href="#">지식관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>운영</label>
+						<ul>
+							<li><a href="#">전체상담</a></li>
+							<li><a href="#">전체OB예약</a></li>
+							<li><a href="#">전체발신문자</a></li>
+							<li><a href="#">전체CS문의</a></li>
+							<li><a href="#">상담재배정</a></li>
+							<li><a href="#">상담사 스킬 등록</a></li>
+							<li><a href="#">상담사 스킬 현황</a></li>
+							<li><a href="#">상담 라우팅</a></li>
+							<li><a href="#">사용자정보</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<a href="#" class="link">CS ADMIN</a>
+		</div><!-- end of opt type1 -->
+
+		<div class="opt type2">
+			<div class="userInfo">
+				<span class="num">44916</span>
+				<span class="name">tmontest님</span>
+				<span class="status IB통화중Icon">IB통화중</span>
+				<span class="timer">00:00:05</span>
+			</div>
+
+			<div class="chkStatus">
+				<button class="active" @@btnDisabled>대기</button>
+				<button class="active" @@btnDisabled>보류</button>
+				<button class="active" @@btnDisabled>호전환</button>
+				<div class="slctWrap active @@slctWrapDisabled">
+					<button>이석</button>
+					<ul>
+						<li><a href="#">OB일반</a></li>
+						<li><a href="#">게시판</a></li>
+						<li><a href="#">메일</a></li>
+						<li><a href="#">이관</a></li>
+						<li><a href="#">IB수동등록</a></li>
+						<li><a href="#">관리</a></li>
+						<li><a href="#">교육&amp;면담</a></li>
+						<li><a href="#">휴식&amp;식사</a></li>
+					</ul>
+				</div><!-- end of slctWrap -->
+			</div>
+
+			<div class="slctWrap white @@slctActive">
+				<button>OB유형</button>
+				<ul>
+					<li><a href="#">OB일반</a></li>
+					<li><a href="#">게시판</a></li>
+					<li><a href="#">메일</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+
+			<div class="phoneCall">
+				<input type="text" placeholder="전화번호" value="010-1234-5678">
+				<button class="call">걸기</button>
+			</div>
+
+			<div class="slctWrap logOpt @@slctActive">
+				<button>로그아웃</button>
+				<ul>
+					<li><a href="#">퇴근</a></li>
+					<li><a href="#">조퇴</a></li>
+					<li><a href="#">휴가(반차)</a></li>
+					<li><a href="#">기타(장기이석)</a></li>
+					<li><a href="#">전산오류</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+		</div><!-- end of opt type2 -->
+	</div><!-- end of opts -->
+</div><!-- end of topWrap -->
+				<div class="tmp">temp box</div>
+			</dd>
+
+			<dt>
+				상단 메뉴 - 사용자 상태 활성화 - 오프라인
+			</dt>
+			<dd>
+				<div class="topWrap">
+	<h1 class="logo">티몬</h1>
+
+	<div class="opts">
+		<div class="opt type1">
+			<div class="slctWrap @@slctActive">
+				<button>연계사이트</button>
+				<ul>
+					<li><a href="#">STEPS</a></li>
+					<li><a href="#">FNSTAT</a></li>
+					<li><a href="#">Bill36524</a></li>
+					<li><a href="#">Service Admin</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<div class="slctWrap type2 @@slctActive">
+				<button>메뉴</button>
+				<ul>
+					<li>
+						<label>상담내역</label>
+						<ul>
+							<li><a href="#">상담내역</a></li>
+							<li><a href="#">OB예약</a></li>
+							<li><a href="#">발신문자</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>커뮤니티</label>
+						<ul>
+							<li><a href="#">달별 공지사항</a></li>
+							<li><a href="#">지식관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>운영</label>
+						<ul>
+							<li><a href="#">전체상담</a></li>
+							<li><a href="#">전체OB예약</a></li>
+							<li><a href="#">전체발신문자</a></li>
+							<li><a href="#">전체CS문의</a></li>
+							<li><a href="#">상담재배정</a></li>
+							<li><a href="#">상담사 스킬 등록</a></li>
+							<li><a href="#">상담사 스킬 현황</a></li>
+							<li><a href="#">상담 라우팅</a></li>
+							<li><a href="#">사용자정보</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- end of slctWrap -->
+			<a href="#" class="link">CS ADMIN</a>
+		</div><!-- end of opt type1 -->
+
+		<div class="opt type2">
+			<div class="userInfo">
+				<span class="num">44916</span>
+				<span class="name">tmontest님</span>
+				<span class="status offline">오프라인</span>
+				<span class="timer">00:00:05</span>
+			</div>
+
+			<div class="chkStatus">
+				<button class="active" @@btnDisabled>대기</button>
+				<button class="active" @@btnDisabled>보류</button>
+				<button class="active" @@btnDisabled>호전환</button>
+				<div class="slctWrap active @@slctWrapDisabled">
+					<button>이석</button>
+					<ul>
+						<li><a href="#">OB일반</a></li>
+						<li><a href="#">게시판</a></li>
+						<li><a href="#">메일</a></li>
+						<li><a href="#">이관</a></li>
+						<li><a href="#">IB수동등록</a></li>
+						<li><a href="#">관리</a></li>
+						<li><a href="#">교육&amp;면담</a></li>
+						<li><a href="#">휴식&amp;식사</a></li>
+					</ul>
+				</div><!-- end of slctWrap -->
+			</div>
+
+			<div class="slctWrap white @@slctActive">
+				<button>OB유형</button>
+				<ul>
+					<li><a href="#">OB일반</a></li>
+					<li><a href="#">게시판</a></li>
+					<li><a href="#">메일</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+
+			<div class="phoneCall">
+				<input type="text" placeholder="전화번호" value="">
+				<button class="call">걸기</button>
+			</div>
+
+			<div class="slctWrap logOpt @@slctActive">
+				<button>로그아웃</button>
+				<ul>
+					<li><a href="#">퇴근</a></li>
+					<li><a href="#">조퇴</a></li>
+					<li><a href="#">휴가(반차)</a></li>
+					<li><a href="#">기타(장기이석)</a></li>
+					<li><a href="#">전산오류</a></li>
+				</ul>
+			</div><!-- end of slctWrap -->
+		</div><!-- end of opt type2 -->
+	</div><!-- end of opts -->
+</div><!-- end of topWrap -->
+				<div class="tmp">temp box</div>
+			</dd>
+		</dl>
+	</section>
+
+</body>
+</html>

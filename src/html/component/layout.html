@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: component</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+.section{
+	margin-top: 30px;
+}
+.article{
+	width: 800px;
+	margin-top: 15px;
+	padding: 15px;
+    background-color: #fff;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "on", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<hr>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>component 모음 페이지</h2>
+			</div>
+			@@include('component/heading.html')
+			@@include('component/list.html')
+			@@include('component/tab.html')
+			@@include('component/table.html')
+			@@include('component/button.html')
+			@@include('component/form1.html')
+			@@include('component/form2.html')
+			@@include('component/layer.html')
+		</div>
+		@@include('common/aside_left.html')
+	</div>
+	<hr>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+	
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	
+	/* [D] 탭 클릭 */
+	$('.spc_form .btn_toggle').on('click', function(){
+		var $this = $(this);
+		var $spcForm = $this.closest('.spc_form');
+		
+		$spcForm.toggleClass('open');
+	});
+});
+</script>
+</body>
+</html>

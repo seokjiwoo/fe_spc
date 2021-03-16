@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: TMON</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+</style>
+<!--  -->
+<script type="text/javascript">
+	window.Promise || document.write('<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>');
+	window.Promise || document.write('<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>');
+	window.Promise || document.write('<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>');
+	window.Promise || document.write('<script src="https://cdn.jsdelivr.net/npm/blob-polyfill"><\/script>');
+	window.Promise || document.write('<script src="https://unpkg.com/canvg@3.0.4/lib/umd.js"><\/script>');
+</script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc home"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc home"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc home"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc home"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc home"><!--<![endif]-->
+<div id="wrap">
+	@@include('common/top_banner_fix.html')
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"deal_on" : "on", 
+			"order_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"claim_on" : "", 
+			"sales_on" : "", 
+			"contract_on" : "", 
+			"adcener_on" : "", 
+			"mystore_on" : "",
+			"support_on" : ""})
+	</div>
+	<hr>
+	<div id="container">
+		<div class="spot">
+			<div class="state_wrap">
+				@@include('home/partner_grade_type2.html')
+				@@include('home/order_state.html', {"loading": "", "first": "first", "title_state" : "주문/배송 현황", "msg":"Loading...", "multi_class" : "bx_order"})
+				@@include('home/order_state.html', {"loading": "loading", "first": "", "title_state" : "취소/환불/교환 현황", "msg":"로딩에 실패했습니다.<br>해당메뉴에서 조회해주세요.", "multi_class" : "bx_cancel"})
+				@@include('home/order_state.html', {"loading": "loading", "first": "", "title_state" : "배송지연 패널티 현황", "msg":"Loading...", "multi_class" : "bx_penalty"})
+				@@include('home/deal_state.html', {"loading": "loading", "first": "first", "title_state" : "정산현황", "msg":"Loading..."})
+				@@include('home/deal_state.html', {"loading": "loading", "first": "", "title_state" : "상품문의/구매후기 현황", "msg":"로딩에 실패했습니다.<br>해당메뉴에서 조회해주세요."})
+				@@include('home/deal_state.html', {"loading": "", "first": "", "title_state" : "딜 진행현황", "msg":"Loading..."})
+				@@include('home/sales_state.html', {"loading": "", "first": "", "title_state" : "일일 매출 통계", "msg":"Loading..."})
+				@@include('home/sales_best.html', {"loading": "", "first": "", "title_state" : "판매 베스트 딜", "msg":"Loading..."})
+			</div>
+			@@include('common/aside_left.html')
+			@@include('common/aside_right.html')
+		</div>
+		<div id="content">
+			<div class="info_area">
+				@@include('home/agree_area.html')
+				@@include('home/notice_area.html')
+			</div>
+			@@include('home/agree_area_nodata.html')
+			@@include('home/summary_area.html', {"loading": "loading"})
+		</div>
+	</div>
+	<hr>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="loading_bar"></div>
+	@@include('layer/partner_agree.html')
+	@@include('layer/inform.html')
+	@@include('layer/coupon_check_report.html')
+	@@include('layer/terms_modify_agree.html')
+
+	@@include('layer/inform_compare.html')
+	@@include('layer/notice_commission.html')
+	@@include('layer/notice_commission_confirmed.html')
+	@@include('layer/notice_commission_about.html')
+	@@include('layer/inform_compare_v1.html')
+	@@include('layer/inform_compare_v2.html')
+	@@include('layer/inform_compare_v3.html')
+	@@include('layer/inform_compare_agree.html')
+	@@include('layer/imgpop_openmarket.html')
+	@@include('layer/feedback_star.html')
+
+	<!-- [D] 배너 슬라이더 UI 확인용 -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/jquery.cycle.all.js"></script>
+	<script>
+		$('#banner_slider').cycle({
+			fx : 'scrollHorz'
+		});
+		$('#banner_slider2').cycle({
+			fx : 'scrollHorz'
+		});
+		$('#banner_slider3').cycle({
+			fx : 'scrollHorz'
+		});
+		$('#banner_slider4').cycle({
+			fx : 'scrollHorz'
+		});
+
+		/* [D] 페이지스크롤시 GNB 고정 UI 확인용 */
+		const btn_sitemap = document.querySelector('.btn_sitemap') 
+		        , sitemap = document.querySelector('.sitemap')
+		        , bannerHeight = document.querySelector('.banner_wrap').offsetHeight
+		        , gnbArea = document.querySelector('.gnb_area')
+				, gnbTop = gnbArea.offsetTop +  bannerHeight
+				;
+
+			btn_sitemap.addEventListener('click', function( e ){
+				e.target.classList.toggle('active');
+				sitemap.classList.toggle('active');
+			});
+
+			window.addEventListener('scroll', function() {
+				gnbTop <  window.scrollY ? gnbArea.classList.add('fixed') : gnbArea.classList.remove('fixed');
+			}) ; 
+	</script>
+</div>
+</body>
+</html>

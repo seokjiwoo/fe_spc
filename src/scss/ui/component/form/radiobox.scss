@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// RADIO BOX
+.spc_radio{
+	display: inline-block;
+	position: relative;
+	margin-right: 25px;
+	font-size: 14px;
+	color: $color_base;
+	cursor: pointer;
+	
+	&.checked{
+		.symbol{
+			@include sp-common("radio_on");
+		}
+	}
+	
+	.symbol{
+		margin: -2px 8px 0 0;
+		@include sp-common("radio_off");
+		vertical-align: middle;
+	}
+	
+	input[type="radio"]{
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include opacity(0);
+		cursor: pointer;
+	}
+}

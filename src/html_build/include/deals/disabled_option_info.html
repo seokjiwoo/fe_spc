@@ -1,0 +1,215 @@
+<div class="search_keyword">
+        <h3><strong>심의 키워드 발견</strong><span><em>ctrl + F</em> 를 통해서 키워드를 검색하세요.</span></h3>
+        <div class="cont">
+            <ul class="btn_list">
+                <li>
+                    <button class="btn round">확인</button>
+                    <div class="txt">
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                    </div>
+                </li>
+                <li>
+                    <button class="btn round">입증</button>
+                    <div class="txt">
+                        <span>살균</span>
+                        <span>탈모</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="note_wp">
+        <strong>옵션정보는 필수 입력사항입니다</strong>
+        <ul class="spc_note">
+            <li><i class="dot"></i>옵션 정보 수정은 딜 제출 전까지 가능하며, 제출 이후에는 [옵션 판매 수량관리]버튼을 통해 판매수량과 품절처리만 가능합니다. 이외의 수정이 필요할 경우 담당 MD에게 문의해주세요.</li>
+            <li><i class="dot"></i>옵션명에 숫자 1, 2, 3...10 이 포함되는 경우 01, 02, 03과 같이 자릿수를 맞추어 등록해야합니다.</li>
+            <li><i class="dot"></i>업로드하려는 엑셀 파일에 공백, 특수문자가 포함된 경우 업로드 되지 않습니다.</li>
+            <li><i class="dot"></i>품절로 인한 주문 취소 발생 시 취소율에 따른 패널티가 적용되니, 실제 판매 가능한 재고수량을 입력해 주세요</li>
+        </ul>
+    </div>
+
+    <table class="spc_table_form commission">
+        <colgroup>
+            <col style="width: 173px ; ">
+            <col style="width: * ; ">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>일반딜 수수료</th>
+                <td>
+                    <p class="state_txt or">10%</p>
+                    <ul class="spc_note">
+                        <li><i class="dot"></i>일반 딜 정보로 노출될 때 적용되는 수수료입니다.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>프로모션딜 수수료</th>
+                <td>
+                    <p class="state_txt or">5%</p>
+                    <ul class="spc_note">
+                        <li><i class="dot"></i>프로모션 달 정보로 노출될 때 적용되는 수수료입니다.</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="btn_wp">
+        <div class="fl_l">
+            <button type="button" class="btn init ws">옵션 작성 가이드 다운로드</button>
+            <button type="button" class="btn init ws">엑셀 다운로드</button>
+        </div>
+        <div class="fl_r">
+            <button type="button" class="btn init ws">옵션 판매 수량관리</button>
+            <button type="button" class="btn init ws" disabled="true">옵션 일괄등록</button>
+            <button type="button" class="btn link" disabled="true">저장</button>
+        </div>
+    </div>
+    
+    <div class="btn_wp box optionBtns">
+        <div class="fl_l">
+            <button class="btn slim" disabled="true">숨김</button>
+            <button class="btn slim" disabled="true">매진</button>
+            <button class="btn slim" disabled="true">노출</button>
+            <button class="btn slim" disabled="true">판매</button>
+            <div class="spc_select type2">
+                <div class="value"><span class="selected">전체옵션보기</span><i></i></div>
+                <select>
+                    <option>옵션1</option>
+                    <option>옵션2</option>
+                    <option>옵션3</option>
+                </select>
+            </div>
+            <button class="btn slim_orange">대표상품선택</button>
+        </div>
+        <div class="fl_r">
+            <button class="btn slim" disabled="true">추가</button>
+            <button class="btn slim" disabled="true">삭제</button>
+            <button class="btn slim" disabled="true">항목관리</button>
+        </div>
+    </div>
+    <div class="scroll_tb">
+        <!-- 스크롤영역 표시를 위해 width 1200을 넣어줬습니다. 개발시에는 빼주세요 -->
+        <table class="deals_tb02" style="width:1200px;">
+            <colgroup>
+                <col style="width: 59px; ">
+                <col style="width: 40px; ">
+                <col style="width: 106px; ">
+                <col style="width: 94px; ">
+                <col style="width: 94px; ">
+                <col style="width: 94px; ">
+                <col style="width: 94px; ">
+                <col style="width: 137px; ">
+                <col style="width: 137px; ">
+                <col style="width: 94px; ">
+                <col style="width: *; ">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <label for="check1" class="spc_check"><input type="checkbox" id="check1" disabled="true"><i class="symbol"></i></label>
+                    </th>
+                    <th scope="col">No.</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">옵션 번호</th>
+                    <th scope="col">정상가격</th>
+                    <th scope="col">판매가격</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">1인당최대구매수량</th>
+                    <th scope="col">판매자상품코드</th>
+                    <th scope="col">수수료율</th>
+                    <th scope="col">&nbsp;</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td></td>
+                        <td>대표상품</td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="check2" class="spc_check"><input type="checkbox" id="check2" disabled="true"><i class="symbol"></i></label></td>
+                        <td>1</td>
+                        <td>
+                            <button class="btn slim" disabled="true">숨김</button>
+                            <button class="btn slim" disabled="true">매진</button>
+                        </td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="check3" class="spc_check"><input type="checkbox" id="check3" disabled="true"><i class="symbol"></i></label></td>
+                        <td>2</td>
+                        <td>
+                            <button class="btn slim" disabled="true">숨김</button>
+                            <button class="btn slim" disabled="true">매진</button>
+                        </td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="check4" class="spc_check"><input type="checkbox" id="check4" disabled="true"><i class="symbol"></i></label></td>
+                        <td>3</td>
+                        <td>
+                            <button class="btn slim" disabled="true">숨김</button>
+                            <button class="btn slim" disabled="true">매진</button>
+                        </td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="check5" class="spc_check"><input type="checkbox" id="check5" disabled="true"><i class="symbol"></i></label></td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn slim" disabled="true">숨김</button>
+                            <button class="btn slim" disabled="true">매진</button>
+                        </td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+    </div>

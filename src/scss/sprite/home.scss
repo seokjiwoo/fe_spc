@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+%sp-home {
+    background: url('../im/sp-home.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-home($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-home, $filename);
+    @extend %sp-home;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-home: (
+    spritesheet_name: sp-home,
+    arr_next: (offset_x: 0, offset_y: -142px, width: 9px, height: 15px),
+    check_off: (offset_x: -176px, offset_y: -93px, width: 16px, height: 16px),
+    check_on: (offset_x: -196px, offset_y: -93px, width: 16px, height: 16px),
+    ico_blue_arr: (offset_x: -101px, offset_y: -121px, width: 6px, height: 10px),
+    ico_empty: (offset_x: 0, offset_y: -93px, width: 45px, height: 45px),
+    ico_exclamation1: (offset_x: -216px, offset_y: -93px, width: 16px, height: 16px),
+    ico_exclamation2: (offset_x: -236px, offset_y: -93px, width: 16px, height: 16px),
+    ico_help: (offset_x: -49px, offset_y: -121px, width: 14px, height: 14px),
+    ico_more: (offset_x: -153px, offset_y: -93px, width: 19px, height: 19px),
+    ico_refresh: (offset_x: -97px, offset_y: -93px, width: 24px, height: 24px),
+    ico_refresh2: (offset_x: -125px, offset_y: -93px, width: 24px, height: 24px),
+    tooltip_arr: (offset_x: -123px, offset_y: -121px, width: 9px, height: 6px),
+    tooltip_arr2: (offset_x: -111px, offset_y: -121px, width: 8px, height: 7px),
+    triangle_down: (offset_x: -67px, offset_y: -121px, width: 13px, height: 10px),
+    triangle_up: (offset_x: -84px, offset_y: -121px, width: 13px, height: 10px),
+    wave_bg: (offset_x: -49px, offset_y: -93px, width: 44px, height: 24px),
+    wave_bg2: (offset_x: 0, offset_y: 0, width: 261px, height: 89px),
+);

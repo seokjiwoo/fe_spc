@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.search_area{
+	display: inline-block;
+	vertical-align: middle;
+	
+	.spc_select{
+		float: left;
+		width: 592px;
+		vertical-align: middle;
+	}
+	
+	.submit{
+		float: left;
+		height: 38px;
+		width: 84px;
+		padding: 0;
+		margin-left: 3px;
+		font-size: 14px;
+		line-height: 42px;
+	}
+}

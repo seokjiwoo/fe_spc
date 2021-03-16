@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sales.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "on", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>판매현황 조회</h2>
+			</div>
+
+			<div class="spc_tab_wp type2">
+				<ul class="spc_tab">
+					<li><button type="button">판매현황</button></li>
+					<li><button type="button"><span>수수료 및<br />공제·환급현황</span></button></li>
+					<li><button type="button">서비스수수료</button></li>
+					<li><button type="button">할인현황</button></li>
+					<li class="on"><button type="button">가격비교<br >대행 서비스</button></li>
+				</ul>
+				<div class="btns">
+					<a href="#" class="btn_link default">정산정책 보기</a>
+					<a href="#" class="btn_link default">정산FAQ 보기</a>
+				</div>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>기간설정</th>
+								<td>
+									<div class="spc_calendar">
+										<input type="text" class="spc_text" readonly="true" value="2018.01.02"><button type="button" class="btn_calendar">달력</button>
+									</div>
+									<span class="dash">~</span>
+									<div class="spc_calendar">
+										<input type="text" class="spc_text" readonly="true" value="2018.01.02"><button type="button" class="btn_calendar">달력</button>
+									</div>
+
+									<div class="spc_select" style="width: 130px; ">
+										<div class="value"><span class="selected">간편설정</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>진행 딜 선택</th>
+								<td>
+									<div class="groupWrap">
+										<label for="tmp_radio1" class="spc_radio checked"><input type="radio" id="tmp_radio1" name="tmp_radio" checked="checked"><i class="symbol"></i>딜명으로 검색</label>
+										<label for="tmp_radio2" class="spc_radio"><input type="radio" id="tmp_radio2" name="tmp_radio"><i class="symbol"></i>딜번호로 검색</label>
+									</div>
+							
+									<div class="spc_select" style="width: 508px; ">
+										<div class="value"><span class="selected">전체 (진행중 딜)</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<p class="light_gray_desc">목록 내 최대 300건의 딜이 노출됩니다. 그 외 딜은 ‘딜번호로 검색’을 이용해주세요. </p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+
+				<div class="btns">
+					<button class="btn orange-border">초기화</button>
+					<button class="btn orange">검색</button>
+				</div>
+			</form>
+
+			<div class="detailWrap mt39">
+				<div class="topWrap">
+					<div class="opt type1">
+						<h4>검색결과</h4>
+						<span class="pointClr">89건</span>
+						<div class="top_btn_box">
+							<button>엑셀 다운로드</button>
+							<button>엑셀 다운로드(상세내역)</button>
+						</div>
+					</div>
+				</div>
+				<table>
+					<colgroup>
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>거래일</th>
+							<th>딜번호</th>
+							<th>기준 금액</th>
+							<th>가격비교 대행 서비스</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2019-02-01</td>
+							<td>D1</td>
+							<td>1,000원</td>
+							<td>200</td>
+						</tr>
+						<tr>
+							<td>2019-02-02</td>
+							<td>D2</td>
+							<td>2,000원</td>
+							<td>400</td>
+						</tr>
+						<tr>
+							<td>2019-02-03</td>
+							<td>D3</td>
+							<td>3,000원</td>
+							<td>2,000</td>
+						</tr>
+						<tr>
+							<td>2019-02-04</td>
+							<td>D4</td>
+							<td>4,000원</td>
+							<td>800</td>
+						</tr>
+						<tr>
+							<td>2019-02-05</td>
+							<td>D5</td>
+							<td>5,000원</td>
+							<td>600</td>
+						</tr>
+						<tr>
+							<td>2019-02-06</td>
+							<td>D6</td>
+							<td>6,000원</td>
+							<td>1,000</td>
+						</tr>
+						<tr>
+							<td>2019-02-07</td>
+							<td>D7</td>
+							<td>7,000원</td>
+							<td>300</td>
+						</tr>
+						<tr>
+							<td>2019-02-08</td>
+							<td>D8</td>
+							<td>8,000원</td>
+							<td>900</td>
+						</tr>
+						<tr>
+							<td>2019-02-09</td>
+							<td>D9</td>
+							<td>9,000원</td>
+							<td>600</td>
+						</tr>
+						<tr>
+							<td>2019-02-10</td>
+							<td>D10</td>
+							<td>10,000원</td>
+							<td>100</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- end of detailWrap -->
+			<div class="pagingWrap">
+				<span class="numPage">
+					<a href="#" class="first">prev jump</a>
+					<a href="#" class="prev">prev</a>
+					<a href="#" class="active">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">next</a>
+					<a href="#" class="end">next jump</a>
+				</span>
+			</div>
+			<ul class="noti">
+				<li>가격비교 대행 서비스 ‘동의’ 파트너 대상으로 <span class="pointClr">2019년 5월 1일부터 가격비교 채널을 통해 유입되어 판매된 상품가(배송비 제외)를 기준으로 발생한 수수료</span>를 조회하는 화면입니다. <a href="#" class="btn_view_detail">자세히 보기</a></li>
+				<li>가격비교 대행 서비스 동의 여부는 <b>‘나의 정보 관리’</b>에서 언제든지 변경 하실 수 있습니다. (단, 변경 사항은 익일(다음날) 00시부터 적용 됩니다)</li>
+				<li>발생한 ‘가격비교 대행 서비스’의 정산차감 여부는 정산서 조회 화면에서 확인 부탁 드립니다.</li>
+				<li>거래일은 ‘배송완료/ 환불완료일’을 의미 합니다.</li>
+			</ul>
+
+		</div><!-- end of content -->
+
+		<!-- @@include('common/aside_left.html') -->
+		<!-- @@include('common/aside_right.html') -->
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+</script>
+
+</body>
+</html>

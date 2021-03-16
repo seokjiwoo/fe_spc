@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 파트너센터</title>
+<link rel="stylesheet" type="text/css" href="../../old_css/abtest_store.css">
+<link rel="stylesheet" type="text/css" href="../../old_css/partner_store.css">
+<link rel="stylesheet" type="text/css" href="../../old_css/partner_store_ext.css">
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc store"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc store"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc store"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc store"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc store"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "on", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<hr>
+	<div id="container">
+		<div id="content" class="contract">
+			<div class="h2_head">
+				<h2>계약관리</h2>
+			</div>
+			<div class="uio_tab" style="border:0px">
+			    <a href="#" class="btn_new_fill" id="partnerInfoWrite">계약서 새로 작성</a>
+		    </div>
+			<div class="tbl_top">
+			    <h3>계약진행 현황</h3>
+			</div>
+			<div class="contract_process">
+				<ul>
+					<li class="step1 on" style="margin-right:25px">
+						<span class="tit">작성중</span>
+						<span class="num"><em data-stts="00" style="cursor:pointer">1</em>건</span>                
+					</li>        
+					<li class="step2" style="margin-right:25px">
+						<span class="tit">약관수정중</span>
+						<span class="num"><em data-stts="11" style="cursor:pointer">0</em>건</span>                
+					</li>        
+					<li class="step3" style="margin-right:25px">
+						<span class="tit">서명승인중</span>
+						<span class="num"><em data-stts="21" style="cursor:pointer">0</em>건</span>                
+					</li>        
+					<li class="step4 on" style="margin-right:25px">
+						<span class="tit">계약완료</span>
+						<span class="num"><em data-stts="24" style="cursor:pointer">3</em>건</span>                
+					</li>        
+					<li class="step5" style="margin-right:25px">
+						<span class="tit">계약만료</span>
+						<span class="num"><em data-stts="33" style="cursor:pointer">0</em>건</span>                
+					</li>        
+					<li class="step7">
+						<span class="tit">중도해지</span>
+						<span class="num"><em data-stts="32" style="cursor:pointer">0</em>건</span>                
+					</li>        
+				</ul>
+			</div>
+			
+			<div class="tbl_top">
+			    <h3>계약서 검색</h3>
+			</div>
+			<form name="searchForm" id="searchForm">
+			<div class="uio_srch_area">
+			    <i class="lt"></i><i class="rt"></i><i class="rb"></i><i class="lb"></i>
+			    <div class="inner">
+			        <div class="units">
+			            <label for="stts" class="h_txt">계약상태</label>
+			            <select name="stts" id="stts" style="width:119px;height:25px">
+			                <option value="">전체 </option>
+			                <option value="00">작성중</option>
+				            <option value="11">약관수정중</option>
+				            <option value="21">서명승인중</option>
+				            <option value="24">계약완료</option>
+				            <option value="33">계약만료</option>
+				            <option value="32">중도해지</option>
+						</select>
+			        </div>
+			        <div class="units">
+			            <label for="pSchCol" class="h_txt">기간</label>
+			            <select name="pSchCol" id="pSchCol" style="width:119px;height:25px">
+			            	<option value="regdt">계약작성일</option>
+			                <option value="begindt">계약체결일</option>
+			                <option value="startdt">계약시작일</option>
+			                <option value="enddt ">계약만료일</option>  
+			            </select>
+			            
+			            <span class="date_area"><input type="text" id="startDate" name="startDate" class="form_type hasDatepicker" style="width:91px"><label for="startDate" class="btn_calendar">달력</label></span>
+			            <span class="bridge">~</span>
+			            <span class="date_area"><input type="text" id="endDate" name="endDate" class="form_type hasDatepicker" style="width:91px"><label for="endDate" class="btn_calendar">달력</label></span>
+			            <span class="period_area">
+			                <a href="#" class="today">오늘</a>
+			                <a href="#" class="yesterday">어제</a>
+			                <a href="#" class="week">이번주</a>
+			                <a href="#" class="month">이번달</a>
+			            </span>
+			        </div>
+			        <div class="units">
+			            <label for="iSchCol" class="h_txt">빠른검색</label>
+			            <select name="iSchCol" id="iSchCol" style="width:119px;height:25px">
+			                <option value="">선택</option>
+			            	<option value="cntrctnm">계약명</option>
+			            	<option value="cntrctno">계약번호</option>
+			            </select>
+			            <input type="text" name="iSchVal" id="iSchVal" class="form_type" style="width:400px">
+			        </div>
+			        <div class="submit_area">
+			            <div class="btn_wrap">
+			                <a class="btn_srch" style="cursor:pointer">검색</a>
+			                <a class="btn_init" style="cursor:pointer">초기화</a>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			</form>
+		    <div class="srch_result_area">
+		        <h4><div class="srch_cnt">검색결과 <span class="count"><em id="gridCnt">0</em></span> 건</div></h4>
+		        <!--div class="opt">
+		            <a href="#n" onclick="download_excel('grid_helper', '엑셀다운로드');" class="btn_excel">엑셀다운로드</a>
+		        </div-->
+		    </div>
+		    <div class="tbl" style="overflow: auto;max-height: 500px;">
+				<div class="scroll_head">
+					<table class="settle head" cellspacing="0" border="0" summary="">
+						<colgroup>
+				    		<col width="100px">
+				    		<col width="400px">
+				            <col width="300px">
+				            <col width="100px">
+				            <col width="80px">
+				            <col width="80px">
+				            <col width="80px">
+				            <col width="150px">
+				            <col width="100px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">계약번호</th>
+		                    	<th scope="col">계약명</th>
+		                    	<th scope="col">계약서식</th>
+		                    	<th scope="col">계약상태</th>
+		                    	<th scope="col">체결일</th>
+		                    	<th scope="col">시작일</th>
+		                    	<th scope="col">만료일</th>
+		                    	<th scope="col">작성일시</th>
+		                    	<th scope="col">작성자</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="scroll_body">
+					<table class="settle body" cellspacing="0" border="0" summary="">
+						<colgroup>
+				    		<col width="100px">
+				    		<col width="400px">
+				            <col width="300px">
+				            <col width="100px">
+				            <col width="80px">
+				            <col width="80px">
+				            <col width="80px">
+				            <col width="150px">
+				            <col width="100px">
+						</colgroup>
+						<tbody id="contarctListWrap">
+							<tr><td colspan="9" class="text-center" style="height:80px"><h2>ⓘ 원하시는 항목을 선택하시고 검색해주세요.</h2></td><td colspan="2"></td></tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		    <div class="paging">
+		    	<a href="1" class="btn_p prev">이전 페이지</a>
+		        <strong class="bgn">1</strong>
+		        <a href="1" class="btn_p next">다음 페이지</a>
+			</div>
+        </div>
+		@@include('common/aside_left.html')
+	</div>
+	<hr>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+	@@include('layer/inform.html')
+	@@include('layer/deal_search.html')
+	@@include('layer/deal_search_none.html')
+	@@include('layer/unethic_report.html')
+	@@include('layer/unkind_report.html')
+	@@include('layer/faq_report.html')
+	@@include('layer/ad_report.html')
+	@@include('layer/guide_video.html')
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="../../js/jquery.bxslider.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+	
+	// 딜검색 레이어 딜명 클릭 시 
+	$('.btn_menu').on('click', function(e){
+		e.preventDefault();
+		
+		var $this = $(this);
+		var $parent = $this.parent();
+		
+		if(!$parent.hasClass('on')){
+			$('.deal_name.on').removeClass('on');
+		}
+		$parent.toggleClass('on');
+	});
+	
+	// 동영상 5개 이상일때 슬라이드
+	if($('.video_lst li').length > 5){
+		$('.video_lst ul').bxSlider({
+			pager: false,
+		    slideWidth: 160,
+		    minSlides: 1,
+		    maxSlides: 5,
+		    moveSlides: 5,
+		    slideMargin: 5
+		});
+	}
+});
+</script>
+</body>
+</html>

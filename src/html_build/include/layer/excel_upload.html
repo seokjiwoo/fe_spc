@@ -1,0 +1,57 @@
+<div class="spc_layer claim" style="width:826px;padding-right:60px;">
+	<div class="layer_hd pos_wrap">
+		<h3>반송장 번호 일괄등록 엑셀 파일 업로드</h3>
+		<a href="#" class="btn link pos">엑셀 양식 다운로드</a>
+	</div>
+	<div class="layer_ct">
+		<form class="spc_form">
+			<fieldset class="spc_form">
+				<table class="spc_table_form">
+					<colgrup>
+						<col style="width:147px;" />
+						<col style="width:auto" />
+					</colgrup>
+					<tbody>
+						<tr>
+							<th>택배사 선택</th>
+							<td>
+								<div class="spc_select" style="width:172px;">
+									<div class="value"><span class="selected">선택하세요</span><i></i></div>
+									<select>
+										<option>전체1</option>
+										<option>전체2</option>
+										<option>전체3</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>첨부파일</th>
+							<td class="file">
+								<!-- <span class="tit">파일첨부</span> -->
+								<span class="btn init upload custom">파일첨부<input type="file" name="fileList" multiple></span>
+								<ul class="file_lst">
+									<li><span class="file_name"><i></i>엑셀파일.xlsx<button class="btn_delete"><i></i>삭제</button></span></li>
+								</ul>
+								<button type="button" class="btn submit small">파일업로드</button>
+								<ul class="cltxt">
+									<li>• 다운로드 받으신 엑셀 양식 파일에 주문번호, 요청번호, 반송택배사명, 반송장 번호를 등록해 주세요.</li>
+									<li>• 파일 선택 버튼을 통해 엑셀파일을 업로드 하면 반송장 번호가 등록 됩니다.</li>
+									<li>
+										• <span>2개 이상의 택배사를 이용하시는 경우 꼭! 택배사별로 파일을 나누어 주세요. <br>
+										 (엑셀에 입력한 택배사가 팝업선택과 다르더라도 무조건 팝업에서 선택한 택배사로 업데이트 됩니다.)</span>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="info"><a href="#">반송장 번호 중복사용에 대한 안내보기</a></p>
+				<div class="btn_area center">
+					<button type="submit" class="btn cancel">취소</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<button type="button" class="btn_close">닫기</button>
+</div>

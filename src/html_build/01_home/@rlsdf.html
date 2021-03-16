@@ -1,0 +1,519 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: TMON</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc.css">
+</head>
+<body>
+<div class="top_wrap">
+	<div class="inner">
+		<div class="account_area">
+			<!-- 하위목록을 노출시키려면 active 클래스를 넣어주세요  -->
+			<div class="state_list">
+				<button class="account"><em>티켓몬스터</em> 님</button>
+				<ul>
+					<li><a href="#">나의 정보 확인</a></li>
+					<li><a href="#">비밀번호 변경</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div> <!-- end of state_list -->
+			<span><a href="#">공지사항</a></span>
+			<span><a href="#">매출증진 TIP</a></span>
+			<span><a href="#">담당자 연락처</a></span>
+			<span class="ad">슈퍼클릭(키워드/검색광고)문의 <em>1661-8200</em></span>	
+			<span class="ad">티몬광고상품문의 <em>02-2098-8690</em></span>
+		</div>
+		<!-- 오픈마켓 로고는 om 멀티클래스, 티몬특가 로고는 mmp 멀티클래스를 주시면 됩니다 -->
+		<!-- <h1 class="spc_logo om"><a href="#">TMON 스토어파트너 센터</a></h1> -->
+		<h1 class="spc_logo dp"><a href="#">TMON 배송상품 파트너센터</a></h1>
+	</div>
+</div>
+<div class="fixed_area">
+		<!-- 페이지 스크롤시 gnb 고정상태일때 gnb_area fixed 클래스를 넣어주세요 -->
+		<div class="gnb_area">
+			<div class="inner_area">
+				<ul class="gnb_wrap" id="gnb">
+					<li class="">
+						<a href="#">티몬특가 신청</a>
+					</li>
+					<li class="@@home_on">
+						<a href="#">딜관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">베이직딜등록</a></li>
+								<li><a href="#">베이직딜 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="@@deal_on">
+						<a href="#">주문관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">미확인 주문</a></li>
+								<li><a href="#">송장등록 대기주문</a></li>
+								<li><a href="#">송장등록 완료주문</a></li>
+								<li><a href="#">배송중 주문</a></li>
+								<li><a href="#">배송템플릿 관리</a></li>
+								<li><a href="#">배송지연패널티 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="@@delivery_on">
+						<a href="#">클레임관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">출고전 취소 관리</a></li>
+								<li><a href="#">환불관리</a></li>
+								<li><a href="#">교환관리</a></li>
+								<li><a href="#">재배송관리</a></li>
+								<li><a href="#">수취처리관리</a></li>
+								<li><a href="#">클레임 등록</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="@@claim_on">
+						<a href="#">문의∙리뷰관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">고객문의 관리</a></li>
+								<li><a href="#">CS문의 관리</a></li>
+								<li><a href="#">고객리뷰 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="@@faq_on">
+						<a href="#">정산관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">판매현황조회</a></li>
+								<li><a href="#">파트너 단위 정산서</a></li>
+								<li><a href="#">딜 단위 정산서</a></li>
+								<li><a href="#">세금계산서</a></li>
+								<li><a href="#">매출·매입내역</a></li>
+								<li><a href="#">PG결제수수료 환급조회</a></li>
+							</ul>
+						</div>
+					</li>
+					<!-- <li class="@@sales_on">
+						<a href="#">계약관리</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">계약서작성</a></li>
+								<li><a href="#">계약서관리</a></li>
+								<li><a href="#">서명승인요청</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class="@@mystore_on">
+						<a href="#">광고주센터</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">광고주센터 바로가기</a></li>
+								<li><a href="#">즉시할인 관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="@@support_on">
+						<a href="#">My 스토어</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">스토어 생성</a></li>
+								<li><a href="#">기본정보관리</a></li>
+								<li><a href="#">추천상품관리</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="@@adcener_on">
+						<a href="#">파트너지원</a>
+						<div class="sub">
+							<i class="arr"></i>
+							<ul>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">자주하는질문</a></li>
+								<li><a href="#">1:1문의</a></li>
+								<li><a href="#">약관변경확인</a></li>
+								<li><a href="#">(구)계약관리 확인</a></li>
+								<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+								<li><a href="#">자료실</a></li>
+								<li><a href="#">파트너교육센터</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 전체메뉴 노출시 btn_sitemap active 클래스를 넣어주세요 -->
+				<a href="#/" class="btn_sitemap"><span>전체메뉴보기</span></a>
+				<!-- 전체메뉴 노출시 sitemap active 클래스를 넣어주세요 -->
+				<div class="sitemap">
+					<!-- 
+						컬럼갯수에 따라 원하는 클래스를 추가해주세요
+						메뉴컬럼4개 : col4
+						메뉴컬럼5개 : col5
+						-->
+					<div class="sitemap_wrap col4">
+						<div>
+							<a href="#">딜관리</a>
+							<ul class="sub">
+								<li><a href="#">베이직딜등록</a></li>
+								<li><a href="#">베이직딜 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">주문관리</a>
+							<ul class="sub">
+								<li><a href="#">미확인 주문</a></li>
+								<li><a href="#">송장등록 대기주문</a></li>
+								<li><a href="#">송장등록 완료주문</a></li>
+								<li><a href="#">배송중 주문</a></li>
+								<li><a href="#">배송템플릿 관리</a></li>
+								<li><a href="#">배송지연패널티 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">클레임관리</a>
+							<ul class="sub">
+								<li><a href="#">출고전 취소 관리</a></li>
+								<li><a href="#">환불관리</a></li>
+								<li><a href="#">교환관리</a></li>
+								<li><a href="#">재배송관리</a></li>
+								<li><a href="#">수취처리관리</a></li>
+								<li><a href="#">클레임 등록</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">문의∙리뷰관리</a>
+							<ul class="sub">
+								<li><a href="#">고객문의 관리</a></li>
+								<li><a href="#">CS문의 관리</a></li>
+								<li><a href="#">고객리뷰 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">정산관리</a>
+							<ul class="sub">
+								<li><a href="#">판매현황조회</a></li>
+								<li><a href="#">파트너 단위 정산서</a></li>
+								<li><a href="#">딜 단위 정산서</a></li>
+								<li><a href="#">세금계산서</a></li>
+								<li><a href="#">매출·매입내역</a></li>
+								<li><a href="#">PG결제수수료 환급조회</a></li>
+							</ul>
+						</div>
+						<!-- <div>
+							<a href="#">계약관리</a>
+							<ul class="sub">
+								<li><a href="#">계약서작성</a></li>
+								<li><a href="#">계약서관리</a></li>
+								<li><a href="#">서명승인요청</a></li>
+							</ul>
+						</div> -->
+						<div>
+							<a href="#">광고주센터</a>
+							<ul class="sub">
+								<li><a href="#">광고주센터 바로가기</a></li>
+								<li><a href="#">즉시할인 관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">My 스토어</a>
+							<ul class="sub">
+								<li><a href="#">스토어 생성</a></li>
+								<li><a href="#">기본정보관리</a></li>
+								<li><a href="#">추천상품관리</a></li>
+							</ul>
+						</div>
+						<div>
+							<a href="#">파트너지원</a>
+							<ul class="sub">
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">1:1문의</a></li>
+								<li><a href="#">약관변경확인</a></li>
+								<li><a href="#">(구)계약관리 확인</a></li>
+								<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+								<li><a href="#">자료실</a></li>
+								<li><a href="#">파트너교육센터</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--  전체메뉴 고정하기 활성화시 active 클래스를 넣어주세요 -->
+					<div class="bottom-area" style="display:none"><button class="menu_fixed">전체메뉴 고정하기</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="order_state @@multi_class @@loading @@first">
+	<div class="head">
+		<h3>@@title_state</h3>
+	 	<span class="standard">최근 1개월 기준</span>
+	 	<button class="btn_refresh">새로고침</button>
+	</div>
+	<ul class="state_lst">
+		<li><i class="dot"></i>
+			<div class="tit"><span>미확인주문</span></div>
+			<strong class="state">
+				<a href="#" class="total">230건</a><span class="dv"></span><a href="#" class="highlight">지연 10건</a>
+			</strong>
+		</li>
+		<li><i class="dot"></i>
+			<div class="tit"><span>송장등록대기</span></div>
+			<strong class="state">
+				<a href="#" class="total">230건</a><span class="dv"></span><a href="#" class="highlight">지연 10건</a>
+			</strong>
+		</li>
+		<li><i class="dot"></i>
+			<div class="tit"><span>송장등록완료</span></div>
+			<strong class="state">
+				<a href="#" class="total">230건</a><span class="dv"></span><a href="#" class="highlight">지연 10건</a>
+			</strong>
+		</li>
+		<li><i class="dot"></i>
+			<div class="tit"><span>배송중</span></div>
+			<strong class="state"><a href="#" class="highlight">2,000,000,000원</a></strong>
+		</li>
+		<li><i class="dot"></i>
+			<div class="tit"><span>재배송요청</span></div>
+			<strong class="state">
+				<a href="#" class="total">230건</a>
+			</strong>
+		</li>
+		<li><i class="dot"></i>
+			<div class="tit">
+				<span>업체확인요청(환불)</span>
+				<button class="btn_help">
+					<span class="blind">도움말</span>
+					<span class="help_tooltip"><i></i>교환, 재배송에 대한 업체 확인요청 건수는 각 탭에서 확인해주세요.</span>
+				</button>
+			</div>
+			<strong class="state">
+				<a href="#" class="total">230건</a>
+			</strong>
+		</li>
+	</ul>
+	<div class="msg">@@msg</div>
+</div>
+<div class="deal_state @@loading @@first">
+	<div class="head">
+		<h3>@@title_state</h3>
+	 	<button class="btn_refresh">새로고침</button>
+	</div>
+	<ul class="state_lst">
+		<li><i class="dot"></i>
+			<div class="tit"><span>판매 중인 딜</span></div>
+			<strong class="state"><a href="#" class="total">0건</a></strong>
+		</li>
+		<li><i class="dot"></i>
+			<div class="tit"><span>종료임박(3일 전)</span></div>
+			<strong class="state"><a href="#" class="highlight">0건</a></strong>
+		</li>
+		<li><i class="dot"></i>
+			<div class="tit"><span>상품별 이미지 미등록</span></div>
+			<strong class="state"><a href="#" class="highlight">+9,999(+9,999)건</a></strong>
+		</li>
+		<li class="submsg">
+			상품별 이미지를 등록해 주시면 다양한 외부 제휴 채널에 검색 시 노출됩니다.<br >
+			노출 채널 확대를 통해 <b>최고 매출에 도전</b>하세요!
+		</li>
+	</ul>
+	<div class="msg">@@msg</div>
+</div>
+<div class="aside_left">
+	<!-- <a href="#" class="banner admon"><i>광고주 센터, 광고등록하면 매출이 UP</i></a> -->
+	<!-- <button type="button" class="mmp"><span class="blind">티몬특가 신청하기</span></button> -->
+	<a href="#" class="banner black_deal"><i>티몬블랙딜 참여하기</i></a>
+	<!-- <button type="button" class="extra one_stop">
+		<i></i>
+		<span>ONE STOP<br>딜검색</span>
+	</button> -->
+	<ul class="aside_lst_pic">
+		<li><a href="#" class="pic onestop"><span class="blind">ONE STOP 딜 검색</span></a></li>
+		<li><a href="#" class="pic partner"><span class="blind">파트너 교육센터</span></a></li>
+		<li><a href="#" class="pic video"><span class="blind">동영상 가이드</span></a></li>
+		<li><a href="#" class="pic report"><span class="blind">비윤리/불친절 직원신고</span></a></li>
+		<!-- <li><a href="#" class="pic faq"><span class="blind">자주하는 질문</span></a></li> -->
+		<li><a href="#" class="pic holiday"><span class="blind">휴무일 공지등록</span></a></li>
+		<!-- <li><a href="#" class="pic excel"><span class="blind">Excel 뷰어 다운로드</span></a></li> -->
+		<!-- <li><a href="#" class="pic econtract"><span class="blind">전자계약서 안내</span></a></li> -->
+		<!-- <li><a href="#" class="pic certificate"><span class="blind">공인인증서 발급</span></a></li> -->
+	</ul>	
+	<!-- <button type="button" class="record_inquiry"><span>Facebook<br />딜 실적 조회</span></button>
+	<a href="#" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</a>
+	<button type="button" class="discount"><span class="blind">할인혜택 적용안내</span></button> -->
+	<!-- <ul class="aside_lst">
+		<li><a href="#" class="point"><span>파트너<br>교육센터</span></a></li>
+		<li><button type="button" class="point"><span>동영상<br>가이드</span></button></li>
+		<li><button type="button"><span>비윤리/불친절<br>직원신고</span></button></li>
+		<li><button type="button"><span>자주하는<br>질문</span></button></li>
+		<li><a href="#"><span>전자계약서<br>안내</span></a></li>
+		<li><a href="#"><span>공인인증서<br>발급</span></a></li>
+	</ul> -->
+	<!-- <button type="button" class="extra">
+		<span>오픈마켓<br>동의</span>
+	</button>
+	<button type="button" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</button> -->
+	<button type="button" class="feedback">
+		<em>페이지 별점 주기</em>
+		<span><i></i><i></i><i></i></span>
+	</button>
+</div>
+<div class="partner_area">
+	<h3>파트너님의 정산/계약 정보</h3>
+	<div class="state_info">
+		<dl>
+			<dt>정산예정일</dt>
+			<dd>매월말일 + 24영업일(80%) / 매월말일 + 40일(20%)</dd>
+		</dl>
+		<dl>
+			<dt>계약현황</dt>
+			<dd>
+				<dl class="contract_info">
+					<dt><span>작성중</span></dt>
+					<dd><span><em>20</em>건</span></dd>
+					<dt><span>약관수정중</span></dt>
+					<dd><span><em>20</em>건</span></dd>
+					<dt><span>파트너서명중</span></dt>
+					<dd><span><em>120</em>건</span></dd>
+					<dt><span>계약완료</span></dt>
+					<dd><span><em>120</em>건</span></dd>
+					<dt><span>티몬서명중</span></dt>
+					<dd><span><em>20</em>건</span></dd>
+					<dt><span>중도해지</span></dt>
+					<dd><span><em>20</em>건</span></dd>
+				</dl>
+			</dd>
+		</dl>
+	</div>
+</div>
+<div class="notice_area">
+	<div class="h_notice"><h3>공지사항</h3><button class="btn_more">공지사항 더보기</button></div>
+	<ul class="spc_tab">
+		<li class="on"><a href="#">전체보기</a></li>
+		<li><a href="#">일반공지</a></li>
+		<li><a href="#">안전거래</a></li>
+		<li><a href="#">약관변경</a></li>
+		<li><a href="#">교육일정</a></li>
+	</ul>
+	<ul class="notice_lst">
+		<li><a href="#">[일반공지]컨텐츠 표출 할인율 소수 발생 시, 내림처리의 건</a><span class="date">2016/04/29</span></li>
+		<li><a href="#">[약관변경]2016년 1기 예정 부가가치세 신고/납부지원 안내</a><span class="date">2016/04/29</span></li>
+		<li><a href="#">[안전거래]컨텐츠 제작비용 부과 정책 약관동의</a><span class="date">2016/04/29</span></li>
+	</ul>
+</div>
+<div class="summary_area">
+	<h3>딜별 현황 요약</h3>
+	<ul class="spc_tab">
+		<li class="on"><a href="#">진행중인 딜 <strong><em>4</em>건</strong></a></li>
+		<li><a href="#">종료된 딜 <strong><em>4</em>건</strong></a></li>
+	</ul>
+	<div class="summary_ct">
+		<div class="search_area">
+			<div class="spc_select">
+				<button class="value"><span class="selected">삼성공기청정기 2016년 인기모델 모음전(판매시작일 2016/04/27)</span><i></i></button>
+				<select name="" id="">
+					<option>삼성공기청정기 2016년 인기모델 모음전(판매시작일 2016/04/27)</option>
+					<option>엘지에어컨 2016년 인기모델 모음전(판매시작일 2016/04/27)</option>
+					<option>대우전자렌지 2016년 인기모델 모음전(판매시작일 2016/04/27)</option>
+				</select>
+			</div>
+			<button type="button" class="btn submit">검색하기</button>
+		</div>
+		<div class="@@loading">
+			<table class="search_result">
+				<colgroup>
+					<col style="width:158px">
+					<col style="width:auto">
+					<col style="width:158px">
+					<col style="width:auto">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">딜이름</th>
+						<td colspan="3" class="deal_name">
+							<strong><a href="#">삼성공기청정기 2016년 인기모델 모음전</a></strong>
+							<span class="bar"></span>
+							<strong class="point">812시간 30분 30초 남음</strong>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">판매수량</th>
+						<td><strong><em>2,000,000,000</em>개</strong></td>
+						<th scope="row">판매금액</th>
+						<td><strong><em>2,000,000,000</em>원</strong></td>
+					</tr>
+					<tr>
+						<th scope="row">판매기간</th>
+						<td colspan="3"><strong>2015/04/29~2016/04/29</strong></td>
+					</tr>
+					<tr>
+						<th scope="row">위탁여부</th>
+						<td>자체배송</td>
+						<th scope="row">배송/상품유형</th>
+						<td>익일발송(일반상품)</td>
+					</tr>
+					<tr>
+						<th scope="row">배송비구분</th>
+						<td>조건부무료</td>
+						<th scope="row">배송비</th>
+						<td><em>2,500</em>원</td>
+					</tr>
+					<tr>
+						<th scope="row">반품지정택배이용</th>
+						<td colspan="3">가능</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="msg">Loading...</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="search_area">
+	<div class="spc_select">
+		<div class="value"><span class="selected">삼성공기청정기 2016년 인기모델 모음전(판매시작일 2016/04/27)</span><i></i></div>
+		<select name="" id="">
+			<option>삼성공기청정기 2016년 인기모델 모음전(판매시작일 2016/04/27)</option>
+			<option>엘지에어컨 2016년 인기모델 모음전(판매시작일 2016/04/27)</option>
+			<option>대우전자렌지 2016년 인기모델 모음전(판매시작일 2016/04/27)</option>
+		</select>
+	</div>
+	<button class="btn submit">검색하기</button>
+</div>
+
+<div class="footer_inner">
+	<ul class="footer_link">
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#"><b>개인정보처리방침</b></a></li>
+		<li><a href="#">전자금융거래</a></li>
+		<li><a href="#">청소년보호정책</a></li>
+	</ul>
+	<span class="footer_logo">TMON</span>
+	<p>사업자등록번호 211-88-41856<span class="dv">|</span>통신판매업신고 제2013-서울강남-02403호</p>
+	<p>서울특별시 강남구 테헤란로 114길 38 동일타워<span class="dv">|</span>대표자 이진원<span class="dv">|</span><a href="#">사업자정보확인</a></p>
+	<p>COPYRIGHT(c) TMON INC. ALL RIGHTS RESERVED.</p>
+	<div class="cs_center">
+		<p class="cs_center_top">
+			파트너센터 <strong>1644-0552</strong>
+		</p>
+		<p class="holiday">
+			평일 09~18시 (점심시간 12~13시)<br >
+			주말/공휴일 휴무
+		</p>
+	</div>
+	<div class="footer_bottom">
+		<img src="../../img/common/footer_iso_banner.png" />
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PTN CMS</title>
+	<link rel="stylesheet" type="text/css" href="../../css/ptn.css">
+</head>
+<body>
+	<div class="winPopWrap ptnTopTable popOrderHistory" style="width: 1400px ; height: 900px ;">
+	<div class="header">주문내역 조회</div>
+	<div class="cont">
+
+	<form>
+		<fieldset class="formWrap">
+			<span class="inp">
+				<div class="sarchBar scrhType1">
+
+					<div class="slctWrapOrigin " >
+	<select>
+						<option>전체</option>
+						<option>주문번호</option>
+						<option>티켓번호</option>
+						</select>
+</div><!-- end of slctWrap -->
+
+
+					<input type="text" style="width:220px">
+					<button class="srch">조회</button>
+				</div>
+			</span>
+		</fieldset>
+	</form>
+
+	<div class="titArea">
+		<strong class="tit1">주문 기본 정보</strong>
+	</div><!-- end of titArea -->
+
+	<div class="popTableWrap">
+		<table class="tbDataView">
+			<colgroup>
+				<col style="width:130px;" />
+				<col style="width:auto" />
+				<col style="width:130px" />
+				<col style="width:auto" />
+				<col style="width:130px" />
+				<col style="width:auto" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>고객ID</th>
+					<td>tmon1</td>
+					<th>고객명</th>
+					<td>김티몬</td>
+					<th>주문일자</th>
+					<td>2018-10-05 14:20:50</td>
+				</tr>
+				<tr>
+					<th>주문정보</th>
+					<td><a href="#;" class="btn_outlink">121234357211</a><a href="#;" class="btn_df arr-r type2 mid">상담정보 주문번호 세팅</a></td>
+					<th>결제금액</th>
+					<td>428,000</td>
+					<th>결제수단</th>
+					<td>Point</td>
+				</tr>
+				<tr>
+					<th>딜명</th>
+					<td colspan="3">[다딜] 클래파 가습기 BFB-HU3000W</td>
+					<th>딜번호</th>
+					<td>123123123</td>
+				</tr>
+				<tr>
+					<th>진행상태</th>
+					<td>배송완료</td>
+					<th>배송조회</th>
+					<td><a href="#;" class="btn_outlink">121234357211</a></td>
+					<th>클레임정보</th>
+					<td>환불1건, 재발송1건</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- end of popTableWrap -->
+
+	<div class="titArea">
+		<strong class="tit1">주문 상세 정보</strong>
+	</div><!-- end of titArea -->
+
+	<div class="popTableWrap">
+		<table class="tbDataView data_orderDetail">
+			<colgroup>
+				<col style="width:auto;" />
+				<col style="width:120px" />
+				<col style="width:160px" />
+				<col style="width:160px" />
+				<col style="width:120px" />
+				<col style="width:150px" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>옵션명</th>
+					<th>수량</th>
+					<th>상품금액</th>
+					<th>즉시할인</th>
+					<th>배송비</th>
+					<th>주문금액</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<!-- 라디오 박스 선택 시 상위 부모 tr 요소에 selected 클래스 추가 필요합니다. -->
+				<tr class="selected">
+					<td>
+						<label class="radioWrap">
+							<input type="radio" name="sltTest" checked>
+							<span>1. 가습기</span>
+						</label>
+					</td>
+					<td>1</td>
+					<td>398,999</td>
+					<td>0</td>
+					<td rowspan="2">-</td>
+					<td rowspan="2">428,000</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="radioWrap">
+							<input type="radio" name="sltTest">
+							<span>2. 가습기필터 | 1. 헤파필터</span>
+						</label>
+					</td>
+					<td>3</td>
+					<td>30,000</td>
+					<td>0</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="txt_addInfo">옵션에 따라 아래의 클레임 정보 내용이 변경됩니다.</p>
+	</div><!-- end of popTableWrap -->
+
+	<div class="titArea">
+		<strong class="tit2">옵션별 티켓/클레임 정보</strong>
+	</div><!-- end of titArea -->
+
+	<div class="popTableWrap">
+		<table class="tbDataView">
+			<colgroup>
+				<col style="width:102px;" />
+				<col style="width:auto" />
+				<col style="width:102px" />
+				<col style="width:auto" />
+				<col style="width:102px" />
+				<col style="width:auto" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>티켓유효기간</th>
+					<td>-</td>
+					<th>티켓사용여부</th>
+					<td>-</td>
+					<th>다회권여부</th>
+					<td>-</td>
+					<th>클레임</th>
+					<td>취소(완료) <a href="#;" class="btn_df type2">보기</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- end of popTableWrap -->
+
+	<div class="titArea">
+		<strong class="tit2">옵션별 클레임현황</strong><a href="#;" class="btn_df arr-r type2 right">클레임 상세</a>
+	</div><!-- end of titArea -->
+
+	<div class="popTableWrap">
+		<table class="tbDataView data_claimStatus">
+			<colgroup>
+				<col style="width:115px;" />
+				<col style="width:115px" />
+				<col style="width:auto" />
+				<col style="width:80px" />
+				<col style="width:140px" />
+				<col style="width:120px" />
+				<col style="width:140px" />
+				<col style="width:190px" />
+				<col style="width:140px" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>묶음요청정보</th>
+					<th>타입</th>
+					<th>옵션명</th>
+					<th>수량</th>
+					<th>접수일자</th>
+					<th>환불금액</th>
+					<th>상태</th>
+					<th>요청사유</th>
+					<th>요청자</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="#;" class="btn_outlink">9756484</a><a href="#;" class="btn_copy">클레임 정보보기</a></td>
+					<td>
+						환불
+						<a href="#;" class="btn_outlink btn_claim_num">9756484</a>
+					</td>
+					<td class="ta_l">1. 가습기</td>
+					<td>1</td>
+					<td>2018-10-05 14:20:50</td>
+					<td>398,000</td>
+					<td>등록<br />(2018-10-10)</td>
+					<td class="ta_l">단순변심<br />(상세) 구매의사취소</td>
+					<td>cust1</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td>
+						재발송
+						<a href="#;" class="btn_outlink btn_claim_num">9756484</a>
+					</td>
+					<td class="ta_l">1. 가습기</td>
+					<td>1</td>
+					<td>2018-10-05 14:20:50</td>
+					<td>398,000</td>
+					<td>등록<br />(2018-10-10)</td>
+					<td class="ta_l">단순변심<br />(상세) 구매의사취소</td>
+					<td>cust1</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="txt_addInfo">묶음요청번호와 요청번호가 조합되어 조회됩니다.</p>
+	</div><!-- end of popTableWrap -->
+
+	<div class="titArea">
+		<strong class="tit2">요청번호 231215205</strong>
+	</div><!-- end of titArea -->
+
+	<div class="popTableWrap mutiTableWrap lastTb">
+		<table class="tbDataView">
+			<colgroup>
+				<col style="width:130px;" />
+				<col style="width:130px;" />
+				<col style="width:auto;" />
+				<col style="width:130px;" />
+				<col style="width:auto" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>확인요청알림</th>
+					<td colspan="4">-</td>
+				</tr>
+				<tr>
+					<th>승인일(처리일자)</th>
+					<td colspan="2">2018-10-11 (tmonmember1)</td>
+					<th>처리일(처리자)</th>
+					<td>2018-10-11 (tmon1@tmon.co.kr)</td>
+				</tr>
+				<tr>
+					<th rowspan="2">추가비용청구</th>
+					<th>청구사유</th>
+					<td>-</td>
+					<th>청구일(처리자)</th>
+					<td>-</td>
+				</tr>
+				<tr>
+					<th>청구승인여부</th>
+					<td>-</td>
+					<th>해제일(처리자)</th>
+					<td>-</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="tbDataView">
+			<colgroup>
+				<col style="width:130px;" />
+				<col style="width:130px;" />
+				<col style="width:auto;" />
+				<col style="width:130px;" />
+				<col style="width:auto" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th rowspan="2">환불정보</th>
+					<th>환불방법</th>
+					<td>결제수단 취소</td>
+					<th>환불지급상태</th>
+					<td>지급완료(2018-10-15 18:00:12) 적립금 33,900원</td>
+				</tr>
+				<tr>
+					<th>환불금액부담</th>
+					<td>업체부담</td>
+					<th>환불승인사유</th>
+					<td>어드민환불승인(파트너 확인)</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="tbDataView">
+			<colgroup>
+				<col style="width:130px;" />
+				<col style="width:130px;" />
+				<col style="width:auto;" />
+				<col style="width:130px;" />
+				<col style="width:auto" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th rowspan="3">반품(수거)정보</th>
+					<th>반품배송비</th>
+					<td>2,500(파트너귀책: 2,500원)</td>
+					<th>반품수거방법</th>
+					<td>파트너수거</td>
+				</tr>
+				<tr>
+					<th>수거상태</th>
+					<td>등록 (2018-10-10 15:20:24) | 수거경과 2일</td>
+					<th>환불승인사유</th>
+					<td>이티몬 ( 010-111-1111)<br />경기도 남양주시 별내동 871 1236-102 </td>
+				</tr>
+				<tr>
+					<th>반품송장번호</th>
+					<td>-</td>
+					<th>등록일(등록자)</th>
+					<td>-</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="tbDataView">
+			<colgroup>
+				<col style="width:130px;" />
+				<col style="width:130px;" />
+				<col style="width:auto;" />
+				<col style="width:130px;" />
+				<col style="width:auto" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th rowspan="6">환불금액</th>
+					<th>상품주문금액</th>
+					<td>33,900원</td>
+					<td rowspan="6" colspan="2" class="refundAmount">
+						총 환불금액: 33,900원
+					</td>
+				</tr>
+				<tr>
+					<th>주문배송비</th>
+					<td>0원</td>
+				</tr>
+				<tr>
+					<th>취소/반품 배송비</th>
+					<td>0원</td>
+				</tr>
+				<tr>
+					<th>쿠폰할인 취소</th>
+					<td>0원</td>
+				</tr>
+				<tr>
+					<th>즉시할인 취소</th>
+					<td>0원</td>
+				</tr>
+				<tr>
+					<th>환불 차감액</th>
+					<td>0원</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- end of popTableWrap -->
+
+	<div class="footBtnWrap">
+		<div class="rt">
+			<a href="#;" class="btnFt bg-org">닫기</a>
+		</div>
+	</div><!-- end of footBtnWrap -->
+
+		</div>
+</div><!-- end of winPopWrap -->
+
+		<div class="layerpopCenterWrap">
+		<div class="layerPopWrap hasBorder layerTicket" style="width: 940px ; height: auto; display: @@display;">
+	<div class="header">티켓 정보</div>
+	<div class="cont">
+		<div class="infoArea">
+            <article>
+                <section>
+					<h3>기본정보</h3>
+					<dl>
+						<dt>옵션명 :</dt>
+						<dd>종일권 1+1 특가 <a href="#;" class="btn_copy">복사하기</a></dd>
+					</dl>
+					<dl>
+						<dt>딜속성 :</dt>
+						<dd></dd>
+					</dl>
+					<dl>
+						<dt>유효기간 :</dt>
+						<dd>2019-04-25 23:59:59까지</dd>
+					</dl>
+					<dl>
+						<dt>미사용환불제 :</dt>
+						<dd>가능 70%</dd>
+					</dl>
+				</section>
+				<section>
+					<h3>구매정보</h3>
+					<dl>
+						<dt>상품금액 :</dt>
+						<dd>12,000</dd>
+					</dl>
+					<dl>
+						<dt>즉시할인 :</dt>
+						<dd></dd>
+					</dl>
+				</section>
+            </article>
+            <article>
+               <table class="tbDataView">
+                   <colgroup>
+                        <col style="width: 150px;" />
+                        <col style="width: 100px;" />
+                        <col style="width: 100px;" />
+                        <col style="width: auto;" />
+                    </colgroup>
+                   <thead>
+                        <tr>
+                            <th>티켓번호</th>
+                            <th>주문상태</th>
+                            <th>클레임상태</th>
+                            <th>사용일</th>
+                        </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>TWTW95345-635333</td>
+                           <td>결제취소</td>
+                           <td>결제취소</td>
+                           <td>2018-10-05 14:20:50</td>
+                       </tr>
+                       <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>2018-10-05 14:20:50</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>2018-10-05 14:20:50</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>TWTW95345-635333</td>
+                            <td>결제취소</td>
+                            <td>결제취소</td>
+                            <td>-</td>
+                        </tr>
+                   </tbody>
+               </table>
+            </article>
+        </div>
+			</div>
+	<button class="close">닫기</button>
+</div><!-- end of layerPopWrap -->
+	</div><!-- end of layerpopCenterWrap -->
+
+</body>
+</html>

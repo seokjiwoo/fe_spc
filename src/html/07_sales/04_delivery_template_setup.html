@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sales.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "on", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>배송지연 패널티관리</h2>
+			</div>
+
+			<div class="spc_tab_wp">
+				<ul class="spc_tab">
+					<li class="on"><button type="button">배송템플릿 설정</button></li>
+					<li><button type="button">배송템플릿 미설정</button></li>
+				</ul>
+				<p class="notice"><span>‘단일/묶음 배송템플릿’을 설정한 딜의 패널티 조회</span></p>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>기간설정</th>
+								<td>
+
+									<div class="spc_select" style="width: 170px; ">
+										<div class="value"><span class="selected">지연기준일</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+
+									<div class="spc_calendar">
+										<input type="text" class="spc_text" readonly="true" value="2018.01.02"><button type="button" class="btn_calendar">달력</button>
+									</div>
+									<span class="dash">~</span>
+									<div class="spc_calendar">
+										<input type="text" class="spc_text" readonly="true" value="2018.01.02"><button type="button" class="btn_calendar">달력</button>
+									</div>
+
+									<div class="spc_select" style="width: 130px; ">
+										<div class="value"><span class="selected">간편설정</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<!-- <tr>
+								<th>딜 선택</th>
+								<td>
+									<div class="groupWrap">
+										<label for="tmp_radio1" class="spc_radio checked"><input type="radio" id="tmp_radio1" name="tmp_radio" checked="checked"><i class="symbol"></i>딜명으로 검색</label>
+										<label for="tmp_radio2" class="spc_radio"><input type="radio" id="tmp_radio2" name="tmp_radio"><i class="symbol"></i>딜번호로 검색</label>
+									</div>
+							
+									<div class="spc_select" style="width: 508px; ">
+										<div class="value"><span class="selected">전체 (진행중 딜)</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr> -->
+							<tr>
+								<th>주문/송장 조회</th>
+								<td>
+									<div class="groupWrap">
+										<label for="tmp_radio3" class="spc_radio checked"><input type="radio" id="tmp_radio3" name="tmp_radio" checked="checked"><i class="symbol"></i>주문번호</label>
+										<label for="tmp_radio4" class="spc_radio"><input type="radio" id="tmp_radio4" name="tmp_radio"><i class="symbol"></i>운송장번호</label>
+										<label for="tmp_radio5" class="spc_radio"><input type="radio" id="tmp_radio5" name="tmp_radio"><i class="symbol"></i>배송그룹번호</label>
+										<label for="tmp_radio6" class="spc_radio"><input type="radio" id="tmp_radio6" name="tmp_radio"><i class="symbol"></i>딜번호</label>
+									</div>
+									<input type="text" style="width: 508px; ">
+								</td>
+							</tr>
+							<tr>
+								<th>소명(처리)상태</th>
+								<td>
+									<label for="tmp_chk1" class="spc_check"><input type="checkbox" id="tmp_chk1" checked="true"><i class="symbol"></i>승인대기</label>
+									<label for="tmp_chk2" class="spc_check"><input type="checkbox" id="tmp_chk2"><i class="symbol"></i>승인거절</label>
+									<label for="tmp_chk3" class="spc_check"><input type="checkbox" id="tmp_chk3" checked="true"><i class="symbol"></i>승인완료</label>
+									<label for="tmp_chk4" class="spc_check"><input type="checkbox" id="tmp_chk4"><i class="symbol"></i>미접수</label>
+									<label for="tmp_chk5" class="spc_check"><input type="checkbox" id="tmp_chk5"><i class="symbol"></i>자동확정</label>
+								</td>
+							</tr>
+							<tr>
+								<th>소명가능상태</th>
+								<td>
+									<label for="tmp_radio5" class="spc_radio checked"><input type="radio" id="tmp_radio5" name="tmp_radio" checked="checked"><i class="symbol"></i>전체</label>
+									<label for="tmp_radio6" class="spc_radio"><input type="radio" id="tmp_radio6" name="tmp_radio"><i class="symbol"></i>소명가능</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+
+				<div class="btns">
+					<button class="btn orange-border">초기화</button>
+					<button class="btn orange">검색</button>
+				</div>
+			</form>
+
+			<div class="detailWrap">
+				<div class="topWrap">
+					<div class="opt type1">
+						<h3>검색결과 요약</h3>
+						<span>(지연기준일 : 2018-03-30 ~ 2018-04-06)</span>
+					</div>
+					<div class="opt type2">
+						<button type="button" class="btn default">배송지연 패널티 관련 1:1문의</button>
+					</div>
+				</div>
+				<table>
+					<colgroup>
+						<col style="width: 98px;">
+						<col style="width: 99px;">
+						<col style="width: 139px;">
+						<col style="width: 139px;">
+						<col style="width: 99px;">
+						<col style="width: 99px;">
+						<col style="width: 99px;">
+						<col style="width: 99px;">
+						<col style="width: auto;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>발생딜 수</th>
+							<th>발생주문 수</th>
+							<th>예정패널티 금액</th>
+							<th>확정패널티 금액</th>
+							<th>승인대기</th>
+							<th>승인거절</th>
+							<th>승인완료</th>
+							<th>미접수</th>
+							<th>자동확정</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>5</td>
+							<td>10</td>
+							<td>16,800</td>
+							<td>16,800</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>16</td>
+							<td>16</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- end of detailWrap -->
+
+			<div class="detailWrap">
+				<div class="topWrap">
+					<div class="opt type1">
+						<h4>검색결과</h4>
+						<span class="pointClr">10건</span>
+					</div>
+					<div class="opt type2">
+						<button type="button" class="btn default">패널티 소명접수</button>
+						<button type="button" class="btn default">엑셀 다운로드</button>
+					</div>
+				</div>
+				<div class="scrollWrap">
+					<table>
+						<colgroup>
+							<col style="width: 58px; " />
+							<col style="width: 97px; " />
+							<col style="width: 97px; " />
+							<col style="width: 97px; " />
+							<col style="width: 97px; " />
+							<col style="width: 97px; " />
+							<col style="width: 97px; " />
+							<col style="width: 87px; " />
+							<col style="width: 157px; " />
+							<col style="width: 107px; " />
+							<col style="width: 97px; " />
+						</colgroup>
+						<thead>
+							<tr>
+								<th><label for="tmp_chk6" class="spc_check"><input type="checkbox" id="tmp_chk6"><i class="symbol"></i></label></th>
+								<th>배송그룹번호</th>
+								<th>딜번호</th>
+								<th>주문번호</th>
+								<th>예정<br />패널티금액</th>
+								<th>확정<br />패널티금액</th>
+								<th>소명<br />(처리)상태</th>
+								<th>소명처리일</th>
+								<th>택배사</th>
+								<th>운송장번호</th>
+								<th>지연기준일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><label for="tmp_chk7" class="spc_check"><input type="checkbox" id="tmp_chk7"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">900</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk8" class="spc_check"><input type="checkbox" id="tmp_chk8"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">900</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk9" class="spc_check"><input type="checkbox" id="tmp_chk9"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">1,000</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk10" class="spc_check"><input type="checkbox" id="tmp_chk10"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">1,000</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk11" class="spc_check"><input type="checkbox" id="tmp_chk11"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">1,000</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk12" class="spc_check"><input type="checkbox" id="tmp_chk12"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">900</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk13" class="spc_check"><input type="checkbox" id="tmp_chk13"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">900</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk14" class="spc_check"><input type="checkbox" id="tmp_chk14"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">1,000</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk15" class="spc_check"><input type="checkbox" id="tmp_chk15"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">1,000</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+							<tr>
+								<td><label for="tmp_chk16" class="spc_check"><input type="checkbox" id="tmp_chk16"><i class="symbol"></i></label></td>
+								<td><a href="#">123456789</a></td>
+								<td>123456789</td>
+								<td>123456789</td>
+								<td><a href="#">1,000</a></td>
+								<td>&nbsp;</td>
+								<td>미접수</td>
+								<td>&nbsp;</td>
+								<td>우체국택배우체국택배</td>
+								<td>1234567890123</td>
+								<td>2018-03-04</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div><!-- end of detailWrap -->
+
+			<ul class="noti">
+				<li>단일/묶음 배송템플릿 설정여부에 따라 노출되는 화면이 상이합니다. </li>
+				<li>패널티는 딜의 주문 기준으로 확인 가능합니다.</li>
+				<li>예정 패널티 금액을 클릭하면 패널티 금액에 대한 소명이 가능합니다. 단, 소명처리상태가 '승인대기' 혹은 '미접수' 일 때만 가능합니다.</li>
+				<li>
+					<p>패널티 금액에 대한 소명가능기간은 정산방식 개편 전후로 다르게 적용됩니다.</p>
+					<p>- 개편 전 상품: 지연기준일 + 10배송영업일 ~ 17배송영업일까지</p>
+					<p>- 개편 후(입점계약 및 전달계약) 상품: 지연기준일부터 지연기준일 + 60일까지입니다.</p>
+					<p>단, 지연기준일 +10배송영업일 전에 소명할 경우 배송상태가 배송시작 혹은 배송완료여야 소명가능합니다. (지연기준일: 배송이 지연되기 시작한 일자)</p>
+				</li>
+				<li>좌측의 선택박스를 여러 개 클릭하면 한 번에 여러 개의 패널티 금액에 대해 소명도 가능합니다.</li>
+				<li>소명접수를 하시면 티몬에서 접수를 받아 소명접수를 승인하거나 거절하게 됩니다.</li>
+				<li>정산액에 반영될 금액은 확정패널티 금액으로 확인하시면 됩니다.</li>
+			</ul>
+
+		</div><!-- end of content -->
+
+		@@include('common/aside_left.html')
+		@@include('common/aside_right.html')
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+</script>
+
+</body>
+</html>

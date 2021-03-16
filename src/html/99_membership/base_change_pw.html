@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 브랜드 파트너 센터 :: 브랜드 파트너 정보</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/membership.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc store"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc store"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc store"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc store"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc store"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global_brand.html')
+	</div>
+	<div id="container">
+		<div id="content" class="brand_content">
+			<h2 class="mypage_title">비밀번호 변경</h2>
+			<p class="mypage_desc">
+				티켓몬스터에서 제공한 임시 비밀번호를 변경하신 수 파트너센터를 이용해주세요.<br />
+				파트너님의 소중한 정보를 안전하게 보호하기 위해 정기적으로 비밀번호 변경을 요청드리고 있습니다.
+			</p>
+			<table class="mypage_tbl input_area">
+				<colgroup>
+					<col width="187px" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+				<tr>
+					<th>현재 비밀번호</th>
+					<td><input type="text" name="" value="" class="spc_text" placeholder="비밀번호" /></td>
+				</tr>
+				<tr>
+					<th>새로운 비밀번호</th>
+					<td>
+						<input type="text" name="" value="" class="spc_text" placeholder="비밀번호" />
+						<p class="input_desc">
+							6~15자의 영문 대소문자, 숫자, 특수문자 2개 이상을 사용해주세요.<br />
+							연속된 숫자 문자(4개 이상)는 제한합니다.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th>새로운 비밀번호 확인</th>
+					<td>
+						<input type="text" name="" value="" class="spc_text" placeholder="비밀번호 확인" />
+						<p class="input_desc">
+							설정하신 비밀번호를 다시 입력해주세요.
+						</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<p class="button_base_area">
+				<button class="btn cancel">다음에 변경</button>
+				<button class="btn submit">비밀번호 변경</button>
+			</p>
+		</div>
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+});
+</script>
+</body>
+</html>

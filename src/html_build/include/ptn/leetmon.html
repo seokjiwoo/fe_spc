@@ -1,0 +1,363 @@
+<div class="titleArea">
+	<div class="tit"><h2>이티몬 파트너(leetmon)</h2></div>
+	<div class="cont">
+		<ul class="iconWrap">
+			<li>
+				<a href="#" class="answerWrap">
+					<button class="ob active">OB예약</button>
+					<span class="answer">OB예약 이력</span>
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>OB 예약 이력 3건</p>
+					</div>
+				</a>
+			</li>
+			<li style="display:none">
+				<a href="#" class="answerWrap">
+					<button class="mail active">답변</button>
+					<span class="answer">미답변 2건</span>
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>미답변 1:1 상담</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<button class="tolk">1:1문의
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>1:1문의[No.문의번호]</p>
+					</div>
+				</button>
+			</li>
+			<li>
+				<button class="incall">이관
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>이관[No.이관번호]</p>
+					</div>
+				</button>
+			</li>
+			<li>
+				<button class="cart">딜
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>[몬스터딜][의류] 젤리스푼 가을신상_1015</p>
+					</div>
+				</button>
+			</li>
+			<li>
+				<button class="member">회원
+					<div class="balloonWrap t sm">
+						<i class="arr"></i>
+						<p>이파트너(TMONPARTNER1)</p>
+					</div>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<ul class="partnerNav">
+	<li><button class="baseBtn">OB예약</button></li>
+	<li class="active"><button class="baseBtn">SMS 전송</button></li>
+	<li><button class="baseBtn">스크립트</button></li>
+	<!-- 
+		활성화 클래스는 li 태그에 넣어주시면 됩니다.
+		active : 기본 버튼 활성화
+		sel_active : 셀렉트활성화
+	 -->
+	<li>
+		<div class="claimSelect">
+			<button class="baseBtn">중대클레임</button>
+			<ul>
+				<li><a href="#">선택없음</a></li>
+				<li><a href="#">욕설/폭언</a></li>
+				<li><a href="#">VIP급 대우 필요</a></li>
+				<li><a href="#">법적 이슈 발생</a></li>
+				<li><a href="#">보상 요청</a></li>
+				<li><a href="#">티몬불만 (영업/운영/시스템)</a></li>
+				<li><a href="#">정산 금액 불만</a></li>
+			</ul>
+		</div>
+	</li>
+</ul>
+
+<div class="ptnInfoArea">
+	<table class="tbDataWrap_ptnInfo cus_type">
+		<colgroup>
+			<col style="width:85px;" />
+			<col style="width:160px;" />
+			<col style="width:85px;" />
+			<col style="width:auto;" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>상담대상</th>
+				<td colspan="3">
+					<div class="sarchBar">
+						<div class="slctWrapOrigin " >
+	<select>
+							<option>선택</option>
+							<option>내용</option>
+							<option>내용</option>
+							<option>내용</option>
+							</select>
+</div><!-- end of slctWrap -->
+
+						<input type="text">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>상담유형</th>
+				<td colspan="3">
+					<!-- 
+						상담유형 셀렉트 활성화
+						활성화 클래스는 div.sarchBar 에 넣어주시면 됩니다.
+						active : 셀렉트 활성화 클래스
+					 -->
+					<div class="sarchBar scrhType3">
+						<input type="text" value="주문/결제/환불&gt; 주문/결제/환불&gt; 환불문의">
+						<button class="delete">삭제</button>
+						<button class="add">팝업링크</button>
+						<ul>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 환불문의</a></li>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 환불불가</a></li>
+							<li>
+								<a href="#">
+									주문/결제/환불&gt; 주문/결제/환불&gt; 환불기간지남 &gt; 주문/결제/환
+									주문/결제/환불&gt; 주문/결제/환불&gt; 환불기간지남 
+								</a>
+							</li>
+							<li><a href="#">주문/결제/환불> 주문/결제/환불> 계좌별 환불 방법 문의</a></li>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 영수증/세금계산서관련</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>상담유형</th>
+				<td colspan="3">
+					<!-- 
+						상담유형 셀렉트 활성화
+						활성화 클래스는 div.sarchBar 에 넣어주시면 됩니다.
+						active : 셀렉트 활성화 클래스
+						-->
+					<div class="sarchBar scrhType3 active">
+
+						<div class="bxInp">
+
+							<!-- 
+								* contenteditable 속성 값
+								- true : 수정 가능
+								- false : 수정 불가능
+								* .inp div 박스에 최대 가로길이 지정 필요합니다.(말줄임 표현)
+								- max-width: 가로길이px
+								-->
+							<div class="inp" contenteditable="true" readonly="true" style="max-width:293px;">주문/결제/환불&gt; 주문/결제/환불</div> 
+							<button class="del">삭제</button>
+						</div>
+						
+						<button class="add">팝업링크</button>
+						<ul>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 환불문의</a></li>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 환불불가</a></li>
+							<li>
+								<a href="#">
+									주문/결제/환불&gt; 주문/결제/환불&gt; 환불기간지남 &gt; 주문/결제/환
+									주문/결제/환불&gt; 주문/결제/환불&gt; 환불기간지남 
+								</a>
+							</li>
+							<li><a href="#">주문/결제/환불> 주문/결제/환불> 계좌별 환불 방법 문의</a></li>
+							<li><a href="#">주문/결제/환불&gt; 주문/결제/환불&gt; 영수증/세금계산서관련</a></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>메인상담</th>
+				<td>
+					<!-- 
+						메인상담 활성화
+						활성화 클래스는 div.sarchBar 에 넣어주시면 됩니다.
+						active : 셀렉트 활성화 클래스
+					 -->
+					<div class="sarchBar scrhType4">
+						<input type="text">
+						<button class="delete">삭제</button>
+						<ul>
+							<li>
+								<a href="#">
+									<span>2018-10-22 14:41:52</span>
+									<span>배송문의 | [몬스터]티탁 1016티탁 1016티탁 1016티탁 1016티탁 10</span>
+									<span>147100339 | 배송문의</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>2018-10-22 14:41:52</span>
+									<span>배송문의 | [몬스터]티탁 1016티탁 1016티탁 1016티탁 1016티탁 10</span>
+									<span>147100339 | 배송문의</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>2018-10-22 14:41:52</span>
+									<span>배송문의 | [몬스터]티탁 1016티탁 1016티탁 1016티탁 1016티탁 10</span>
+									<span>147100339 | 배송문의</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>2018-10-22 14:41:52</span>
+									<span>배송문의 | [몬스터]티탁 1016티탁 1016티탁 1016티탁 1016티탁 10</span>
+									<span>147100339 | 배송문의</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</td>
+				<th>주문번호</th>
+				<td>
+					<div class="sarchBar default">
+						<input type="text">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>상담제목</th>
+				<td colspan="3">
+					<div class="sarchBar default">
+						<input type="text">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<textarea class="textArea" placeholder="1. 문의사항: &#13;&#10;2. 안내사항:&#13;&#10;3. 처리내용:&#13;&#10;4. 약속여부: 약속없음/ oo 약속 (00시까지)"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th>파일첨부</th>
+				<td colspan="3">
+					<div class="fileUpload">
+						<input type="file">
+						<span>파일첨부</span>
+					</div>
+					<span>첨부파일 3건</span>
+				</td>
+			</tr>
+			<tr>
+				<th>통화결과</th>
+				<td colspan="3">
+					<div class="saveWrap">
+						<div class="radios">
+							<label class="radioWrap">
+								<input type="radio" checked="checked">
+								<span>성공</span>
+							</label>
+							<label class="radioWrap">
+								<input type="radio">
+								<span>실패</span>
+							</label>
+							<label class="radioWrap">
+								<input type="radio">
+								<span>끊김</span>
+							</label>
+							<label class="radioWrap">
+								<input type="radio">
+								<span>호전환</span>
+							</label>
+						</div>
+						<!-- 
+							저장버튼(셀렉트) 활성화
+							활성화 클래스는 div.slctWrap에 넣어주시면 됩니다.
+							active : 셀렉트 활성화 클래스
+						 -->
+						<div class="slctWrap  " >
+	<button>저장</button>
+	<ul>
+							<li class="groupSel">
+								<a href="#">그룹이관</a>
+								<!-- 
+									이관 유형선택 활성화
+									활성화 클래스는 div.groupSel에 넣어주시면 됩니다.
+									active : 셀렉트 활성화 클래스
+								 -->
+								<div class="typeSelect">
+									<em class="tit">이관 유형선택</em>
+									<ul>
+										<li class="active">
+											<button>정산</button>
+											<div class="innerBox">
+												<label class="radioWrap">
+													<input type="radio" name="group1">
+													<span>정산 1팀</span>
+												</label>
+												<label class="radioWrap">
+													<input type="radio" name="group1">
+													<span>정산 2팀</span>
+												</label>
+											</div>
+										</li>
+										<li>
+											<button>배송</button>
+											<div class="innerBox">
+												<label class="radioWrap">
+													<input type="radio" name="group2">
+													<span>배송 1팀</span>
+												</label>
+												<label class="radioWrap">
+													<input type="radio" name="group2">
+													<span>배송 2팀</span>
+												</label>
+											</div>
+										</li>
+										<li>
+											<button>고객케어</button>
+											<div class="innerBox">
+												<label class="radioWrap">
+													<input type="radio" name="group3">
+													<span>test1</span>
+												</label>
+												<label class="radioWrap">
+													<input type="radio" name="group3">
+													<span>test2</span>
+												</label>
+											</div>
+										</li>
+										<li>
+											<button>1:1문의</button>
+											<div class="innerBox">
+												<label class="radioWrap">
+													<input type="radio" name="group4">
+													<span>test1</span>
+												</label>
+												<label class="radioWrap">
+													<input type="radio" name="group4">
+													<span>test2</span>
+												</label>
+											</div>
+										</li>
+									</ul>
+
+									<div class="btn_wrap">
+										<button class="btn orangeBorder">취소</button>
+										<button class="btn orangeBg">이관</button>
+									</div>
+
+								</div>
+							</li>
+							<li><a href="#">개인이관</a></li>
+							<li><a href="#">진행</a></li>
+							<li><a href="#">완료</a></li>
+							</ul>
+</div><!-- end of slctWrap -->
+					</div>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>

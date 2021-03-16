@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sales.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "on", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>딜기준 정산서 조회</h2>
+			</div>
+
+			<div class="spc_tab_wp none_tab">
+				<div class="btns">
+					<button type="button" class="btn default">정산정책 보기</button>
+					<button type="button" class="btn default">정산FAQ 보기</button>
+				</div>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>진행 딜 선택</th>
+								<td>
+									<div class="groupWrap">
+										<label for="tmp_radio1" class="spc_radio checked"><input type="radio" id="tmp_radio1" name="tmp_radio" checked="checked"><i class="symbol"></i>딜명으로 검색</label>
+										<label for="tmp_radio2" class="spc_radio"><input type="radio" id="tmp_radio2" name="tmp_radio"><i class="symbol"></i>딜번호로 검색</label>
+									</div>
+							
+									<div class="spc_select" style="width: 508px; ">
+										<div class="value"><span class="selected">전체 (진행중 딜)</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+
+				<div class="btns">
+					<button class="btn orange-border">초기화</button>
+					<button class="btn orange">검색</button>
+				</div>
+			</form>
+
+			<div class="detailWrap mt39">
+				<table>
+					<thead>
+						<tr>
+							<th>
+								<p class="msg">진행하셨던 딜을 선택하시면 온라인 정산서를 확인하실 수 있습니다. <br>
+								온라인 정산서는 입금완료 처리된 이후 조회 가능하며, 입금이 완료된 시점에도<br>
+								정산서 확인이 되지 않거나 정산금액에 문제가 있는 경우 담당 파트너컨설턴트(PC팀)에게 문의해 주세요.
+								</p>
+							</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+
+			<div class="detailWrap mt39">
+				<div class="topWrap">
+					<div class="opt type1">
+						<h3>정산서 내역</h3>
+						<span>(판매 종료일 : 2018-01-03)</span>
+					</div>
+				</div>
+				<table>
+					<colgroup>
+						<col style="width: 120px;">
+						<col style="width: 121px;">
+						<col style="width: auto;">
+						<col style="width: 121px;">
+						<col style="width: 121px;">
+						<col style="width: 121px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>정산회차</th>
+							<th>정산 예정일</th>
+							<th>매출 집계기간</th>
+							<th>수량</th>
+							<th>지급상태</th>
+							<th>정산서</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3"><p class="txt">1차</p></td>
+							<td rowspan="3">2018-01-24</td>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (배송완료 수량)</td>
+							<td>145</td>
+							<td rowspan="3"><p class="txt">지급완료<br />(2018-01-24)</p></td>
+							<td rowspan="3"><button type="button" class="btn orange-border">정산서</button></td>
+						</tr>
+						<tr>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (환불수량)</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td class="ta-l"><span class="pointClr fw-b">합계</span></td>
+							<td><span class="pointClr fw-b">145</span></td>
+						</tr>
+						<tr>
+							<td rowspan="3"><p class="txt">2차</p></td>
+							<td rowspan="3">2018-01-24</td>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (배송완료 수량)</td>
+							<td>145</td>
+							<td rowspan="3"><p class="txt">지급완료<br />(2018-01-24)</p></td>
+							<td rowspan="3"><button type="button" class="btn orange-border">정산서</button></td>
+						</tr>
+						<tr>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (환불수량)</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td class="ta-l"><span class="pointClr fw-b">합계</span></td>
+							<td><span class="pointClr fw-b">145</span></td>
+						</tr>
+						<tr>
+							<td rowspan="4"><p class="txt">3차<br />(최종)</p></td>
+							<td rowspan="4">2018-01-24</td>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (배송완료 수량)</td>
+							<td>145</td>
+							<td rowspan="4"><p class="txt">지급완료<br />(2018-01-24)</p></td>
+							<td rowspan="4"><button type="button" class="btn orange-border">정산서</button></td>
+						</tr>
+						<tr>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (환불수량)</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (환불대기수량)</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td class="ta-l"><span class="pointClr fw-b">합계</span></td>
+							<td><span class="pointClr fw-b">145</span></td>
+						</tr>
+						<tr>
+							<td rowspan="4"><p class="txt">추가 1차</p></td>
+							<td rowspan="4">2018-01-24</td>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (배송완료 수량)</td>
+							<td>145</td>
+							<td rowspan="4"><p class="txt">지급완료<br />(2018-01-24)</p></td>
+							<td rowspan="4"><button type="button" class="btn orange-border">정산서</button></td>
+						</tr>
+						<tr>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (환불수량)</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td class="ta-l">2018-01-03 ~ 2018-01-11 (환불대기수량)</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td class="ta-l"><span class="pointClr fw-b">합계</span></td>
+							<td><span class="pointClr fw-b">145</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- end of detailWrap -->
+
+			<ul class="noti">
+				<li>정산서 버튼을 클릭하시면, 정산 회차별 온라인 정산서를 확인하실 수 있습니다. 온라인 정산서는 입금완료 처리된 이후 조회 가능합니다.</li>
+				<li>지급상태가 '지급완료'임에도 정산서를 확인할 수 없거나, 정산금액에 문제가 있는 경우에는 <span class="pointClr">스토어 파트너 컨택센터(1644-0552)</span>로 문의하여 주시기 바랍니다.</li>
+				<li>지급상태가 '미지급'인 경우는 해당 정산 차수의 지급예정액에 특이사항이 발생하여, 지급이 보류된 케이스입니다. 이 경우 다음 정산 차수에서 누적금액으로 지급됩니다.</li>
+				<li>예정정산서는 <span class="pointClr">주/차수 정산의 경우 지급예정일 7일 전</span>부터, <span class="pointClr">월정산의 경우 지급예정일 10일 전</span>부터 조회가 가능합니다.<br />또한, 예정정산서의 금액은 실 지급예정일까지 변동이 있을 수 있습니다.</li>
+			</ul>
+
+		</div><!-- end of content -->
+
+		<!-- @@include('common/aside_left.html') -->
+		<!-- @@include('common/aside_right.html') -->
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+</script>
+
+</body>
+</html>

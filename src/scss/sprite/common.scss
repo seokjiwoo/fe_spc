@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+%sp-common {
+    background: url('../im/sp-common.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-common($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-common, $filename);
+    @extend %sp-common;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-common: (
+    spritesheet_name: sp-common,
+    banner_admon: (offset_x: 0, offset_y: 0, width: 88px, height: 146px),
+    btn_layer_close1: (offset_x: 0, offset_y: -150px, width: 17px, height: 17px),
+    btn_sitemap: (offset_x: -154px, offset_y: -87px, width: 30px, height: 30px),
+    btn_sitemap_close: (offset_x: -188px, offset_y: -87px, width: 30px, height: 30px),
+    btn_slide_next: (offset_x: -92px, offset_y: -87px, width: 27px, height: 43px),
+    btn_slide_prev: (offset_x: -123px, offset_y: -87px, width: 27px, height: 43px),
+    chk_off: (offset_x: -222px, offset_y: -87px, width: 20px, height: 20px),
+    chk_on: (offset_x: -246px, offset_y: -87px, width: 20px, height: 20px),
+    gnb_sub_arr: (offset_x: -376px, offset_y: -62px, width: 9px, height: 6px),
+    ico_btn_close: (offset_x: -366px, offset_y: -87px, width: 19px, height: 19px),
+    ico_calendar: (offset_x: -276px, offset_y: -62px, width: 19px, height: 16px),
+    ico_file: (offset_x: -333px, offset_y: -62px, width: 9px, height: 9px),
+    ico_file_delete: (offset_x: -222px, offset_y: -111px, width: 6px, height: 6px),
+    ico_onestop: (offset_x: -92px, offset_y: -62px, width: 62px, height: 21px),
+    ico_select: (offset_x: -346px, offset_y: -62px, width: 11px, height: 6px),
+    ico_select_on: (offset_x: -361px, offset_y: -62px, width: 11px, height: 6px),
+    ico_toggler_closed: (offset_x: -270px, offset_y: -87px, width: 20px, height: 20px),
+    ico_toggler_opened: (offset_x: -294px, offset_y: -87px, width: 20px, height: 20px),
+    ico_tooltip: (offset_x: -232px, offset_y: -62px, width: 18px, height: 18px),
+    ico_x: (offset_x: -254px, offset_y: -62px, width: 18px, height: 18px),
+    logo_brand: (offset_x: -92px, offset_y: 0, width: 298px, height: 27px),
+    logo_footer: (offset_x: -158px, offset_y: -62px, width: 70px, height: 18px),
+    logo_spc: (offset_x: -92px, offset_y: -31px, width: 298px, height: 27px),
+    operator_minus: (offset_x: -299px, offset_y: -62px, width: 13px, height: 13px),
+    operator_plus: (offset_x: -316px, offset_y: -62px, width: 13px, height: 13px),
+    radio_off: (offset_x: -318px, offset_y: -87px, width: 20px, height: 20px),
+    radio_on: (offset_x: -342px, offset_y: -87px, width: 20px, height: 20px),
+);

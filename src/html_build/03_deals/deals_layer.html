@@ -1,0 +1,850 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 딜관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+<style>
+	/* [D] UI 확인용 */
+	body {
+		padding: 20px; 
+	}
+	.deals_layer{
+		display: block;
+		position: relative; 
+		margin-top: 20px; 
+	}
+</style>
+</head>
+<body>
+	<!-- 판매기간 연장 -->
+	<div class="deals_layer extended_sale" style="width:648px;">
+		<div class="layer_hd">
+			<h3>판매기간 연장</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>판매기간 연장 딜</h4>
+			<table class="deals_tb01">
+			 	<colgroup>
+			 		<col style="width:119px;">
+			 		<col style="width:auto;">
+			 		<col style="width:119px;">
+			 	</colgroup>
+			 	<thead>
+			 		<tr>
+			 			<th scope="col">딜 번호</th>
+			 			<th scope="col">딜 이름</th>
+			 			<th scope="col">판매종료일</th>
+			 		</tr>
+			 	</thead>
+			 	<tbody>
+			 		<tr>
+			 			<td>881119762</td>
+			 			<td><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+			 			<td>2018.01.26</td>
+			 		</tr>
+			 		<tr>
+			 			<td class="under_txt">881119762</td>
+			 			<td class="under_txt"><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+			 			<td class="under_txt">2018.01.26</td>
+			 		</tr>
+			 	</tbody>
+			</table>
+			<ul class="tip_list">
+				<li>판매종료 당일 연장은 불가능합니다.</li>
+			</ul>
+			<h4 class="mt30">판매종료일 설정</h4>
+			<table class="deals_tb01 pd10">
+				<colgroup>
+					<col style="width:119px;">
+					<col style="width:auto" />
+				</colgroup>
+				<tbody>
+					<th scope="row">판매종료일</th>
+					<td>
+						<div class="a_left">
+							<div class="spc_select closeDate" style="width:212px;">
+								<div class="value"><span class="selected">연장할 기간 선택</span><i></i></div>
+								<select>
+									<option>옵션1</option>
+									<option>옵션2</option>
+									<option>옵션3</option>
+								</select>
+							</div>
+						</div>
+					</td>
+				</tbody>
+			</table>
+			<div class="btn_area">
+				<button type ="submit" class="btn cancel2">취소</button>
+				<button type="submit" class="btn submit2">등록</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div> 
+	<!--// 판매기간 연장 -->
+
+	<!-- 판매기간 연장02 -->
+	<div class="deals_layer extended_sale" style="width:648px;">
+		<div class="layer_hd">
+			<h3>판매기간 연장</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h484">
+				<h4>성공 <span class="txt_point">3건</span></h4>
+				<table class="deals_tb01">
+				 	<colgroup>
+				 		<col style="width:119px;">
+				 		<col style="width:auto;">
+				 		<col style="width:119px;">
+				 	</colgroup>
+				 	<thead>
+				 		<tr>
+				 			<th scope="col">딜 번호</th>
+				 			<th scope="col">딜 이름</th>
+				 			<th scope="col">판매종료일</th>
+				 		</tr>
+				 	</thead>
+				 	<tbody>
+				 		<tr>
+				 			<td>881119762</td>
+				 			<td><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+				 			<td>2018.01.26</td>
+				 		</tr>
+				 		<tr>
+				 			<td>881119762</td>
+				 			<td><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+				 			<td>2018.01.26</td>
+				 		</tr>
+				 	</tbody>
+				</table>
+				<h4 class="mt30">실패 <span class="txt_point">3건</span></h4>
+				<table class="deals_tb01 failed">
+				 	<colgroup>
+				 		<col style="width:119px;">
+				 		<col style="width:302px;">
+				 		<col style="width:105px;">
+				 		<col style="width:auto;">
+				 	</colgroup>
+				 	<thead>
+				 		<tr>
+				 			<th scope="col">딜 번호</th>
+				 			<th scope="col">딜 이름</th>
+				 			<th scope="col">사유</th>
+				 			<th scope="col">판매종료일</th>
+				 		</tr>
+				 	</thead>
+				 	<tbody>
+				 		<tr>
+				 			<td>881119762</td>
+				 			<td><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+				 			<td>판매 중인 딜이<br>아닙니다.</td>
+				 			<td>2018.01.26</td>
+				 		</tr>
+				 		<tr>
+				 			<td>881119762</td>
+				 			<td><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+				 			<td>판매 중인 딜이<br>아닙니다.</td>
+				 			<td>2018.01.26</td>
+				 		</tr>
+				 		<tr>
+				 			<td>881119762</td>
+				 			<td><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+				 			<td>판매 중인 딜이<br>아닙니다.</td>
+				 			<td>2018.01.26</td>
+				 		</tr>
+				 		<tr>
+				 			<td>881119762</td>
+				 			<td><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+				 			<td>판매 중인 딜이<br>아닙니다.</td>
+				 			<td>2018.01.26</td>
+				 		</tr>
+				 		<tr>
+				 			<td>881119762</td>
+				 			<td><div class="a_left">코사마 타월 특가 모음전 01</div></td>
+				 			<td>판매 중인 딜이<br>아닙니다.</td>
+				 			<td>2018.01.26</td>
+				 		</tr>
+				 	</tbody>
+				</table>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div> 
+	<!--// 판매기간 연장02 -->
+
+	<!-- 미리보기 -->
+	<div class="deals_layer preview" style="width:718px;">
+		<div class="preview_bg">
+			<div class="info">
+				<p class="title"><em>상품 홍보제목</em>상품홍보제목</p>
+				<p class="name"><em>메인상품 이름</em>메인 상품이름</p>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!--// 미리보기 -->
+
+	<!-- 옵션판매 수량관리 -->
+	<div class="deals_layer option" style="width:838px;">
+		<div class="layer_hd">
+			<h3>옵션 판매 수량관리</h3>
+		</div>
+		<div class="layer_ct">
+			<ul class="opt_list">
+				<li>현재 판매 중이거나 판매 예정인 딜만 판매 수량관리가 가능합니다.</li>
+				<li>수량 조정을 원하는경우 <span></span> 에 수량을 기재한 후 추가 버튼을 눌러주세요
+					<ul>
+						<li>- 추가 : 가능수량에 표기될 숫자를 최대로 기입 (가능 수량 : 오입력을 방지하기 위해 최대수향의 50%를 입력할 수 있음)</li>
+						<li>- 감소 : 감소시킬 수량을 음수로 기입(예: -5)</li>
+					</ul>
+				</li>
+				<li><span>품절</span> 버튼을 누르면 해당 옵션은 <em>품절처리가 되어 판매되지 않습니다. (노란색 처리) 연동 API를 통해 등록된 딜의 옵션은 품절 처리가 불가합니다.</em></li>
+				<li><span>판매</span> 버튼을 누르면 해당 옵션은 <em>판매가 재개되며 판매 가능수량을 추가하셔야 합니다.</em></li>
+				<li class="gap">[숨김상태] 해당 옵션은 <em>고객에게 노출되지 않습니다. (회색처리)</em></li>
+			</ul>
+			<h4 class="mt24">옵션 선택</h4>
+			<table class="deals_tb01">
+				<colgroup>
+					<col style="width:231px;">
+					<col style="width:95px;">
+					<col style="width:75px;"  > 
+					<col style="width:75px;">
+					<col style="width:75px;">
+					<col style="width:75px;">
+					<col style="width:130px;">
+					<col style="width:78px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">판매옵션</th>
+						<th scope="col">판매금액</th>
+						<th scope="col">최대수량</th>
+						<th scope="col">판매수량</th>
+						<th scope="col">취소수량</th>
+						<th scope="col">잔여수량</th>
+						<th scope="col">수량추가<span>(수량추가/가능수량)</span></th>
+						<th scope="col">품절처리</th>
+					</tr>
+					<tbody>
+						<tr>
+							<td><div class="a_left">01. 카카오 큐티 젤리 케이스 아이폰</div></td>
+							<td>11,900원</td>
+							<td>15</td>
+							<td>15</td>
+							<td>15</td>
+							<td>15</td>
+							<td>( <input type="text" class="quantity"> / 7 )<br><button type="button" class="btn slim mt6">추가</button></td>
+							<td><button type="button" class="btn slim">품절</button></td>
+						</tr>
+						<tr class="yellow_bg">
+							<td><div class="a_left">02. 카카오 큐티 젤리 케이스 아이폰7타입 B. 어피치</div></td>
+							<td>11,900원</td>
+							<td>15</td>
+							<td>15</td>
+							<td>15</td>
+							<td>15</td>
+							<td>품절상태입니다.</td>
+							<td><button type="button" class="btn slim">판매</button></td>
+						</tr>
+						<tr class="gray_bg">
+							<td><div class="a_left">02. 카카오 큐티 젤리 케이스 아이폰7타입 B. 어피치</div></td>
+							<td>11,900원</td>
+							<td>15</td>
+							<td>15</td>
+							<td>15</td>
+							<td>15</td>
+							<td>( <input type="text" class="quantity"> / 7 )<br><button type="button" class="btn slim mt6">추가</button></td>
+							<td>[숨김상태]</td>
+						</tr>
+					</tbody>
+				</thead>
+			</table>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!--// 옵션판매 수량관리 -->
+
+	<!-- 품절처리 -->
+	<div class="deals_layer soldout" style="width:428px;">
+		<div class="layer_hd">
+			<h3>품절처리</h3>
+		</div>
+		<div class="layer_ct">
+			<h4>품절사유</h4>
+			<div class="txt_area"><textarea>상품이 품절된 사유를 입력해 주세요. (200자 이하)</textarea></div>
+			<ul class="spc_note">
+				<li><i class="dot"></i>품절로 인해 환불처리가 필요한 고객님께는 사전 안내 후, ‘재고 품절’사유로 환불 처리해주셔야 합니다.</li>
+				<li><i class="dot"></i>위 사유로 환불 완료시 해당 고객님께 판매가 기준 10% 적립금이 지급되며 해당 금액은 정산 시 차감됩니다.</li>
+			</ul>
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="submit" class="btn submit2">등록</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!-- // 품절처리 -->
+
+	<!-- 딜 복제 -->
+	<div class="deals_layer deals_copy" style="width:648px;">
+		<div class="layer_hd">
+			<h3>딜 복제</h3>
+			<p>원본딜에 등록된 딜 주요 내용을 복제하여 임시저장 상태로 신규딜이 생성됩니다.</p>
+		</div>
+		<div class="layer_ct">
+			<h4>복제 여부 선택</h4>
+			<table class="deals_tb01">
+				<colgroup>
+					<col style="width:150px;">
+					<col style="width:auto;">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th><div class="a_left">컨텐츠 제작구분</div></th>
+						<td>
+							<div class="a_left">
+								<label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked><i class="symbol"></i>파트너 제작</label>
+								<label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>티몬제작</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th><div class="a_left">구비서류</div></th>
+						<td>
+							<div class="a_left">
+								<label for="ly_radio1-3" class="spc_radio"><input type="radio" id="ly_radio1-3" name="ly_radio2"><i class="symbol"></i>복제</label>
+								<label for="ly_radio1-4" class="spc_radio"><input type="radio" id="ly_radio1-4" name="ly_radio2"><i class="symbol"></i>복제안함</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th><div class="a_left">컨텐츠</div></th>
+						<td>
+							<div class="a_left">
+								<label for="ly_radio1-5" class="spc_radio"><input type="radio" id="ly_radio1-5" name="ly_radio3"><i class="symbol"></i>복제</label>
+								<label for="ly_radio1-6" class="spc_radio"><input type="radio" id="ly_radio1-6" name="ly_radio3"><i class="symbol"></i>복제안함</label>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="spc_note">
+				<li><i class="dot"></i>복제 제외 항목 : 정상가 근거, 정상가 근거자료, 택배사, 배송형태, 배송, 반품배송비, 반품불가조건, 옵션</li>
+				<li><i class="dot"></i>컨텐츠 파트너 제작 딜을 티몬 제작딜로 변경하는 경우, 원본딜에 등록된 컨텐츠는 복제되지 않습니다.</li>
+				<li><i class="dot"></i>컨텐츠 티몬 제작 딜을 파트너 제작 딜로 변경하는 경우, 컨텐츠 업로드 작업해주셔야 합니다.</li>
+			</ul>
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="submit" class="btn submit2">복제하기</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!--// 딜 복제 -->
+
+	<!-- 할인쿠폰 동의약관 -->
+	<div class="deals_layer coupon_terms" style="width:648px;">
+		<div class="layer_hd">
+			<h3>할인쿠폰 동의약관</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h264">
+				<ol class="ls">
+					<li>
+						1. 귀 판매자와 체결한 계약에서 판매자의 동의가있는경우 당사는 판매위탁 상품에 대해 구매할인쿠폰(즉시
+						할인쿠폰, 딜 전용쿠폰, 장바구니 쿠폰을 말함. 이하동일)을 적용하여 판매대행을 할 수 있으며,<span class="txt_point">판매자가 동의
+						하지 않는 경우 본 판매위탁 상품은 당사의 모든구매할인 쿠폰 적용에서 배제되는</span> 것으로 합의하였습니다. 
+						동 합의에 기초하여 다음 사항들에 대한 확인/동의서를 제출받고자 하오니 협조 부탁드리며, 문의사항이 
+						있으신경우 파트너 전용센터로 연락주시기 바랍니다.
+						<ul>
+							<li>팬매기간 동안 판매촉진을 위해 필요한 경우당사는 구매할인 쿠폰을 적용할 수있으며, 구매할인쿠폰 적용에 따른 할인이 부담 주체는 별도협의로정합니다.</li>
+							<li>
+								판매 과정에서 구매할인 쿠폰이 적용되는 경우 그 적용가액만큼 상품 판매가가 할인되며, 당사가 부담하는 상품 판매가 할인액에 대해서는 당사의 판매 수수료 산정시
+								<span class="under">할인 전 상품금액을 기준으로 산정되는 수수료를 금액에서 그 할인액을 차감</span>합니다.(예) 판매 상품에 당사 부담 10원 할인쿠폰 적용시 당사 수수료가 10원 할인됨
+							</li>
+						</ul>
+					</li>
+					<li>
+						2. 본 동의서 제출에도 불구하고 판매자는 판매개시 후 판매기간 동안의 구매결제 건별로 구매 할인쿠폰 적용
+						본 동의서 제출에도 불구하고 판매자는 판매개시 후 판매기간 동안의 구매결제 건별로 구매 할인쿠폰 적용
+						본 동의서 제출에도 불구하고 판매자는 판매개시 후 판매기간 동안의 구매결제 건별로 구매 할인쿠폰 적용
+						본 동의서 제출에도 불구하고 판매자는 판매개시 후 판매기간 동안의 구매결제 건별로 구매 할인쿠폰 적용
+						본 동의서 제출에도 불구하고 판매자는 판매개시 후 판매기간 동안의 구매결제 건별로 구매 할인쿠폰 적용
+						본 동의서 제출에도 불구하고 판매자는 판매개시 후 판매기간 동안의 구매결제 건별로 구매 할인쿠폰 적용
+					</li>
+				</ol>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!--// 할인쿠폰 동의약관 -->
+
+	<!-- 상품정보제공고시 미리보기 -->
+	<div class="deals_layer product_view" style="width:648px;">
+		<div class="layer_hd">
+			<h3>상품정보제공고시 미리보기</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h408">
+				<h4>스포츠용품</h4>
+				<table class="deals_tb01 ">
+					<colgroup>
+						<col style="width:280px;">
+						<col style="width:350;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>항목</th>
+							<th>내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><div class="a_left">1. 품명 및 모델명</div></td>
+							<td><div class="a_left">여성데일리 운동화</div></td>
+						</tr>
+						<tr>
+							<td><div class="a_left">2. 크기, 중량</div></td>
+							<td><div class="a_left">250g</div></td>
+						</tr>
+						<tr>
+							<td><div class="a_left">3. 색상</div></td>
+							<td><div class="a_left">빨강, 민트</div></td>
+						</tr>
+						<tr>
+							<td><div class="a_left">4. 재질</div></td>
+							<td><div class="a_left">폴리에스테르</div></td>
+						</tr>
+						<tr>
+							<td><div class="a_left">5. 제품 구성</div></td>
+							<td><div class="a_left">운동화, 운동화 끈</div></td>
+						</tr>
+						<tr>
+							<td><div class="a_left">6. 동일모델의 출시년월</div></td>
+							<td><div class="a_left">2015.02</div></td>
+						</tr>
+						<tr>
+							<td><div class="a_left">7. 제조사, 수입품의 경우 수입자를 함께 표시 <br>(병행수입의 경우 병행수입 여부로 대체가능)</div></td>
+							<td><div class="a_left">티몬통상</div></td>
+						</tr>
+						<tr>
+							<td><div class="a_left">8. 제조국</div></td>
+							<td><div class="a_left">한국</div></td>
+						</tr>
+						<tr>
+							<td><div class="a_left">9. 상품별 세부 사양</div></td>
+							<td><div class="a_left">별도 표기</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!-- //상품정보제공고시 미리보기 -->
+
+	<!-- 옵션상태 처리결과 -->
+	<div class="deals_layer option_result" style="width:648px;">
+		<div class="layer_hd">
+			<h3>옵션상태 처리결과</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h484">
+				<h4>성공 <span class="txt_point">3건</span></h4>
+				<table class="deals_tb01">
+				 	<colgroup>
+				 		<col style="width:94px;">
+				 		<col style="width:auto;">
+				 		<col style="width:121px;">
+				 	</colgroup>
+				 	<thead>
+				 		<tr>
+				 			<th scope="col">옵션번호</th>
+				 			<th scope="col">옵션명</th>
+				 			<th scope="col">처리상태</th>
+				 		</tr>
+				 	</thead>
+				 	<tbody>
+				 		<tr>
+				 			<td>881119762</td>
+				 			<td><div class="a_left">01. 카카오 큐티 젤리 케이스 | 아이폰7 | A.프로도</div></td>
+				 			<td>매진</td>
+				 		</tr>
+				 		<tr>
+				 			<td>259875691</td>
+				 			<td><div class="a_left">01. 카카오와 함께하는 엄청 귀여운 큐티 젤리 케이스 카카오 베이비 ver.01 | 아이폰7 | A.프로도</div></td>
+				 			<td>매진</td>
+				 		</tr>
+				 		<tr>
+				 			<td>259875691</td>
+				 			<td><div class="a_left">01. 카카오와 함께하는 엄청 귀여운 큐티 젤리 케이스 카카오 베이비 ver.01 | 아이폰7 | A.프로도</div></td>
+				 			<td>매진</td>
+				 		</tr>
+				 	</tbody>
+				</table>
+				<h4 class="mt30">실패 <span class="txt_point">3건</span></h4>
+				<table class="deals_tb01">
+				 	<colgroup>
+				 		<col style="width:94px;">
+				 		<col style="width:auto;">
+				 		<col style="width:121px;">
+				 	</colgroup>
+				 	<thead>
+				 		<tr>
+				 			<th scope="col">옵션번호</th>
+				 			<th scope="col">옵션명</th>
+				 			<th scope="col">처리상태</th>
+				 		</tr>
+				 	</thead>
+				 	<tbody>
+				 		<tr>
+				 			<td>259875691</td>
+				 			<td><div class="a_left">01. 카카오와 함께하는 엄청 귀여운 큐티 젤리 케이스 카카오 베이비 ver.01 | 아이폰7 | A.프로도</div></td>
+				 			<td>이미 노출 처리 된 <br> 옵션입니다.</td>
+				 		</tr>
+				 		<tr>
+				 			<td>259875691</td>
+				 			<td><div class="a_left">01. 카카오 큐티 젤리 케이스 | 아이폰7 | A.프로도</div></td>
+				 			<td>이미 노출 처리 된 <br> 옵션입니다.</td>
+				 		</tr>
+				 		<tr>
+				 			<td>259875691</td>
+				 			<td><div class="a_left">01. 카카오 큐티 젤리 케이스 | 아이폰7 | A.프로도</div></td>
+				 			<td>이미 노출 처리 된 <br> 옵션입니다.</td>
+				 		</tr>
+				 	</tbody>
+				</table>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div> 
+	<!--// 옵션상태 처리결과 -->
+
+	<!-- 대표상품 설정 -->
+	<div class="deals_layer product_set" style="width:648px;">
+		<div class="layer_hd">
+			<h3>대표상품 설정</h3>
+		</div>
+		<div class="layer_ct">
+			<ul class="spc_note">
+				<li><i class="dot"></i>소수점 이하의 할인율이 발생할 경우, 공정거래법에 의거하여 내림처리됩니다. (예:60.7% -&gt; 60%로 표기)</li>
+				<li><i class="dot"></i>대표상품으로 선택된 옵션은 메인이미지/섬네일/모바일 배너에 반드시 표시되어있어야 합니다.</li>
+				<li><i class="dot"></i>선택된 대표옵셥은 딜 진행시 정상가, 할인가, 할인율 항목에 반영됩니다.</li>
+				<li><i class="dot"></i>딜진행중 대표옵션이 삭제될 경우 재설정 해주셔야 하며, 변경된 대표 옵션값에 따라 정상가, 할인가, 할인율도 변경됩니다.</li>
+			</ul>
+			<h4>대표상품 정보 <span class="impor txt_point">(꼭 확인해주세요!)</span></h4>
+			<table class="deals_tb01">
+			 	<colgroup>
+			 		<col style="width:75px;">
+			 		<col style="width:247px;">
+			 		<col style="width:88px;">
+			 		<col style="width:235px;">
+			 	</colgroup>
+			 	<tbody>
+			 		<tr>
+			 			<th>상품명</th>
+			 			<td colspan="3"><div class="a_left">01. 카카오 큐티 젤리 케이스</div></td>
+			 		</tr>
+			 		<tr>
+			 			<th>정상가</th>
+			 			<td><div class="a_left">30,000</div></td>
+			 			<th>할인율</th>
+			 			<td><div class="a_left"><strong class="txt_point">60%</strong></div></td>
+			 		</tr>
+			 		<tr>
+			 			<th>할인가</th>
+			 			<td><div class="a_left"><strong class="txt_point">11900</strong></div></td>
+			 			<th>가격출처</th>
+			 			<td><div class="a_left">티몬가</div></td>
+			 		</tr>
+			 	</tbody>
+			</table>
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="submit" class="btn submit2">확인</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div> 
+	<!-- // 대표상품 설정 -->
+
+	<!-- KC인증 대상 상품-->
+	<div class="deals_layer product_kc" style="width:648px;">
+		<div class="layer_hd">
+			<h3>KC인증 대상 상품</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="kc_box">
+				<p>
+					<span class="txt_point">KC 인증 대상 상품이 포함되어 있습니다.</span> <br>
+					딜 컨텐츠 내 ‘실제 상품에 부착되어 있는 인증정보’ 혹은 ‘상품에 동봉되어 배송되는 인증정보’ <br>
+					이미지를 삽입해 주시기 바랍니다.
+				</p>
+			</div>
+			<table class="deals_tb01">
+			 	<colgroup>
+			 		<col style="width:130px;">
+			 		<col style="width:auto">
+			 	</colgroup>
+			 	<tbody>
+				 	 <tr>
+				 	 	<th class="top">대상유무 확인</th>
+				 	 	<td>
+				 	 		<div class="a_left">
+				 	 			<ul>
+				 	 				<li>전기용품 : <a href="http://www.kats.go.kr/content.do?cm sid=44" target="_blank">http://www.kats.go.kr/content.do?cm sid=44</a></li>
+				 	 				<li>생활용품 : <a href="http://www.kats.go.kr/content.do?cm sid=44" target="_blank">http://www.kats.go.kr/content.do?cm sid=49</a></li>
+				 	 				<li>어린이용품 : <a href="http://www.kats.go.kr/content.do?cm sid=44" target="_blank">http://www.kats.go.kr/content.do?cm sid=496</a></li>
+				 	 			</ul>
+				 	 		</div>
+				 	 	</td>
+				 	 </tr>
+				 	  <tr>
+				 	 	<th>인증정보 검색</th>
+				 	 	<td>
+				 	 		<div class="a_left">
+				 	 			<ul>
+				 	 				<li><a href="http://www.kats.go.kr/content.do?cm sid=44" target="_blank">http://www.kats.go.kr/content.do?cm sid=44</li>
+				 	 			</ul>
+				 	 		</div>
+				 	 	</td>
+				 	 </tr>
+			 	</tbody>
+			</table>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div> 
+	<!-- // KC인증 대상 상품-->
+	
+	<!-- 상품정보제공고시 양식 다운로드 -->
+	<div class="deals_layer form_down" style="width:648px;">
+		<div class="layer_hd">
+			<h3>상품정보제공고시 양식 다운로드</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="scroll_box h369">
+				<table class="deals_tb01">
+				 	<colgroup>
+				 		<col style="width:178px;">
+				 		<col style="width:auto">
+				 		<col style="width:178px">
+				 		<col style="width:auto">
+				 	</colgroup>
+				 	<tbody>
+					 	 <tr>
+					 	 	<th><div class="a_left">물품대여서비스_<br>서적유아용품 행사용</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 	<th><div class="a_left">물품대여서비스_ <br>정수기,비데,공기청정기</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 </tr>
+					 	  <tr>
+					 	 	<th><div class="a_left">사무용기기</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 	<th><div class="a_left">상품권 쿠폰</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 </tr>
+					 	  <tr>
+					 	 	<th><div class="a_left">서적</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 	<th><div class="a_left">소형전자_mp3등</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 </tr>
+					 	  <tr>
+					 	 	<th><div class="a_left">스포츠용품</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 	<th><div class="a_left">가공식품</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 </tr>
+					 	  <tr>
+					 	 	<th><div class="a_left">가구</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 	<th><div class="a_left">가방</div></th>
+					 	 	<td><button type="button" class="btn down">다운로드</button></td>
+					 	 </tr>
+				 	</tbody>
+				</table>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div> 
+	<!-- // 상품정보제공고시 양식 다운로드 -->
+
+	<div class="deals_layer submit_info" style="width:648px;">
+		<div class="layer_hd">
+			<h3>딜 제출 정보</h3>
+		</div>
+		<div class="layer_ct">
+			<ul class="opt_list type2">
+				<li><em>딜 제출 전 입력하신 주요정보를 다시 확인해주세요!</em></li>
+				<li>입력하신 주요정보에 이상이 없으면 제출 버튼을 눌러주세요.</li>
+			</ul>
+			<div class="scroll_box h476">
+				<table class="deals_tb01">
+				 	<colgroup>
+				 		<col style="width: 157px ; ">
+				 		<col style="width: 158px ; ">
+				 		<col style="width: 158px ; ">
+				 		<col style="width: * ; ">
+				 	</colgroup>
+				 	<tbody>
+				 		<tr>
+				 			<th>담당MD</th>
+				 			<td colspan="3"><div class="a_left">하태희 (Email@tmon.co.kr)</div></td>
+				 		</tr>
+				 		<tr>
+				 			<th>상품명(메인상품이름)</th>
+				 			<td colspan="3"><div class="a_left">봄맞이 원피스 기획전</div></td>
+				 		</tr>
+				 		<tr>
+				 			<th>카테고리</th>
+				 			<td colspan="3"><div class="a_left">패션의류 > 원피스 > 캐주얼원피스</div></td>
+				 		</tr>
+				 		<tr>
+				 			<th>판매기간</th>
+				 			<td colspan="3"><div class="a_left">2018년 03월 30일 ~ 05월 25일</div></td>
+				 		</tr>
+				 		<tr>
+				 			<th>대표상품</th>
+				 			<td colspan="3"><div class="a_left">01. 살랑살랑 원피스</div></td>
+				 		</tr>
+				 		<tr>
+				 			<th rowspan="2">대표상품 가격</th>
+				 			<th class="subTitle">정상가</th>
+				 			<th class="subTitle">할인가</th>
+				 			<th class="subTitle">할인율</th>
+				 		</tr>
+				 		<tr>
+				 			<td class="subDesc">30,000</td>
+				 			<td class="subDesc">30,000</td>
+				 			<td class="subDesc">0</td>
+				 		</tr>
+				 		<tr>
+				 			<th>대표상품 수수료</th>
+				 			<td colspan="3"><div class="a_left">16%</div></td>
+				 		</tr>
+				 		<tr>
+				 			<th>상품유형</th>
+				 			<td colspan="3"><div class="a_left">일반상품</div></td>
+				 		</tr>
+				 		<tr>
+				 			<th>배송유형</th>
+				 			<td colspan="3"><div class="a_left">익일발송</div></td>
+				 		</tr>
+				 		<tr>
+				 			<th rowspan="4">배송비정책</th>
+				 			<th class="subTitle">배송비조건</th>
+				 			<th class="subTitle">배송비(편도)</th>
+				 			<th class="subTitle">추가조건</th>
+				 		</tr>
+				 		<tr>
+				 			<td class="subDesc">30,000</td>
+				 			<td class="subDesc">30,000</td>
+				 			<td class="subDesc">0</td>
+				 		</tr>
+				 		<tr>
+				 			<th class="subTitle">반품배송비</th>
+				 			<th class="subTitle">도서산간배송</th>
+				 			<th class="subTitle">도서산간추가배송비</th>
+				 		</tr>
+				 		<tr>
+				 			<td class="subDesc">30,000</td>
+				 			<td class="subDesc">30,000</td>
+				 			<td class="subDesc">0</td>
+				 		</tr>
+				 		<tr>
+				 			<th>컨텐츠 등록</th>
+				 			<td colspan="3"><div class="a_left">파트너등록</div></td>
+				 		</tr>
+				 	</tbody>
+				</table>
+
+				<ul class="opt_list">
+					<li><em>등록한 정보는 담당 MD에 의해 변경될 수 있으며, 변경된 내용은 딜진행 전 딜별계약을 통해 확인하세요.</em></li>
+					<li><span class="bold">제출된 딜은 이런 과정을 거쳐 판매됩니다!</span><br />MD 딜 정보 검토 및 승인 > 컨텐츠 제작 및 등록(티몬 제작시) > 심의 검수 및 승인 > 판매시작</li>
+				</ul>
+				
+				<div class="btn_area">
+					<button type="submit" class="btn cancel2">취소</button>
+					<button type="submit" class="btn submit2">제출</button>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+
+	<!-- 대표상품 설정 -->
+	<div class="deals_layer add_items" style="width: 467px;">
+		<div class="layer_hd">
+			<h3>항목추가</h3>
+		</div>
+		<div class="layer_ct">
+			<ul class="opt_list">
+				<li><em>최대 5개까지</em> 추가 가능합니다.</li>
+			</ul>
+
+			<div class="listWrap">
+				<h3><span>항목명</span></h3>
+				<ul class="list">
+					<li>
+		 				<input type="text" class="item" placeholder="상품명">
+		 				<button class="add">추가</button>
+		 				<button class="remove">삭제</button>
+					</li>
+				</ul>
+			</div>			
+
+			<div class="btn_area">
+				<button type="submit" class="btn cancel2">취소</button>
+				<button type="submit" class="btn submit2">등록/수정</button>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div> 
+
+	<!-- 심의 키워드 -->
+	<div class="deals_layer reviewKey" style="width:500px;">
+		<div class="layer_hd">
+			<h3>심의 키워드</h3>
+		</div>
+		<div class="layer_ct">
+			<div class="keywordWrap">
+				<div class="keyIcon blue">확인</div>
+				<span class="keyDesc">올림픽</span>
+			</div>
+			<div class="keywordWrap">
+				<div class="keyIcon green">입증</div>
+				<span class="keyDesc">여드름</span>
+			</div>
+		</div>
+		<button type="button" class="btn_close">닫기</button>
+	</div>
+	<!--// 심의 키워드 -->	
+
+	<script>
+		let elem_ulBox = document.querySelector( '.listWrap ul.list' ) ; 
+		let elem_li = elem_ulBox.querySelector( 'li' ) ; 
+
+		function addEvents ( elem ) {
+			let btnAdd = elem.querySelector( 'button.add' ) ; 
+			let btnRemove = elem.querySelector( 'button.remove' ) ; 
+
+			btnAdd.addEventListener( 'click' , function () {
+				if ( elem_ulBox.querySelectorAll( 'li' ).length >= 5 ) return ; 
+				let elemClone = elem.cloneNode( true ) ; 
+				elem_ulBox.appendChild( elemClone ) ; 
+
+				addEvents( elemClone ) ; 
+			}) ; 
+
+			btnRemove.addEventListener( 'click' , function () {
+				elem.parentNode.removeChild( elem ) ; 
+			}) ; 
+		}
+
+		addEvents( elem_li ) ; 
+	</script>
+
+</body>
+</html>

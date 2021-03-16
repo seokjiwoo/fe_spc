@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+.partner_area{
+	h3{
+		padding: 10px 0 12px;
+		font-family: $font_nanum_gothic;
+		font-size: 18px;
+		color: $color_dark;
+		line-height: 21px;
+	}
+	
+	.state_info{
+		border-top: 1px solid #babcc0;
+		font-size: 14px;
+		
+		> dl{
+			overflow: hidden;
+			padding: 14px 0 12px;
+			border-bottom: 1px solid #e7e8e9;
+			line-height: 24px;
+			
+			> dt{
+				float: left;
+				width: 37%;
+				color: $color_base;
+			}
+			> dd{
+				float: left;
+				width: 63%;
+				color: $color_dark;
+			}
+		}
+	}//.state_info
+	
+	.contract_info{
+		height: 75px;
+		margin: 0 -20px;
+		font-size: 0;
+		line-height: 25px;
+		
+		dt, dd{
+			display: inline-block;
+			width: 25%;
+			font-size: 14px;
+			vertical-align: middle;
+		}
+		
+		dt{
+			> span{
+				padding-left: 20px;
+				letter-spacing: -1px;
+			}
+		}
+		dd{
+			font-weight: bold;
+			text-align: right;
+			> span{
+				padding-right: 20px;
+			}
+		}
+	}//.contract_info
+}
+
+// IE7
+.lt-ie8{
+	.partner_area{
+		.contract_info{
+			margin: 0;
+			height: 83px;
+			
+			dt, dd{
+				float: left;
+			}
+			
+			dt{
+				> span{
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// CHECK BOX
+.spc_check{
+	display: inline-block;
+	position: relative;
+	margin-right: 12px;
+	font-size: 14px;
+	color: $color_base;
+	cursor: pointer;
+	
+	&.checked{
+		.symbol{
+			@include sp-common("chk_on");
+		}
+	}
+	
+	.symbol{
+		margin: -2px 5px 0 0;
+		@include sp-common("chk_off");
+		vertical-align: middle;
+	}
+	
+	input[type="checkbox"]{
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include opacity(0);
+		cursor: pointer;
+	}
+}

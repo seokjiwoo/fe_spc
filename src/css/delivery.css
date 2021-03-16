@@ -1,0 +1,72 @@
+.process_step .h3_head .btn_refresh, .process_step .process_lst > li > .inner p .warning > i, .process_step .tooltip_wrap { background: url("../im/sp-delivery.png?v=20210121102313") no-repeat; display: inline-block; overflow: hidden; }
+
+.process_step .h3_head .btn_refresh { float: left; text-align: left; margin-left: 10px; width: 21px; height: 21px; background-position: 0px 0px; -webkit-background-position: 0px 0px; overflow: hidden; line-height: 100em; vertical-align: top; }
+.process_step .h3_head .state_text { float: right; margin-top: 6px; color: #d1d1d1; font-size: 14px; }
+.process_step .h3_head .state_text a { color: #f27935; }
+.process_step .h3_head .state_text a:hover { text-decoration: underline; }
+.process_step .h3_head .state_text .bar { color: #d1d1d1; }
+.process_step .h3_head .state_text .text { color: #8d9097; padding-right: 10px; }
+.process_step .process_lst { display: inline-block; width: 1198px; margin-bottom: 13px; border: 1px solid #acb3bf; background-color: #f7faff; }
+.process_step .process_lst > li { position: relative; float: left; width: 20%; }
+.process_step .process_lst > li:hover { z-index: 5; }
+.process_step .process_lst > li:after, .process_step .process_lst > li:before { left: 99.6%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
+.process_step .process_lst > li:after { border-color: rgba(136, 183, 213, 0); border-left-color: #f7faff; border-width: 16px; margin-top: -14px; }
+.process_step .process_lst > li:before { border-color: rgba(194, 225, 245, 0); border-left-color: #acb3bf; border-width: 17px; margin-top: -15px; }
+.process_step .process_lst > li > .inner { height: 170px; border-right: 1px solid #d9dee5; color: #17181a; text-align: center; }
+.process_step .process_lst > li > .inner > .title { padding-top: 35px; font-size: 18px; font-weight: bold; }
+.process_step .process_lst > li > .inner .state { display: block; margin-top: 10px; }
+.process_step .process_lst > li > .inner .state button { display: inline-block; overflow: visible; font-size: 16px; font-weight: bold; vertical-align: middle; }
+.process_step .process_lst > li > .inner .state button.total { color: #17181a; }
+.process_step .process_lst > li > .inner .state button.point { color: #f27935; }
+.process_step .process_lst > li > .inner .state button:hover { text-decoration: underline; }
+.process_step .process_lst > li > .inner .state .bar { background-color: #d1d1d1; display: inline-block; height: 15px; margin: -4px 10px 0; width: 1px; vertical-align: middle; }
+.process_step .process_lst > li > .inner p { color: #595963; font-size: 12px; line-height: 19px; margin-top: 15px; }
+.process_step .process_lst > li > .inner p .warning { display: block; font-weight: normal; color: #f27935; }
+.process_step .process_lst > li > .inner p .warning > i { margin: -2px 3px 0 0; width: 12px; height: 12px; background-position: 0px -25px; -webkit-background-position: 0px -25px; vertical-align: middle; }
+.process_step .process_lst > li > .inner p .warning > a { color: #f27935; text-decoration: underline; }
+.process_step .process_lst > li.last:after, .process_step .process_lst > li.last:before { display: none; }
+.process_step .process_lst > li.last .inner { border-right: none; }
+.process_step p.subtext { position: relative; padding-left: 10px; color: #8d9097; }
+.process_step p.subtext .dot { position: absolute; top: 5px; left: 0; display: inline-block; width: 2px; height: 2px; background-color: #bbbcc1; }
+.process_step .tooltip_wrap { position: relative; margin: -4px 0 0 5px; vertical-align: middle; width: 16px; height: 16px; background-position: -25px 0px; -webkit-background-position: -25px 0px; vertical-align: middle; cursor: pointer; }
+.process_step .tooltip_wrap:hover { overflow: visible; z-index: 10; }
+.process_step .tooltip_wrap:hover .tooltip { display: block; }
+.process_step .tooltip_wrap .tooltip { display: none; position: relative; top: 10px; left: -130px; padding-top: 22px; }
+.process_step .tooltip_wrap .tooltip:hover { display: block; }
+.process_step .tooltip_wrap .tooltip.r_align { left: auto; }
+.process_step .tooltip_wrap .tooltip.sm { width: 360px; }
+.process_step .tooltip_wrap .tooltip.sm.r_align { right: 300px; }
+.process_step .tooltip_wrap .tooltip.rg { width: 510px; }
+.process_step .tooltip_wrap .tooltip .process_help { padding: 30px 30px 21px 30px; border: 1px solid #868d95; background-color: #fff; }
+.process_step .tooltip_wrap .tooltip .process_help li { letter-spacing: -1px; }
+
+.process_help strong.title { display: block; margin-bottom: 13px; font-size: 18px; color: #17181a; text-align: left; }
+.process_help li { line-height: 23px; margin-top: 8px; font-size: 14px; font-weight: normal; color: #595963; text-align: left; }
+.process_help li .point { color: #f27935; }
+.process_help li .underline { font-size: 14px; color: #4f79c0; text-align: left; text-decoration: underline; }
+.process_help > ul > li { position: relative; padding-left: 10px; }
+.process_help > ul > li .dot { position: absolute; top: 10px; left: 0; width: 2px; height: 2px; background-color: #9b9ba1; }
+.process_help ol { padding-left: 13px; }
+.process_help ol li { list-style-type: decimal; }
+.process_help .spc_tab { margin-top: 35px; }
+.process_help .spc_tab li { width: 50%; padding: 0; margin: 0 -1px; }
+.process_help .spc_tab li.on { margin-top: -1px; }
+.process_help .help_step li { margin: 25px 0 0; font-size: 14px; color: #595963; line-height: 23px; }
+.process_help .help_step li .num { font-weight: bold; color: #f27935; }
+.process_help .help_step li .image { margin-top: 15px; }
+.process_help .help_step li .image img { vertical-align: middle; }
+.process_help .help_note { margin-top: 22px; }
+.process_help .help_note > li { position: relative; margin-top: 0; padding-left: 15px; font-size: 12px; color: #8d9097; line-height: 18px; }
+.process_help .help_note > li i { position: absolute; top: 0; left: 0; }
+
+.lt-ie8 .process_step .process_lst > li { clear: right; }
+.lt-ie8 .process_step .tooltip_wrap { display: inline; zoom: 1; }
+
+.spc { /* SDUMU-193 */ }
+.spc .h2_head { margin-bottom: 30px; }
+.spc .search_result { margin-top: 50px; }
+.spc .search_result .h3_head { margin-bottom: 14px; }
+.spc .spc_note { margin-top: 12px; }
+.spc .process_step { margin-bottom: 43px; }
+.spc .process_step .h3_head { margin-bottom: 18px; }
+.spc .spc_radio_line { padding-bottom: 10px; }

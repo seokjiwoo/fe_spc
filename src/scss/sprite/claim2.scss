@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+%sp-claim2 {
+    background: url('../im/sp-claim2.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-claim2($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-claim2, $filename);
+    @extend %sp-claim2;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-claim2: (
+    spritesheet_name: sp-claim2,
+    operator_minus: (offset_x: 0, offset_y: 0, width: 13px, height: 13px),
+    operator_plus: (offset_x: -17px, offset_y: 0, width: 13px, height: 13px),
+);

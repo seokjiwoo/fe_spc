@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+%sp-help {
+    background: url('../im/sp-help.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-help($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-help, $filename);
+    @extend %sp-help;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-help: (
+    spritesheet_name: sp-help,
+    btn_close: (offset_x: -25px, offset_y: 0, width: 19px, height: 19px),
+    btn_next_after: (offset_x: 0, offset_y: -25px, width: 10px, height: 14px),
+    btn_next_before: (offset_x: -14px, offset_y: -25px, width: 10px, height: 14px),
+    btn_prev_after: (offset_x: -28px, offset_y: -25px, width: 10px, height: 14px),
+    btn_prev_before: (offset_x: -48px, offset_y: 0, width: 10px, height: 14px),
+    ico_arr_down: (offset_x: -48px, offset_y: -32px, width: 10px, height: 5px),
+    ico_arr_down2: (offset_x: 0, offset_y: -43px, width: 13px, height: 8px),
+    ico_arr_up: (offset_x: -33px, offset_y: -43px, width: 10px, height: 5px),
+    ico_arr_up2: (offset_x: -17px, offset_y: -43px, width: 12px, height: 8px),
+    ico_cate: (offset_x: -62px, offset_y: 0, width: 5px, height: 9px),
+    ico_link: (offset_x: -48px, offset_y: -18px, width: 10px, height: 10px),
+    ico_magnify: (offset_x: 0, offset_y: 0, width: 21px, height: 21px),
+);

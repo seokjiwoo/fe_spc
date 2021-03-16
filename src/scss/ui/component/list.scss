@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.spc_note{
+	li{
+		position: relative;
+		padding-left: 10px;
+		font-size: 12px;
+		color: #8d9097;
+		line-height: 22px;
+		
+		.dot{
+			position: absolute;
+			left: 0;
+			top: 8px;
+			width: 2px;
+			height: 2px;
+			background-color: #bbbcc1;
+		}
+		
+		strong{
+			font-weight: normal;
+			color: $color_dark;
+			&.point{
+				color: $color_point;
+			}
+		}
+	}
+}

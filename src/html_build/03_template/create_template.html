@@ -1,0 +1,784 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 딜관리 :: 배송템플릿 관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/template.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		<div class="top_wrap">
+	<div class="inner">
+		<div class="account_area">
+			<!-- 하위목록을 노출시키려면 active 클래스를 넣어주세요  -->
+			<div class="state_list">
+				<button class="account"><em>티켓몬스터</em> 님</button>
+				<ul>
+					<li><a href="#">나의 정보 확인</a></li>
+					<li><a href="#">비밀번호 변경</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div> <!-- end of state_list -->
+			<span><a href="#">공지사항</a></span>
+			<span><a href="#">매출증진 TIP</a></span>
+			<span><a href="#">담당자 연락처</a></span>
+			<span class="ad">슈퍼클릭(키워드/검색광고)문의 <em>1661-8200</em></span>	
+			<span class="ad">티몬광고상품문의 <em>02-2098-8690</em></span>
+		</div>
+		<!-- 오픈마켓 로고는 om 멀티클래스, 티몬특가 로고는 mmp 멀티클래스를 주시면 됩니다 -->
+		<!-- <h1 class="spc_logo om"><a href="#">TMON 스토어파트너 센터</a></h1> -->
+		<h1 class="spc_logo dp"><a href="#">TMON 배송상품 파트너센터</a></h1>
+	</div>
+</div>
+		<div class="fixed_area">
+	<!-- 페이지 스크롤시 gnb 고정상태일때 gnb_area fixed 클래스를 넣어주세요 -->
+	<div class="gnb_area">
+		<div class="inner_area">
+			<ul class="gnb_wrap" id="gnb">
+				<li class="">
+					<a href="#">티몬특가 신청</a>
+				</li>
+				<li class="">
+					<a href="#">딜관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">베이직딜등록</a></li>
+							<li><a href="#">베이직딜 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#">주문관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">미확인 주문</a></li>
+							<li><a href="#">송장등록 대기주문</a></li>
+							<li><a href="#">송장등록 완료주문</a></li>
+							<li><a href="#">배송중 주문</a></li>
+							<li><a href="#">배송템플릿 관리</a></li>
+							<li><a href="#">배송지연패널티 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="">
+					<a href="#">클레임관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">출고전 취소 관리</a></li>
+							<li><a href="#">환불관리</a></li>
+							<li><a href="#">교환관리</a></li>
+							<li><a href="#">재배송관리</a></li>
+							<li><a href="#">수취처리관리</a></li>
+							<li><a href="#">클레임 등록</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="">
+					<a href="#">문의∙리뷰관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">고객문의 관리</a></li>
+							<li><a href="#">CS문의 관리</a></li>
+							<li><a href="#">고객리뷰 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="">
+					<a href="#">정산관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">판매현황조회</a></li>
+							<li><a href="#">파트너 단위 정산서</a></li>
+							<li><a href="#">딜 단위 정산서</a></li>
+							<li><a href="#">세금계산서</a></li>
+							<li><a href="#">매출·매입내역</a></li>
+							<li><a href="#">PG결제수수료 환급조회</a></li>
+						</ul>
+					</div>
+				</li>
+				<!-- <li class="">
+					<a href="#">계약관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">계약서작성</a></li>
+							<li><a href="#">계약서관리</a></li>
+							<li><a href="#">서명승인요청</a></li>
+						</ul>
+					</div>
+				</li> -->
+				<li class="@@mystore_on">
+					<a href="#">광고주센터</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">광고주센터 바로가기</a></li>
+							<li><a href="#">즉시할인 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="">
+					<a href="#">My 스토어</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">스토어 생성</a></li>
+							<li><a href="#">기본정보관리</a></li>
+							<li><a href="#">추천상품관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="@@adcener_on">
+					<a href="#">파트너지원</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">자주하는질문</a></li>
+							<li><a href="#">1:1문의</a></li>
+							<li><a href="#">약관변경확인</a></li>
+							<li><a href="#">(구)계약관리 확인</a></li>
+							<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+							<li><a href="#">자료실</a></li>
+							<li><a href="#">파트너교육센터</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<!-- 전체메뉴 노출시 btn_sitemap active 클래스를 넣어주세요 -->
+			<a href="#/" class="btn_sitemap"><span>전체메뉴보기</span></a>
+			<!-- 전체메뉴 노출시 sitemap active 클래스를 넣어주세요 -->
+			<div class="sitemap">
+				<!-- 
+					컬럼갯수에 따라 원하는 클래스를 추가해주세요
+					메뉴컬럼4개 : col4
+					메뉴컬럼5개 : col5
+					-->
+				<div class="sitemap_wrap col4">
+					<div>
+						<a href="#">딜관리</a>
+						<ul class="sub">
+							<li><a href="#">베이직딜등록</a></li>
+							<li><a href="#">베이직딜 관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">주문관리</a>
+						<ul class="sub">
+							<li><a href="#">미확인 주문</a></li>
+							<li><a href="#">송장등록 대기주문</a></li>
+							<li><a href="#">송장등록 완료주문</a></li>
+							<li><a href="#">배송중 주문</a></li>
+							<li><a href="#">배송템플릿 관리</a></li>
+							<li><a href="#">배송지연패널티 관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">클레임관리</a>
+						<ul class="sub">
+							<li><a href="#">출고전 취소 관리</a></li>
+							<li><a href="#">환불관리</a></li>
+							<li><a href="#">교환관리</a></li>
+							<li><a href="#">재배송관리</a></li>
+							<li><a href="#">수취처리관리</a></li>
+							<li><a href="#">클레임 등록</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">문의∙리뷰관리</a>
+						<ul class="sub">
+							<li><a href="#">고객문의 관리</a></li>
+							<li><a href="#">CS문의 관리</a></li>
+							<li><a href="#">고객리뷰 관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">정산관리</a>
+						<ul class="sub">
+							<li><a href="#">판매현황조회</a></li>
+							<li><a href="#">파트너 단위 정산서</a></li>
+							<li><a href="#">딜 단위 정산서</a></li>
+							<li><a href="#">세금계산서</a></li>
+							<li><a href="#">매출·매입내역</a></li>
+							<li><a href="#">PG결제수수료 환급조회</a></li>
+						</ul>
+					</div>
+					<!-- <div>
+						<a href="#">계약관리</a>
+						<ul class="sub">
+							<li><a href="#">계약서작성</a></li>
+							<li><a href="#">계약서관리</a></li>
+							<li><a href="#">서명승인요청</a></li>
+						</ul>
+					</div> -->
+					<div>
+						<a href="#">광고주센터</a>
+						<ul class="sub">
+							<li><a href="#">광고주센터 바로가기</a></li>
+							<li><a href="#">즉시할인 관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">My 스토어</a>
+						<ul class="sub">
+							<li><a href="#">스토어 생성</a></li>
+							<li><a href="#">기본정보관리</a></li>
+							<li><a href="#">추천상품관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">파트너지원</a>
+						<ul class="sub">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">1:1문의</a></li>
+							<li><a href="#">약관변경확인</a></li>
+							<li><a href="#">(구)계약관리 확인</a></li>
+							<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+							<li><a href="#">자료실</a></li>
+							<li><a href="#">파트너교육센터</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--  전체메뉴 고정하기 활성화시 active 클래스를 넣어주세요 -->
+				<div class="bottom-area" style="display:none"><button class="menu_fixed">전체메뉴 고정하기</button></div>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>배송템플릿 생성</h2>
+			</div>
+			
+			<div class="h3_head">
+				<h3>기본정보</h3>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: 293px ; ">
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>묶음배송여부</th>
+								<td colspan="3">
+									<div class="plate_box mt0">
+										<label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked><i class="symbol"></i>묶음배송 적용</label>
+										<label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>묶음배송 미적용</label>
+										<ul class="spc_note">
+											<li><i class="dot"></i>묶음배송 여부를 선택해주세요</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>배송템플릿 번호</th>
+								<td>&nbsp;</td>
+								<th>배송템플릿 명</th>
+								<td><input type="text" class="spc_text white" style="width:210px" value="배송템플릿 명"></td>
+							</tr>
+							<tr>
+								<th>위탁여부</th>
+								<td>N (일반배송)</td>
+								<th>파트너</th>
+								<td><p class="txt20">롯데백화점<br>㈜잠실점 (lotte_jamsilstore)</p></td>
+							</tr>
+							<tr>
+								<th>생성일</th>
+								<td>2018. 01. 30 16 : 05 : 23</td>
+								<th>생성자</th>
+								<td>hyejung@tmon.co.kr</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<div class="h3_head">
+				<h3>상세정보</h3>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: 143px ; ">
+							<col style="width: 158px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>상품유형그룹
+									<button class="help">도움
+										<div class="balloon">
+											<p>
+												상품유형그룹은 상품유형을 그룹핑한 것으로<br> 
+												배송템플릿의 상품유형그룹과 딜의 상품유형이 동일해야만<br>
+												딜에서 해당배송템플릿을 이용할 수 있습니다. 
+											</p>
+										</div>
+									</button>
+								</th>
+								<td colspan="3">
+									<div class="radioWrap cell_wp01">
+										<label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked><i class="symbol"></i>일반상품</label>
+										<label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>냉장/냉동/신선식품</label>
+										<label for="ly_radio1-3" class="spc_radio"><input type="radio" id="ly_radio1-3" name="ly_radio1"><i class="symbol"></i>주문제작</label>
+										<label for="ly_radio1-4" class="spc_radio"><input type="radio" id="ly_radio1-4" name="ly_radio1"><i class="symbol"></i>주문 후 발주</label>
+										<label for="ly_radio1-5" class="spc_radio"><input type="radio" id="ly_radio1-5" name="ly_radio1"><i class="symbol"></i>화물/설치</label>
+										<label for="ly_radio1-6" class="spc_radio"><input type="radio" id="ly_radio1-6" name="ly_radio1"><i class="symbol"></i>해외구매(해외직배송 / 해외 구매대행)</label>
+										<label for="ly_radio1-7" class="spc_radio"><input type="radio" id="ly_radio1-7" name="ly_radio1"><i class="symbol"></i>예외상품</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>배송유형</th>
+								<td colspan="3">
+									<label for="ly_radio1-9" class="spc_radio checked"><input type="radio" id="ly_radio1-9" name="ly_radio2" checked><i class="symbol"></i>당일발송</label>
+									<label for="ly_radio1-10" class="spc_radio"><input type="radio" id="ly_radio1-10" name="ly_radio2"><i class="symbol"></i>익일발송</label>
+									<label for="ly_radio1-11" class="spc_radio"><input type="radio" id="ly_radio1-11" name="ly_radio2"><i class="symbol"></i>종료 후 발송</label>
+									<label for="ly_radio1-12" class="spc_radio disabled"><input type="radio" id="ly_radio1-12" name="ly_radio2" disabled><i class="symbol"></i>예외발송</label>
+								</td>
+							</tr>
+							<tr>
+								<th>당일발송 마감시간
+									<button class="help">도움
+										<div class="balloon">
+											<p>
+												주문 30분 후에 주문내역 확인이 가능하므로, <br>
+												실제 당일 발송 가능시간 보다 30분 빠른시간으로 설정해주세요<br>
+												Ex) 당일발송 가능시간이 02시 30분일 경우, 02시로 설정
+											</p>
+										</div>
+									</button>
+								</th>
+								<td colspan="3">
+									<div class="spc_select" style="width: 210px; ">
+										<div class="value"><span class="selected">선택</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<ul class="spc_note btnWrap">
+										<li></i>주문 30분 후부터 주문내역 확인이 가능하므로, 실제 당일 발송 가능시간보다 30분 빠른 시간으로 설정해주세요.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="5">배송비정책</th>
+								<th class="inner_tit05">배송비 조건</th>
+								<th class="inner_tit05">배송비 </th>
+								<th class="inner_tit05">추가조건</th>
+							</tr>
+							<tr>
+								<th class="inner_tit02">
+									<label for="ly_radio1-15" class="spc_radio checked"><input type="radio" id="ly_radio1-15" name="ly_radio4" checked><i class="symbol"></i>무료</label>
+									<button class="help">도움
+										<div class="balloon">
+											<p>상품의 배송비가 주문수량 &amp; 주문금액에 무관하게 무료일 경우 선택가능</p>
+										</div>
+									</button>
+								</th>
+								<td>
+									<div class="none_price">원</div>
+								</td>
+								<td><input type="text" class="spc_text" value="0" style="width:100px;">
+									<span class="expain_txt">원 / 반품발생 시의 반품비(편도)</span>
+								</td>
+							</tr>
+							<tr>
+								<th class="inner_tit02"><label for="ly_radio1-16" class="spc_radio"><input type="radio" id="ly_radio1-16" name="ly_radio4"><i class="symbol"></i>조건부무료</label>
+									<button class="help">도움
+										<div class="balloon">
+											<p>무료배송 기준 금액 이하 주문 시 부과될 배송비 입력</p>
+										</div>
+									</button>
+								</th>
+								<td>
+									<input type="text" class="spc_text" value="0" style="width:100px;">
+									<span class="expain_txt">원</span>
+								</td>
+								<td>
+									<input type="text" class="spc_text" value="0" style="width:100px;">
+									<span class="expain_txt">원 이상 구매시 무료</span>
+								</td>
+							</tr>
+							<tr>
+								<th class="inner_tit02"><label for="ly_radio1-17" class="spc_radio"><input type="radio" id="ly_radio1-17" name="ly_radio4"><i class="symbol"></i>선결제</label>
+									<button class="help">도움
+										<div class="balloon">
+											<p>주문시 고객이 배송비를 선결제 해야 하는 경우 선택가능</p>
+										</div>
+									</button>
+								</th>
+								<td>
+									<input type="text" class="spc_text" value="0" style="width:100px;">
+									<span class="expain_txt">원</span>
+								</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<th class="inner_tit02"><label for="ly_radio1-18" class="spc_radio"><input type="radio" id="ly_radio1-18" name="ly_radio4"><i class="symbol"></i>착불(편도)</label>
+									<button class="help">도움
+										<div class="balloon">
+											<p>상품수령 시 고객이 배송비를 결제해야 하는 경우 (상품유형이 화물설치일 경우에만 선택가능)</p>
+										</div>
+									</button>
+								</th>
+								<td>
+									<input type="text" class="spc_text" value="0" style="width:100px;">
+									<span class="expain_txt">원</span>
+								</td>
+								<td>&nbsp;</td>
+							</tr>
+							 <tr>
+								<th>제주/도서산간 배송
+									<button class="help">도움
+										<div class="balloon">
+											<ul class="spc_note dark">
+												<li><i class="dot"></i>[제주/도서산간 배송]을 [가능]으로 선택하시면, 고객 주문 시 도서산간 배송비가 추가로 결제됩니다. </li>
+												<li><i class="dot"></i>티몬에서 제공하는 2개 권역 외에 도서산간 배송비를 차등 적용하고 싶다면 [도서산간지역에 따라 차등 배송비 적용]을<br >
+												선택하여 주시고 차등 배송비의 최소 금액과 최대 금액을 입력하여 주세요.</li>
+												<li><i class="dot"></i>[도서산간지역에 따라 차등 배송비 적용]을 선택하시면, 고객 주문 시 도서산간배송비 결제 기능이 제공되지 않습니다.</li>
+											</ul>
+										</div>
+									</button>
+								</th>
+								<td colspan="3">
+									<div class="cell_wp01">
+										<label for="ly_radio1-19" class="spc_radio checked"><input type="radio" id="ly_radio1-19" name="ly_radio5" checked><i class="symbol"></i>가능</label>
+										<label for="ly_radio1-20" class="spc_radio"><input type="radio" id="ly_radio1-20" name="ly_radio5"><i class="symbol"></i>불가능</label>
+										<table class="mount_deli_tbl">
+											<colgroup>
+												<col style="width:146px;">
+												<col style="width:156px;">
+												<col style="width:156px;">
+												<col style="width:auto;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>선택</th>
+													<th>제주도</th>
+													<th>제주 외 도서산간</th>
+													<th>비고</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<!--
+															<label for="ly_radio1-21" class="spc_radio disabled"><input type="radio" id="ly_radio1-21" name="ly_radio6" disabled><i class="symbol"></i>결제기능 제공</label>
+															* 위와 같이 label의 class에 disabled를 추가하고 radio에 disabled property를 추가 하면 disabled 상태가 됩니다.
+														-->
+														<label for="ly_radio1-21" class="spc_radio checked"><input type="radio" id="ly_radio1-21" name="ly_radio6" checked><i class="symbol"></i>결제기능 제공</label>
+													</td>
+													<td>
+														<input type="text" class="spc_text white" value="0" style="width:100px;">
+														<span class="expain_txt">원</span>
+													</td>
+													<td>
+														<input type="text" class="spc_text white" value="0" style="width:100px;">
+														<span class="expain_txt">원</span>
+													</td>
+													<td class="content">
+														주문 시 도서산간 배송비 결제 기능 제공
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<label for="ly_radio1-22" class="spc_radio"><input type="radio" id="ly_radio1-22" name="ly_radio6"><i class="symbol"></i>결제기능 미제공</label>
+													</td>
+													<td colspan="2">
+														<p class="mount_deli_txt1">도서산간지역에 따라 차등 배송비 적용</p>
+														<input type="text" class="spc_text" value="0" style="width:100px;">
+														<span class="expain_txt">원</span>
+														<span class="ico_between">~</span>
+														<input type="text" class="spc_text" value="0" style="width:100px;">
+														<span class="expain_txt">원</span>
+													</td>
+													<td class="content">
+														주문 시 도서산간 배송비 결제 기능 제공이 불가하며,<br >
+														주문 발생 시 고객에 직접 연락하여 추가 배송비 별도<br >
+														입금요청 필요
+													</td>
+												</tr>
+											</tbody> 
+										</table>
+										<p class="mount_deli_txt2">
+											도서산간 지역별 차등 배송비를 적용해야 하거나, 아래 제공되는 도서산간 지역 권역과 원하는 지역범위 구분이 다른 경우 도서산간 배송비의 결제 기능 제공이 불가합니다.<br >
+											결제 기능 제공 불가로 인한 추가 커뮤니케이션 비용발생 및 고객OB의 비용은 파트너의 선택에 따른 책임임을 유의 부탁 드립니다. <br >
+											<a href="#" class="link">제주 및 제주 외 도서산간 지역 보기</a>
+										</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>티몬반품 지정택배</th>
+								<td colspan="3">
+									<div class="cell_wp01">
+										<label for="ly_radio1-25" class="spc_radio checked"><input type="radio" id="ly_radio1-25" name="ly_radio8" checked=""><i class="symbol"></i>가능</label>
+										<label for="ly_radio1-26" class="spc_radio"><input type="radio" id="ly_radio1-26" name="ly_radio8"><i class="symbol"></i>불가능</label>
+										<ul class="spc_note">
+											<li><i class="dot"></i>지정반품을 이용하지 않으셔도 자동으로 수거 접수가 가능합니다.</li>
+											<li class="link"><i class="dot"></i>(배송하시는 택배사를 반품택배사로 등록하면, 환불/교환 등록 시 해당 택배사로 자동 수거지시 <a href="#">반품택배사 등록하러 가기</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th rowspan="4">배송지주소</th>
+								<td colspan="3">
+									<div class="plate_box mt0">
+										<div class="inner">
+											<button type="button" class="btn init ws">주소찾기</button>
+											<ul class="spc_note">
+												<li><i class="dot"></i>[주소지 찾기]버튼을 클릭하여 주소지와 담당자를 입력해주세요</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="inner_tit04">배송지 번호</th>
+								<td colspan="2">
+									<div class="inbox">
+										<span class="expain_txt">배송지 번호</span>
+										<input type="text" class="spc_text" style="width:100px;">
+									</div>
+									<div class="inbox">
+										<span class="expain_txt">배송지명</span>
+										<input type="text" class="spc_text" style="width:100px;">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="inner_tit04">주소지</th>
+								<td colspan="2">
+									<div class="address_info">
+										<ul>
+											<li><input type="text" class="spc_text" value="06176" style="width:312px;"></li>
+											<li>
+												<input type="text" class="spc_text" value="서울시특별시 강남구 대치동 1004" style="width:312px;">
+												<input type="text" class="spc_text" value="1234" style="width:312px;">
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="inner_tit04">담당자</th>
+								<td colspan="2"><input type="text" class="spc_text" style="width:164px;"></td>
+							</tr>
+							<tr>
+								<th rowspan="4">반품/교환주소</th>
+								<td colspan="3">
+									<div class="plate_box mt0">
+										<div class="inner">
+											<button type="button" class="btn init ws">주소찾기</button>
+											<ul class="spc_note">
+												<li><i class="dot"></i>[주소지 찾기]버튼을 클릭하여 주소지와 담당자를 입력해주세요</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="inner_tit04">반품/교환지 번호</th>
+								<td colspan="2">
+									<div class="inbox">
+										<span class="expain_txt">반품/교환지 번호</span>
+										<input type="text" class="spc_text" value="1234567" style="width:100px;">
+									</div>
+									<div class="inbox">
+										<span class="expain_txt">반품/교환지 명</span>
+										<input type="text" class="spc_text" value="동대문 물류센터" style="width:130px;">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="inner_tit04">주소지</th>
+								<td colspan="2">
+									<div class="address_info">
+										<ul>
+											<li><input type="text" class="spc_text" value="06176" style="width:312px;"></li>
+											<li>
+												<input type="text" class="spc_text" value="서울시특별시 강남구 대치동 1004" style="width:312px;">
+												<input type="text" class="spc_text" value="1234" style="width:312px;">
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="inner_tit04">담당자</th>
+								<td colspan="2"><input type="text" class="spc_text" value="홍길동(010-1234-5678)" style="width:164px;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<div class="btn_wp mt20">
+				<div class="fl_l">
+					<button type="button" class="btn cancel2">목록</button>
+				</div>
+				<div class="fl_r">
+					<button type="button" class="btn cancel2">취소</button>
+					<button type="button" class="btn submit2">등록</button>
+				</div>
+			</div>
+		
+		</div>
+		<div class="aside_left">
+	<!-- <a href="#" class="banner admon"><i>광고주 센터, 광고등록하면 매출이 UP</i></a> -->
+	<a href="#" class="banner black_deal"><i>티몬블랙딜 참여하기</i></a>
+	<!-- <button type="button" class="mmp"><span class="blind">티몬특가 신청하기</span></button> -->
+	<!-- <button type="button" class="extra one_stop">
+		<span>딜검색</span>
+	</button> -->
+	<ul class="aside_lst_pic">
+		<li><a href="#" class="pic onestop"><span class="blind">ONE STOP 딜 검색</span></a></li>
+		<li><a href="#" class="pic partner"><span class="blind">파트너 교육센터</span></a></li>
+		<li><a href="#" class="pic video"><span class="blind">동영상 가이드</span></a></li>
+		<li><a href="#" class="pic report"><span class="blind">비윤리/불친절 직원신고</span></a></li>
+		<!-- <li><a href="#" class="pic faq"><span class="blind">자주하는 질문</span></a></li> -->
+		<li><a href="#" class="pic holiday"><span class="blind">휴무일 공지등록</span></a></li>
+		<!-- <li><a href="#" class="pic excel"><span class="blind">Excel 뷰어 다운로드</span></a></li> -->
+		<!-- <li><a href="#" class="pic econtract"><span class="blind">전자계약서 안내</span></a></li> -->
+		<!-- <li><a href="#" class="pic certificate"><span class="blind">공인인증서 발급</span></a></li> -->
+	</ul>	
+	<!-- <button type="button" class="record_inquiry"><span>Facebook<br />딜 실적 조회</span></button>
+	<a href="#" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</a>
+	<button type="button" class="discount"><span class="blind">할인혜택 적용안내</span></button> -->
+	<!-- <ul class="aside_lst">
+		<li><a href="#" class="point"><span>파트너<br>교육센터</span></a></li>
+		<li><button type="button" class="point"><span>동영상<br>가이드</span></button></li>
+		<li><button type="button"><span>비윤리/불친절<br>직원신고</span></button></li>
+		<li><button type="button"><span>자주하는<br>질문</span></button></li>
+		<li><a href="#"><span>전자계약서<br>안내</span></a></li>
+		<li><a href="#"><span>공인인증서<br>발급</span></a></li>
+	</ul> -->
+	<!-- <button type="button" class="extra">
+		<span>오픈마켓<br>동의</span>
+	</button>
+	<button type="button" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</button> -->
+	<button type="button" class="feedback">
+		<em>페이지 별점 주기</em>
+		<span><i></i><i></i><i></i></span>
+	</button>
+</div>
+		<div class="aside_right">
+	
+	<div class="bx_banner_event">
+		<ul class="banner_list">
+			<li><a href="#"><img src="../../img/banner/banner_right_slide_01.jpg" width="100" height="127" alt="임시 이미지"></a></li>
+			<li><a href="#"><img src="../../img/banner/banner_right_slide_02.jpg" width="100" height="127" alt="임시 이미지"></a></li>
+			<li><a href="#"><img src="../../img/banner/banner_right_slide_03.jpg" width="100" height="127" alt="임시 이미지"></a></li>
+		</ul>
+		<div class="control">
+			<div class="num">
+				<span class="crnt">1</span> / <span class="total">3</span>
+			</div>
+			<button type="button" class="btn_move prev">이전 배너리스트 보기</button>
+			<button type="button" class="btn_move next">다음 배너리스트 보기</button>
+		</div>	<!-- end of control -->
+	</div> <!-- end of bx_banner_event -->
+
+	<div class="bx_banner_service">
+		<div class="banner_list">
+			<a href="#"><img src="../../img/banner/banner_right_partner.jpg" width="120" height="175" alt="임시 이미지"></a>
+		</div>
+		<div class="control">
+			<div class="paging">
+				<!-- 현재 선택된 버튼에 on클래스가 추가됩니다. -->
+				<button type="button">배너 1</button>
+				<button type="button">배너 2</button>
+				<button type="button" class="on">배너 3</button>
+				<button type="button">배너 4</button>
+				<button type="button">배너 5</button>
+			</div>
+		</div>	<!-- end of control -->
+	</div> <!-- end of bx_banner_service -->
+
+</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+	<ul class="footer_link">
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#"><b>개인정보처리방침</b></a></li>
+		<li><a href="#">전자금융거래</a></li>
+		<li><a href="#">청소년보호정책</a></li>
+	</ul>
+	<span class="footer_logo">TMON</span>
+	<p>사업자등록번호 211-88-41856<span class="dv">|</span>통신판매업신고 제2013-서울강남-02403호</p>
+	<p>서울특별시 강남구 테헤란로 114길 38 동일타워<span class="dv">|</span>대표자 이진원<span class="dv">|</span><a href="#">사업자정보확인</a></p>
+	<p>COPYRIGHT(c) TMON INC. ALL RIGHTS RESERVED.</p>
+	<div class="cs_center">
+		<p class="cs_center_top">
+			파트너센터 <strong>1644-0552</strong>
+		</p>
+		<p class="holiday">
+			평일 09~18시 (점심시간 12~13시)<br >
+			주말/공휴일 휴무
+		</p>
+	</div>
+	<div class="footer_bottom">
+		<img src="../../img/common/footer_iso_banner.png" />
+	</div>
+</div>
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+});
+</script>
+</body>
+</html>

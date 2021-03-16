@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="content">
+  <div class="get_product_wrap">
+      <div class="header">
+          <h2>수수료 변경</h2>
+      </div>
+      <ul class="spc_note">
+          <li><i class="dot"></i>슈퍼마트 딜, 물류직매입 딜, 벤더플랙스 딜, E쿠폰선물하기 딜의 경우에만 ‘상품별 적용‘ 이 가능합니다. </li>
+        </ul>
+      <form action="" class="spc_form">
+        <fieldset>
+          <table class="spc_table_form">
+            <colgroup>
+              <col style="width: 123px ; ">
+              <col style="width: * ; ">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>적용시점</th>
+                <td>
+                    <label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked="checked"><i class="symbol"></i>바로 적용</label>
+                    <label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>기간 설정</label>
+                    <ul class="spc_note">
+                        <li><i class="dot"></i>‘변경’한 시점부터 변경된 수수료로 적용됩니다.</li>
+                    </ul>
+                    <div class="calendarArea">
+                        <div class="scheduleWrap">
+                          <input type="text" value="2018.01.02 18:12:21">
+                          <button class="calendar">달력</button>
+                          <button class="time">시간</button>
+                        </div>
+                        <span class="to">~</span>
+                        <div class="scheduleWrap">
+                          <input type="text" value="2018.01.02 18:12:21">
+                          <button class="calendar">달력</button>
+                          <button class="time">시간</button>
+                        </div>
+                        <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i>종료일 미설정</label>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <th>변경사유</th>
+                <td>
+                    <ul class="radio_list">
+                        <li><label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>미대상</label></li>
+                        <li><label for="ly_radio2-2" class="spc_radio checked"><input type="radio" id="ly_radio2-2" name="ly_radio2"><i class="symbol" checked="checked"></i>상품상세참조</label></li>
+                        <li><label for="ly_radio2-3" class="spc_radio"><input type="radio" id="ly_radio2-3" name="ly_radio2"><i class="symbol"></i>국내산</label></li>
+                        <li>
+                            <label for="ly_radio2-4" class="spc_radio"><input type="radio" id="ly_radio2-4" name="ly_radio2"><i class="symbol"></i>직접입력</label>
+                            <div class="limitTextWrap type3 w454">
+                                <div class="inputWrap">
+                                    <input type="text" class="spc_text" disabled>
+                                    <p class="crntText"><span>0</span>/<span>15자</span></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>파일첨부</th>
+                <td>
+                    <div class="btn fileUpload ml0">
+                        <input type="file">
+                        <span>파일첨부</span>
+                    </div>
+                    <div class="fileInfo_wrap mt6">
+                        <p class="fileInfo">
+                            <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                            <button class="del">delete</button>
+                        </p>
+                        <p class="fileInfo">
+                            <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                            <button class="del">delete</button>
+                        </p>
+                        <p class="fileInfo">
+                            <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                            <button class="del">delete</button>
+                        </p>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                  <th>적용단위</th>
+                  <td>
+                    <label for="ly_radio3-1" class="spc_radio checked"><input type="radio" id="ly_radio3-1" name="ly_radio3" checked="checked"><i class="symbol"></i>모든 상품에 적용</label>
+                    <label for="ly_radio3-2" class="spc_radio"><input type="radio" id="ly_radio3-2" name="ly_radio3"><i class="symbol"></i>상품별 적용</label>
+                  </td>
+              </tr>
+              <tr>
+                <th>수수료</th>
+                <td>
+                  <div class="commissionTb">
+                      <div class="topInfo">
+                        <span class="inp"><strong>수수료율</strong><input type="text" class="spc_text" value="99" /><em>%</em></span>
+                        <button type="button" class="btn init">선택상품 일괄적용</button>
+                      </div>
+                      <table class="deals_tb02">
+                        <colgroup>
+                            <col style="width: 57px;" >
+                            <col style="width: 53px;" >
+                            <col style="width: 88px;" >
+                            <col style="width: 96px;" >
+                            <col style="width: 206px;" >
+                            <col style="width: 101px;" >
+                            <col style="width: 89px;" >
+                            <col style="width: auto" >
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th><label for="check0" class="spc_check"><input type="checkbox" id="check0"><i class="symbol"></i></label></th>
+                            <th>NO.</th>
+                            <th>상품번호</th>
+                            <th>상품명</th>
+                            <th>노출카테고리</th>
+                            <th>변경 가능범위</th>
+                            <th>현재 수수료</th>
+                            <th>수수료</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td>12345678</td>
+                            <td>사무용 노트북</td>
+                            <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                            <td>10%~100%</td>
+                            <td>99%</td>
+                            <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                          </tr>
+                          <tr>
+                              <td><label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i></label></td>
+                              <td>2</td>
+                              <td>12345678</td>
+                              <td>사무용 노트북</td>
+                              <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                              <td>10%~100%</td>
+                              <td>99%</td>
+                              <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="check3" class="spc_check"><input type="checkbox" id="check3"><i class="symbol"></i></label></td>
+                                <td>3</td>
+                                <td>12345678</td>
+                                <td>사무용 노트북</td>
+                                <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                                <td>10%~100%</td>
+                                <td>99%</td>
+                                <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="check4" class="spc_check"><input type="checkbox" id="check4"><i class="symbol"></i></label></td>
+                                <td>4</td>
+                                <td>12345678</td>
+                                <td>사무용 노트북</td>
+                                <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                                <td>10%~100%</td>
+                                <td>99%</td>
+                                <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="check5" class="spc_check"><input type="checkbox" id="check5"><i class="symbol"></i></label></td>
+                                <td>5</td>
+                                <td>12345678</td>
+                                <td>사무용 노트북</td>
+                                <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                                <td>10%~100%</td>
+                                <td>99%</td>
+                                <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="check6" class="spc_check"><input type="checkbox" id="check6"><i class="symbol"></i></label></td>
+                                <td>6</td>
+                                <td>12345678</td>
+                                <td>사무용 노트북</td>
+                                <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                                <td>10%~100%</td>
+                                <td>99%</td>
+                                <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="check7" class="spc_check"><input type="checkbox" id="check7"><i class="symbol"></i></label></td>
+                                <td>7</td>
+                                <td>12345678</td>
+                                <td>사무용 노트북</td>
+                                <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                                <td>10%~100%</td>
+                                <td>99%</td>
+                                <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="check8" class="spc_check"><input type="checkbox" id="check8"><i class="symbol"></i></label></td>
+                                <td>8</td>
+                                <td>12345678</td>
+                                <td>사무용 노트북</td>
+                                <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                                <td>10%~100%</td>
+                                <td>99%</td>
+                                <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="check9" class="spc_check"><input type="checkbox" id="check9"><i class="symbol"></i></label></td>
+                                <td>9</td>
+                                <td>12345678</td>
+                                <td>사무용 노트북</td>
+                                <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                                <td>10%~100%</td>
+                                <td>99%</td>
+                                <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="check10" class="spc_check"><input type="checkbox" id="check10"><i class="symbol"></i></label></td>
+                                <td>10</td>
+                                <td>12345678</td>
+                                <td>사무용 노트북</td>
+                                <td>가전/컴퓨터 &gt; 노트북/데스크탑 &gt; 노트북 &gt; 사무용</td>
+                                <td>10%~100%</td>
+                                <td>99%</td>
+                                <td><span class="changeInp"><input type="text" class="spc_text" value="99"><em>%</em></span></td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </form>
+      <div class="btn_area right decrease">
+        <button type="submit" class="btn cancel3">변경</button>
+        </div>
+  </div>
+</div>
+</body>
+</html>

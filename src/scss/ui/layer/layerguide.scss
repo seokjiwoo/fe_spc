@@ -1,0 +1,172 @@
+@charset "UTF-8";
+.home_layer_guide{
+
+	$clr-default : #16181a ;
+	$clr-active : #f27935 ;
+
+	width:600px;
+
+	border:1px solid #30343b;
+	background-color: #fff;
+	z-index:50;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+
+	.header{
+		line-height:1;
+		padding:20px 60px 20px 24px;
+		font-size:17px; color:$clr-default; font-weight: 700; letter-spacing: -1px;
+		border-bottom: 1px solid #f0f2f5;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.container{
+		padding:20px 24px;
+		.contents{
+			height:387px; overflow-y:auto;
+			font-size:13px; line-height:24px; letter-spacing: -.5px; color:$clr-default; word-wrap: break-word;				
+			.img{
+				text-align: center;
+			}
+			img{
+				display:block; margin:0 auto;
+				max-width: 100%; height:auto;				
+			}
+		}
+		.controls{
+			position: relative;
+			text-align: center;
+			padding:20px 0 0;
+			height:30px; line-height:30px;
+			.indicator{
+				font-size:0;
+				button{
+					display:inline-block;
+					width:30px ; height:30px ;
+					background-position: 0 0;
+					background-repeat: no-repeat;
+					text-indent:-9999em;
+					&.prev{
+						background-image: url('../img/layer/btn_prev_layer.png');
+					}
+					&.next{
+						background-image: url('../img/layer/btn_next_layer.png');
+					}
+				}
+				.num{
+					display:inline-block;
+					margin:0 5px;
+					font-size:13px; color:$clr-default;
+					.crnt{
+						font-weight: 700 ;
+					}
+				}
+			}
+			.btn_today_close{
+				input[type=checkbox]{
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					filter: alpha(opacity=0);
+					cursor: pointer;
+					&:checked + span {
+						color:#f27935;
+					}
+					&:checked + span:before{
+						background-image: url('../img/layer/chk_today_close_on.png');
+						border:0;
+					}
+				}
+				span {
+					display: inline-block;
+					font-size:12px; color:#7d7e80; letter-spacing: -.5px;
+					&:before{
+						content:"";
+						position: relative; top:-1px;
+						display:inline-block;
+						width:16px; height:16px;
+						margin-right: 7px;
+						border:1px solid #ccd2d8; background-color: #fff;
+						vertical-align: middle;
+						box-sizing: border-box;
+						-webkit-box-sizing: border-box;
+						-moz-box-sizing: border-box;
+					}
+				}
+				i{
+					position: relative; top:-1px;
+					display:inline-block;
+					width:16px; height:16px;
+					margin-right: 7px;
+					border:1px solid #ccd2d8; background-color: #fff;
+					vertical-align: middle;
+					box-sizing: border-box;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+				}
+				display:block;
+				position: absolute;
+				right:0; top:20px;
+				height:30px; line-height:30px;
+				user-select: none;
+				-ms-user-select: none;
+				cursor: pointer;
+			}
+		}
+	}
+	.list{
+		position: relative;
+		padding:15px 24px;
+		border-top:1px solid #e3e5e8;
+		background-color: #f8f8f8;
+		ul {
+			padding-right:54px;
+			li {
+				height:26px; line-height:26px;
+				margin-top: 2px;
+				color:$clr-default; font-weight:700;
+				letter-spacing: -.5px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				a{
+					color:$clr-default;
+				}
+				&:first-child{
+					margin-top: 0;
+				}
+				&.crnt{
+					color:$clr-active;
+					a { color:$clr-active; }
+				}
+				&.hidden{
+					display:none;
+				}
+			}
+		}
+		.btn_lst_toggle{
+			display:block;
+			position: absolute; right:15px; top:14px;
+			width:34px; height:28px;
+			background-image: url('../img/layer/btn_open_list.png');
+			background-repeat: no-repeat;
+			text-indent:-9999em; font-size:0;
+			&.close{
+				background-image: url('../img/layer/btn_close_list.png');
+			}
+		}
+	}
+	.btn_close{
+		display:block;
+		width: 19px; height: 19px;
+		position: absolute;
+    top: 19px; right: 23px;
+		background: url(https://spc.tmon.co.kr/static/images/btn_layer_close.png?v=201910071600) no-repeat 0 0;
+		text-indent:-9999em; font-size:0;
+	}
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+%sp-service_grade {
+    background: url('../im/sp-service_grade.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-service_grade($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-service_grade, $filename);
+    @extend %sp-service_grade;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-service_grade: (
+    spritesheet_name: sp-service_grade,
+    ico_green_after: (offset_x: 0, offset_y: 0, width: 16px, height: 16px),
+    ico_green_before: (offset_x: -20px, offset_y: 0, width: 16px, height: 16px),
+    ico_orange_after: (offset_x: 0, offset_y: -20px, width: 16px, height: 16px),
+    ico_orange_before: (offset_x: -20px, offset_y: -20px, width: 16px, height: 16px),
+    ico_red_after: (offset_x: -40px, offset_y: 0, width: 16px, height: 16px),
+    ico_red_before: (offset_x: -40px, offset_y: -20px, width: 16px, height: 16px),
+);

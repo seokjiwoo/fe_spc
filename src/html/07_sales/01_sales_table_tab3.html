@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sales.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "on", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>판매현황 조회</h2>
+			</div>
+
+			<div class="spc_tab_wp type2">
+				<ul class="spc_tab">
+					<li><button type="button">판매현황</button></li>
+					<li><button type="button"><span>수수료 및<br />공제·환급현황</span></button></li>
+					<li class="on"><button type="button">서비스수수료</button></li>
+					<li><button type="button">할인현황</button></li>
+					<li><button type="button">가격비교<br >대행 서비스</button></li>
+				</ul>
+				<div class="btns">
+					<button type="button" class="btn default">정산정책 보기</button>
+					<button type="button" class="btn default">정산FAQ 보기</button>
+				</div>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>기간설정</th>
+								<td>
+									<div class="spc_select" style="width: 170px; ">
+										<div class="value"><span class="selected">서비스수수료 발생월</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>									
+
+									<div class="spc_select" style="width: 131px; ">
+										<div class="value"><span class="selected">2018.04</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+									<span class="dash">~</span>
+									<div class="spc_select" style="width: 131px; ">
+										<div class="value"><span class="selected">2018.04</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+
+				<div class="btns">
+					<button class="btn orange-border">초기화</button>
+					<button class="btn orange">검색</button>
+				</div>
+			</form>
+
+			<div class="detailWrap mt37">
+				<div class="topWrap">
+					<div class="opt type1">
+						<h4>검색결과</h4>
+						<span class="pointClr">10건</span>
+					</div>
+				</div>
+				<table>
+					<colgroup>
+						<col style="width: 100px; " />
+						<col style="width: 101px; " />
+						<col style="width: 101px; " />
+						<col style="width: auto; " />
+						<col style="width: 101px; " />
+						<col style="width: 101px; " />
+						<col style="width: 101px; " />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>매출산정월</th>
+							<th>총 매출액<br />(파트너기준)</th>
+							<th>대상 딜번호</th>
+							<th>대상 딜이름</th>
+							<th>딜 매출액</th>
+							<th>서비스수수료<br />금액</th>
+							<th>서비스수수료<br />발생일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2017-06</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">NEW 머핀 휴대용 선풍기</td>
+							<td>5,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-07</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">인바디 가정용 체지방 다이얼H20B</td>
+							<td>15,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-08</td>
+							<td>123,400</td>
+							<td>123456789</td>
+							<td class="ta-l">인바디 가정용 체지방 다이얼H20B</td>
+							<td>15,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-09</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">[건강가전][안마용품]힐링팩토리 손지압 마사지기 HF-100 힐링팩토리 손지압 마사지기 HF-100</td>
+							<td>944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-10</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">NEW 머핀 휴대용 선풍기</td>
+							<td>15,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-11</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">NEW 머핀 휴대용 선풍기</td>
+							<td>115,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-12</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">인바디 가정용 체지방 다이얼H20B</td>
+							<td>15,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-01</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">인바디 가정용 체지방 다이얼H20B</td>
+							<td>15,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-02</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">인바디 가정용 체지방 다이얼H20B</td>
+							<td>15,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+						<tr>
+							<td>2017-03</td>
+							<td>15,994,400</td>
+							<td>123456789</td>
+							<td class="ta-l">인바디 가정용 체지방 다이얼H20B</td>
+							<td>15,944,400</td>
+							<td>99,000</td>
+							<td>2017-08-03</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- end of detailWrap -->
+
+			<ul class="noti">
+				<li>이 메뉴의 서비스수수료는 2017년 7월 부터 파트너 매출액 기준으로 발생한 서비스수수료를 조회하는 화면입니다.</li>
+				<li><span class="pointClr">매출산정월</span>: 매월 1일 파트너ID기준 전월 매출을 집계하여 서비스수수료 부과 대상여부를 판단하는데, 당월을 기준으로 전월이 매출산정월이 됩니다.</li>
+				<li><span class="pointClr">서비스수수료 발생일</span>: 전월 매출을 산정하여 서비스수수료를 인식한 날짜로 매월 1일이 서비스수수료 발생일이 됩니다.</li>
+				<li>파트너ID 기준 전월 매출이 100만원 이상이면, 전월 최고매출액 딜에 서비스수수료를 부과합니다.</li>
+				<li>파트너ID 기준 전월 매출이 100만원 미만이면, 서비스수수료를 부과하지 않습니다.</li>
+				<li>발생한 서비스수수료의 정산차감 여부는 정산서 조회 화면에서 확인 부탁드립니다.</li>
+			</ul>
+
+			<div class="pagingWrap">
+				<span class="numPage">
+					<!-- <a href="#" class="first">prev jump</a> -->
+					<!-- <a href="#" class="prev">prev</a> -->
+					<a href="#" class="active">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next">next</a>
+					<a href="#" class="end">next jump</a>
+				</span>
+			</div>
+
+		</div><!-- end of content -->
+
+		<!-- @@include('common/aside_left.html') -->
+		<!-- @@include('common/aside_right.html') -->
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+</script>
+
+</body>
+</html>

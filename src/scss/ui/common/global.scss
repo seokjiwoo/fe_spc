@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+#header{
+	.global{
+		display: inline-block;
+		height: 25px;
+		vertical-align: middle;
+		
+		.spc_account{
+			float: right;
+			
+			> p{
+				float: left;
+				height: 24px;
+				margin-right: 8px;
+				color: #8d9097;
+				line-height: 25px;
+				
+				.link_account{
+					font-weight: bold;
+					color: #4f79c0;
+				}
+			}
+			
+			.btn_account{
+				display: inline-block;
+			    overflow: visible;
+				height: 23px;
+			    padding: 0 10px;
+			    border: 1px solid #cfcfcf;
+			    background-color: #fff;
+			    font-size: 12px;
+			    color: #595963;
+			    line-height: 26px;
+			    text-align: center;
+			    vertical-align: middle;
+			}
+			
+			button.btn_account{
+				height: 25px;
+			}
+		}//.spc_account
+	}
+
+	.top_wrap{
+		background-color :#fff;
+		.inner{
+			width: 1200px;
+			margin : 0 auto;
+			@include after();
+		}
+		.account_area{
+			position: relative;
+			float : right;
+			margin-top: 37px;
+			font-size : 0;
+			
+			> span,
+			.state_list{
+				display : inline-block ;
+			}
+			> span {
+				position : relative;
+				margin-left : 10px;
+				padding-left : 10px;
+				font-size : 12px;
+				&:after{
+					content:"";
+					position: absolute;
+					left:0;top:5px;
+					width: 1px;
+					height: 18px;
+					display:block;
+					background-color:#d8d8d8;
+				}
+				&:nth-of-type(1){
+					padding-left:0;
+					&:after{
+						display:none;
+					}
+				}
+				a, &.ad{
+					color : #16181a;
+					font-family: "Nanum Gothic";
+					font-weight: bold;
+					display:block;
+					height: 30px;
+					line-height: 30px;
+				}
+				&.ad{
+					display : inline-block;
+					&:before{
+						content : "";
+						width : 14px;
+						height : 14px;
+						display : inline-block;
+						margin-right : 8px;
+						vertical-align: middle;
+						background : url(../img/common/icon-2.png) no-repeat 0 0;
+					}
+					em{
+						color : #f27935;
+					}
+					&:last-child{
+						padding-left: 0 ;
+						&:before, &:after{
+							display: none ;
+						}
+					}
+				}
+			}
+			
+
+			.state_list{
+				position:absolute;
+				right:0; top:-30px;
+				min-width: 130px;
+				box-sizing: border-box;
+				font-size : 13px;
+				&:before{
+					content:"";
+					position: absolute;
+					left:0;top:0;
+					width: 100%;
+					height: 1px;
+					background-color:#16181a;
+					display:none;
+				}
+				&:after{
+					content:"";
+					position: absolute;
+					right:0;top:5px;
+					width: 1px;
+					height: 18px;
+					display:block;
+					background-color:#d8d8d8;
+					display:none;
+				}
+				.account{
+					position:relative;
+					width: 100%;
+					height:32px;
+					line-height:32px;
+					display:block;
+					padding: 0 25px 0 15px;
+					font-family: "Nanum Gothic";
+					font-weight: bold;
+					em{
+						color : #2b6bc2;
+					}
+
+					&:after{
+						content:"";
+						position: absolute;
+						top : 13px;
+						right :14px;
+						width : 9px;
+						height: 6px;
+						display: inline-block;
+						overflow:hidden;
+						background:url( ../img/common/state_list_arrow.png ) no-repeat 0 0;
+					}
+				}
+
+				ul{
+					position:absolute;
+					left: -1px;
+					bottom: -76px;
+					z-index:30;
+					border:1px solid #16181a;
+					border-top-color: #ebedef;
+					width: 100%;
+					display:block;
+					background-color:#fff;
+					padding : 11px 0 9px;
+					display:none;
+					li a{
+						color : #6c7580;
+						display:block;
+						line-height:14px;
+						padding:2px 15px;
+						font-size : 11px;
+						font-family: "Nanum Gothic";
+					}
+				}
+
+				&.active{
+					border-left:1px solid #16181a;
+					border-right:1px solid #16181a;
+					&:before{
+						display:block;
+					}
+					&:after{
+						display:none;
+					}
+
+					.account:after{
+						background-position : 0 -6px;
+					}
+
+					ul{
+						display : block;
+					}
+				}
+
+			}
+		}
+
+	} // end of top_wrap
+	
+	h1{
+		height: 27px;
+		padding: 24px 0 24px;
+		font-size: 0;
+		display : inline-block;
+		float : left;
+		&.spc_logo{
+			a{
+				@include sp-common("logo_spc");
+				@include txt-hide-with-sprite();
+			}
+			&.om {
+				a {
+					background: url( '../img/common/img_logo_om.png' );
+					width: 415px;
+					height: 30px;
+				}
+			}
+			&.mmp {
+				a {
+					background: url( '../img/common/img_logo_mmp.png' );
+					width: 415px;
+					height: 30px;
+				}
+			}
+			&.dp {
+				a {
+					background: url( '../img/common/img_logo_dp.png' );
+					width: 336px;
+					height: 27px;
+				}
+			}
+		}
+		&.custom_m{
+			margin-top:36px
+		}
+		
+		&.brand_logo{
+			a{
+				@include sp-common("logo_brand");
+				@include txt-hide-with-sprite();
+			}
+		}
+		// SPC, DPC 이용약관페이지에서 사용하는 기본로고 추가
+		&.tmon_logo{
+			a{
+				width:101px;
+				height:26px;
+				display:inline-block;
+				background:url(../im/sp-common.png) no-repeat -92px 0;
+			}
+		}
+	}//h1
+
+	h1.membership_logo {
+		display: block;
+		text-align: center;
+		float: none;
+		padding: 14px 0 23px;
+	}
+	.membership_global {
+		display: block;
+		width: 1200px;
+		margin: 0 auto;
+		padding-top: 12px;
+	}
+}

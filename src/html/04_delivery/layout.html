@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/delivery.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "on", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+			@@include('delivery/heading.html')
+			@@include('delivery/process_step.html')
+			@@include('delivery/search_form.html')
+			@@include('delivery/search_result.html')
+			@@include('delivery/note.html')
+		</div>
+		@@include('common/aside_left.html')
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+	@@include('delivery/layer.html')
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+	
+	/* [D] 레이어 버튼에 있는 "_layer" 클래스와 "data-id" 속성은 레이어를 띄우기위한 스크립트용 입니다. */
+	$('._layer').on('click', function(){
+		var $this = $(this);
+		var $layer = $('#'+$this.attr('data-id'));
+		var winHeight = $(window).height();
+		var lyHeight = $layer.outerHeight();
+		var lyWidth = $layer.outerWidth();
+		
+		$('.spc_dim').show();
+		$layer.show();
+		if(lyHeight > winHeight){
+			$layer.css({
+				'position': 'absolute',
+				'top': '30px',
+				'left': '50%',
+				'margin-left': -(lyWidth/2)+'px'
+			});
+			$(document).scrollTop(0);
+		}else{
+			$layer.css({
+				'position': 'fixed',
+				'top': '50%',
+				'left': '50%',
+				'margin-top': -(lyHeight/2)+'px',
+				'margin-left': -(lyWidth/2)+'px'
+			});
+		}
+	});
+	
+	$('.spc_layer').on('click', '.btn_close', function(){
+		$(this).closest('.spc_layer').css({
+			'position': 'relative',
+			'top': 'auto',
+			'left': 'auto',
+			'margin-top': 0+'px',
+			'margin-left': 0+'px'
+		});
+		$('.spc_dim').hide();
+	});
+	
+	var $soldoutGuideTabCt = $('#soldoutGuide .tab_ct');
+	$soldoutGuideTabCt.not(':eq(0)').hide();
+	$('#soldoutGuide .spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+		
+		$soldoutGuideTabCt.hide();
+		$soldoutGuideTabCt.eq(idx).show();
+	});
+});
+</script>
+</body>
+</html>

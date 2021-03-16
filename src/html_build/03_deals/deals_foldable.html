@@ -1,0 +1,1780 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		<div class="top_wrap">
+	<div class="inner">
+		<div class="account_area">
+			<!-- 하위목록을 노출시키려면 active 클래스를 넣어주세요  -->
+			<div class="state_list">
+				<button class="account"><em>티켓몬스터</em> 님</button>
+				<ul>
+					<li><a href="#">나의 정보 확인</a></li>
+					<li><a href="#">비밀번호 변경</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div> <!-- end of state_list -->
+			<span><a href="#">공지사항</a></span>
+			<span><a href="#">매출증진 TIP</a></span>
+			<span><a href="#">담당자 연락처</a></span>
+			<span class="ad">슈퍼클릭(키워드/검색광고)문의 <em>1661-8200</em></span>	
+			<span class="ad">티몬광고상품문의 <em>02-2098-8690</em></span>
+		</div>
+		<!-- 오픈마켓 로고는 om 멀티클래스, 티몬특가 로고는 mmp 멀티클래스를 주시면 됩니다 -->
+		<!-- <h1 class="spc_logo om"><a href="#">TMON 스토어파트너 센터</a></h1> -->
+		<h1 class="spc_logo dp"><a href="#">TMON 배송상품 파트너센터</a></h1>
+	</div>
+</div>
+		<div class="fixed_area">
+	<!-- 페이지 스크롤시 gnb 고정상태일때 gnb_area fixed 클래스를 넣어주세요 -->
+	<div class="gnb_area">
+		<div class="inner_area">
+			<ul class="gnb_wrap" id="gnb">
+				<li class="">
+					<a href="#">티몬특가 신청</a>
+				</li>
+				<li class="">
+					<a href="#">딜관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">베이직딜등록</a></li>
+							<li><a href="#">베이직딜 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#">주문관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">미확인 주문</a></li>
+							<li><a href="#">송장등록 대기주문</a></li>
+							<li><a href="#">송장등록 완료주문</a></li>
+							<li><a href="#">배송중 주문</a></li>
+							<li><a href="#">배송템플릿 관리</a></li>
+							<li><a href="#">배송지연패널티 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="">
+					<a href="#">클레임관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">출고전 취소 관리</a></li>
+							<li><a href="#">환불관리</a></li>
+							<li><a href="#">교환관리</a></li>
+							<li><a href="#">재배송관리</a></li>
+							<li><a href="#">수취처리관리</a></li>
+							<li><a href="#">클레임 등록</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="">
+					<a href="#">문의∙리뷰관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">고객문의 관리</a></li>
+							<li><a href="#">CS문의 관리</a></li>
+							<li><a href="#">고객리뷰 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="">
+					<a href="#">정산관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">판매현황조회</a></li>
+							<li><a href="#">파트너 단위 정산서</a></li>
+							<li><a href="#">딜 단위 정산서</a></li>
+							<li><a href="#">세금계산서</a></li>
+							<li><a href="#">매출·매입내역</a></li>
+							<li><a href="#">PG결제수수료 환급조회</a></li>
+						</ul>
+					</div>
+				</li>
+				<!-- <li class="">
+					<a href="#">계약관리</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">계약서작성</a></li>
+							<li><a href="#">계약서관리</a></li>
+							<li><a href="#">서명승인요청</a></li>
+						</ul>
+					</div>
+				</li> -->
+				<li class="@@mystore_on">
+					<a href="#">광고주센터</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">광고주센터 바로가기</a></li>
+							<li><a href="#">즉시할인 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="">
+					<a href="#">My 스토어</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">스토어 생성</a></li>
+							<li><a href="#">기본정보관리</a></li>
+							<li><a href="#">추천상품관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="@@adcener_on">
+					<a href="#">파트너지원</a>
+					<div class="sub">
+						<i class="arr"></i>
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">자주하는질문</a></li>
+							<li><a href="#">1:1문의</a></li>
+							<li><a href="#">약관변경확인</a></li>
+							<li><a href="#">(구)계약관리 확인</a></li>
+							<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+							<li><a href="#">자료실</a></li>
+							<li><a href="#">파트너교육센터</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<!-- 전체메뉴 노출시 btn_sitemap active 클래스를 넣어주세요 -->
+			<a href="#/" class="btn_sitemap"><span>전체메뉴보기</span></a>
+			<!-- 전체메뉴 노출시 sitemap active 클래스를 넣어주세요 -->
+			<div class="sitemap">
+				<!-- 
+					컬럼갯수에 따라 원하는 클래스를 추가해주세요
+					메뉴컬럼4개 : col4
+					메뉴컬럼5개 : col5
+					-->
+				<div class="sitemap_wrap col4">
+					<div>
+						<a href="#">딜관리</a>
+						<ul class="sub">
+							<li><a href="#">베이직딜등록</a></li>
+							<li><a href="#">베이직딜 관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">주문관리</a>
+						<ul class="sub">
+							<li><a href="#">미확인 주문</a></li>
+							<li><a href="#">송장등록 대기주문</a></li>
+							<li><a href="#">송장등록 완료주문</a></li>
+							<li><a href="#">배송중 주문</a></li>
+							<li><a href="#">배송템플릿 관리</a></li>
+							<li><a href="#">배송지연패널티 관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">클레임관리</a>
+						<ul class="sub">
+							<li><a href="#">출고전 취소 관리</a></li>
+							<li><a href="#">환불관리</a></li>
+							<li><a href="#">교환관리</a></li>
+							<li><a href="#">재배송관리</a></li>
+							<li><a href="#">수취처리관리</a></li>
+							<li><a href="#">클레임 등록</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">문의∙리뷰관리</a>
+						<ul class="sub">
+							<li><a href="#">고객문의 관리</a></li>
+							<li><a href="#">CS문의 관리</a></li>
+							<li><a href="#">고객리뷰 관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">정산관리</a>
+						<ul class="sub">
+							<li><a href="#">판매현황조회</a></li>
+							<li><a href="#">파트너 단위 정산서</a></li>
+							<li><a href="#">딜 단위 정산서</a></li>
+							<li><a href="#">세금계산서</a></li>
+							<li><a href="#">매출·매입내역</a></li>
+							<li><a href="#">PG결제수수료 환급조회</a></li>
+						</ul>
+					</div>
+					<!-- <div>
+						<a href="#">계약관리</a>
+						<ul class="sub">
+							<li><a href="#">계약서작성</a></li>
+							<li><a href="#">계약서관리</a></li>
+							<li><a href="#">서명승인요청</a></li>
+						</ul>
+					</div> -->
+					<div>
+						<a href="#">광고주센터</a>
+						<ul class="sub">
+							<li><a href="#">광고주센터 바로가기</a></li>
+							<li><a href="#">즉시할인 관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">My 스토어</a>
+						<ul class="sub">
+							<li><a href="#">스토어 생성</a></li>
+							<li><a href="#">기본정보관리</a></li>
+							<li><a href="#">추천상품관리</a></li>
+						</ul>
+					</div>
+					<div>
+						<a href="#">파트너지원</a>
+						<ul class="sub">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">1:1문의</a></li>
+							<li><a href="#">약관변경확인</a></li>
+							<li><a href="#">(구)계약관리 확인</a></li>
+							<li><a href="#">티몬특가<i class="new_menu"></i></a></li>
+							<li><a href="#">자료실</a></li>
+							<li><a href="#">파트너교육센터</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--  전체메뉴 고정하기 활성화시 active 클래스를 넣어주세요 -->
+				<div class="bottom-area" style="display:none"><button class="menu_fixed">전체메뉴 고정하기</button></div>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+	<div id="container">
+		<div id="content">
+           
+            <div class="h2_head">
+                <!-- <h2>베이직딜 등록</h2> -->
+                <h2>티몬특가딜 등록</h2>
+            </div>
+            
+            <div class="must_box">
+                <p>‘복제한 딜명’ 딜로부터 복제된 딜입니다. 입력 정보를 다시 한번 정확하게 확인해 주시기 바랍니다. <em>(N/5)번 복제</em></p>
+                <button class="btn arrow">로그 보기</button>
+            </div>
+            <!-- <div class="must_box">
+                <p>QE130 수동편집 1단 딜로부터 복제된 딜입니다. 입력정보를 다시 한번 정확하게 확인해 주시기 바랍니다.</p>
+                <button class="btn arrow">원본 딜 보기</button>
+            </div> -->
+            
+            <p class="chkPoint"><span class="bullet">*</span> <span>필수 입력 사항</span></p>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: 294px ; ">
+							<col style="width: 174px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>딜번호(딜상태)</th>
+								<td>1234567 (임시저장)</td>
+								<th><span class="bullet">*</span>고객문의담당</th>
+								<td>
+									<button type="button" class="btn init">설정하기</button><span class="expain_txt">미등록</span>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>판매담당</th>
+								<td>
+									<button type="button" class="btn init">설정하기</button>
+								</td>
+								<th><span class="bullet">*</span>교환/환불담당</th>
+								<td>
+									<button type="button" class="btn init">설정하기</button><span class="expain_txt txt_point">등록완료</span>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="bullet">*</span>담당MD 선택</th>
+								<td colspan="3">
+                                    <div class="search_keyword_box">
+                                        <input type="text" class="spc_text name" placeholder="이름">
+                                        <button type="button" class="btn_search">조회하기</button>
+                                        <div class="name_list_box">
+                                            <p class="none">검색 결과가 없습니다.</p>
+                                            <ul>
+                                                <li><a href="#">홍길동(가전)</a></li>
+                                                <li><a href="#">홍길동(뷰티)</a></li>
+                                                <li><a href="#">홍길동(패션)</a></li>
+                                                <li><a href="#">홍길동(가전)</a></li>
+                                                <li><a href="#">홍길동(뷰티)</a></li>
+                                                <li><a href="#">홍길동(패션)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="keywordList">
+                                        <p class="word">
+                                            <span class="name">홍길동(뷰티)</span>
+                                            <button class="del">삭제</button>
+                                        </p>
+                                    </div>
+                                    <p class="noti">
+                                        아는 MD가 없으신가요?
+                                        <span class="answer">
+                                            <i class="ico_kakaoch">카카오 채널</i>
+                                            <a href="https://pf.kakao.com/_axhFRxb/chat">카카오채널 1:1 상담하기</a>
+                                            혹은
+                                            <i class="ico_kakaomf">카카오톡 모바일 친구</i>
+                                            <em>카카오톡 모바일 친구(티몬MD배정)검색</em>으로 티몬 MD 배정 상담을 받아보세요.
+                                        </span>
+                                    </p>
+								</td>
+							</tr>								
+						</tbody>
+					</table>
+				</fieldset>
+            </form>
+
+            <div class="btn_area_wrap">
+                <div><button type="button" class="btn init">참여중인 기획전</button></div>
+                <div class="btn_area">
+                    <span class="save_time"><em>마지막 저장</em>2019.07.31 06:18 PM</span>
+                    <button type="button" class="btn init">저장하기</button>
+                    <button type="button" class="btn init">임시저장</button>
+                    <button type="button" class="btn init">미리보기</button>
+                    <button type="button" class="btn init">제출</button>
+                    <button type="button" class="btn init">취소</button>
+                </div>
+            </div>
+
+            <div class="foldable_wrap">
+                <!--
+                    - 컨텐츠영역을 노출시킬려면 div.foldable_box 에
+                    - active 클래스를 추가해주세요
+                -->
+
+                <!-- 기본정보 -->
+                <div class="foldable_box active">
+                    <div class="head">
+                        <h3 class="title">기본정보</h3>
+                        <div class="right_wrap">
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><form action="" class="spc_form">
+        <fieldset>
+            <table class="spc_table_form">
+                <colgroup>
+                    <col style="width: 173px ; ">
+                    <col style="width: * ; ">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>
+                            <span class="bullet">*</span>
+                            <div class="stitle">카테고리</div>
+                            <button class="help">도움 </button></th>
+                        </th>
+                        <td>
+                            <div class="register_cate">
+                                <label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>일반등록</label>
+                                <label for="ly_radio2-2" class="spc_radio checked"><input type="radio" id="ly_radio2-2" name="ly_radio2" checked="checked"><i class="symbol"></i>단품등록</label>
+                                <div class="commission_wrap">
+                                    <span>수수료 할인</span>
+                                    <div class="tooltip_wrap">
+                                        <div class="tooltip_txt left">
+                                            <strong>수수료 할인</strong>
+                                            <p>
+                                                단품등록을 통해 상품을 등록하면 수수료 할인이 적용됩니다. <br />
+                                                선택한 카테고리의 수수료를 통해 확인해주세요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cate_input">
+								<input type="text" class="spc_text keyword" placeholder="상품명, 브랜드명으로 검색이 가능합니다.(ex. 포카칩)">
+								<button class="ico_search">검색</button>
+								<div class="cate_search_layer hide">
+									<p class="none">
+										검색하신 카테고리가 없습니다. 다시검색해주세요
+									</p>
+									<ul>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 봉지<span>라면</span></a></li>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 풀무원 생면식감 생<span>라면</span> 매운맛, 95.9g, 32개</a></li>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 풀무원 생면식감 생<span>라면</span> 매운맛, 95.9g, 32개</a></li>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 풀무원 생면식감 생<span>라면</span> 매운맛, 95.9g, 32개</a></li>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 풀무원 생면식감 생<span>라면</span> 매운맛, 95.9g, 32개</a></li>
+									</ul>
+								</div>
+                            </div>
+                            <div class="cate_use_inline">
+                                <!-- 
+                                    버튼영역안에 툴팁레이어가 들어가 있을때 IE 브라우저에서 
+                                    노출되지 않는 현상이 있어 버튼과 툴팁레이어 분리처리 
+                                -->
+                                <button type="button" class="btn link">카테고리 템플릿 사용</button>
+                                <div class="tooltip_wrap">
+                                    <div class="tooltip_txt top">
+                                        <strong>카테고리 템플릿</strong>
+                                        <p>
+                                            카레고리 선택 후  <span>“카테고리 템플릿 등록”</span>을 체크하여 <br />
+                                            최근에 사용한 카테고리를 저장하여 불러올 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="cate_input">
+								<input type="text" class="spc_text keyword" placeholder="카테고리명 검색">
+								<button class="ico_x">삭제</button>
+								<div class="cate_search_layer hide">
+									<p class="none">
+										검색하신 카테고리가 없습니다. 다시검색해주세요
+									</p>
+									<ul>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 봉지<span>라면</span></a></li>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 풀무원 생면식감 생<span>라면</span> 매운맛, 95.9g, 32개</a></li>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 풀무원 생면식감 생<span>라면</span> 매운맛, 95.9g, 32개</a></li>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 풀무원 생면식감 생<span>라면</span> 매운맛, 95.9g, 32개</a></li>
+										<li><a href="#">식품·건강 &gt; 면/통조림/가공식품 &gt; 라면/컵<span>라면</span> &gt; 풀무원 생면식감 생<span>라면</span> 매운맛, 95.9g, 32개</a></li>
+									</ul>
+								</div>
+                            </div>
+                            <div class="select_list w135">
+                                <div class="spc_select">
+                                    <div class="value"><span class="selected">대분류</span><i></i></div>
+                                    <select>
+                                        <option>옵션1</option>
+                                        <option>옵션2</option>
+                                        <option>옵션3</option>
+                                    </select>
+                                </div>
+                                <div class="spc_select">
+                                    <div class="value"><span class="selected">중분류</span><i></i></div>
+                                    <select>
+                                        <option>옵션1</option>
+                                        <option>옵션2</option>
+                                        <option>옵션3</option>
+                                    </select>
+                                </div>
+                                <div class="spc_select">
+                                    <div class="value"><span class="selected">소분류</span><i></i></div>
+                                    <select>
+                                        <option>옵션1</option>
+                                        <option>옵션2</option>
+                                        <option>옵션3</option>
+                                    </select>
+                                </div>
+                                <div class="spc_select">
+                                    <div class="value"><span class="selected">세분류</span><i></i></div>
+                                    <select>
+                                        <option>옵션1</option>
+                                        <option>옵션2</option>
+                                        <option>옵션3</option>
+                                    </select>
+                                </div>
+                                <label for="cate_save" class="spc_check cate_chk"><input type="checkbox" id="cate_save"><i class="symbol"></i>카테고리 템플릿  등록</label>
+                            </div>
+                            <ul class="spc_note type_cate">
+                                <li><i class="dot"></i>선택한 카테고리의 <span class="commission">수수료율 -3.3% (VAT 포함)</span></li>
+                                <li><i class="dot"></i>상품명, 브랜드명으로도 검색이 가능합니다. 찾는 상품이 없는 경우, <span class="under_point">‘일반등록’</span>을 통해 검색해주세요.</li>
+                                <li><i class="dot"></i>아이템 카테고리가 등록되면 티몬 홈페이지에 노출되는 일반품목 카테고리가 지정됩니다.</li>
+                                <li><i class="dot"></i>상품과 맞지 않는 카테고리를 선택할 경우, 강제 이동되거나 판매가 중지될 수 있습니다.</li>
+                                <li><i class="dot"></i>등록하고 싶은 카테고리가 있으신가요? 카테고리를 확인해 보세요. <a href="#;" class="btn_arr">카테고리 제안하기</a></li>
+                                <li><i class="dot"></i>검색 가능한 전체 아이템 카테고리 리스트를 확인해보세요 <a href="#;" class="btn_arr">카테고리 제안하기</a></li>
+                            </ul>
+                            <div class="exposed_cata">
+                                <h4 class="tit">티몬 홈페이지에 노출될 카테고리</h4>
+                                <div class="cont">
+                                    <ul class="spc_note">
+                                        <li><i class="dot"></i>식품/건강 &gt; 라면/즉석밥/통조림 &gt; 라면/컵라면 &gt; 봉지라면</li>
+                                        <li><i class="dot"></i>식품/건강 &gt; 라면/즉석밥/통조림 &gt; 라면/컵라면 &gt; 국내라면</li>
+                                        <li><i class="dot"></i>식품/건강 &gt; 라면/즉석밥/통조림 &gt; 파스터/국수/면류 &gt; 기타면류</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span class="bullet">*</span>
+                            <div class="stitle">딜명</div>
+                            <button class="help">도움 </button></th>
+                        </th>
+                        <td>
+                            <div class="deal_inputArea">
+                                <div><input type="text" class="spc_text" placeholder="상품 홍보제목" style="width:620px"><span>(0/40자)</span></div>
+                                <div><input type="text" class="spc_text" placeholder="메인 상품이름" style="width:620px"><span>(0/50자)</span></div>
+                            </div>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>특정 특수문자는 사용이 불가합니다.</li>
+                            </ul>
+                            <button type="button" class="btn link">미리보기</button>
+                            <button type="button" class="btn init guide">딜명 제작가이드</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span class="bullet">*</span>
+                            <div class="stitle">판매기간</div>
+                            <button class="help">도움 </button></th>
+                        </th>
+                        <td>
+                            <div class="spc_calendar">
+                                <input type="text" class="spc_text" value="2016.04.27"><button class="btn_calendar">달력</button>
+                                <input type="text" class="hhmmss" value="00:00:00">
+                            </div>
+                            <span class="dash">~</span>
+                            <div class="spc_calendar">
+                                <input type="text" class="spc_text" value="2016.04.30" disabled><button class="btn_calendar">달력</button>
+                                <input type="text" class="hhmmss" value="00:00:00" disabled>
+                            </div>
+                            <div class="spc_select disabled" style="width: 130px;">
+                                <div class="value"><span class="selected">간편설정</span><i></i></div>
+                                <select disabled>
+                                    <option>옵션1</option>
+                                    <option>옵션2</option>
+                                    <option>옵션3</option>
+                                </select>
+                            </div>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>파트너 단위 정산 딜은 상시 판매로 설정되며 판매 종료일의 임의변경이 불가합니다.</li>
+                                <li><i class="dot"></i>시간 설정은 담당 MD에게 문의 바랍니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span class="bullet">*</span>
+                            <div class="stitle">
+                                브랜드
+                                <div class="balloon type2 active">
+                                    <p>브랜드를 확인하세요.</p>
+                                </div>
+                            </div>
+                            <button class="help">도움 </button></th>
+                        <td>
+                            <div class="brandInfo">
+                                <div>
+                                    <button type="button" class="btn init">등록/수정 하기</button>
+                                    <span class="point">나이키 등록완료 / 설정안함</span>
+                                </div>
+                                <ul class="spc_note">
+                                    <li class="point"><i class="dot"></i>미노출 브랜드입니다. 브랜드 활용 서비스 혜택에서 제외될 수 있습니다.</li>
+                                    <li class="point"><i class="dot"></i>브랜드 활용 서비스 혜택에서 제외될 수 있습니다.</li>
+                                    <li><i class="dot"></i>입력된 브랜드 정보는 외부 채널(네이버, 다음 등), 검색, 카테고리 필터 및 정렬가중치에 활용됩니다.</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="stitle">검색키워드</div>
+                            <button class="help">도움 </button></th>
+                        </th>
+                        <td>
+                            <input type="text" class="spc_text keyword" placeholder="검색 키워드">
+                            <div class="keywordList">
+                                <p class="word">
+                                    <span class="name">나이키</span>
+                                    <button class="del">삭제</button>
+                                </p>
+                                <p class="word">
+                                    <span class="name">아디다스</span>
+                                    <button class="del">삭제</button>
+                                </p>
+                            </div>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>키워드 입력 후 엔터(Enter)를 눌러주세요. 최대 10개까지 입력 가능합니다.</li>
+                                <li><i class="dot"></i>상품과 무관한 검색 키워드를 등록할 경우, 임의로 상품 노출이 차단될 수 있으니 참고바랍니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form></div>
+                </div>
+                <!-- // 기본정보 -->
+
+                <!-- 핀매정보 -->
+                <div class="foldable_box">
+                    <div class="head">
+                        <h3 class="title">판매정보</h3>
+                        <div class="right_wrap">
+                            <div class="txt">1인당 최대 구매수량 (999개 까지 구매가능 1일마다 초기화) / 할인쿠폰 동의 할인쿠폰 동의</div>
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><form action="" class="spc_form">
+    <fieldset>
+        <table class="spc_table_form">
+            <colgroup>
+                <col style="width: 173px ; ">
+                <col style="width: * ; ">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th><span class="bullet">*</span>1인당 최대 구매수량</th>
+                    <td>
+                        <input type="text" class="spc_text" disabled="true"><span class="expain_txt">개 까지 구매가능</span>
+                        <input type="text" class="spc_text" disabled="true"><span class="expain_txt">일 마다 초기화</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>할인쿠폰 동의</th>
+                    <td>
+                        <div class="note_wp">
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>회원가입시 할인쿠폰 적용에 동의했습니다.</li>
+                            </ul>
+                            <button type="button" class="btn init">약관상세보기</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>상품상태</th>
+                    <td>
+                        <label for="ly_radio2-1" class="spc_radio checked"><input type="radio" id="ly_radio2-1" name="ly_radio2" checked="checked"><i class="symbol"></i>신상품</label>
+                        <label for="ly_radio2-2" class="spc_radio"><input type="radio" id="ly_radio2-2" name="ly_radio2"><i class="symbol"></i>중고</label>
+                        <label for="ly_radio2-3" class="spc_radio"><input type="radio" id="ly_radio2-3" name="ly_radio2"><i class="symbol"></i>리퍼</label>
+                        <label for="ly_radio2-4" class="spc_radio"><input type="radio" id="ly_radio2-4" name="ly_radio2"><i class="symbol"></i>전시</label>
+                        <label for="ly_radio2-5" class="spc_radio"><input type="radio" id="ly_radio2-5" name="ly_radio2"><i class="symbol"></i>반품</label>
+                        <label for="ly_radio2-6" class="spc_radio"><input type="radio" id="ly_radio2-6" name="ly_radio2"><i class="symbol"></i>스크래치</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>판매방식</th>
+                    <td>
+                        <label for="ly_radio3-1" class="spc_radio"><input type="radio" id="ly_radio3-1" name="ly_radio3"><i class="symbol"></i>해당없음</label>
+                        <label for="ly_radio3-2" class="spc_radio"><input type="radio" id="ly_radio3-2" name="ly_radio3"><i class="symbol"></i>도매</label>
+                        <label for="ly_radio3-3" class="spc_radio"><input type="radio" id="ly_radio3-3" name="ly_radio3"><i class="symbol"></i>렌탈</label>
+                        <label for="ly_radio3-4" class="spc_radio"><input type="radio" id="ly_radio3-4" name="ly_radio3"><i class="symbol"></i>대여</label>
+                        <label for="ly_radio3-5" class="spc_radio"><input type="radio" id="ly_radio3-5" name="ly_radio3"><i class="symbol"></i>할부</label>
+                        <label for="ly_radio3-6" class="spc_radio"><input type="radio" id="ly_radio3-6" name="ly_radio3"><i class="symbol"></i>예약판매</label>
+                        <label for="ly_radio3-7" class="spc_radio checked"><input type="radio" id="ly_radio3-7" name="ly_radio3" checked="checked"><i class="symbol"></i>구매대행</label>
+                        <ul class="spc_note">
+                            <li><i class="dot"></i><span class="gray">구매대행이란 이케아, 코스트코</span> 등의 오프라인 마켓에서 구매를 대행하여 배송하는 상품을 의미합니다.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form></div>
+                </div>
+                <!-- // 판매정보 -->
+
+                 <!-- 인증정보 -->
+                 <div class="foldable_box">
+                    <div class="head">
+                        <h3 class="title">인증정보</h3>
+                        <div class="right_wrap">
+                            <div class="txt">성인인증(미상용) / 식품원산지 표기(미대상) / 식품수입여부(일반상품)</div>
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><form action="" class="spc_form">
+    <fieldset>
+        <table class="spc_table_form">
+            <colgroup>
+                <col style="width: 173px ; ">
+                <col style="width: * ; ">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th><span class="bullet">*</span>성인인증</th>
+                    <td colspan="2">
+                        <label for="ly_radio1-1" class="spc_radio"><input type="radio" id="ly_radio1-1" name="ly_radio1"><i class="symbol"></i>사용</label>
+                        <label for="ly_radio1-2" class="spc_radio checked"><input type="radio" id="ly_radio1-2" name="ly_radio1" checked="checked"><i class="symbol"></i>미사용</label>
+                        <span class="cert_note">※ (미사용)-&gt;사용 변경만 가능하며, 사용-&gt;(미사용) 변경은 딜 재등록 필요</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>식품 원산지 표기<button class="help">도움</button></th>
+                    <td colspan="2">
+                        <label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>미대상</label>
+                        <label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>상품상세 참조</label>
+                        <label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>국내산</label>
+                        <label for="ly_radio2-1" class="spc_radio checked"><input type="radio" id="ly_radio2-1" name="ly_radio2" checked="checked"><i class="symbol"></i>직접 입력</label>
+                        <div class="limitTextWrap type2">
+                            <input type="text" class="spc_text" placeholder="최대 10자 이내로 입력해주세요.">
+                            <p class="crntText"><span>0</span>/<span>10자</span></p>
+                        </div>
+                        <ul class="spc_note">
+                            <li><i class="dot"></i>허위 표기시 관련법에 의하여 처벌 받을 수 있습니다. 정확한 원산지 정보만 입력해 주시기 바랍니다. <br>상세페이지에 원산지 정보가있거나 복수원산지, 가공식품등의 경우 [상품상세참조]를 선택해 주시기 바랍니다. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="bullet">*</span>병행수입<button class="help">도움</button></th>
+                    <td colspan="2">
+                        <label for="ly_radio5-1" class="spc_radio checked"><input type="radio" id="ly_radio5-1" name="ly_radio5" checked="checked"><i class="symbol"></i>대상</label>
+                        <label for="ly_radio5-2" class="spc_radio"><input type="radio" id="ly_radio5-2" name="ly_radio5"><i class="symbol"></i>미대상</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btn fileUpload disabled">
+                            <input type="file" disabled="true">
+                            <span>파일첨부</span>
+                        </div>
+                        <ul class="spc_note">
+                            <li><i class="dot"></i>병행수입 상품 등록 시 수입신고필증/인보이스 증빙서류를 첨부해주세요.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="bullet">*</span>정상가근거</th>
+                    <td colspan="2">
+                        <div class="spc_select" style="width: 210px; ">
+                            <div class="value"><span class="selected">홈쇼핑 판매가</span><i></i></div>
+                            <select>
+                                <option>옵션1</option>
+                                <option>옵션2</option>
+                                <option>옵션3</option>
+                            </select>
+                        </div>
+                        <ul class="spc_note">
+                            <li><i class="dot"></i>최근 홈쇼핑에서 판매된 판매가입니다. 단, 수입브랜드 상품들의 경우 국내 정식 수입원의 가격을 기준으로 표기하였기에 병행수입 상품의 경우 차이가 있을 수 있으니 참고해 주시기 바랍니다.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btnWrap">
+                            <button type="button" class="btn init docsDown">양식 다운로드</button>
+                            <div class="btn fileUpload">
+                                <input type="file">
+                                <span>파일첨부</span>
+                            </div>
+                        </div>
+                        <div class="fileInfo_wrap">
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="3"><span class="bullet">*</span>KC 인증</th>
+                    <td colspan="2">
+                        <label for="ly_radio6-1" class="spc_radio checked"><input type="radio" id="ly_radio6-1" name="ly_radio6" checked="checked"><i class="symbol"></i>대상</label>
+                        <label for="ly_radio6-2" class="spc_radio"><input type="radio" id="ly_radio6-2" name="ly_radio6"><i class="symbol"></i>미대상</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul class="con_ls">
+                            <li>
+                                <input type="text" class="spc_text regist" placeholder="- 를 포함하여 등록">
+                                <div class="btnWrap">
+                                    <button type="button" class="btn init">인증확인</button>
+                                    <button type="button" class="btn add"><span class="blind">추가</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="text" class="spc_text regist" placeholder="- 를 포함하여 등록">
+                                <div class="btnWrap">
+                                    <button type="button" class="btn init">인증확인</button>
+                                    <button type="button" class="btn add"><span class="blind">삭제</span></button>
+                                    <button type="button" class="btn remove"><span class="blind">삭제</span></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btnWrap">
+                            <div class="btn fileUpload disabled">
+                                <input type="file" disabled="true">
+                                <span>파일첨부</span>
+                            </div>
+                        </div>
+                        <div class="fileInfo_wrap">
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="bullet">*</span>판매허가 신고대상<button class="help">도움</button></th>
+                    <td colspan="2">
+                        <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i>해당없음</label>
+                        <label for="check2" class="spc_check"><input type="checkbox" id="check2"><i class="symbol"></i>건강식품</label>
+                        <label for="check3" class="spc_check"><input type="checkbox" id="check3"><i class="symbol"></i>의료기기</label>
+                        <label for="check4" class="spc_check"><input type="checkbox" id="check4"><i class="symbol"></i>기능성 화장품</label>
+                        <label for="check5" class="spc_check"><input type="checkbox" id="check5"><i class="symbol"></i>특수용도 화장품</label>
+                        <label for="check6" class="spc_check"><input type="checkbox" id="check6"><i class="symbol"></i>의약외품</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btn fileUpload">
+                            <input type="file">
+                            <span>파일첨부</span>
+                        </div>
+                        <div class="fileInfo_wrap">
+                            <p class="fileInfo">
+                                <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                <button class="del">delete</button>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>기타 구비서류</th>
+                    <td colspan="2">
+                        <div class="btn fileUpload">
+                            <input type="file">
+                            <span>파일첨부</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form></div>
+                </div>
+                <!-- // 인증정보 -->
+
+                <!-- 상품정보제공고시 -->
+                <div class="foldable_box">
+                    <div class="head">
+                        <h3 class="title">상품정보제공고시</h3>
+                        <div class="right_wrap">
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><form action="" class="spc_form">
+        <fieldset>
+            <table class="spc_table_form">
+                <colgroup>
+                    <col style="width: 173px ; ">
+                    <col style="width: 155px ; ">
+                    <col style="width: * ; ">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th rowspan="2"><span class="bullet">*</span>상품정보 제공공시<button class="help">도움</button></th>
+                        <td>직접 등록</td>
+                        <td>
+                            <button type="button" class="btn init">등록/수정하기</button>
+                            <span class="point">등록완료</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>엑셀 등록</td>
+                        <td>
+                            <div class="btn_wp product_offer">
+                                <button type="button" class="btn init">양식 다운로드</button>
+                                <div class="btn fileUpload disabled">
+                                    <input type="file" disabled="true">
+                                    <span>파일첨부</span>
+                                </div>
+                                <button type="button" class="btn init">미리보기</button>
+                            </div>
+                            <div class="fileInfo_wrap">
+                                <p class="fileInfo">
+                                    <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                    <button class="del">delete</button>
+                                </p>
+                                <p class="fileInfo">
+                                    <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                                    <button class="del">delete</button>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form></div>
+                </div>
+                <!-- // 상품정보제공고시 -->
+
+                <!-- 배송정보 -->
+                <div class="foldable_box">
+                    <div class="head">
+                        <h3 class="title">배송정보</h3>
+                        <div class="right_wrap">
+                            <div class="txt">상품유형(냉장/냉동/신선식품) / 택배사(CJ대한통운 국제특송) / 편의점 픽업 서비스(불가능)</div>
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><form action="" class="spc_form">
+        <fieldset>
+            <table class="spc_table_form">
+                <colgroup>
+                    <col style="width: 173px ; ">
+                    <col style="width: * ; ">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>
+                            <span class="bullet">*</span>
+                            <!-- 새로 추가된 기능과 정책 때문에 마크업이 수정되었습니다 .
+                            기존 제목 텍스트는 감싸는 태그 없이 홀로 존재하였지만 추가된 정책의 
+                            '말풍선'이 추가되면서 디자인과 동일하게 보여지기 위해 마크업이 추가되었습니다.  -->
+                            <div class="stitle">상품유형
+                                <div class="balloon type2 active">
+                                    <p>확인이 필요합니다.</p>
+                                </div>
+                            </div>
+                            <button class="help">도움</button>
+                        </th>
+                        <td>
+                            <div class="radioWrap">
+                                <label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked="checked"><i class="symbol"></i>냉장/냉동/신선 식품</label>
+                                <label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>해외직배송</label>
+                                <label for="ly_radio1-3" class="spc_radio"><input type="radio" id="ly_radio1-3" name="ly_radio1"><i class="symbol"></i>해외 구매대행</label>
+                                <label for="ly_radio1-4" class="spc_radio"><input type="radio" id="ly_radio1-4" name="ly_radio1"><i class="symbol"></i>화물/설치</label>
+                                <label for="ly_radio1-5" class="spc_radio"><input type="radio" id="ly_radio1-5" name="ly_radio1"><i class="symbol"></i>주문제작</label>
+                                <label for="ly_radio1-6" class="spc_radio"><input type="radio" id="ly_radio1-6" name="ly_radio1"><i class="symbol"></i>주문 후 발주</label>
+                                <label for="ly_radio1-7" class="spc_radio"><input type="radio" id="ly_radio1-7" name="ly_radio1"><i class="symbol"></i>일반 상품</label>
+                                <label for="ly_radio1-8" class="spc_radio"><input type="radio" id="ly_radio1-8" name="ly_radio1"><i class="symbol"></i>예외상품</label>
+                            </div>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i><span class="gray">예외상품</span>선택은 렌탈, 응모, 추첨 등 비배송상품만 가능합니다. (배송상품이 선택된 경우, 딜 진행이 불가합니다.)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                     <tr>
+                         <th><span class="bullet">*</span>택배사<button class="help">도움</button></th>
+                         <td>
+                             <div class="spc_select" style="width: 210px; ">
+                                <div class="value"><span class="selected">선택</span><i></i></div>
+                                <select>
+                                    <option>옵션1</option>
+                                    <option>옵션2</option>
+                                    <option>옵션3</option>
+                                </select>
+                            </div>
+                         </td>
+                     </tr>
+                     <tr>
+                         <th><span class="bullet">*</span>편의점 픽업 서비스<button class="help">도움</button></th>
+                         <td>
+                             <label for="ly_radio1-13" class="spc_radio"><input type="radio" id="ly_radio1-13" name="ly_radio3"><i class="symbol"></i>가능</label>
+                            <label for="ly_radio1-14" class="spc_radio checked"><input type="radio" id="ly_radio1-14" name="ly_radio3" checked="checked"><i class="symbol"></i>불가능</label>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>무게 5kg 이상, 박스 3변의 합 160cm 이상의 제품을 제외하고 모두 편의점 픽업 이용이 가능하며, 가능 선택시 일반상품(상품유형)으로 자동 적용됩니다.</li>
+                                <li><i class="dot"></i><strong class="point">픽업 이용 불가 택배사</strong> : 한진택배, 천일택배, 경동택배, 합동택배, 대신택배, 로젠택배 <a href="#" class="detail_view">서비스 자세히 보기</a></li>
+                            </ul>
+                         </td>
+                     </tr>
+                     <tr>
+                        <th><span class="bullet">*</span>지역별 차등배송<button class="help">도움</button></th>
+                        <td>
+                            <label for="ly_radio1-21" class="spc_radio checked"><input type="radio" id="ly_radio1-20" name="ly_radio6" checked=""><i class="symbol"></i>대상</label>
+                            <label for="ly_radio1-22" class="spc_radio"><input type="radio" id="ly_radio1-21" name="ly_radio6"><i class="symbol"></i>미대상</label>
+                            <div class="plate_box">
+                                <input type="text" class="spc_text" value="지역이나 품목에 따라 배송비가 추가로 발생할 경우 해당 상세 내용 기입해주세요" style="width:100%;">
+                            </div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <th><span class="bullet">*</span>단순변심 환불<button class="help">도움</button></th>
+                        <td>
+                            <label for="ly_radio1-27" class="spc_radio"><input type="radio" id="ly_radio1-27" name="ly_radio9"><i class="symbol"></i>예</label>
+                            <label for="ly_radio1-28" class="spc_radio checked"><input type="radio" id="ly_radio1-28" name="ly_radio9" checked><i class="symbol"></i>아니오</label>
+                            <div class="plate_box"><input type="text" class="spc_text" value="단숨변심 불가 사유를 입력해주세요" style="width:100%;" disabled="true"></div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <th><span class="bullet">*</span>개인통관고유부호<button class="help">도움</button></th>
+                        <td>
+                            <label for="ly_radio1-29" class="spc_radio"><input type="radio" id="ly_radio1-29" name="ly_radio10"><i class="symbol"></i>수집함</label>
+                            <label for="ly_radio1-30" class="spc_radio checked"><input type="radio" id="ly_radio1-30" name="ly_radio10" checked><i class="symbol"></i>수집안함</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="bullet">*</span>추가문구<button class="help">도움</button></th>
+                        <td>
+                            <label for="ly_radio1-31" class="spc_radio"><input type="radio" id="ly_radio1-31" name="ly_radio11"><i class="symbol"></i>예</label>
+                            <label for="ly_radio1-32" class="spc_radio checked"><input type="radio" id="ly_radio1-32" name="ly_radio11" checked=""><i class="symbol"></i>아니오</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="bullet">*</span>배송템플릿<button class="help">도움</button></th>
+                        <td>
+                            <div class="btntemplateBtns">
+                                <div class="spc_select" style="width: 368px; ">
+                                    <div class="value"><span class="selected">배송템플릿 선택</span><i></i></div>
+                                    <select>
+                                        <option>옵션1</option>
+                                        <option>옵션2</option>
+                                        <option>옵션3</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn init">새로고침</button>
+                                <button type="button" class="btn init">신규생성</button>
+                                <button type="button" class="btn init">배송템플릿 관리</button>
+                            </div>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>배송템플릿은 딜등록 이후에는 수정이 불가능합니다.</li>
+                                <li><i class="dot"></i>배송정보의 묶음 배송여부와 상품유형이 같은 배송템플릿만 선택 가능합니다.</li>
+                                <li><i class="dot"></i>배송템플릿 신규생성 후에는 ‘새로고침’을 꼭 해주세요.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</div>
+                </div>
+                <!-- // 배송정보 -->
+
+                <!-- 옵션정보 -->
+                <div class="foldable_box active">
+                    <div class="head">
+                        <h3 class="title">옵션정보</h3>
+                        <div class="right_wrap">
+                            <div class="txt">등록완료</div>
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><div class="search_keyword">
+        <h3><strong>심의 키워드 발견</strong><span><em>ctrl + F</em> 를 통해서 키워드를 검색하세요.</span></h3>
+        <div class="cont">
+            <ul class="btn_list">
+                <li>
+                    <button class="btn round">확인</button>
+                    <div class="txt">
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                        <span>테스트 문구입니다</span>
+                    </div>
+                </li>
+                <li>
+                    <button class="btn round">입증</button>
+                    <div class="txt">
+                        <span>살균</span>
+                        <span>탈모</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="note_wp">
+        <strong>옵션정보는 필수 입력사항입니다</strong>
+        <ul class="spc_note">
+            <li><i class="dot"></i>옵션 정보 수정은 딜 제출 전까지 가능하며, 제출 이후에는 [옵션 판매 수량관리]버튼을 통해 판매수량과 품절처리만 가능합니다. 이외의 수정이 필요할 경우 담당 MD에게 문의해주세요.</li>
+            <li><i class="dot"></i>옵션명에 숫자 1, 2, 3...10 이 포함되는 경우 01, 02, 03과 같이 자릿수를 맞추어 등록해야합니다.</li>
+            <li><i class="dot"></i>업로드하려는 엑셀 파일에 공백, 특수문자가 포함된 경우 업로드 되지 않습니다.</li>
+            <li><i class="dot"></i>품절로 인한 주문 취소 발생 시 취소율에 따른 패널티가 적용되니, 실제 판매 가능한 재고수량을 입력해 주세요</li>
+        </ul>
+    </div>
+
+    <table class="spc_table_form commission">
+        <colgroup>
+            <col style="width: 173px ; ">
+            <col style="width: * ; ">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>일반딜 수수료</th>
+                <td>
+                    <p class="state_txt or">10%</p>
+                    <ul class="spc_note">
+                        <li><i class="dot"></i>일반 딜 정보로 노출될 때 적용되는 수수료입니다.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>프로모션딜 수수료</th>
+                <td>
+                    <p class="state_txt or">5%</p>
+                    <ul class="spc_note">
+                        <li><i class="dot"></i>프로모션 달 정보로 노출될 때 적용되는 수수료입니다.</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="btn_wp">
+        <div class="fl_l">
+            <button type="button" class="btn init ws">옵션 작성 가이드 다운로드</button>
+            <button type="button" class="btn init ws">엑셀 다운로드</button>
+        </div>
+        <div class="fl_r">
+            <button type="button" class="btn init ws">옵션 판매 수량관리</button>
+            <button type="button" class="btn init ws" disabled="true">옵션 일괄등록</button>
+            <button type="button" class="btn link" disabled="true">저장</button>
+        </div>
+    </div>
+    
+    <div class="btn_wp box optionBtns">
+        <div class="fl_l">
+            <button class="btn slim" disabled="true">숨김</button>
+            <button class="btn slim" disabled="true">매진</button>
+            <button class="btn slim" disabled="true">노출</button>
+            <button class="btn slim" disabled="true">판매</button>
+            <div class="spc_select type2">
+                <div class="value"><span class="selected">전체옵션보기</span><i></i></div>
+                <select>
+                    <option>옵션1</option>
+                    <option>옵션2</option>
+                    <option>옵션3</option>
+                </select>
+            </div>
+            <button class="btn slim_orange">대표상품선택</button>
+        </div>
+        <div class="fl_r">
+            <button class="btn slim" disabled="true">추가</button>
+            <button class="btn slim" disabled="true">삭제</button>
+            <button class="btn slim" disabled="true">항목관리</button>
+        </div>
+    </div>
+    <div class="scroll_tb">
+        <!-- 스크롤영역 표시를 위해 width 1200을 넣어줬습니다. 개발시에는 빼주세요 -->
+        <table class="deals_tb02" style="width:1200px;">
+            <colgroup>
+                <col style="width: 59px; ">
+                <col style="width: 40px; ">
+                <col style="width: 106px; ">
+                <col style="width: 94px; ">
+                <col style="width: 94px; ">
+                <col style="width: 94px; ">
+                <col style="width: 94px; ">
+                <col style="width: 137px; ">
+                <col style="width: 137px; ">
+                <col style="width: 94px; ">
+                <col style="width: *; ">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <label for="check1" class="spc_check"><input type="checkbox" id="check1" disabled="true"><i class="symbol"></i></label>
+                    </th>
+                    <th scope="col">No.</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">옵션 번호</th>
+                    <th scope="col">정상가격</th>
+                    <th scope="col">판매가격</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">1인당최대구매수량</th>
+                    <th scope="col">판매자상품코드</th>
+                    <th scope="col">수수료율</th>
+                    <th scope="col">&nbsp;</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td></td>
+                        <td>대표상품</td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="check2" class="spc_check"><input type="checkbox" id="check2" disabled="true"><i class="symbol"></i></label></td>
+                        <td>1</td>
+                        <td>
+                            <button class="btn slim" disabled="true">숨김</button>
+                            <button class="btn slim" disabled="true">매진</button>
+                        </td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="check3" class="spc_check"><input type="checkbox" id="check3" disabled="true"><i class="symbol"></i></label></td>
+                        <td>2</td>
+                        <td>
+                            <button class="btn slim" disabled="true">숨김</button>
+                            <button class="btn slim" disabled="true">매진</button>
+                        </td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="check4" class="spc_check"><input type="checkbox" id="check4" disabled="true"><i class="symbol"></i></label></td>
+                        <td>3</td>
+                        <td>
+                            <button class="btn slim" disabled="true">숨김</button>
+                            <button class="btn slim" disabled="true">매진</button>
+                        </td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><label for="check5" class="spc_check"><input type="checkbox" id="check5" disabled="true"><i class="symbol"></i></label></td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn slim" disabled="true">숨김</button>
+                            <button class="btn slim" disabled="true">매진</button>
+                        </td>
+                        <td>872552987</td>
+                        <td>10,000 원</td>
+                        <td>9,000 원</td>
+                        <td>900</td>
+                        <td>1</td>
+                        <td>판매자상품코드</td>
+                        <td class="bgGray">1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+    </div></div>
+                </div>
+                <!-- // 옵션정보 -->
+
+                <!-- 프로모션딜 신청 -->
+                <div class="foldable_box">
+                    <div class="head">
+                        <h3 class="title">프로모션딜 신청</h3>
+                        <div class="right_wrap">
+                            <div class="txt">프로모션딜신청(신청) / 프로모션딜판매가(모든옵션을판매가9999원에신청) / 프로모션딜수수료(모든옵션을수수료15%에신청)… </div>
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><form action="" class="spc_form">
+    <fieldset>
+        <table class="spc_table_form">
+            <colgroup>
+                <col style="width: 173px ; ">
+                <col style="width: * ; ">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th><span class="bullet">*</span>프로모션딜 신청<button class="help">도움</button></th>
+                    <td>
+                        <div class="apply_wrap">
+                            <label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked><i class="symbol"></i>신청</label>
+                            <label for="ly_radio1-1" class="spc_radio"><input type="radio" id="ly_radio1-1" name="ly_radio1"><i class="symbol"></i>신청하지 않음</label>
+                            <button type="button" class="btn init use_guide">이용가이드</button>
+                        </div>
+                        <ul class="spc_note">
+                            <li><i class="dot"></i>노출될 카테고리 : (대분류) &gt; (중분류) &gt; (소분류) &gt; (세분류)</li>
+                            <li><i class="dot"></i>딜과 맞지 않는 카테고리에 등록할 경우 강제 이동되거나 판매가 중지될 수 있습니다.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>프로모션딜 판매가<button class="help">도움</button></th>
+                    <td>
+                        <div class="otp_input">
+                            <span>모든 옵션을 판매가<input type="text" class="spc_text" value="0">원에 신청</span>  
+                            <span>(옵션 정보의 판매가 <em class="point">9,900원</em>보다 작은 값만 입력 가능)</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="bullet">*</span>프로모션딜 수수료<button class="help">도움</button></th>
+                    <td>
+                        <div class="otp_input">
+                            <span>모든 옵션을 수수료<input type="text" class="spc_text" value="0">%에 신청</span>  
+                            <span>(현재 일반 딜이 수수료 <em class="point">10%</em>)</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form></div>
+                </div>
+
+                <div class="foldable_box">
+                    <div class="head">
+                        <h3 class="title">프로모션딜 신청</h3>
+                        <div class="right_wrap">
+                            <div class="txt">프로모션딜신청(신청하지 않음)</div>
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><form action="" class="spc_form">
+    <fieldset>
+        <table class="spc_table_form">
+            <colgroup>
+                <col style="width: 173px ; ">
+                <col style="width: * ; ">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th><span class="bullet">*</span>프로모션딜 신청<button class="help">도움</button></th>
+                    <td>
+                        <label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked><i class="symbol"></i>신청</label>
+                        <label for="ly_radio1-1" class="spc_radio"><input type="radio" id="ly_radio1-1" name="ly_radio1"><i class="symbol"></i>신청하지 않음</label>
+                        <button type="button" class="btn init use_guide">이용가이드</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form></div>
+                </div>
+                <!-- // 프로모션딜 신청 -->
+
+                <!-- 콘텐츠정보 -->
+                <div class="foldable_box">
+                    <div class="head">
+                        <h3 class="title">콘텐츠정보</h3>
+                        <div class="right_wrap">
+                            <div class="txt">컨텐츠 제작방식(파트너제작) / 딜 동영상 등록(사용) / 딜 이미지 등록(등록)</div>
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont">    <form action="" class="spc_form">
+        <fieldset>
+            <table class="spc_table_form mb10">
+                <colgroup>
+                    <col style="width: 183px ; ">
+                    <col style="width: 195px ; ">
+                    <col style="width: * ; ">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="bullet">*</span>컨텐츠 제작 방식<button class="help">도움</button></th>
+                        <td colspan="2">
+                            <label for="ly_radio1-1" class="spc_radio"><input type="radio" id="ly_radio1-1" name="ly_radio1"><i class="symbol"></i>파트너 제작</label>
+                            <label for="ly_radio1-2" class="spc_radio checked"><input type="radio" id="ly_radio1-2" name="ly_radio1" checked="checked"><i class="symbol"></i>티몬 제작</label>
+                            <button type="button" class="btn init">딜 이미지 제작가이드</button>
+                            <button type="button" class="btn init">딜 상세설명 제작가이드</button>
+                            <button type="button" class="btn init">컨텐츠 제작 비용 안내</button>
+                            <!-- <button type="button" class="btn init">리빙 제작가이드 다운로드</button>
+                            <button type="button" class="btn init">
+                                <p class="balloon">의류,패션잡화,스포츠레저,브랜드</p>
+                                패션 제작가이드 다운로드
+                            </button> -->
+                            
+                            <!-- 타임 에이전시 배너 영역 -->
+                            <div class="bx_bn">
+                                <img src="../../img/banner/banner_top_sample_01_01.jpg" alt="샘플이미지">
+                            </div>
+
+                        </td>
+                    </tr>
+                    <!-- 컨텐츠 제작비용 적용(신규딜) -->
+                    <tr>
+                        <th rowspan="3"><span class="bullet">*</span>컨텐츠 제작비용 적용</th>
+                        <th class="inner_th">앵콜딜 여부</th>
+                        <td>
+                            <label for="ly_radio1-1-1" class="spc_radio"><input type="radio" id="ly_radio1-1-1" name="ly_radio1-1"><i class="symbol"></i>신규딜</label>
+                            <label for="ly_radio1-1-2" class="spc_radio checked"><input type="radio" id="ly_radio1-1-2" name="ly_radio1-1" checked="checked"><i class="symbol"></i>앵콜딜</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">제작비용 적용 신규옵션 수</th>
+                        <td>
+                            <input type="text" class="spc_text" style="width:70px;"> 개
+                            <span class="right_notice">※ 컨텐츠 제작비용은 신규 옵션만 적용됩니다.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">촬영필요 여부</th>
+                        <td>
+                            <label for="ly_radio1-2-1" class="spc_radio"><input type="radio" id="ly_radio1-2-1" name="ly_radio1-2"><i class="symbol"></i>촬영필요</label>
+                            <label for="ly_radio1-2-2" class="spc_radio checked"><input type="radio" id="ly_radio1-2-2" name="ly_radio1-2" checked="checked"><i class="symbol"></i>촬영불필요</label>
+                        </td>
+                    </tr>
+                    <!-- // 컨텐츠 제작비용 적용 -->
+
+                    <!-- 컨텐츠 제작비용 적용(앵콜딜) -->
+                    <tr>
+                        <th rowspan="4"><span class="bullet">*</span>컨텐츠 제작비용 적용</th>
+                        <th class="inner_th">앵콜딜 여부</th>
+                        <td>
+                            <label for="ly_radio1-3-1" class="spc_radio checked"><input type="radio" id="ly_radio1-3-1" name="ly_radio1-3" checked="checked"><i class="symbol"></i>신규딜</label>
+                            <label for="ly_radio1-3-2" class="spc_radio"><input type="radio" id="ly_radio1-3-2" name="ly_radio1-3"><i class="symbol"></i>앵콜딜</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">인트로 수정 여부(앵콜딜)</th>
+                        <td>
+                            <label for="ly_radio1-4-1" class="spc_radio checked"><input type="radio" id="ly_radio1-4-1" name="ly_radio1-4" checked="checked"><i class="symbol"></i>미수정</label>
+                            <label for="ly_radio1-4-2" class="spc_radio"><input type="radio" id="ly_radio1-4-2" name="ly_radio1-4"><i class="symbol"></i>수정</label>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>추가나 변경되는 옵션이 30종 이상일 때 인트로를 수정하는 경우 신규딜 비용으로 계산됩니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">제작비용 적용 앵콜옵션 수</th>
+                        <td>
+                            <input type="text" class="spc_text" style="width:70px;"> 개
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">촬영필요 여부</th>
+                        <td>
+                            <label for="ly_radio1-5-1" class="spc_radio"><input type="radio" id="ly_radio1-5-1" name="ly_radio1-5"><i class="symbol"></i>촬영필요</label>
+                            <label for="ly_radio1-5-2" class="spc_radio checked"><input type="radio" id="ly_radio1-5-2" name="ly_radio1-5" checked="checked"><i class="symbol"></i>촬영불필요</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="td_notice">
+                            <ul>
+                                <li>빨간색 별 표시 부분(노란색영역)은 필수 기재입니다.</li>
+                                <li>빨간색 별 표시 영역을 제외한 나머지 부분은 필요 시 기재해주시면 됩니다.</li>
+                                <li>요청서를 바탕으로 컨텐츠가 제작되므로 컨텐츠에 들어가길 원하는 컨셉 및 방향, 내용 등이 있다면 빠짐없이 기재해 주세요.</li>
+                                <li>타임 에이전시 문의전화 : 02-2098-4330  |  이메일 : ContentsDesign@tmon.co.kr</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <!-- // 컨텐츠 제작비용 적용 -->
+
+                    <!-- 컨텐츠 참고 정보 -->
+                    <tr>
+                        <th><span class="bullet">*</span>컨텐츠 참고 정보</th>
+                        <th class="inner_th">
+                            벤치마킹 URL
+                            <p class="th_desc">
+                                (의뢰인 자사 홈페이지/<br >
+                                쇼핑몰 컨셉 및 방향 확인용)
+                            </p>
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <!-- // 컨텐츠 참고 정보 -->
+
+                    <!-- 딜 서머리 -->
+                    <tr>
+                        <th rowspan="5"><span class="bullet">*</span>딜 서머리</th>
+                        <th class="inner_th">
+                            <span class="bullet">*</span>옵션 리스트 구성
+                            <p class="th_desc">(1단/2단/3단)</p>
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">
+                            <span class="bullet">*</span>인트로 메인카피
+                            <p class="th_desc">(1~2줄 이내)</p>
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">
+                            <span class="bullet">*</span>인트로 서브카피
+                            <p class="th_desc">(2~3줄 이내)</p>
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">Notice</th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">
+                            그 외 추가내용<br >
+                            및 요청사항
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <!-- // 딜 서머리 -->
+
+                    <!-- 딜 리뷰 -->
+                    <tr>
+                        <th rowspan="5"><span class="bullet">*</span>딜 리뷰</th>
+                        <th class="inner_th">
+                            <span class="bullet">*</span>브랜드 소개
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">
+                            <span class="bullet">*</span>체크포인트
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">
+                            <span class="bullet">*</span>옵션 상품<br >
+                            상세 정보
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">
+                            그 외 컨텐츠에 추가할 영역
+                            <p class="th_desc">(이벤트/후기/사용방법/Q&A 등)</p>
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="inner_th">
+                            전달사항
+                        </th>
+                        <td class="design_point">
+                            <textarea class="spc_txtarea"></textarea>
+                        </td>
+                    </tr>
+                    <!-- // 딜 리뷰 -->
+                    
+                    <!-- 컨텐츠 관련 자료 -->
+                    <tr>
+                        <th>
+                            <span class="bullet">*</span>컨텐츠 제작<br >
+                            참고자료 업로드
+                        </th>
+                        <td colspan="2">
+                            <div class="btn_wp product_offer">
+                                <div class="btn fileUpload">
+                                    <input type="file" disabled="true">
+                                    <span>파일첨부</span>
+                                </div>
+                            </div>
+                            <div class="fileInfo_wrap">
+                                <p class="fileInfo">
+                                    <span class="title">첨부파일.png</span>
+                                    <button class="del">delete</button>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- // 컨텐츠 관련 자료 -->
+                </tbody>
+            </table>
+        </fieldset>
+    </form></div>
+                </div>
+                <!-- // 콘텐츠정보 -->
+
+                <!-- 네이버쇼핑 매칭 -->
+                <div class="foldable_box">
+                    <div class="head">
+                        <h3 class="title">네이버쇼핑 매칭</h3>
+                        <div class="right_wrap">
+                            <button class="toggleBtn"><span>컨텐츠 열기/닫기</span></button>
+                        </div>
+                    </div>
+                    <div class="cont"><form action="" class="spc_form">
+        <fieldset>
+            <table class="spc_table_form">
+                <colgroup>
+                    <col style="width: 173px ; ">
+                    <col style="width: * ; ">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="bullet">*</span>네이버쇼핑 매칭<button class="help">도움</button></th>
+                        <td>
+                            <button type="button" class="btn init">매칭하기</button>
+                            <ul class="spc_note">
+                                <li><i class="dot"></i>이미지가 등록된 옵션에 네이버 쇼핑몰을 매칭해주세요.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form></div>
+                </div>
+                <!-- // 네이버쇼핑 매칭 -->
+
+                <div class="pageOptions">
+                    <div class="last_save">
+                        <div class="time">
+                            <em>마지막 저장</em>
+                            <p>2019.07.31<br>06:18 PM</p>
+                        </div>
+                    </div>
+                    <button class="default">저장하기</button>
+                    <button class="default">임시저장</button>
+                    <button class="default">미리보기</button>
+                    <button class="default">제출</button>
+                    <button class="default">목록으로</button>
+                    <button class="top">맨위로</button>
+                </div>
+
+            </div>
+						
+		</div>
+		<div class="aside_left">
+	<!-- <a href="#" class="banner admon"><i>광고주 센터, 광고등록하면 매출이 UP</i></a> -->
+	<a href="#" class="banner black_deal"><i>티몬블랙딜 참여하기</i></a>
+	<!-- <button type="button" class="mmp"><span class="blind">티몬특가 신청하기</span></button> -->
+	<!-- <button type="button" class="extra one_stop">
+		<span>딜검색</span>
+	</button> -->
+	<ul class="aside_lst_pic">
+		<li><a href="#" class="pic onestop"><span class="blind">ONE STOP 딜 검색</span></a></li>
+		<li><a href="#" class="pic partner"><span class="blind">파트너 교육센터</span></a></li>
+		<li><a href="#" class="pic video"><span class="blind">동영상 가이드</span></a></li>
+		<li><a href="#" class="pic report"><span class="blind">비윤리/불친절 직원신고</span></a></li>
+		<!-- <li><a href="#" class="pic faq"><span class="blind">자주하는 질문</span></a></li> -->
+		<li><a href="#" class="pic holiday"><span class="blind">휴무일 공지등록</span></a></li>
+		<!-- <li><a href="#" class="pic excel"><span class="blind">Excel 뷰어 다운로드</span></a></li> -->
+		<!-- <li><a href="#" class="pic econtract"><span class="blind">전자계약서 안내</span></a></li> -->
+		<!-- <li><a href="#" class="pic certificate"><span class="blind">공인인증서 발급</span></a></li> -->
+	</ul>	
+	<!-- <button type="button" class="record_inquiry"><span>Facebook<br />딜 실적 조회</span></button>
+	<a href="#" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</a>
+	<button type="button" class="discount"><span class="blind">할인혜택 적용안내</span></button> -->
+	<!-- <ul class="aside_lst">
+		<li><a href="#" class="point"><span>파트너<br>교육센터</span></a></li>
+		<li><button type="button" class="point"><span>동영상<br>가이드</span></button></li>
+		<li><button type="button"><span>비윤리/불친절<br>직원신고</span></button></li>
+		<li><button type="button"><span>자주하는<br>질문</span></button></li>
+		<li><a href="#"><span>전자계약서<br>안내</span></a></li>
+		<li><a href="#"><span>공인인증서<br>발급</span></a></li>
+	</ul> -->
+	<!-- <button type="button" class="extra">
+		<span>오픈마켓<br>동의</span>
+	</button>
+	<button type="button" class="extra">
+		<span>추가메뉴<br>있을경우</span>
+	</button> -->
+	<button type="button" class="feedback">
+		<em>페이지 별점 주기</em>
+		<span><i></i><i></i><i></i></span>
+	</button>
+</div>
+		<div class="aside_right">
+	
+	<div class="bx_banner_event">
+		<ul class="banner_list">
+			<li><a href="#"><img src="../../img/banner/banner_right_slide_01.jpg" width="100" height="127" alt="임시 이미지"></a></li>
+			<li><a href="#"><img src="../../img/banner/banner_right_slide_02.jpg" width="100" height="127" alt="임시 이미지"></a></li>
+			<li><a href="#"><img src="../../img/banner/banner_right_slide_03.jpg" width="100" height="127" alt="임시 이미지"></a></li>
+		</ul>
+		<div class="control">
+			<div class="num">
+				<span class="crnt">1</span> / <span class="total">3</span>
+			</div>
+			<button type="button" class="btn_move prev">이전 배너리스트 보기</button>
+			<button type="button" class="btn_move next">다음 배너리스트 보기</button>
+		</div>	<!-- end of control -->
+	</div> <!-- end of bx_banner_event -->
+
+	<div class="bx_banner_service">
+		<div class="banner_list">
+			<a href="#"><img src="../../img/banner/banner_right_partner.jpg" width="120" height="175" alt="임시 이미지"></a>
+		</div>
+		<div class="control">
+			<div class="paging">
+				<!-- 현재 선택된 버튼에 on클래스가 추가됩니다. -->
+				<button type="button">배너 1</button>
+				<button type="button">배너 2</button>
+				<button type="button" class="on">배너 3</button>
+				<button type="button">배너 4</button>
+				<button type="button">배너 5</button>
+			</div>
+		</div>	<!-- end of control -->
+	</div> <!-- end of bx_banner_service -->
+
+</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+	<ul class="footer_link">
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#"><b>개인정보처리방침</b></a></li>
+		<li><a href="#">전자금융거래</a></li>
+		<li><a href="#">청소년보호정책</a></li>
+	</ul>
+	<span class="footer_logo">TMON</span>
+	<p>사업자등록번호 211-88-41856<span class="dv">|</span>통신판매업신고 제2013-서울강남-02403호</p>
+	<p>서울특별시 강남구 테헤란로 114길 38 동일타워<span class="dv">|</span>대표자 이진원<span class="dv">|</span><a href="#">사업자정보확인</a></p>
+	<p>COPYRIGHT(c) TMON INC. ALL RIGHTS RESERVED.</p>
+	<div class="cs_center">
+		<p class="cs_center_top">
+			파트너센터 <strong>1644-0552</strong>
+		</p>
+		<p class="holiday">
+			평일 09~18시 (점심시간 12~13시)<br >
+			주말/공휴일 휴무
+		</p>
+	</div>
+	<div class="footer_bottom">
+		<img src="../../img/common/footer_iso_banner.png" />
+	</div>
+</div>
+	</div>
+</div>
+
+<script>
+    /* UI 확인용으로만 참고부탁드립니다. */
+    var heads = document.querySelectorAll( '.foldable_box div.head' );
+    [].forEach.call( heads,  function( elem, idx ){
+        elem.addEventListener('click', function( e ){
+            var tg = e.target.closest('.foldable_box');
+            tg.classList.contains('active') ? tg.classList.remove('active') : tg.classList.add('active');
+        })
+    });
+</script>
+
+</body>
+</html>

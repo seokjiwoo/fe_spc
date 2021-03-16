@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@font-face { font-family: 'Nanum Barun Gothic UltraLight'; font-style: normal; font-weight: 200; src: url("../../../common/fonts/NanumBarunGothicUltraLight.eot"); src: local("Nanum Barun Gothic UltraLight"), local("NanumBarunGothicUltraLight"), url("../../../common/fonts/NanumBarunGothicUltraLight.eot?#iefix") format("embedded-opentype"), url("../../../common/fonts/NanumBarunGothicUltraLight.woff2") format("woff2"), url("../../../common/fonts/NanumBarunGothicUltraLight.woff") format("woff"), url("../../../common/fonts/NanumBarunGothicUltraLight.ttf") format("truetype"); }
+@font-face { font-family: 'Nanum Barun Gothic Light'; font-style: normal; font-weight: 300; src: url("../../../common/fonts/NanumBarunGothicLight.eot"); src: local("Nanum Barun Gothic Light"), local("NanumBarunGothicLight"), url("../../../common/fonts/NanumBarunGothicLight.eot?#iefix") format("embedded-opentype"), url("../../../common/fonts/NanumBarunGothicLight.woff2") format("woff2"), url("../../../common/fonts/NanumBarunGothicLight.woff") format("woff"), url("../../../common/fonts/NanumBarunGothicLight.ttf") format("truetype"); }
+@font-face { font-family: 'Nanum Barun Gothic'; font-style: normal; font-weight: 400; src: url("../../../common/fonts/NanumBarunGothic.eot"); src: local("Nanum Barun Gothic"), local("NanumBarunGothic"), url("../../../common/fonts/NanumBarunGothic.eot?#iefix") format("embedded-opentype"), url("../../../common/fonts/NanumBarunGothic.woff2") format("woff2"), url("../../../common/fonts/NanumBarunGothic.woff") format("woff"), url("../../../common/fonts/NanumBarunGothic.ttf") format("truetype"); }
+/* Nanum Gothic (Korean) http://hangeul.naver.com */
+@font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 400; src: url("../../../common/fonts/NanumGothic-Regular.eot"); src: url("../../../common/fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../../../common/fonts/NanumGothic-Regular.woff2") format("woff2"), url("../../../common/fonts/NanumGothic-Regular.woff") format("woff"), url("../../../common/fonts/NanumGothic-Regular.ttf") format("truetype"); }
+@font-face { font-family: 'Nanum Gothic Bold'; font-style: normal; font-weight: 700; src: url("../../../common/fonts/NanumGothic-Bold.eot"); src: url("../../../common/fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../../../common/fonts/NanumGothic-Bold.woff2") format("woff2"), url("../../../common/fonts/NanumGothic-Bold.woff") format("woff"), url("../../../common/fonts/NanumGothic-Bold.ttf") format("truetype"); }
+@font-face { font-family: 'Nanum Gothic ExtraBold'; font-style: normal; font-weight: 800; src: url("../../../common/fonts/NanumGothic-ExtraBold.eot"); src: url("../../../common/fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../../common/fonts/NanumGothic-ExtraBold.woff2") format("woff2"), url("../../../common/fonts/NanumGothic-ExtraBold.woff") format("woff"), url("../../../common/fonts/NanumGothic-ExtraBold.ttf") format("truetype"); }
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, select, textarea, a, button { margin: 0; padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; margin: 0; padding: 0; }
+
+body, input, select, textarea, button, table { font-size: 12px; font-family: "돋움", dotum, "Apple SD GothicNeo", sans-serif; }
+
+img, fieldset { border: 0; }
+
+li { list-style: none; }
+
+em, i, address { font-style: normal; }
+
+a { text-decoration: none; }
+
+caption, legend, hr { display: none; }
+
+table { table-layout: fixed; width: 100%; }
+
+table, th, td { border: 0; border-spacing: 0; border-collapse: collapse; }
+
+button { border: 0; background-color: transparent; cursor: pointer; outline: none; }
+
+input[type="checkbox"], input[type="radio"] { width: 13px; height: 13px; vertical-align: text-top; }
+
+label { vertical-align: -1px; }
+label input[type="checkbox"], label input[type="radio"] { margin-top: -1px; }
+
+input[type=text]::-ms-clear { display: none; }
+
+.blind { visibility: hidden; overflow: hidden; position: absolute; width: 0; height: 0; font: 0/0 a; }
+
+html, body { height: 100%; }
+
+#wrap { min-width: 1450px; min-height: 100%; background-color: #fff; }
+
+#header { position: relative; min-height: 120px; background-color: #fff; z-index: 20; }
+
+#container { position: relative; z-index: 10; }
+
+#content { width: 1200px; min-height: 530px; margin: 0 auto; padding: 50px 0 63px; }
+
+#footer { border-top: 1px solid #dadde0; background-color: #fff; }
+
+.spc.home_bg #header { background-color: #f3f4f6; }
+
+.winpop_openmarket { box-sizing: border-box; padding: 0 40px 50px; background-color: #fff; letter-spacing: -0.8px; }
+.winpop_openmarket .layer_hd { box-sizing: border-box; position: relative; height: 178px; border-bottom: 1px solid #b7bfc8; padding-top: 1px; margin-top: -1px; margin-bottom: 56px; }
+.winpop_openmarket .layer_hd .logo { margin: 51px auto 0; font-size: 0; background: url("../img/home/openmarket_logo.png"); width: 77px; height: 20px; }
+.winpop_openmarket .layer_hd .title { margin: 18px auto 0; font-size: 0; background: url("../img/home/openmarket_title.png"); width: 485px; height: 38px; }
+.winpop_openmarket .layer_ct { padding: 0 20px; }
+.winpop_openmarket .layer_ct .point { color: #f27935; }
+.winpop_openmarket .layer_ct .ct_title { font-size: 18px; font-weight: 700; color: #16181a; margin-bottom: 20px; }
+.winpop_openmarket .layer_ct .openmarket_nt { margin-bottom: 50px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_txt { color: #595963; font-size: 13px; line-height: 24px; margin-bottom: 19px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_txt p { margin: 11px 0 0; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_txt p:first-child { margin-top: 0px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_txt .point { font-weight: 700; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table { border: 1px solid #e3e5e8; padding: 20px 24px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl { margin-top: 20px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl:first-child { margin-top: 0px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl dt { display: inline-block; box-sizing: border-box; font-size: 12px; font-weight: 700; line-height: 20px; color: #fff; padding: 0 8px; height: 20px; background-color: #f27935; text-align: center; border-radius: 11px; vertical-align: top; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl dd { display: inline-block; margin-left: 25px; position: relative; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl dd:before { content: ''; position: absolute; width: 1px; height: 56px; background-color: #f0f2f5; top: 0; left: -13px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl dd.second:before { height: 40px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl dd ul li { position: relative; font-size: 13px; line-height: 20px; color: #595963; padding-left: 8px; margin-top: 4px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl dd ul li:first-child { margin-top: 0px; }
+.winpop_openmarket .layer_ct .openmarket_nt .nt_table dl dd ul li i { display: block; position: absolute; top: 8px; left: 0; width: 2px; height: 2px; background-color: #595963; }
+.winpop_openmarket .layer_ct .openmarket_pt .pt_txt { font-size: 13px; color: #595963; line-height: 22px; margin-bottom: 12px; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table { margin-bottom: 50px; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table table { border-top: 1px solid #b7bfc8; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table table tbody th, .winpop_openmarket .layer_ct .openmarket_pt .ct_table table tbody td { box-sizing: border-box; color: #16181a; height: 57px; padding: 0 20px; border-left: 1px solid #e8e9ea; border-bottom: 1px solid #e8e9ea; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table table tbody th { font-weight: 700; text-align: left; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table table tbody th:first-child { border-left: none; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table table tbody td input[type="text"]:disabled { background: #eee; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table table tbody td .spc_text { width: 150px; box-sizing: border-box; font-size: 12px; height: 34px; line-height: 34px; border: 1px solid #ccd2d8; color: #16181a; padding: 0 10px; vertical-align: middle; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table table tbody td .spc_text.phone { width: 80px; }
+.winpop_openmarket .layer_ct .openmarket_pt .ct_table table tbody td .gap { margin-left: 3px; margin-right: 5px; }
+.winpop_openmarket .layer_ct .openmarket_term .btn_agree { box-sizing: border-box; width: 100%; height: 50px; line-height: 50px; background-color: #f27935; font-size: 16px; color: #fff; font-weight: 700; letter-spacing: -0.8px; }
+.winpop_openmarket .layer_ct .openmarket_term .term { margin-bottom: 20px; }
+.winpop_openmarket .layer_ct .openmarket_term .term hr { display: block; margin: 23.5px 0; border: none; border-top: 1px solid #e3e5e8; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_title { font-size: 16px; font-weight: 700; margin-top: 20px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc { box-sizing: border-box; margin-top: 8px; height: 260px; background-color: #f8f8f8; border: 1px solid #e3e5e8; padding: 24px 30px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc .scroll { width: 558px; height: 210px; overflow: auto; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc .term_intitle { font-size: 16px; color: #595963; font-weight: 700; text-align: center; margin-bottom: 16px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl { width: 540px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dt { font-size: 14px; color: #595963; font-weight: 700; margin-top: 16px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dt:first-child { margin-top: 0px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dt.chapter { margin: 20px 0; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dt.chapter:first-child { margin: 0 0 20px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd { font-size: 13px; color: #7d7e80; line-height: 20px; margin-top: 8px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd p.d_noti { margin-top: 12px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.roundNum { margin-top: 8px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.roundNum > li { position: relative; margin-top: 4px; padding-left: 16px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.roundNum > li:first-child { margin-top: 0px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.roundNum > li > i { position: absolute; display: block; top: 0px; left: 0px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.num { margin-top: 4px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.num > li { position: relative; margin-top: 4px; padding-left: 19px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.num > li:first-child { margin-top: 0px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.num > li > i { position: absolute; display: block; top: 0px; left: 0px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.hangul { margin-top: 4px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.hangul > li { position: relative; margin-top: 4px; padding-left: 19px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.hangul > li:first-child { margin-top: 0px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.hangul > li > i { position: absolute; display: block; top: 0px; left: 0px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.bullet { margin-top: 4px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.bullet > li { position: relative; margin-top: 4px; padding-left: 19px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.bullet > li:first-child { margin-top: 0px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd ul.bullet > li > i { position: absolute; display: block; width: 2px; height: 2px; top: 8px; left: 10px; background-color: #7d7e80; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd dl.dep1 > dt { margin-top: 16px; font-size: 13px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd dl.dep2 > dt { margin-top: 12px; font-size: 13px; color: #7d7e80; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table { margin-top: 8px; margin-bottom: 16px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table .t_title { font-size: 11px; color: #595963; margin-bottom: 4px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table { border: 1px solid #e3e5e8; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table th, .winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table td { border-left: 1px solid #e3e5e8; border-bottom: 1px solid #e3e5e8; box-sizing: border-box; height: 28px; padding: 6px 12px; color: #7d7e80; font-size: 12px; line-height: 16px; text-align: left; vertical-align: top; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table th.line2, .winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table td.line2 { height: 44px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table th:first-child, .winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table td:first-child { border-left: none; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table th { background-color: #f0f2f5; font-weight: 700; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table td { background-color: #fff; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table table + .t_noti { margin-top: 8px; }
+.winpop_openmarket .layer_ct .openmarket_term .term > dl .term_desc dl dd .term_table .t_noti { font-size: 11px; line-height: 17px; color: #7d7e80; margin-top: 4px; }
+.winpop_openmarket .layer_ct .openmarket_term .agree_desc { font-size: 13px; line-height: 20px; color: #16181a; margin-bottom: 20px; }

@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc.css">
+<link rel="stylesheet" type="text/css" href="../../css/special.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "on", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+            <div class="h2_head">
+                <h2>특가매장 신청 관리</h2>
+                <div class="btn_area">
+                    <a href="#;" class="btn-type1 lg">목록으로</a>
+                </div>
+            </div>
+
+            <div class="step_apply">
+                <ol class="lst">
+                    <!-- 현재 스텝에 active 클래스 추가해주세요 -->
+                    <li class="">참여신청</li>
+                    <li class="active">검수중</li>
+                    <li class="">딜제출요청</li>
+                    <li class="">딜제출완료</li>
+                </ol>
+            </div>
+
+            <form action="" class="spc_form">
+                <fieldset>
+                    <table class="spc_table_form mb18">
+                        <colgroup>
+                            <col style="width: 200px">
+                            <col style="width: 200px">
+                            <col style="width: 200px">
+                            <col style="width: 200px">
+                            <col style="width: 200px">
+                            <col style="width: auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>담당자명</th>
+                                <td>김티몬</td>
+                                <th>전화번호</th>
+                                <td>010-4321-4321</td>
+                                <th>이메일</th>
+                                <td>tmon@spcpartner.com</td>
+                            </tr>
+                            <tr>
+                                <th>1212타임 특가매장 <br> 참여동의 여부</th>
+                                <td colspan="5">미동의<span class="warning_txt">(미동의 시, 1212타임 참여가 불가능합니다.)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+
+            <ul class="spc_note">
+                <li><i class="dot"></i>위 담당자 정보로 프로모션 협의가 진행되며, 신청제출 이후 변경이 불가능합니다. <a href="#;" class="btn-type1">변경하기</a></li>
+            </ul>
+
+            <div class="explanation">
+                <strong class="tit">신청 전, 확인해 주세요!</strong>
+                <ul class="spc_note">
+                    <li><i class="dot"></i>배송비 정책은 <span class="point">무료배송</span>, 전 옵션 <span class="point">균일가</span>는 필수입니다.</li>
+                    <li><i class="dot"></i>신청내용은 검수 과정에서 변경될 수 있으며, <span class="point">티몬답변 확인 후 딜 제출까지 완료</span>되어야 특가매장 진행이 가능합니다.</li>
+                    <li><i class="dot"></i>특가매장 참여를 위해 기재한 내용이 사실과 다름이 없음을 확인합니다.</li>
+                    <li><i class="dot"></i>특가매장 참여 상담을 위한 개인정보 이용에 동의합니다.</li>
+                </ul>
+            </div>
+
+            <div class="detail_head">
+                <span class="spc_label active">step01</span>
+                <strong>희망하는 특가 특가매장을 선택해주세요.</strong>
+            </div>
+
+            <form action="" class="spc_form">
+                <fieldset>
+                    <table class="spc_table_form">
+                        <colgroup>
+                            <col style="width: 200px">
+                            <col style="width: auto"> 
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th rowspan="2"><span class="bullet">*</span>희망 특가매장<button class="btn-type-help">도움</button></th>
+                                <td>
+                                    <label for="check1" class="spc_check">
+                                        <input type="checkbox" id="check1"><i class="symbol"></i>
+                                        모든 매장 가능
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul class="select_list">
+                                        <li>
+                                            <div class="spc_select w200">
+                                                <div class="value">
+                                                    <span class="selected">
+                                                        <strong>1순위</strong>
+                                                        선택한 옵션
+                                                    </span>
+                                                    <i></i>
+                                                </div>
+                                                <select>
+                                                    <option>옵션1</option>
+                                                    <option>옵션2</option>
+                                                    <option>옵션3</option>
+                                                </select>
+                                            </div>
+                                            <ul class="spc_note type_point">
+                                                <li><i class="dot"></i>타임어택 급 가격 구성이 필요합니다.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="spc_select w200">
+                                                <div class="value">
+                                                    <span class="selected">
+                                                        <strong>2순위</strong>
+                                                        선택한 옵션
+                                                    </span>
+                                                    <i></i>
+                                                </div>
+                                                <select>
+                                                    <option>옵션1</option>
+                                                    <option>옵션2</option>
+                                                    <option>옵션3</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2"><span class="bullet">*</span>특가매장 참여 가능일<button class="btn-type-help">도움</button></th>
+                                <td>
+                                    <label for="check1" class="spc_check">
+                                        <input type="checkbox" id="check1"><i class="symbol"></i>
+                                        상시 참여 가능
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="calendar_wrap">
+                                        <div class="spc_calendar">
+                                            <input type="text" class="spc_text" value="2016.04.30"><button class="btn_calendar">달력</button>
+                                        </div> ~
+                                        <div class="spc_calendar">
+                                            <input type="text" class="spc_text" value="2016.04.30"><button class="btn_calendar">달력</button>
+                                        </div>
+                                    </div>
+                                    <ul class="spc_note">
+                                        <li><i class="dot"></i>특가매장에 참여 가능한 기간을 설정해주세요.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+
+            <div class="detail_head">
+                <span class="spc_label active">step02</span>
+                <strong>대표상품정보를 입력해주세요.</strong>
+            </div>
+
+            <form action="" class="spc_form">
+                <fieldset>
+                    <table class="spc_table_form">
+                        <colgroup>
+                            <col style="width: 200px">
+                            <col style="width: 144px">
+                            <col style="width: 360px">
+                            <col style="width: 144px">
+                            <col style="width: auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3" class="ta_c">
+                                    <span class="bullet">*</span>상품 이미지
+                                    <div class="img_wrap mt12">
+                                        <img src="https://picsum.photos/id/55/105/105">
+                                        <div class="btn_wrap">
+                                            <button class="view">
+                                                <i>확대</i>
+                                            </button>
+                                            <button class="edit">
+                                                <i>편집</i>
+                                            </button>
+                                            <button class="del">
+                                                <i>삭제</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th><span class="bullet">*</span>대표상품명<button class="btn-type-help">도움</button></th>
+                                <td><input type="text" class="spc_text w300" placeholder="브랜드+상품명+모델번호+구성/용량 으로 입력해주세요"></td>
+                                <th>브랜드</th>
+                                <td><input type="text" class="spc_text w300" placeholder="브랜드명을 입력해주세요."></td></td>
+                            </tr>
+                            <tr>
+                                <th><span class="bullet">*</span>행사가격 (균일가)</th>
+                                <td><input type="text" class="spc_text w300" placeholder="끝자리를 5,9 단위로 입력해주세요"><span class="won">원</span></td>
+                                <th><span class="bullet">*</span>공급가격</th>
+                                <td><input type="text" class="spc_text w300" placeholder="티몬에 공급 가능한 가격을 입력해주세요"><span class="won">원</span></td>
+                            </tr>
+                            <tr>
+                                <th><span class="bullet">*</span>판매가능수량</th>
+                                <td><input type="text" class="spc_text w300" placeholder="판매가능한 대표상품 재고수량을 입력해주세요"></td>
+                                <th><span class="bullet">*</span>카테고리</th>
+                                <td>
+                                    <ul class="select_list">
+                                        <li>
+                                            <div class="spc_select w140">
+                                                <div class="value"><span class="selected">선택한 옵션</span><i></i></div>
+                                                <select>
+                                                    <option>옵션1</option>
+                                                    <option>옵션2</option>
+                                                    <option>옵션3</option>
+                                                </select>
+                                            </div>
+                                            <ul class="spc_note type_point">
+                                                <li><i class="dot"></i>제조일자/유통기한 항목을 <br> 꼭 입력해주세요.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>제조일자/유통기한</th>
+                                <td colspan="4">
+                                    <input type="text" class="spc_text w948" placeholder="제조연월일, 유통기한 또는 품질유지기한을 입력해주세요.">
+                                    <div class="upload_area">
+                                        <div class="fileUpload">
+                                            <input type="file">
+                                            <span>파일첨부</span>
+                                        </div>
+                                        <span class="btnDown upload">
+                                            <span class="title">첨부파일명첨부파일명첨부파일명첨부파일명.xlsx</span>
+                                            <button type="button" class="del"><i>삭제</i></button>
+                                        </span>
+                                        <ul class="spc_note">
+                                            <li><i class="dot"></i>상품의 제조일자 유통기한이 나타난 이미지 또는 자료를 첨부해주세요<li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>타사 판매 이력</th>
+                                <td colspan="4">
+                                    <input type="text" class="spc_text w948" placeholder="대표상품을 판매했던 사이트 url 을 입력해주세요.">
+                                    <div class="upload_area">
+                                        <div class="fileUpload">
+                                            <input type="file">
+                                            <span>파일첨부</span>
+                                        </div>
+                                        <span class="btnDown upload">
+                                            <span class="title">첨부파일명첨부파일명첨부파일명첨부파일명.xlsx</span>
+                                            <button type="button" class="del"><i>삭제</i></button>
+                                        </span>
+                                        <ul class="spc_note">
+                                            <li><i class="dot"></i>유효한 url 이 없을 경우, 전체 상품 구성을 알 수 있는 이미지 또는 자료를첨부해주세요.<li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>추천사유 및 특이사항</th>
+                                <td colspan="4">
+                                    <textarea name="" class="spc_textarea w948" placeholder="상품의 특성 또는 파트너사가 해당 상품을 판매하는 방식(최저가, 단독판매 등)을 자유롭게 기재해주세요."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+
+            <div class="detail_head">
+                <span class="spc_label">option</span>
+                <strong>상품 구성이 다양할 경우, 전체 상품 정보를 입력하면 특가매장 승인률이 높아집니다.</strong>
+            </div>
+
+            <div class="product_info_input">
+                <p>현재 판매대기 판매중 판매종료 딜의 옵션정보를 불러올 수 있습니다</p>
+                <div class="input_area">
+                    <div class="deal_num">
+                        <input type="text" class="spc_text w320" placeholder="딜번호">
+                        <a href="#;" class="btn-type1 lg">옵션정보 불러오기</a>
+                    </div>
+                    <div class="btn_area">
+                        <a href="#;" class="btn-type1 lg">엑셀로 일괄등록</a>
+                        <a href="#;" class="btn-type1 lg">상품 엑셀 다운로드</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modify_area">
+                <a href="#;" class="btn-type1 active">추가</a>
+                <a href="#;" class="btn-type1 disabled">삭제</a>
+            </div>
+            <div class="scroll_box">
+                <table class="basic_tb">
+                    <colgroup>
+                        <col style="width: 80px">
+                        <col style="width: 100px">
+                        <col style="width: 740px">
+                        <col style="width: 140px">
+                        <col style="width: auto">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></th>
+                            <th>No.</th>
+                            <th>상품명</th>
+                            <th>수량</th>
+                            <th>행사가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                        <tr>
+                            <td><label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i></label></td>
+                            <td>1</td>
+                            <td class="tal">02. 스타벅스 콜드브루 10g</td>
+                            <td>3,000</td>
+                            <td>2,999원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <ul class="spc_note">
+                <li><i class="dot"></i>상품명에 숫자 1, 2, 3...10 이 포함되는 경우 01, 02, 03과 같이 자릿수를 맞추어 등록해야 합니다.</li>
+                <li><i class="dot"></i>업로드하려는 엑셀 파일에 공백, 특수문자가 포함된 경우 업로드 되지 않습니다.</li>
+                <li><i class="dot"></i>이미 입력한 상품명이 있을 경우, 반드시 최신버전의 엑셀을 다운받아서 다시 업로드 해주세요. 엑셀파일 업로드 시, 입력되어 있는 정보는 삭제됩니다.</li>
+            </ul>
+
+		</div>
+		@@include('common/aside_left.html')
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+</div>
+
+</body>
+</html>

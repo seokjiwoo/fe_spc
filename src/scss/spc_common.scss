@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+@import "nanum_local_shared";
+@import "./mixins/mixins";
+@import "./sprite/mixins";
+@import "./sprite/common";
+@import "./sprite/home";
+@import "./common/variables";
+@import "./common/reset";
+@import "./common/shared_layout"; // layout은 마지막
+
+@import "./ui/common/global";
+@import "./ui/common/gnb";
+@import "./ui/common/aside_left";
+@import "./ui/common/aside_right";
+@import "./ui/common/top_banner";
+@import "./ui/common/footer";
+@import "./ui/common/layout"; // layout은 마지막
+
+// 공통 구성요소
+@import "./ui/component/head";
+@import "./ui/component/grid";
+@import "./ui/component/button";
+@import "./ui/component/tab";
+@import "./ui/component/table";
+@import "./ui/component/list";
+@import "./ui/component/form/form";
+@import "./ui/component/form/textbox";
+@import "./ui/component/form/textarea";
+@import "./ui/component/form/checkbox";
+@import "./ui/component/form/radiobox";
+@import "./ui/component/form/selectbox";
+@import "./ui/component/layer/layer";
+
+// LAYER (left 메뉴)
+@import "./ui/layer/inform";
+@import "./ui/layer/search";
+@import "./ui/layer/report";
+@import "./ui/layer/video";
+
+/* 구버전 SPC 대응 */
+// 레이아웃은 개편되고 컨텐츠 영역은 기존 디자인 사용
+body.store{
+	overflow: visible;
+	width: auto;
+	background: none;
+	#wrap{
+		overflow: visible;
+		width: auto;
+		background: none;
+	}
+
+	button{
+		border: 0;
+	    background-color: transparent;
+	    cursor: pointer;
+	    outline: none;
+	}
+
+	#header{
+		height: auto;
+		padding: 0;
+
+		h1{
+			position: static;
+			top: auto;
+			left: auto;
+			a{
+				padding: 0;
+			}
+		}
+	}
+
+	.gnb_wrap > li > a, .sitemap_wrap > li > a, .aside_left a{
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+	#container{
+		width: auto;
+		background: none;
+	}
+
+	#content{
+		position:relative;
+		width:930px;
+		min-height:530px;
+		padding:50px 29px 150px;
+		.spot{
+			background: none;
+			border: 0;
+		}
+		.h2_head{
+			margin-bottom: 30px;
+			h2{
+				font-family: $font_nanum_gothic;
+				font-size: 24px;
+				color: #000;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.spc_form{
+		.btn_area{
+			padding: 0;
+		}
+	}
+
+	.spc_table_board{
+		td{
+			&.tl{
+				position: static;
+				width: auto;
+				height: auto;
+				background: none;
+			}
+		}
+	}
+
+	.spc_text{
+		&:disabled, &.disabled{
+			background-color: #fafbfb;
+			color: #b5b5b9;
+		}
+	}
+
+	div#footer{
+		position: relative;
+		height: auto;
+		padding: 0;
+		border-top: 1px solid #dadde0;
+		background: none;
+		text-align: left;
+	}
+
+	// 컨텐츠 영역에서 개편디자인 & 기존디자인 함께 사용
+	&.shared{
+		#content{
+			width: 1200px;
+			min-height: auto;
+		    padding: 50px 0 63px;
+		}
+	}
+}
+
+// 회원가입, 로그인페이지 모바일 대응
+@media ( min-width: 375px ) {
+	body.spc.store #wrap {
+	   min-width: 100%;
+	}
+
+	body.spc.store #header {
+	   width: 100%;
+	}
+
+	body.spc.store #footer .footer_inner {
+	   width: 100%;
+	   -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	   box-sizing: border-box;
+	}
+	/* body.spc.store #footer .footer_inner {
+	   padding-left: 140px;
+	}
+	body.spc.store #footer .footer_inner .footer_logo {
+	   left: 40px;
+	} */
+ }
+
+ @media ( min-width: 1200px ) {
+	body.spc.store #wrap {
+	   min-width: 1450px;
+	}
+	body.spc.store #footer .footer_inner {
+	   width: 1200px;
+	}
+ }
+

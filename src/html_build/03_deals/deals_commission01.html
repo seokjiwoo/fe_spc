@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/deals.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="content">
+  <div class="get_product_wrap">
+      <div class="header">
+          <h2>수수료 변경</h2>
+      </div>
+      <ul class="spc_note">
+          <li><i class="dot"></i>슈퍼마트 딜, 물류직매입 딜, 벤더플랙스 딜, E쿠폰선물하기 딜의 경우에만 ‘상품별 적용‘ 이 가능합니다. </li>
+        </ul>
+      <form action="" class="spc_form">
+        <fieldset>
+          <table class="spc_table_form">
+            <colgroup>
+              <col style="width: 123px ; ">
+              <col style="width: * ; ">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>적용시점</th>
+                <td>
+                    <label for="ly_radio1-1" class="spc_radio checked"><input type="radio" id="ly_radio1-1" name="ly_radio1" checked="checked"><i class="symbol"></i>바로 적용</label>
+                    <label for="ly_radio1-2" class="spc_radio"><input type="radio" id="ly_radio1-2" name="ly_radio1"><i class="symbol"></i>기간 설정</label>
+                    <ul class="spc_note">
+                        <li><i class="dot"></i>‘변경’한 시점부터 변경된 수수료로 적용됩니다.</li>
+                    </ul>
+                    <div class="calendarArea">
+                        <div class="scheduleWrap">
+                          <input type="text" value="2018.01.02 18:12:21">
+                          <button class="calendar">달력</button>
+                          <button class="time">시간</button>
+                        </div>
+                        <span class="to">~</span>
+                        <div class="scheduleWrap">
+                          <input type="text" value="2018.01.02 18:12:21">
+                          <button class="calendar">달력</button>
+                          <button class="time">시간</button>
+                        </div>
+                        <label for="check1" class="spc_check"><input type="checkbox" id="check1"><i class="symbol"></i>종료일 미설정</label>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <th>변경사유</th>
+                <td>
+                    <ul class="radio_list">
+                        <li><label for="ly_radio2-1" class="spc_radio"><input type="radio" id="ly_radio2-1" name="ly_radio2"><i class="symbol"></i>미대상</label></li>
+                        <li><label for="ly_radio2-2" class="spc_radio checked"><input type="radio" id="ly_radio2-2" name="ly_radio2"><i class="symbol" checked="checked"></i>상품상세참조</label></li>
+                        <li><label for="ly_radio2-3" class="spc_radio"><input type="radio" id="ly_radio2-3" name="ly_radio2"><i class="symbol"></i>국내산</label></li>
+                        <li>
+                            <label for="ly_radio2-4" class="spc_radio"><input type="radio" id="ly_radio2-4" name="ly_radio2"><i class="symbol"></i>직접입력</label>
+                            <div class="limitTextWrap type3 w454">
+                                <div class="inputWrap">
+                                    <input type="text" class="spc_text" disabled>
+                                    <p class="crntText"><span>0</span>/<span>15자</span></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>파일첨부</th>
+                <td>
+                    <div class="btn fileUpload ml0">
+                        <input type="file">
+                        <span>파일첨부</span>
+                    </div>
+                    <div class="fileInfo_wrap mt6">
+                        <p class="fileInfo">
+                            <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                            <button class="del">delete</button>
+                        </p>
+                        <p class="fileInfo">
+                            <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                            <button class="del">delete</button>
+                        </p>
+                        <p class="fileInfo">
+                            <span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+                            <button class="del">delete</button>
+                        </p>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                  <th>적용단위</th>
+                  <td>
+                    <label for="ly_radio3-1" class="spc_radio checked"><input type="radio" id="ly_radio3-1" name="ly_radio3" checked="checked"><i class="symbol"></i>모든 상품에 적용</label>
+                    <label for="ly_radio3-2" class="spc_radio"><input type="radio" id="ly_radio3-2" name="ly_radio3"><i class="symbol"></i>상품별 적용</label>
+                  </td>
+              </tr>
+              <tr>
+                <th>수수료</th>
+                <td>
+                    <div class="ratioInput">
+                        <div class="inputWrap">
+                            <input type="text" class="spc_text" placeholder="5">
+                        </div>
+                        <span class="won">%</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </form>
+      <div class="btn_area right decrease">
+        <button type="submit" class="btn cancel3">변경</button>
+        </div>
+  </div>
+</div>
+</body>
+</html>

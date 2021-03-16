@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+.summary_area{
+	h3{
+		padding: 5px 0 12px;
+		font-family: $font_nanum_gothic;
+		font-size: 18px;
+		color: $color_dark;
+		line-height: 21px;
+	}
+	
+	.spc_tab{
+		li{
+			width: 150px;
+			height: 43px;
+			a, button{
+				width: 150px;
+				height: 43px;
+				line-height: 46px;
+			}
+			strong{
+				color: $color_point;
+			}
+		}//li
+	}//.spc_tab
+	
+	.summary_ct{
+		min-height: 343px;
+	}
+	
+	.search_result{
+		border-top: 1px solid #e7e8e9;
+		tr{
+			th:first-child, td:first-child{
+				border-left: 0;
+			}
+		}
+		th, td{
+			height: 43px;
+			padding-left: 20px;
+			border-left: 1px solid #e7e8e9;
+			border-bottom: 1px solid #e7e8e9;
+			font-size: 14px;
+			line-height: 17px;
+		}
+		th{
+			color: $color_base;
+			font-weight: normal;
+			text-align: left;
+		}
+		td{
+			color: $color_dark;
+		}
+		.point{
+			color: $color_point;
+		}
+		.deal_name{
+			strong{
+				display: inline-block;
+				a{
+					color: $color_dark;
+				}
+			}
+			.bar{
+				display: inline-block;
+				height: 11px;
+				width: 1px;
+				margin: 0 6px;
+				background-color: #dddee0;
+			}
+		}
+	}//.search_result
+	
+	.msg{
+		display: none;	
+	}
+	.loading{
+		position: relative;
+		.msg{
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin-top: -13px;
+			font-size: 20px;
+			font-weight: bold;
+			color: $color_dark;
+			text-align: center;
+			line-height: 26px;
+		}
+	}
+}

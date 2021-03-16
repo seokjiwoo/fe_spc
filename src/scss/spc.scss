@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@import "nanum_local";
+@import "./mixins/mixins";
+@import "./sprite/mixins";
+@import "./sprite/common";
+@import "./sprite/home";
+@import "./common/variables";
+@import "./common/reset";
+@import "./common/layout";
+
+@import "./ui/common/global";
+@import "./ui/common/gnb";
+@import "./ui/common/aside_left";
+@import "./ui/common/aside_right";
+@import "./ui/common/top_banner";
+@import "./ui/common/footer";
+
+// 공통 구성요소
+@import "./ui/component/head";
+@import "./ui/component/grid";
+@import "./ui/component/button";
+@import "./ui/component/table";
+@import "./ui/component/tab";
+@import "./ui/component/list";
+@import "./ui/component/form/form";
+@import "./ui/component/form/textbox";
+@import "./ui/component/form/textarea";
+@import "./ui/component/form/checkbox";
+@import "./ui/component/form/radiobox";
+@import "./ui/component/form/selectbox";
+@import "./ui/component/layer/layer";
+
+// LAYER
+@import "./ui/layer/inform";
+@import "./ui/layer/terms";
+@import "./ui/layer/search";
+@import "./ui/layer/report";
+@import "./ui/layer/video";
+@import "./ui/layer/notice";
+@import "./ui/layer/feedback";
+@import "./ui/layer/layerguide";
+
+
+// HOME CONTENT
+@import "./ui/home/order_state";
+@import "./ui/home/deal_state";
+@import "./ui/home/partner_area";
+@import "./ui/home/notice_area";
+@import "./ui/home/summary_area";
+@import "./ui/home/search_area";
+@import "./ui/home/partner_grade";
+@import "./ui/home/sales_state";
+
+// layout은 마지막
+@import "./ui/common/layout";
+@import "./ui/home/layout";
+

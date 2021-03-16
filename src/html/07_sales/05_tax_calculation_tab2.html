@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sales.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "on", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>세금계산서</h2>
+			</div>
+
+			<div class="spc_tab_wp">
+				<ul class="spc_tab">
+					<li><button type="button">파트너 기준 정산</button></li>
+					<li class="on"><button type="button">딜 기준 정산</button></li>
+				</ul>
+				<p class="notice"><span>딜 단위로 정산된 세금계산서 발행금액을 확인할 수 있는 화면입니다.</span></p>
+			</div>
+
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 173px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>기간설정</th>
+								<td>
+
+									<div class="spc_select" style="width: 170px; ">
+										<div class="value"><span class="selected">발행일자</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+
+									<div class="spc_select" style="width: 131px; ">
+										<div class="value"><span class="selected">2018년</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+
+									<div class="spc_select" style="width: 131px; ">
+										<div class="value"><span class="selected">04월</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<th>진행 딜 선택</th>
+								<td>
+									<div class="groupWrap">
+										<label for="tmp_radio1" class="spc_radio checked"><input type="radio" id="tmp_radio1" name="tmp_radio" checked="checked"><i class="symbol"></i>딜명으로 검색</label>
+										<label for="tmp_radio2" class="spc_radio"><input type="radio" id="tmp_radio2" name="tmp_radio"><i class="symbol"></i>딜번호로 검색</label>
+									</div>
+									<div class="spc_select" style="width: 508px; ">
+										<div class="value"><span class="selected">검색하시려는 딜을 선택해주세요.</span><i></i></div>
+										<select>
+											<option>옵션1</option>
+											<option>옵션2</option>
+											<option>옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+
+				<div class="btns">
+					<button class="btn orange-border">초기화</button>
+					<button class="btn orange">검색</button>
+				</div>
+			</form>
+
+			<dl class="guideAccordion">
+				<dt>
+					<p>전자세금계산서 안내</p>
+					<!-- <button class="close">접기</button> -->
+					<button class="open">보기</button>
+				</dt>
+				<dd>
+
+					<dl class="desc">
+						<dt>발행일</dt>
+						<dd>
+							<h5>2016년 07월 31일 포함 이전 :</h5>
+							<ol>
+								<li>1) 차수정산 : 최종 정산일을 작성일자로 하여 <span class="pointClr">매월 5일 또는 20일</span>에 발행됩니다.</li>
+								<li>2) 주정산 : 각 정산일을 작성일자로 하여 <span class="pointClr">매월 5일 또는 20일</span>에 발행됩니다.</li>
+								<li>3) 월정산 : 각 정산일을 작성일자로 하여 <span class="pointClr">익월 20일</span>에 발행됩니다.</li>
+							</ol>
+							<h5>2016년 08월 01일 포함 이후 :</h5>
+							<p>거래 발생금액을 기준으로 <span class="pointClr">당월 1일 ~ 말일 거래는 익월 5 (영업일)</span> 에 발행됩니다.</p>
+						</dd>
+						<dt>발행방법</dt>
+						<dd>
+							<p>발행 일자 및 금액 등 자세한 사항은 <a href="#">이세로(http://www.esero.go.kr)</a>에서 수시로 확인하실 수 있습니다. </p>
+							<p>이용방법 : 회원가입 → 공인인증서 등록 → 공인인증서 로그인(log-in) → 세금계산서 조회 및 발행</p>
+						</dd>
+					</dl>
+
+				</dd>
+			</dl><!-- end of guideAccordion -->
+
+			<div class="detailWrap mt37">
+				<div class="topWrap">
+					<div class="opt type1">
+						<h4>발행/작성일자 기준 검색결과</h4>
+						<span class="pointClr">2건</span>
+					</div>
+				</div>
+				<table>
+					<colgroup>
+						<col style="width: 48px; " />
+						<col style="width: 99px; " />
+						<col style="width: 99px; " />
+						<col style="width: 130px; " />
+						<col style="width: 159px; " />
+						<col style="width: 130px; " />
+						<col style="width: 99px; " />
+						<col style="width: auto; " />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>작성일자</th>
+							<th>작성일자</th>
+							<th>발행금액</th>
+							<th>상호(법인)명</th>
+							<th>사업자등록번호</th>
+							<th>대표자명</th>
+							<th>수신 이메일 주소</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2018-03-01</td>
+							<td>2018-03-01</td>
+							<td>12,116,800</td>
+							<td>티몬 티모니연합</td>
+							<td>123-45-67890</td>
+							<td>김티몬</td>
+							<td>tmonian98_a6@tmon.co.kr</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>2018-03-01</td>
+							<td>2018-03-01</td>
+							<td>12,116,800</td>
+							<td>티몬 티모니연합 티몬 티모니연합 티몬 티모니연합</td>
+							<td>123-45-67890</td>
+							<td>김티몬</td>
+							<td>tmonian98_a6@tmon.co.kr</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- end of detailWrap -->
+
+			<div class="detailWrap">
+				<div class="topWrap">
+					<div class="opt type1">
+						<h4>거래일자 기준 검색결과</h4>
+						<span class="pointClr">0건</span>
+						<span>(2016년 08월 거래부터 제공)</span>
+					</div>
+					<div class="opt type2">
+						<button type="button" class="btn default">용어설명</button>
+						<button type="button" class="btn default">엑셀 다운로드</button>
+					</div>
+				</div>
+				<div class="scrollWrap">
+					<table>
+						<colgroup>
+							<col style="width: 94px; " />
+							<col style="width: 156px; " />
+							<col style="width: 120px; " />
+							<col style="width: 120px; " />
+							<col style="width: 120px; " />
+							<col style="width: 120px; " />
+							<col style="width: 120px; " />
+							<col style="width: auto; " />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>거래일</th>
+								<th>계산서 발행예정금액<br />(=A-B+C+D+E+F)</th>
+								<th>A.판매대행수수료</th>
+								<th>B.매출차감액</th>
+								<th>C.위탁배송비<br />(고객부담외)</th>
+								<th>D.서비스 수수료</th>
+								<th>E.컨텐츠비용</th>
+								<th>F.촬영비용</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div><!-- end of detailWrap -->
+
+			<ul class="noti">
+				<li>거래일자로 조회 시 세금계산서 발행금액의 기준이 되는 금액을 제공합니다. 단, 실제로 발행된 금액과는 다를 수 있습니다.</li>
+				<li>거래일자 기준으로 상세내역을 확인하고 싶으시면 파트너기준 정산 조회 > 정산예정에서 거래일을 동일하게 설정하고 <br /><span class="underline">거래구분: 배송완료, 배송완료 후 환불, 서비스수수료, 컨텐츠비용, 촬영비용인 항목의 금액</span>을 확인하세요.</li>
+				<li>주문번호 기준으로 'A. 판매대행수수료'의 상세내역을 확인하고 싶으시면 월 매출/매입내역 > 매입내역 > 월별 상세내역에서 확인하세요.</li>
+				<li>C. 위탁 배송비(고객부담 외)는 위탁배송 딜에만 해당하는 금액입니다.</li>
+			</ul>
+
+		</div><!-- end of content -->
+
+		@@include('common/aside_left.html')
+		@@include('common/aside_right.html')
+	</div>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+</div>
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	/* [D] 탭 클릭 */
+	$('.spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+	});
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+
+	/*아래의 스크립트는 테스트 용입니다. */
+	let guideAccordionWrap = document.querySelector( 'dl.guideAccordion' ) , 
+		 guideAccordion_dts = guideAccordionWrap.querySelectorAll( ':scope > dt' ) , 
+		 guideAccordion_dds = guideAccordionWrap.querySelectorAll( 'dd' ) ; 
+
+	[].forEach.call( guideAccordion_dts , function ( dt , idx ) {
+		dt.querySelector( 'button' ).addEventListener( 'click' , function () {
+			if ( this.classList.contains( 'open') ) {
+				this.setAttribute( 'class' , 'close' ) ; 
+				this.closest( 'dt' ).classList.add( 'active' ) ; 
+				this.textContent = '접기' ; 
+			} else {
+				this.setAttribute( 'class' , 'open' ) ; 
+				this.closest( 'dt' ).classList.remove( 'active' ) ; 
+				this.textContent = '보기' ; 
+			}
+		}) ; 
+	}) ; 
+
+</script>
+
+</body>
+</html>

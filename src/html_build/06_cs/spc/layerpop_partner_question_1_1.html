@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../../css/cs2.css">
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+
+	<div class="csLayerPopWrap">
+		<h3>1:1 문의하기</h3>
+		<div class="contWrap">
+			<table>
+				<colgroup>
+					<col style="width: 170px; " />
+					<col style="width: auto; " />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>연락처</th>
+						<td>
+							<div class="slctWrap" style="width: 130px">
+								<div class="value">010</div>
+								<select>
+									<option>010</option>
+									<option>011</option>
+									<option>012</option>
+								</select>
+							</div>
+							<input type="text" class="txtBox" style="width: 100px;" />
+							<span class="arw">-</span>
+							<input type="text" class="txtBox" style="width: 100px;" />
+
+							<label class="chkWrap phoneChk">
+								<input type="checkbox">
+								<span>문의 결과 SMS 수신</span>
+							</label>
+
+						</td>
+					</tr>
+					<tr>
+						<th>E-Mail</th>
+						<td>
+							<input type="text" class="txtBox" style="width: 130px;" />
+							<span class="symbolAt">@</span>
+							<input type="text" class="txtBox" style="width: 130px;" />
+							<div class="slctWrap selEmail" style="width: 130px">
+								<div class="value">계정선택</div>
+								<select>
+									<option>옵션1</option>
+									<option>옵션2</option>
+									<option>옵션3</option>
+								</select>
+							</div>
+							
+							<label class="chkWrap mailChk">
+								<input type="checkbox">
+								<span>문의 결과 E-Mail 수신</span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<th>문의유형</th>
+						<td>
+							<div class="slctWrap" style="width: 200px;">
+								<div class="value">문의 유형 선택</div>
+								<select>
+									<option>옵션1</option>
+									<option>옵션2</option>
+									<option>옵션3</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>문의딜</th>
+						<td>
+							<div class="radioList">
+								<label class="radioWrap">
+									<input type="radio" name="tmpR1" checked>
+									<span>딜번호로 검색</span>
+								</label>
+								<label class="radioWrap">
+									<input type="radio" name="tmpR1">
+									<span>진행중 딜목록</span>
+								</label>
+								<label class="radioWrap">
+									<input type="radio" name="tmpR1">
+									<span>판매종료 딜목록</span>
+								</label>
+							</div>
+							<div class="searchWrap">
+								<input type="text" class="txtBox searchBox" placeholder="검색 키워드" style="width: 350px; ">
+								<button class="btn orangeBg">조회</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>문의 전 확인사항</th>
+						<td>
+							<div class="Checklist">
+								<p class="pointClr">계약내용, 컨텐츠 등 딜 진행 과 관련된 사항은 담당 MD에게 문의하시기 바랍니다.</p>
+								<p class="read">문의 전 꼭 읽어보세요!!!</p>
+								<div class="notice">
+									<p>정산은 아래 기준으로 진행 됩니다.</p>
+									<dl>
+										<dt class="bold">(1) 정산 주기가 '차수' 일 경우</dt>
+										<dd class="info">정산일 / 정산금액 (입금시간 : 정산일 오후 2 ~ 7시 사이)</dd>
+										<dd>- 1차 정산 : 판매 종료 후 7영업일 / {판매종료일+6영업일까지의 (배송완료금액 – 배송후 환불완료금액)} X 70% +배송비</dd>
+										<dd>- 2차 정산 : 판매 종료 후 14영업일 / {판매종료일+11영업일까지의 (배송완료금액 - 배송후 환불완료금액)} X 90% - 기지급액</dd>
+									</dl>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>제목</th>
+						<td>
+							<input type="text" class="txtBox" placeholder="제목을 입력하세요" style="width: 100%; ">
+						</td>
+					</tr>
+					<tr>
+						<th>내용</th>
+						<td>
+							<textarea class="textBox textInput" placeholder="내용을 입력하세요.&#10;내용이 길어질 경우 스크롤이 생깁니다."></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th>첨부파일</th>
+						<td>
+							<div class="attachment">
+								<div class="fileUpload">
+									<input type="file">
+									<span>파일첨부</span>
+								</div>
+								<p class="fileUploadGuide">파일당 최대 50MB이하, 첨부가능수 10개, gif, png, jpg, docs, docx, xls, xlsx, ppt, pptx, txt, pdf 첨부 가능</p>
+							</div>
+							<div class="fileListWrap">
+								<div class="fileUploadWrap">
+									<p class="guide">이곳에 파일을 끌어 놓아주세요.</p>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btnsWrap">
+				<button class="btn orangeBg">등록</button>
+				<button class="btn orangeBorder">취소</button>
+			</div>
+		</div>
+	</div><!-- end of csLayerPopWrap  -->
+
+</div>
+</body>
+</html>

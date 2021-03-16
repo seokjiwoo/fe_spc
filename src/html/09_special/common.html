@@ -1,0 +1,754 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 배송관리</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc.css">
+<link rel="stylesheet" type="text/css" href="../../css/special.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+body{
+	padding:50px 20px ;
+}
+.wrapGuide{
+	width:1200px;
+	padding-bottom:100px;
+	margin:0 auto ;
+}
+.wrapGuide > dt {
+	font-size: 18px; 
+	font-weight:bold;
+	margin-bottom: 20px;
+	margin-top:50px ;
+	padding-top:50px;
+	border-top:1px solid #eee ;
+}
+.wrapGuide > dt:first-child{
+	margin-top: 0 ; 
+	border-top: 0 ; 
+	padding-top: 0 ;
+}
+.wrapGuide > dd{
+	margin-bottom: 10px;
+}
+.wrapGuide > dd a[class^="btn-"]{
+	vertical-align: top;
+}
+.tmpBox{
+	display: inline-block;
+	position: relative;
+	width: 100px; height: 100px;
+	margin:0 auto ;
+	border: 1px dashed red;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+
+<dl class="wrapGuide">
+	<dt>Dashboard</dt>
+	<dd>
+		
+		<!-- button 태그를 사용한 대시보드 -->
+		<div class="dashboard">
+			<ul class="lst">
+				<li class="all active">
+					<button type="button" class="item">
+						<dl>
+							<dt>전체</dt>
+							<dd>99건</dd>
+						</dl>
+					</button>
+				</li>
+				<li class="save">
+					<button type="button" class="item">
+						<dl>
+							<dt>임시저장</dt>
+							<dd>9건</dd>
+						</dl>
+					</button>
+				</li>
+				<li class="apply">
+					<button type="button" class="item">
+						<dl>
+							<dt>참여신청</dt>
+							<dd>29건</dd>
+						</dl>
+					</button>
+				</li>
+				<li class="test active">
+					<button type="button" class="item">
+						<dl>
+							<dt>검수중</dt>
+							<dd>9999건</dd>
+						</dl>
+					</button>
+				</li>
+				<li class="return">
+					<button type="button" class="item">
+						<dl>
+							<dt>반려</dt>
+							<dd>2319건</dd>
+						</dl>
+					</button>
+				</li>
+				<li class="send">
+					<button type="button" class="item">
+						<dl>
+							<dt>딜제출요청</dt>
+							<dd>9건</dd>
+						</dl>
+					</button>
+					<div class="balloonWrap b">
+						<i class="arr"></i>
+						<p>티몬답변 확인 후, 딜을 생성하여 딜번호를 제출해주세요.</p>
+					</div>
+				</li>
+				<li class="comp">
+					<button type="button" class="item">
+						<dl>
+							<dt>딜제출완료</dt>
+							<dd>9건</dd>
+						</dl>
+					</button>
+				</li>
+				<li class="cancel">
+					<button type="button" class="item">
+						<dl>
+							<dt>신청취소</dt>
+							<dd>9건</dd>
+						</dl>
+					</button>
+				</li>
+			</ul>
+		</div> <!-- end of dashboard -->
+
+	</dd>
+	<dd>
+		
+		<!-- a 태그를 사용한 대시보드 -->
+		<div class="dashboard">
+			<ul class="lst">
+				<li class="all active">
+					<a href="#;" class="item">
+						<dl>
+							<dt>전체</dt>
+							<dd>99건</dd>
+						</dl>
+					</a>
+				</li>
+				<li class="save">
+					<a href="#;" class="item">
+						<dl>
+							<dt>임시저장</dt>
+							<dd>9건</dd>
+						</dl>
+					</a>
+				</li>
+				<li class="apply">
+					<a href="#;" class="item">
+						<dl>
+							<dt>참여신청</dt>
+							<dd>29건</dd>
+						</dl>
+					</a>
+				</li>
+				<li class="test active">
+					<a href="#;" class="item">
+						<dl>
+							<dt>검수중</dt>
+							<dd>9999건</dd>
+						</dl>
+					</a>
+				</li>
+				<li class="return">
+					<a href="#;" class="item">
+						<dl>
+							<dt>반려</dt>
+							<dd>2319건</dd>
+						</dl>
+					</a>
+				</li>
+				<li class="send">
+					<a href="#;" class="item">
+						<dl>
+							<dt>딜제출요청</dt>
+							<dd>9건</dd>
+						</dl>
+					</a>
+					<div class="balloonWrap b">
+						<i class="arr"></i>
+						<p>확정된 프로모션 진행조건으로 딜 등록을 완료해주세요.</p>
+					</div>
+				</li>
+				<li class="comp">
+					<a href="#;" class="item">
+						<dl>
+							<dt>딜제출완료</dt>
+							<dd>9건</dd>
+						</dl>
+					</a>
+				</li>
+				<li class="cancel">
+					<a href="#;" class="item">
+						<dl>
+							<dt>신청취소</dt>
+							<dd>9건</dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div> <!-- end of dashboard -->
+
+	</dd>
+	<dt>Step</dt>
+	<dd>
+
+		<div class="step_apply">
+			<ol class="lst">
+
+				<!-- 현재 스텝에 active 클래스 추가해주세요 -->
+				<li class="active">참여신청</li>
+				<li class="">검수중</li>
+				<li class="">딜제출요청</li>
+				<li class="">딜제출완료</li>
+			</ol>
+		</div>
+		
+	</dd>
+	<dd>
+		<div class="step_apply">
+			<ol class="lst">
+
+				<!-- 현재 스텝에 active 클래스 추가해주세요 -->
+				<li class="">참여신청</li>
+				<li class="active">검수중</li>
+				<li class="">딜제출요청</li>
+				<li class="">딜제출완료</li>
+			</ol>
+		</div>
+	</dd>
+	<dd>
+		<div class="step_apply">
+			<ol class="lst">
+
+				<!-- 현재 스텝에 active 클래스 추가해주세요 -->
+				<li class="">참여신청</li>
+				<li class="">검수중</li>
+				<li class="active">딜제출요청</li>
+				<li class="">딜제출완료</li>
+			</ol>
+		</div>
+	</dd>
+	<dd>
+		<div class="step_apply">
+			<ol class="lst">
+
+				<!-- 현재 스텝에 active 클래스 추가해주세요 -->
+				<li class="">참여신청</li>
+				<li class="">검수중</li>
+				<li class="">딜제출요청</li>
+				<li class="active">딜제출완료</li>
+			</ol>
+		</div>
+	</dd>
+
+	<dt>기본 팝업</dt>
+	<dd>
+
+		<div class="deals_layer " style="width:500px;">
+			<div class="layer_hd">
+				제목이 들어갑니다.
+			</div>
+			<div class="layer_ct">
+				<p>
+					기본적으로 레이어팝업은 position: reletive 를 가지고 있습니다. 
+					레이어로 띄우기 위해 사용되는 곳에서 position: absolute 혹은 fixed로 변경하여 주십시오.
+					팝업의 크기는 사용하는 곳에서 추가하여주십시오.
+				</p>
+			</div>
+			<div class="btn_area">
+				<button type="submit" class="btn-type2 sm active">확인</button>
+			</div>
+			<button type="button" class="btn_close">닫기</button>
+		</div>
+
+	</dd>	
+
+	<dt>말풍선</dt>
+	<dd>
+		말풍선의 위치는 클래스 값을 추가해서 변경할 수 있습니다.<br />
+		r(우측), l(좌측), b(하단), t(상단)
+		<br /><br /><br /><br /><br /><br /><br />
+	</dd>
+	<dd style="padding-left:100px;">
+		<div class="tmpBox">
+			<div class="balloonWrap r">
+				<i class="arr"></i>
+				<p>컨텐츠가 들어갑니다.</p>
+			</div>
+		</div>
+	</dd>
+	<!-- <dd style="padding-left:100px;">
+		<div class="tmpBox">
+			<div class="balloonWrap b">
+				<i class="arr"></i>
+				<p>컨텐츠가 들어갑니다.</p>
+			</div>
+		</div>
+	</dd> -->
+	<dt>버튼</dt>
+	<dd>
+		<a href="#;" class="btn-type1 lg">버튼 타입1 large</a>
+		<a href="#;" class="btn-type1 lg disabled">버튼 타입1 large</a>
+		<a href="#;" class="btn-type1 lg active">버튼 타입1 large</a>
+		<br /><br />
+		<a href="#;" class="btn-type1">버튼 타입1</a>
+		<a href="#;" class="btn-type1 disabled">버튼 타입1</a>
+		<a href="#;" class="btn-type1 active">버튼 타입1</a>
+		<br /><br />
+		<a href="#;" class="btn-type1 sm">버튼 타입1 small</a>
+		<a href="#;" class="btn-type1 sm disabled">버튼 타입1 small</a>
+		<a href="#;" class="btn-type1 sm active">버튼 타입1 small</a>
+		<br /><br />
+		
+		<!-- 페이지하단 & 팝업 하단에 들어가는 버튼 타입 -->
+		<a href="#;" class="btn-type2">버튼 타입2</a>
+		<a href="#;" class="btn-type2 active">버튼 타입2</a>
+		<br /><br />
+		<a href="#;" class="btn-type2 sm">버튼 타입2</a>
+		<a href="#;" class="btn-type2 sm active">버튼 타입2</a>
+		<br /><br />
+		<a href="#;" class="btn-type2 x-sm">타입2</a>
+		<a href="#;" class="btn-type2 x-sm active">타입2</a>
+	</dd>
+
+	<dt>도움말 버튼</dt>
+	<dd>
+		<button class="btn-type-help">도움</button>
+	</dd>
+	<dd>
+		<!-- 버튼 클릭시 추가되는 마크업이 있으면 bx_help로 감싸주세요. -->
+		<div class="bx_help">
+			<button class="btn-type-help">도움</button>
+		</div>
+	</dd>
+
+	<dt>페이징</dt>
+	<dd>
+		<div class="pagingWrap">
+			<span class="numPage">
+				<a href="#" class="first">prev jump</a>
+				<a href="#" class="prev">prev</a>
+				<a href="#" class="active">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#">8</a>
+				<a href="#">9</a>
+				<a href="#">10</a>
+				<a href="#" class="next">next</a>
+				<a href="#" class="end">next jump</a>
+			</span>
+		</div>
+	</dd>
+
+	<dt>체크박스</dt>
+	<dd>
+		<label for="check1" class="spc_check">
+			<input type="checkbox" id="check1"><i class="symbol"></i>
+			샘플 체크박스 텍스트
+		</label>
+		<br />
+		<br />
+		<label for="check2" class="spc_check checked">
+			<input type="checkbox" id="check2" checked><i class="symbol"></i>
+			샘플 체크박스 텍스트
+		</label>
+		<br />
+		<br />
+		<label for="check2_1" class="spc_check checked disabled">
+			<input type="checkbox" id="check2_1" checked disabled><i class="symbol"></i>
+			샘플 체크박스 텍스트
+		</label>
+		<br />
+		<br />
+		<label for="check3" class="spc_check disabled">
+			<input type="checkbox" id="check3" disabled><i class="symbol"></i>
+			샘플 체크박스 텍스트
+		</label>
+		<br />
+		<br />
+		<label for="check4" class="spc_check onlyChk">
+			<input type="checkbox" id="check4"><i class="symbol"></i>
+		</label>
+	</dd>
+
+	<dt>라디오박스</dt>
+	<dd>
+		<label for="ly_radio1-1" class="spc_radio">
+			<input type="radio" id="ly_radio1-1" name="ly_radio1"><i class="symbol"></i>
+			냉장/냉동/신선 식품
+		</label>
+		<br />
+		<br />
+		<label for="ly_radio1-2" class="spc_radio checked">
+			<input type="radio" id="ly_radio1-2" name="ly_radio1" checked="checked"><i class="symbol"></i>
+			냉장/냉동/신선 식품
+		</label>
+		<br />
+		<br />
+		<label for="ly_radio1-3" class="spc_radio disabled">
+			<input type="radio" id="ly_radio1-3" name="ly_radio1" disabled ><i class="symbol"></i>
+			냉장/냉동/신선 식품
+		</label>
+		<br />
+		<br />
+		<label for="ly_radio1-4" class="spc_radio onlyChk">
+			<input type="radio" id="ly_radio1-4" name="ly_radio1" ><i class="symbol"></i>
+		</label>
+	</dd>
+
+	<dt>파일첨부 버튼</dt>
+	<dd>
+		<div class="fileUpload">
+			<input type="file">
+			<span>파일첨부</span>
+		</div>		
+	</dd>
+
+	<dt>첨부 파일</dt>
+	<dd>
+		첨부 파일의 기본사이즈는 100% 입니다. 
+		사용하는 곳에서 별도로 사이즈를 지정하여 사용합니다.
+	</dd>
+	<dd style="width:360px;">
+		<!-- <a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a> -->
+		<span class="btnDown upload">
+			<span class="title">첨부파일명첨부파일명첨부파일명첨부파일명.xlsx</span>
+			<button type="button" class="del"><i>삭제</i></button>
+		</span>
+	</dd>
+	<dd>
+		<!-- <a href="#;" class="btnDown"><span class="title">첨부파일명.xlsx</span></a> -->
+		<span class="btnDown upload">
+			<span class="title">첨부파일명첨부파일명첨부파일명첨부파일명.xlsx</span>
+			<button type="button" class="del"><i>삭제</i></button>
+		</span>
+	</dd>
+
+	<dt>달력</dt>
+	<dd>
+		달력의 기본사이즈는 100% 입니다. 
+		사용하는 곳에서 별도로 사이즈를 지정하여 사용합니다.
+	</dd>
+	<dd style="width:130px">
+		<div class="spc_calendar">
+			<input type="text" class="spc_text" value="2016.04.30"><button class="btn_calendar">달력</button>
+		</div>
+	</dd>
+	<dd>
+		<div class="spc_calendar">
+			<input type="text" class="spc_text" value="2016.04.30"><button class="btn_calendar">달력</button>
+		</div>
+	</dd>
+	<dd>
+		<div class="spc_calendar">
+			<input type="text" class="spc_text" value="2016.04.30" disabled><button class="btn_calendar">달력</button>
+		</div>
+	</dd>
+
+	<dt>인풋박스</dt>
+	<dd>
+		인풋의 기본사이즈는 100% 입니다. 
+		사용하는 곳에서 별도로 사이즈를 지정하여 사용합니다.
+	</dd>
+	<dd style="width:300px">
+		<input type="text" class="spc_text " placeholder="인풋 박스입니다.">
+	</dd>
+	<dd style="width:300px">
+		<input type="text" class="spc_text " placeholder="인풋 박스입니다." value="value 값이 들어있습니다.">
+	</dd>
+	<dd>
+		<input type="text" class="spc_text " placeholder="인풋 박스입니다.">
+	</dd>
+	<dd>
+		<input type="text" class="spc_text " placeholder="인풋 박스입니다." disabled>
+	</dd>
+
+	<dt>셀렉트 박스</dt>
+	<dd>
+		셀렉트 박스의 기본 사이즈는 100% 입니다. 
+		사용하는 곳에서 별도로 사이즈를 지정하여 사용합니다.
+	</dd>
+	<dd style="width: 210px; ">
+		<div class="spc_select">
+			<div class="value"><span class="selected">선택한 옵션</span><i></i></div>
+			<select>
+					<option>옵션1</option>
+					<option>옵션2</option>
+					<option>옵션3</option>
+			</select>
+		</div>
+	</dd>
+	<dd style="width: 210px; ">
+		<div class="spc_select">
+			<div class="value">
+				<span class="selected">
+					<strong>1순위</strong>
+					선택한 옵션
+				</span>
+				<i></i>
+			</div>
+			<select>
+					<option>옵션1</option>
+					<option>옵션2</option>
+					<option>옵션3</option>
+			</select>
+		</div>
+	</dd>
+	<dd>
+		<div class="spc_select">
+			<div class="value"><span class="selected">선택한 옵션</span><i></i></div>
+			<select>
+					<option>옵션1</option>
+					<option>옵션2</option>
+					<option>옵션3</option>
+			</select>
+		</div>
+	</dd>
+	<dd>
+		<div class="spc_select disabled">
+			<div class="value"><span class="selected">선택한 옵션</span><i></i></div>
+			<select disabled>
+					<option>옵션1</option>
+					<option>옵션2</option>
+					<option>옵션3</option>
+			</select>
+		</div>
+	</dd>
+
+	<dt>Textarea</dt>
+	<dd>
+		Textarea의 기본 사이즈는 100% 입니다. 
+		사용하는 곳에서 별도로 사이즈를 지정하여 사용합니다.
+	</dd>
+	<dd style="width:500px">
+		<textarea name="" class="spc_textarea" placeholder="내용을 입력해주세요. (10자이상 3,000자 이내)"></textarea>
+	</dd>
+	<dd>
+		<textarea name="" class="spc_textarea" placeholder="내용을 입력해주세요. (10자이상 3,000자 이내)"></textarea>
+	</dd>
+	<dd>
+		<textarea name="" class="spc_textarea" placeholder="내용을 입력해주세요. (10자이상 3,000자 이내)" disabled></textarea>
+	</dd>
+
+	<dt>라벨</dt>
+	<dd>
+		<span class="spc_label">STEP 01</span>
+	</dd>
+	<dd>
+		<span class="spc_label active">STEP 01</span>
+	</dd>
+	<dd>
+		<div class="detail_head">
+			<span class="spc_label">OPTION</span>
+			<strong>대표상품정보를 입력해주세요.</strong>
+		</div>
+	</dd>
+
+	<dt>상품이미지 아이콘</dt>
+	<dd>
+		<div class="img_wrap">
+			<img src="https://picsum.photos/id/55/105/105">
+			<div class="btn_wrap">
+				<button class="view">
+					<i>확대</i>
+				</button>
+				<button class="edit">
+					<i>편집</i>
+				</button>
+				<button class="del">
+					<i>삭제</i>
+				</button>
+			</div>
+		</div>
+	</dd>
+
+	<dt>공통 테이블</dt>
+	<dd>
+
+		<table class="spc_table_form">
+			<colgroup>
+				<col style="width: 173px ; ">
+				<col style="width: 294px ; ">
+				<col style="width: 174px ; ">
+				<col style="width: auto ; ">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>딜번호(딜상태)</th>
+					<td>1234567 (임시저장)</td>
+					<th><span class="bullet">*</span>고객문의담당</th>
+					<td>
+						<label for="check5" class="spc_check">
+							<input type="checkbox" id="check5"><i class="symbol"></i>
+							샘플 체크박스 텍스트
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						딜번호(딜상태)
+						<div class="bx_help">
+							<button class="btn-type-help">도움</button>
+						</div>
+					</th>
+					<td>1234567 (임시저장)</td>
+					<th><span class="bullet">*</span>고객문의담당</th>
+					<td>
+						<div style="width: 210px; ">
+							<div class="spc_select">
+								<div class="value"><span class="selected">선택한 옵션</span><i></i></div>
+								<select>
+										<option>옵션1</option>
+										<option>옵션2</option>
+										<option>옵션3</option>
+								</select>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</dd>
+	<dd>
+		<table class="spc_table_form">
+			<colgroup>
+				<col style="width: 20% ; ">
+				<col style="width: 20% ; ">
+				<col style="width: 20% ; ">
+				<col style="width: 20% ; ">
+				<col style="width: 20% ; ">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">신청번호</th>
+					<th scope="col">참여신청일</th>
+					<th scope="col">대표상품명</th>
+					<th scope="col">행사가격</th>
+					<th scope="col">행사가격</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>12345</td>
+					<td>12345</td>
+					<td class="ta_l">12345</td>
+					<td>12345</td>
+					<td>12345</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</dd>
+
+	
+
+</dl>
+
+
+
+
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+	
+	/* [D] 레이어 버튼에 있는 "_layer" 클래스와 "data-id" 속성은 레이어를 띄우기위한 스크립트용 입니다. */
+	$('._layer').on('click', function(){
+		var $this = $(this);
+		var $layer = $('#'+$this.attr('data-id'));
+		var winHeight = $(window).height();
+		var lyHeight = $layer.outerHeight();
+		var lyWidth = $layer.outerWidth();
+		
+		$('.spc_dim').show();
+		$layer.show();
+		if(lyHeight > winHeight){
+			$layer.css({
+				'position': 'absolute',
+				'top': '30px',
+				'left': '50%',
+				'margin-left': -(lyWidth/2)+'px'
+			});
+			$(document).scrollTop(0);
+		}else{
+			$layer.css({
+				'position': 'fixed',
+				'top': '50%',
+				'left': '50%',
+				'margin-top': -(lyHeight/2)+'px',
+				'margin-left': -(lyWidth/2)+'px'
+			});
+		}
+	});
+	
+	$('.spc_layer').on('click', '.btn_close', function(){
+		$(this).closest('.spc_layer').css({
+			'position': 'relative',
+			'top': 'auto',
+			'left': 'auto',
+			'margin-top': 0+'px',
+			'margin-left': 0+'px'
+		});
+		$('.spc_dim').hide();
+	});
+	
+	var $soldoutGuideTabCt = $('#soldoutGuide .tab_ct');
+	$soldoutGuideTabCt.not(':eq(0)').hide();
+	$('#soldoutGuide .spc_tab').on('click', 'button', function(){
+		var $this = $(this);
+		var $parent = $this.parent('li');
+		var idx = $parent.index();
+		
+		$parent.siblings('.on').removeClass('on');
+		$parent.addClass('on');
+		
+		$soldoutGuideTabCt.hide();
+		$soldoutGuideTabCt.eq(idx).show();
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<div class="timelineWrap">
+
+	<div class="sarchBar scrhType2">
+		<div class="slctWrapOrigin " >
+	<select>
+			<option>전체</option>
+			<option>010-1234-5678</option>
+			<option>010-1234-5678</option>
+			<option>010-1234-5678</option>
+			</select>
+</div><!-- end of slctWrap -->
+
+		<input type="text">
+		<button class="srch">조회</button>
+		<button class="reset">초기화</button>
+	</div><!-- end of sarchBar -->
+
+	<div class="listBoxWrap">
+		<ul class="timeLineList">
+
+			<li class="item">
+
+				<!--
+				서브 상담이력 보기 버튼 클릭 시 consultContainer 요소에 showSubConsult 클래스 추가가 필요합니다.
+				showSubConsult 클래스 추가 시 서브 상담 리스트 노출됩니다.
+				-->
+				<div class="consultContainer showSubConsult">
+					<div class="mainConsultArea">
+						<!--
+							상담 유형별 추가되는 클래스 목록입니다.
+							* IB : ib
+							* OB : ob
+							* 1:1문의 : qu
+							* 이관 : tr
+							* CS문의 : cs
+							* 기타 : etc
+						-->
+
+						<!--
+						상담 제목 버튼 클릭 시 consultBx 요소에 showDetail 클래스 추가가 필요합니다.
+						showDetail 클래스 추가 시 상담 상세 노출됩니다.
+						-->
+						<dl class="consultBx cs showDetail">
+							<dt>
+								<span class="cat">[CS문의]</span>
+								<span class="date">2018-10-02 11:53:59</span>
+								<span class="status">[완료][이관완료]</span>
+								<button type="button" class="btnRecord">녹취듣기</button>
+							</dt>
+							<dd class="deal">[단하루] 비욘 롱패딩 / 역시즌 특가 / 여성패딩_묶음</dd>
+							<dd class="tit">
+								<button type="button">배송지연 환불 &gt; 환불요청</button>
+							</dd>
+							<dd class="detail">
+								1. 문의내용: 배송지연되어 환불 요청<br />
+								2. 안내내용: 이미 배송된 상태로 배송중 문제가 발생. 고객이 강하게 환불 클레임<br />
+								3. 처리내용: 파트너에게 환불 문의<br />
+								4. 약속여부: 약속 없음
+							</dd>
+						</dl>
+						<a href="#;" class="btnViewConsult">파트너 문의 보기</a>
+					</div><!-- end of mainConsultArea -->
+
+					<!-- 서브 상담 이력이 있을 경우만 버튼이 추가됩니다. -->
+					<button type="button" class="btnViewSubConsult">서브 상담이력 보기</button>
+
+					<div class="subConsultArea">
+
+						<!-- 전체 열기 기본 -->
+						<!-- <button type="button" class="btnToggle active">전체 열기</button> -->
+
+						<!-- 전체 열기 클릭 시 : active 클래스 추가 , 전체닫기로 텍스트 변경 -->
+						<button type="button" class="btnToggle active">전체닫기</button>
+
+						<ul class="lstSubConsult">
+							<li>
+								<dl class="consultBx tr showDetail">
+									<dt>
+										<span class="cat">[이관]</span>
+										<span class="date">2018-10-02 11:53:59</span>
+									</dt>
+									<dd class="tit">
+										<button type="button">배송지연 환불 &gt; 환불요청</button>
+									</dd>
+									<dd class="detail">
+										1. 문의내용: 환불요청문의 환불가능문의 2. 안내내용: 환불불가, 부분환불은 가능 3. 약속여부: 약속 내용 없음
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="consultBx etc showDetail">
+									<dt>
+										<span class="cat">[기타]</span>
+										<span class="date">2018-10-02 11:53:59</span>
+									</dt>
+									<dd class="tit">
+										<button type="button">배송지연 환불 &gt; 환불요청</button>
+									</dd>
+									<dd class="detail">
+										1. 문의내용: 환불요청문의 환불가능문의 2. 안내내용: 환불불가, 부분환불은 가능 3. 약속여부: 약속 내용 없음
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl class="consultBx ib showDetail">
+									<dt>
+										<span class="cat">[IB]</span>
+										<span class="date">2018-10-02 11:53:59</span>
+									</dt>
+									<dd class="tit">
+										<button type="button">배송지연 환불 &gt; 환불요청</button>
+									</dd>
+									<dd class="detail">
+										1. 문의내용: 환불요청문의 환불가능문의 2. 안내내용: 환불불가, 부분환불은 가능 3. 약속여부: 약속 내용 없음
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div><!-- end of subConsultArea -->
+				</div><!-- end of consultContainer -->
+			</li>
+
+			<li class="item">
+				<div class="consultContainer">
+					<div class="mainConsultArea">
+						<dl class="consultBx tr">
+							<dt>
+								<span class="cat">[이관]</span>
+								<span class="date">2018-10-02 11:53:59</span>
+								<span class="status">[완료][이관완료]</span>
+							</dt>
+							<dd class="deal">[단하루] 비욘 롱패딩 / 역시즌 특가 / 여성패딩_묶음</dd>
+							<dd class="tit">
+								<button type="button">배송지연 환불 &gt; 환불요청</button>
+							</dd>
+							<dd class="detail">
+								1. 문의내용: 배송지연되어 환불 요청<br />
+								2. 안내내용: 이미 배송된 상태로 배송중 문제가 발생. 고객이 강하게 환불 클레임<br />
+								3. 처리내용: 파트너에게 환불 문의<br />
+								4. 약속여부: 약속 없음
+							</dd>
+						</dl>
+						<a href="#;" class="btnViewConsult">파트너 문의 보기</a>
+					</div><!-- end of mainConsultArea -->
+				</div><!-- end of consultContainer -->
+			</li>
+
+			<li class="item">
+				<div class="consultContainer">
+					<div class="mainConsultArea">
+						<dl class="consultBx ib">
+							<dt>
+								<span class="cat">[IB]</span>
+								<span class="date">2018-10-02 11:53:59</span>
+								<span class="status">[완료]</span>
+								<button type="button" class="btnRecord">녹취듣기</button>
+							</dt>
+							<dd class="deal">[단하루] 비욘 롱패딩 / 역시즌 특가 / 여성패딩_묶음</dd>
+							<dd class="tit">
+								<button type="button">배송지연 환불 &gt; 환불요청</button>
+							</dd>
+							<dd class="detail">
+								1. 문의내용: 배송지연되어 환불 요청<br />
+								2. 안내내용: 이미 배송된 상태로 배송중 문제가 발생. 고객이 강하게 환불 클레임<br />
+								3. 처리내용: 파트너에게 환불 문의<br />
+								4. 약속여부: 약속 없음
+							</dd>
+						</dl>
+						<a href="#;" class="btnViewConsult">파트너 문의 보기</a>
+					</div><!-- end of mainConsultArea -->
+					<button type="button" class="btnViewSubConsult">서브 상담이력 보기</button>
+				</div><!-- end of consultContainer -->
+			</li>
+
+			<li class="item">
+				<div class="consultContainer">
+					<div class="mainConsultArea">
+						<dl class="consultBx etc">
+							<dt>
+								<span class="cat">[기타]</span>
+								<span class="date">2018-10-02 11:53:59</span>
+								<span class="status">[완료]</span>
+								<button type="button" class="btnRecord">녹취듣기</button>
+							</dt>
+							<dd class="deal">[단하루] 비욘 롱패딩 / 역시즌 특가 / 여성패딩_묶음</dd>
+							<dd class="tit">
+								<button type="button">배송지연 환불 &gt; 환불요청</button>
+							</dd>
+							<dd class="detail">
+								1. 문의내용: 배송지연되어 환불 요청<br />
+								2. 안내내용: 이미 배송된 상태로 배송중 문제가 발생. 고객이 강하게 환불 클레임<br />
+								3. 처리내용: 파트너에게 환불 문의<br />
+								4. 약속여부: 약속 없음
+							</dd>
+						</dl>
+						<a href="#;" class="btnViewConsult">파트너 문의 보기</a>
+					</div><!-- end of mainConsultArea -->
+					<button type="button" class="btnViewSubConsult">서브 상담이력 보기</button>
+				</div><!-- end of consultContainer -->
+			</li>
+
+		</ul><!-- end of timeLineList -->
+
+	</div><!-- end of listBoxWrap -->
+
+</div><!-- end of timelineWrap -->

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+%sp-membership {
+    background: url('../im/sp-membership.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-membership($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-membership, $filename);
+    @extend %sp-membership;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-membership: (
+    spritesheet_name: sp-membership,
+    arrow_left: (offset_x: 0, offset_y: -30px, width: 23px, height: 23px),
+    arrow_right: (offset_x: -27px, offset_y: -30px, width: 23px, height: 23px),
+    circle_off: (offset_x: 0, offset_y: 0, width: 26px, height: 26px),
+    circle_on: (offset_x: -30px, offset_y: 0, width: 26px, height: 26px),
+    step_arrow: (offset_x: -60px, offset_y: 0, width: 10px, height: 19px),
+);

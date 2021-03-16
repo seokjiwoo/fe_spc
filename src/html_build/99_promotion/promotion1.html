@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 프로모션</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<link rel="stylesheet" type="text/css" href="../../css/promotion.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		<div class="top_wrap">
+	<div class="inner">
+		<div class="account_area">
+			<!-- 하위목록을 노출시키려면 active 클래스를 넣어주세요  -->
+			<div class="state_list">
+				<button class="account"><em>티켓몬스터</em> 님</button>
+				<ul>
+					<li><a href="#">나의 정보 확인</a></li>
+					<li><a href="#">비밀번호 변경</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div> <!-- end of state_list -->
+			<span><a href="#">공지사항</a></span>
+			<span><a href="#">매출증진 TIP</a></span>
+			<span><a href="#">담당자 연락처</a></span>
+			<span class="ad">슈퍼클릭(키워드/검색광고)문의 <em>1661-8200</em></span>	
+			<span class="ad">티몬광고상품문의 <em>02-2098-8690</em></span>
+		</div>
+		<!-- 오픈마켓 로고는 om 멀티클래스, 티몬특가 로고는 mmp 멀티클래스를 주시면 됩니다 -->
+		<!-- <h1 class="spc_logo om"><a href="#">TMON 스토어파트너 센터</a></h1> -->
+		<h1 class="spc_logo dp"><a href="#">TMON 배송상품 파트너센터</a></h1>
+	</div>
+</div>
+	</div>
+	<hr>
+	<div id="container">
+		<div class="top_visual"><!-- 해당 이미지는 2배 크기로 작업 --></div>
+		<div id="content">
+			<p class="notice_txt">
+				개업일 입력 및 사업자등록증 첨부 후 신청하시면, 승인일까지 영업일 기준 3~5일 소요됩니다.<br>
+				해당 프로모션은 회사 사정에 따라 조기 종료될 수 있습니다.
+			</p>
+			<ul class="notice_subtxt">
+				<li>본 프로모션은 오픈마켓 파트너만 신청 가능합니다. (제외대상 : 특가계정 & 특가참여 딜)</li>
+			</ul>
+			<form action="" class="spc_form">
+				<fieldset>
+					<table class="spc_table_form">
+						<colgroup>
+							<col style="width: 158px ; ">
+							<col style="width: * ; ">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th>개업 연월일</th>
+							<td>
+								<input type="text" name="" class="spc_text" placeholder="날짜 입력 ex) 20191212">
+							</td>
+						</tr>
+						<tr>
+							<th>사업자등록증 첨부</th>
+							<td>
+								<div class="btn fileUpload">
+									<input type="file">
+									<span>파일첨부</span>
+								</div>
+								<p class="fileUploadTxt">첨부파일 최대 1개 (25MB이하) 등록 가능 / jpg, png, gif, zip 첨부 가능 </p>
+								<div class="fileInfo_wrap">
+									<p class="fileInfo">
+										<span class="title">KakaoTalk_신고내용_20171220_141452696.jpg</span>
+										<button class="del">delete</button>
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>사업자등록증 첨부</th>
+							<td>
+								<div class="btn fileUpload">
+									<input type="file">
+									<span>파일첨부</span>
+								</div>
+								<p class="fileUploadTxt">첨부파일 최대 1개 (25MB이하) 등록 가능 / jpg, png, gif, zip 첨부 가능 </p>
+								<div class="fileInfo_wrap">
+									<p class="no_file_txt">
+										이곳에 파일을 첨부하세요.
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>사업자등록증 첨부</th>
+							<td>
+								<div class="btn fileUpload disabled">
+									<input type="file" disabled>
+									<span>파일첨부</span>
+								</div>
+								<p class="fileUploadTxt">첨부파일 최대 1개 (25MB이하) 등록 가능 / jpg, png, gif, zip 첨부 가능 </p>
+								<div class="fileInfo_wrap disabled">
+									<p class="no_file_txt">
+										파일을 첨부하실 수 없습니다.
+									</p>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<div class="btns">
+					<button class="btn white">취소</button>
+					<button class="btn orange">신청</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<hr>
+	<div id="footer">
+		<div class="footer_inner">
+	<ul class="footer_link">
+		<li><a href="#">이용약관</a></li>
+		<li><a href="#"><b>개인정보처리방침</b></a></li>
+		<li><a href="#">전자금융거래</a></li>
+		<li><a href="#">청소년보호정책</a></li>
+	</ul>
+	<span class="footer_logo">TMON</span>
+	<p>사업자등록번호 211-88-41856<span class="dv">|</span>통신판매업신고 제2013-서울강남-02403호</p>
+	<p>서울특별시 강남구 테헤란로 114길 38 동일타워<span class="dv">|</span>대표자 이진원<span class="dv">|</span><a href="#">사업자정보확인</a></p>
+	<p>COPYRIGHT(c) TMON INC. ALL RIGHTS RESERVED.</p>
+	<div class="cs_center">
+		<p class="cs_center_top">
+			파트너센터 <strong>1644-0552</strong>
+		</p>
+		<p class="holiday">
+			평일 09~18시 (점심시간 12~13시)<br >
+			주말/공휴일 휴무
+		</p>
+	</div>
+	<div class="footer_bottom">
+		<img src="../../img/common/footer_iso_banner.png" />
+	</div>
+</div>
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="../../js/jquery.bxslider.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+	
+	// 딜검색 레이어 딜명 클릭 시 
+	$('.btn_menu').on('click', function(e){
+		e.preventDefault();
+		
+		var $this = $(this);
+		var $parent = $this.parent();
+		
+		if(!$parent.hasClass('on')){
+			$('.deal_name.on').removeClass('on');
+		}
+		$parent.toggleClass('on');
+	});
+	
+	// 동영상 5개 이상일때 슬라이드
+	if($('.video_lst li').length > 5){
+		$('.video_lst ul').bxSlider({
+			pager: false,
+		    slideWidth: 160,
+		    minSlides: 1,
+		    maxSlides: 5,
+		    moveSlides: 5,
+		    slideMargin: 5
+		});
+	}
+});
+</script>
+</body>
+</html>

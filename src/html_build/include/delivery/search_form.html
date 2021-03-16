@@ -1,0 +1,130 @@
+<div class="spc_form open">
+	<div class="h3_head">
+		<h3>배송조회 및 처리</h3>
+		<button class="btn_toggle">검색창</button>
+		<div class="options">
+			<button type="button" class="btn manage">옵션판매수량관리</button>
+		</div>
+	</div>
+	<form>
+		<fieldset>
+			<table class="spc_table_form">
+				<colgroup>
+					<col style="width:157px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>기간조회</th>
+						<td>
+							<div class="spc_select" style="width:112px;">
+								<div class="value"><span class="selected">주문일</span><i></i></div>
+								<select>
+									<option>주문일1</option>
+									<option>주문일2</option>
+									<option>주문일3</option>
+								</select>
+							</div>
+							<div class="spc_calendar">
+								<input type="text" class="spc_text" value="2016.04.27"><button class="btn_calendar">달력</button>
+							</div>
+							<span class="dash">~</span>
+							<div class="spc_calendar">
+								<input type="text" class="spc_text" value="2016.04.30"><button class="btn_calendar">달력</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>배송상태</th>
+						<td>
+							<div class="spc_select" style="width:193px;">
+								<div class="value"><span class="selected">전체</span><i></i></div>
+								<select>
+									<option>전체1</option>
+									<option>전체2</option>
+									<option>전체3</option>
+								</select>
+							</div>
+							<label for="check1" class="spc_check"><input type="checkbox" id="check1" /><i class="symbol"></i>오늘까지 송장등록해야 하는 주문</label>
+						</td>
+					</tr>
+					<tr>
+						<th>배송지연</th>
+						<td>
+							<label for="check2" class="spc_check"><input type="checkbox" id="check2" /><i class="symbol"></i>주문확인 지연</label>
+							<label for="check3" class="spc_check"><input type="checkbox" id="check3" /><i class="symbol"></i>송장등록 지연</label>
+							<label for="check4" class="spc_check"><input type="checkbox" id="check4" /><i class="symbol"></i>상품배송 지연</label>
+						</td>
+					</tr>
+					<tr>
+						<th>지연신고</th>
+						<td>
+							<label for="check5" class="spc_check"><input type="checkbox" id="check5" /><i class="symbol"></i>Y</label>
+							<label for="check6" class="spc_check"><input type="checkbox" id="check6" /><i class="symbol"></i>N</label>
+						</td>
+					</tr>
+					<tr>
+						<th>상세검색</th>
+						<td>
+							<div class="spc_select" style="width:112px;">
+								<div class="value"><span class="selected">주문일</span><i></i></div>
+								<select>
+									<option>주문일1</option>
+									<option>주문일2</option>
+									<option>주문일3</option>
+								</select>
+							</div>
+							<input type="text" class="spc_text" style="width:428px;">
+						</td>
+					</tr>
+					<tr>
+						<th>딜 선택</th>
+						<td>
+							<div class="spc_radio_line">
+								<label class="spc_radio checked"><input type="radio" name="" checked="checked" /><i class="symbol"></i>전체</label>
+								<label class="spc_radio"><input type="radio" name="" /><i class="symbol"></i>딜번호로 검색</label>
+								<label class="spc_radio"><input type="radio" name="" /><i class="symbol"></i>진행중 딜목록</label>
+								<label class="spc_radio"><input type="radio" name="" /><i class="symbol"></i>판매종료 딜목록</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>딜 선택</th>
+						<td>
+							<div class="spc_radio_line">
+								<label class="spc_radio checked"><input type="radio" name="" /><i class="symbol"></i>전체</label>
+								<label class="spc_radio checked"><input type="radio" name="" checked="checked" /><i class="symbol"></i>딜번호로 검색</label>
+								<label class="spc_radio"><input type="radio" name="" /><i class="symbol"></i>진행중 딜목록</label>
+								<label class="spc_radio"><input type="radio" name="" /><i class="symbol"></i>판매종료 딜목록</label>
+							</div>
+							<input type="text" class="spc_text" style="width:553px;">
+						</td>
+					</tr>
+					<tr>
+						<th>딜 선택</th>
+						<td>
+							<div class="spc_radio_line">
+								<label class="spc_radio"><input type="radio" name="" /><i class="symbol"></i>전체</label>
+								<label class="spc_radio"><input type="radio" name="" /><i class="symbol"></i>딜번호로 검색</label>
+								<label class="spc_radio"><input type="radio" name="" /><i class="symbol"></i>진행중 딜목록</label>
+								<label class="spc_radio checked"><input type="radio" name="" checked="checked" /><i class="symbol"></i>판매종료 딜목록</label>
+							</div>
+							<div class="spc_select" style="width:573px;">
+								<div class="value"><span class="selected">딜선택</span><i></i></div>
+								<select>
+									<option>딜선택1</option>
+									<option>딜선택2</option>
+									<option>딜선택3</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btn_area">
+				<button type="reset" class="btn cancel">초기화</button>
+				<button type="submit" class="btn submit">검색</button>
+			</div>
+		</fieldset>
+	</form>
+</div>

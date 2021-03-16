@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: TMON</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc home"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc home"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc home"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc home"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc home home_bg"><!--<![endif]-->
+<div id="wrap">
+	@@include('common/top_banner_fix.html')
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"deal_on" : "on", 
+			"order_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"claim_on" : "", 
+			"sales_on" : "", 
+			"contract_on" : "", 
+			"adcener_on" : "", 
+			"mystore_on" : "",
+			"support_on" : ""})
+			@@include('common/aside_left.html')
+			@@include('common/aside_right.html')
+		</div>
+		<hr>
+	<div id="container">
+		<div class="spot">
+			<div class="state_wrap">
+				@@include('home/partner_grade.html')
+				@@include('home/order_state.html', {"loading": "loading", "first": "first", "title_state" : "주문/배송 현황", "msg":"Loading...", "multi_class" : "bx_order"})
+				@@include('home/order_state.html', {"loading": "loading", "first": "", "title_state" : "취소/환불/교환 현황", "msg":"로딩에 실패했습니다.<br>해당메뉴에서 조회해주세요.", "multi_class" : "bx_cancel"})
+				@@include('home/order_state.html', {"loading": "", "first": "", "title_state" : "배송지연 패널티 현황", "msg":"Loading...", "multi_class" : "bx_penalty"})
+				@@include('home/deal_state.html', {"loading": "loading", "first": "first", "title_state" : "정산현황", "msg":"Loading..."})
+				@@include('home/deal_state.html', {"loading": "loading", "first": "", "title_state" : "상품문의/구매후기 현황", "msg":"로딩에 실패했습니다.<br>해당메뉴에서 조회해주세요."})
+				@@include('home/deal_state.html', {"loading": "", "first": "", "title_state" : "딜 진행현황", "msg":"Loading..."})
+			</div>
+		</div>
+		<div id="content">
+			<div class="info_area">
+				@@include('home/partner_area.html')
+				@@include('home/notice_area.html')
+			</div>
+			@@include('home/summary_area.html', {"loading": "loading"})
+		</div>
+	</div>
+	<hr>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="loading_bar"></div>
+	@@include('layer/layer_guide.html')
+	@@include('layer/inform.html')
+	@@include('layer/coupon_check_report.html')
+	@@include('layer/terms_modify_agree.html')
+
+	@@include('layer/inform_compare.html')
+	@@include('layer/notice_commission.html')
+	@@include('layer/notice_commission_confirmed.html')
+	@@include('layer/notice_commission_about.html')
+	@@include('layer/inform_compare_v1.html')
+	@@include('layer/inform_compare_v2.html')
+	@@include('layer/inform_compare_v3.html')
+	@@include('layer/inform_compare_agree.html')
+	@@include('layer/imgpop_openmarket.html')
+	@@include('layer/feedback_star.html')
+
+	<!-- [D] 배너 슬라이더 UI 확인용 -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../js/jquery.cycle.all.js"></script>
+	<script>
+		$('#banner_slider').cycle({
+			fx : 'scrollHorz'
+		});
+		$('#banner_slider2').cycle({
+			fx : 'scrollHorz'
+		});
+		$('#banner_slider3').cycle({
+			fx : 'scrollHorz'
+		});
+		$('#banner_slider4').cycle({
+			fx : 'scrollHorz'
+		});
+	</script>
+</div>
+</body>
+</html>

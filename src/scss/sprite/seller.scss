@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+%sp-seller {
+    background: url('../im/sp-seller.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@mixin sp-seller($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-seller, $filename);
+    @extend %sp-seller;
+	@include sp-mosaic($dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-seller: (
+    spritesheet_name: sp-seller,
+    btn_next_after: (offset_x: -70px, offset_y: 0, width: 24px, height: 24px),
+    btn_next_before: (offset_x: -70px, offset_y: -28px, width: 24px, height: 24px),
+    btn_nextend_after: (offset_x: 0, offset_y: -70px, width: 24px, height: 24px),
+    btn_nextend_before: (offset_x: -28px, offset_y: -70px, width: 24px, height: 24px),
+    btn_prev_after: (offset_x: -56px, offset_y: -70px, width: 24px, height: 24px),
+    btn_prev_before: (offset_x: -98px, offset_y: 0, width: 24px, height: 24px),
+    btn_prevfirst_after: (offset_x: -98px, offset_y: -28px, width: 24px, height: 24px),
+    btn_prevfirst_before: (offset_x: -98px, offset_y: -56px, width: 24px, height: 24px),
+    ico_caution: (offset_x: 0, offset_y: 0, width: 66px, height: 66px),
+    ico_caution_sm: (offset_x: -96px, offset_y: -98px, width: 16px, height: 16px),
+    ico_chk_off: (offset_x: 0, offset_y: -98px, width: 20px, height: 20px),
+    ico_chk_on: (offset_x: -24px, offset_y: -98px, width: 20px, height: 20px),
+    ico_chkdisable_after: (offset_x: -48px, offset_y: -98px, width: 20px, height: 20px),
+    ico_chkdisable_before: (offset_x: -72px, offset_y: -98px, width: 20px, height: 20px),
+);

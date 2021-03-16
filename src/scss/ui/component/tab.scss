@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+// TAB
+.spc_tab{
+	border-bottom: 1px solid #babcc0;
+	font-size: 0;
+	li{
+		display: inline-block;
+		width: 100px;
+		margin-right: -1px;
+		border: solid #cfd1d5;
+		border-width: 1px 1px 0;
+		background-color: #fafbfb;
+		text-align: center;
+		vertical-align: middle;
+		a, button{
+			display: inline-block;
+			width: 100%;
+		    height: 42px;
+		    line-height: 44px;
+   			font-size: 14px;
+			color: #8d9097;
+			vertical-align: middle;
+		}
+		&.on{
+			position: relative;
+			top: 1px;
+			margin-top: -1px;
+			border-top: 1px solid #babcc0;
+			border-right: 1px solid #babcc0;
+			border-left: 1px solid #babcc0;
+			border-bottom: 1px solid #fff;
+			background-color: #fff;
+			a, button{
+				color: $color_dark;
+			}
+		}
+	}//li
+}//.spc_tab
+
+// IE7
+.lt-ie8{
+	.spc_tab{
+		display: inline-block;
+		li{
+			float: left;
+		}
+	}
+}
+

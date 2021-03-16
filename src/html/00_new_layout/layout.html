@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SPC :: 개편레이아웃</title>
+<link rel="stylesheet" type="text/css" href="../../css/spc_common.css">
+<style>
+/* [D] UI 확인용 */
+.spc_layer{
+	display: block;
+	position: relative;
+}
+</style>
+</head>
+<!--[if lt IE 7]><body class="lt-ie9 lt-ie8 lt-ie7 spc"> <![endif]-->
+<!--[if IE 7]><body class="lt-ie9 lt-ie8 spc"> <![endif]-->
+<!--[if IE 8]><body class="lt-ie9 spc"> <![endif]-->
+<!--[if IE 9]><body class="lt-ie10 spc"> <![endif]-->
+<!--[if gt IE 9]><!--><body class="spc"><!--<![endif]-->
+<div id="wrap">
+	<div id="header">
+		@@include('common/global.html')
+		@@include('common/gnb.html', {
+			"home_on" : "", 
+			"contract_on" : "on", 
+			"deal_on" : "", 
+			"delivery_on" : "", 
+			"claim_on" : "", 
+			"faq_on" : "", 
+			"sales_on" : "", 
+			"report_on" : "", 
+			"support_on" : ""})
+	</div>
+	<hr>
+	<div id="container">
+		<div id="content">
+			<div class="h2_head">
+				<h2>컨텐츠 타이틀</h2>
+			</div>
+		</div>
+		@@include('common/aside_left.html')
+	</div>
+	<hr>
+	<div id="footer">
+		@@include('common/footer.html')
+	</div>
+	<div class="spc_dim"></div> <!-- [D] 레이어 띄울 시 show 시켜주세요. -->
+	@@include('layer/inform.html')
+	@@include('layer/deal_search.html')
+	@@include('layer/deal_search_none.html')
+	@@include('layer/unethic_report.html')
+	@@include('layer/unkind_report.html')
+	@@include('layer/guide_video.html')
+</div>
+<!-- [D] UI 확인용 -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="../../js/jquery.bxslider.min.js"></script>
+<script>
+$(function() {
+	/* [D] 사이트맵의 활성화 스타일을 주기 위해 "btn_sitemap" 요소에 "open"클래스를 토글시켜주세요. */
+	$('.btn_sitemap').on('click', function(){
+		$(this).toggleClass('open');
+	});
+	
+	/* [D] 체크박스의 활성화 스타일을 주기 위해 "spc_check" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_check').on('change', 'input', function(){
+		$(this).parent().toggleClass('checked');
+	});
+	
+	/* [D] 라디오버튼의 활성화 스타일을 주기 위해 "spc_radio" 요소에 "checked"클래스를 토글시켜주세요. */
+	$('.spc_radio').on('click', 'input', function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var _name = $this.attr('name');
+		
+		$parent.siblings().find('[name="'+ _name +'"]').parent().removeClass('checked');
+		$parent.addClass('checked');
+	});
+	
+	// 딜검색 레이어 딜명 클릭 시 
+	$('.btn_menu').on('click', function(e){
+		e.preventDefault();
+		
+		var $this = $(this);
+		var $parent = $this.parent();
+		
+		if(!$parent.hasClass('on')){
+			$('.deal_name.on').removeClass('on');
+		}
+		$parent.toggleClass('on');
+	});
+	
+	// 동영상 5개 이상일때 슬라이드
+	if($('.video_lst li').length > 5){
+		$('.video_lst ul').bxSlider({
+			pager: false,
+		    slideWidth: 160,
+		    minSlides: 1,
+		    maxSlides: 5,
+		    moveSlides: 5,
+		    slideMargin: 5
+		});
+	}
+});
+</script>
+</body>
+</html>

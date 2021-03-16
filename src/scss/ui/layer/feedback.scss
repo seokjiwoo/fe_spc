@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+.spc_layer.feedback{
+	$clr_highlight : #f27935;
+	$clr_require : #ea3323;
+	.layer_hd {
+		h3{
+			font-size:20px;
+		}
+	}
+	.layer_ct{
+		h4{
+			font-size:14px;
+			line-height:20px;
+			margin-bottom: 8px;
+			em{
+				color:$clr_highlight;
+				font-weight:bold;
+			}
+		}
+		.bx_score{
+			margin-bottom: 10px;
+			padding:15px;
+			text-align: center;
+			border:1px solid #f0f2f5;
+			.num_score{
+				display: block;
+				margin-bottom: 4px;
+				font-size:40px;
+				font-family: Tahoma, "돋움", dotum, "Apple SD GothicNeo", sans-serif ;
+				font-weight:bold;
+				color:#000;
+			}
+			.chk_score{
+				margin-bottom: 8px;
+				direction: rtl;
+				font-size:0;
+				input[type=radio]{
+					visibility: hidden;
+					position: absolute;
+					top: 0; left: 0;
+					width: 0; height: 0;
+					margin: 0;
+					opacity: 0;
+				}
+				label{
+					display:inline-block;
+					width:32px; height:32px;
+					background:url('../img/common/star.png') no-repeat 0 0;					
+					text-indent:-9999em;
+					font-size:0;
+					cursor: pointer;
+				}
+				input[type=radio]:checked{
+					& ~ label{
+						background:url('../img/common/star_active.png') no-repeat 0 0;					
+					}
+				}
+			}
+			.txt_tip{
+				color:#595963;
+				.btn_tip{
+					display: inline-block;
+					position: relative;
+					top:-1px;
+					i{
+						display: inline-block;
+						width:14px; height:14px;
+						background:url('../img/common/mark_tooltip.png') no-repeat 0 0;
+						text-indent: -9999em;
+						font-size:0;
+						vertical-align:top;
+					}
+					.layer{
+						display: none;
+						position: absolute;
+						left:50%; top:23px;
+						padding:10px 15px;
+						text-align: left;
+						font-size:11px;
+						line-height:15px;
+						border:1px solid #30343b;
+						white-space: nowrap;
+						background-color: #fff;
+						transform:translateX(-50%);
+						-webkit-transform:translateX(-50%);
+						-moz-transform:translateX(-50%);
+						-ms-transform:translateX(-50%);
+						-o-transform:translateX(-50%);
+						&:after{
+							content:"";
+							display:block;
+							position: absolute;
+							left:50%; top:-7px;
+							margin-left:-6px;
+							width:11px; height:7px;
+							background:url('../img/common/arr_grade_tip.jpg') no-repeat 0 0;
+						}
+						strong{
+							color:$clr_highlight;
+						}
+					}
+					&:hover, &:focus{
+						.layer{
+							display:inline-block;
+						}
+					}
+				}
+			}
+		}
+		.bx_comment{
+			textarea{
+				width:100%;	height:60px;
+				padding:8px 10px;
+				border:1px solid #ccd2d8;
+				margin-bottom: 12px;
+				box-sizing: border-box;
+				font-size:12px;
+				line-height:1.35;
+				color:#16181a;
+				&.active {
+					border-color:$clr_require;
+					margin-bottom: 2px;
+					& + .txt{
+						display: inline-block;
+					}
+				}
+				&::-webkit-input-placeholder {color: #a6a9ad;}
+				&::-moz-placeholder {color: #a6a9ad;}
+				&:-ms-input-placeholder {color: #a6a9ad;}
+				&:-moz-placeholder {color: #a6a9ad;}
+			}
+			.txt{
+				display: none;
+				margin-bottom: 10px;
+				color:$clr_require;
+				line-height:20px;
+				font-weight:normal;
+			}
+		}
+		.txt_consult{
+			margin-bottom: 30px;
+			color:#7d7e80;
+			a{
+				font-weight:bold;
+				color:$clr_highlight;
+				text-decoration: underline;
+			}
+		}
+		.btn_area{
+			&.center{
+				text-align: center;
+			}
+			.submit{
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				font-weight: bold;
+			}
+		}
+	}
+	.btn_close{
+		width:19px; height:19px; 
+		background: url('https://spc.tmon.co.kr/static/images/btn_layer_close.png?v=201910071600') no-repeat 0 0;
+	}
+}
